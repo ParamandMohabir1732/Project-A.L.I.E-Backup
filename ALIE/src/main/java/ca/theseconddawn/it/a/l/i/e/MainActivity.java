@@ -22,6 +22,7 @@ Software Project
 
 package ca.theseconddawn.it.a.l.i.e;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -32,5 +33,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+    public void onBackPressed () {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle(R.string.builderTitle);
+        builder.setMessage(R.string.builderMessage);
+        builder.setIcon(R.drawable.alie_icon);
+        builder.setCancelable(true);
+        builder.setNegativeButton(R.string.builderNegativeButton, ((dialogInterface, i) -> dialogInterface.cancel()));
+        builder.setPositiveButton(R.string.builderPositiveButton, ((dialogInterface, i) -> finish()));
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 }

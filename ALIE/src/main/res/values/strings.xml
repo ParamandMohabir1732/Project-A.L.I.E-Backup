@@ -4,4 +4,8 @@
 <!-- Paolo Brancato N01434080 CENG322 SECTION 0NC Software Project -->
 <resources>
     <string name="app_name">A.L.I.E</string>
+    <string name="builderTitle">A.L.I.E</string>
+    <string name="builderMessage">Are you sure you want to exit?</string>
+    <string name="builderNegativeButton">No</string>
+    <string name="builderPositiveButton">Yes</string>
 </resources>
