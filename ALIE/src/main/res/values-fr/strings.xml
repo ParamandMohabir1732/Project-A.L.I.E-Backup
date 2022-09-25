@@ -9,5 +9,12 @@
     <string name="builderMessage">Êtes-vous srû de vouloir quitter?</string>
     <string name="builderNegativeButton">Non</string>
     <string name="builderPositiveButton">Oui</string>
-    <string name="titleHome">Home</string>
+    <string name="titleHome">Maison</string>
+    <string name="imageView1">Il s\'agit de l\'image de l\'icône de mon application qui sera affichée dans le tiroir de navigation.</string>
+    <string name="textView1">La deuxième aube</string>
+    <string name="textView2">A.L.I.E@support.ca</string>
+    <string name="openNavigationDrawer">Ouvrir le tiroir de navigation</string>
+    <string name="closeNavigationDrawer">Fermer le tiroir de navigation</string>
+    <string name="titleSettings">Réglages</string>
+    <string name="toastMessage1">Opening Settings...</string>
 </resources>
