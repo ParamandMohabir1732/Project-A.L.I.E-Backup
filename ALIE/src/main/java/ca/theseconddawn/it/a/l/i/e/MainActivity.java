@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
         builder.setTitle(R.string.builderTitle);
         builder.setMessage(R.string.builderMessage);
-        builder.setIcon(R.drawable.alie_icon);
+        builder.setIcon(R.mipmap.ic_launcher_round);
         builder.setCancelable(true);
         builder.setNegativeButton(R.string.builderNegativeButton, ((dialogInterface, i) -> dialogInterface.cancel()));
         builder.setPositiveButton(R.string.builderPositiveButton, ((dialogInterface, i) -> finish()));
