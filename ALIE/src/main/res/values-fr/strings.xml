@@ -16,5 +16,5 @@
     <string name="openNavigationDrawer">Ouvrir le tiroir de navigation</string>
     <string name="closeNavigationDrawer">Fermer le tiroir de navigation</string>
     <string name="titleSettings">Réglages</string>
-    <string name="toastMessage1">Opening Settings...</string>
+    <string name="toastMessage1">Paramètres douverture…</string>
 </resources>
