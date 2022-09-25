@@ -13,4 +13,6 @@
     <string name="imageView1">This is the image of my App Icon that will be displayed in the Navigation Drawer.</string>
     <string name="textView1">The Second Dawn</string>
     <string name="textView2">A.L.I.E@support.ca</string>
+    <string name="openNavigationDrawer">Open Navigation Drawer</string>
+    <string name="closeNavigationDrawer">Close Navigation Drawer</string>
 </resources>
