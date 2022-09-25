@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Paramand Mohabir N01421732 CENG322 Section 0NC Software Project -->
 <!-- Vladislav Vassilyev N01436627 CENG322 SECTION 0NB Software Project -->
 <!-- Dave Patel N01465129 CENG322 SECTION 0NA Software Project -->
@@ -8,4 +9,5 @@
     <string name="builderMessage">Are you sure you want to exit?</string>
     <string name="builderNegativeButton">No</string>
     <string name="builderPositiveButton">Yes</string>
+    <string name="titleHome">Home</string>
 </resources>

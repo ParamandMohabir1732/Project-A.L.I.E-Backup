@@ -19,7 +19,6 @@ CENG322 Section ONC
 Software Project
  */
 
-
 package ca.theseconddawn.it.a.l.i.e;
 
 import androidx.appcompat.app.AlertDialog;

@@ -9,4 +9,5 @@
     <string name="builderMessage">Êtes-vous srû de vouloir quitter?</string>
     <string name="builderNegativeButton">Non</string>
     <string name="builderPositiveButton">Oui</string>
+    <string name="titleHome">Home</string>
 </resources>
