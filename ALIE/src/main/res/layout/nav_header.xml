@@ -5,7 +5,8 @@
     android:background="@color/lightblue"
     android:gravity="bottom"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView1"

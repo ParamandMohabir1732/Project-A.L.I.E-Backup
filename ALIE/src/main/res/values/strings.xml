@@ -15,4 +15,6 @@
     <string name="textView2">A.L.I.E@support.ca</string>
     <string name="openNavigationDrawer">Open Navigation Drawer</string>
     <string name="closeNavigationDrawer">Close Navigation Drawer</string>
+    <string name="titleSettings">Settings</string>
+    <string name="toastMessage1">Opening Settings...</string>
 </resources>
