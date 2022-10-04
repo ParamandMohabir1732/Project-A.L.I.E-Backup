@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.TheSecondDawnToolBarSettings) {
             Toast.makeText(this, toastMessage1, Toast.LENGTH_LONG).show();
-            Intent settings = new Intent(Settings.ACTION_SETTINGS);
+            Intent settings = new Intent(MainActivity.this, ConfigurationActivity.class);
             startActivity(settings);
             return true;
         }

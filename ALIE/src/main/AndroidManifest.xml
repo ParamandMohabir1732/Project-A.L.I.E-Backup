@@ -13,9 +13,17 @@
         android:theme="@style/Theme.ALIE"
         tools:targetApi="31">
         <activity
+            android:name=".ConfigurationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_configuration">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainActivity"
-            android:theme="@style/Theme.ALIE.NoActionBar"
-            android:exported="true">
+            android:exported="true"
+            android:theme="@style/Theme.ALIE.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
