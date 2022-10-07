@@ -1,5 +1,5 @@
 package ca.theseconddawn.it.a.l.i.e;
-
+/*Vladislav Vassilyev n01436627 */
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;

@@ -1,35 +1,42 @@
-<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <PreferenceCategory app:title="@string/messages_header">
-
-        <EditTextPreference
-            app:key="signature"
-            app:title="@string/signature_title"
-            app:useSimpleSummaryProvider="true" />
-
-        <ListPreference
-            app:defaultValue="reply"
-            app:entries="@array/reply_entries"
-            app:entryValues="@array/reply_values"
-            app:key="reply"
-            app:title="@string/reply_title"
-            app:useSimpleSummaryProvider="true" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory app:title="@string/sync_header">
-
-        <SwitchPreferenceCompat
-            app:key="sync"
-            app:title="@string/sync_title" />
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Vladislav Vassilyev n01436627-->
+    <PreferenceCategory app:title="@string/Portrait">
 
         <SwitchPreferenceCompat
             app:dependency="sync"
             app:key="attachment"
-            app:summaryOff="@string/attachment_summary_off"
-            app:summaryOn="@string/attachment_summary_on"
-            app:title="@string/attachment_title" />
+            app:summaryOff="@string/rotation_summary_off"
+            app:summaryOn="@string/rotation_summary_on"
+            app:title="@string/rotation_title" />
 
     </PreferenceCategory>
+    <PreferenceCategory app:title="@string/Loudness">
+        <SeekBarPreference
+            android:key="volume"
+            android:title="@string/Volume"
+            app:showSeekBarValue="true"
+            android:defaultValue="50"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/LED">
+
+        <ListPreference
+            app:defaultValue="Red"
+            app:entries="@array/color_entries"
+            app:entryValues="@array/color_values"
+            app:key="reply"
+            app:title="@string/led_color"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/FanControl">
+        <SwitchPreferenceCompat
+            android:key="Fan"
+            android:title="@string/Fan_on_off"/>
+    </PreferenceCategory>
+
 
 </PreferenceScreen>

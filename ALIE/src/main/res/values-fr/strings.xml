@@ -17,4 +17,23 @@
     <string name="closeNavigationDrawer">Fermer le tiroir de navigation</string>
     <string name="titleSettings">Réglages</string>
     <string name="toastMessage1">Paramètres douverture…</string>
+    <string name="title_activity_configuration">Activitédeconfiguration</string>
+
+    <!-- Controls Titles -->
+    <string name="Portrait">Orientation</string>
+    <string name="Loudness">Volume du haut-parleur</string>
+    <string name="LED">Contrôle des voyants</string>
+    <string name="FanControl">Contrôle du ventilateur</string>
+
+    <!-- Sound control -->
+    <string name="Volume">Volume du haut-parleur</string>
+
+    <!-- Messages Preferences -->
+    <string name="led_color">Contrôle des voyants</string>
+
+    <!-- Sync Preferences -->
+    <string name="rotation_title">Orientation actuelle de lécran</string>
+    <string name="rotation_summary_on">Paysage</string>
+    <string name="rotation_summary_off">Portrait</string>
+    <string name="Fan_on_off">Ventilateur MARCHE/ARRÊT</string>
 </resources>

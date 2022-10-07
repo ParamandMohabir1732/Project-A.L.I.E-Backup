@@ -18,18 +18,24 @@
     <string name="toastMessage1">Opening Settings…</string>
     <string name="title_activity_configuration">ConfigurationActivity</string>
 
-    <!-- Preference Titles -->
-    <string name="messages_header">Messages</string>
-    <string name="sync_header">Sync</string>
+    <!-- Controls Titles -->
+    <string name="Portrait">Orientation</string>
+    <string name="Loudness">Speaker loudness</string>
+    <string name="LED">LED control</string>
+    <string name="FanControl">Fan control</string>
 
+    <!-- Sound control -->
+    <string name="Volume">Speaker Volume</string>
+    
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
-    <string name="reply_title">Default reply action</string>
+    <string name="led_color">Set LED color</string>
 
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
-    <string name="attachment_title">Download incoming attachments</string>
-    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    <string name="rotation_title">Current screen orientation</string>
+    <string name="rotation_summary_on">Landscape
     </string>
-    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="rotation_summary_off">Portrait</string>
+    <string name="Fan_on_off">Fan ON/OFF</string>
 </resources>
