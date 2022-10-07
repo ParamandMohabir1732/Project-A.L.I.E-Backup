@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Paramand Mohabir N01421732 CENG322 Section 0NC Software Project -->
+<?xml version="1.0" encoding="utf-8"?><!-- Paramand Mohabir N01421732 CENG322 Section 0NC Software Project -->
 <!-- Vladislav Vassilyev N01436627 CENG322 SECTION 0NB Software Project -->
 <!-- Dave Patel N01465129 CENG322 SECTION 0NA Software Project -->
 <!-- Paolo Brancato N01434080 CENG322 SECTION 0NC Software Project -->
@@ -62,4 +61,14 @@
     <string name="button1">LOGIN</string>
     <string name="textView5">Register</string>
     <string name="textView6">Forgot Password?</string>
+
+    <!-- Register Screen -->
+    <string name="imageView3">This is the image of my App Icon that will be displayed in the Registration Screen</string>
+    <string name="textView7">A.L.I.E</string>
+    <string name="textView8">Our Amazing App</string>
+    <string name="editText3">Username:</string>
+    <string name="editText4">Date of Birth:</string>
+    <string name="editText5">Email Address:</string>
+    <string name="editText6">Password:</string>
+    <string name="button2">REGISTER</string>
 </resources>

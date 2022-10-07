@@ -4,27 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
 
     <ImageView
-        android:id="@+id/TheSecondDawnImageView2"
+        android:id="@+id/TheSecondDawnImageView3"
         android:layout_width="126dp"
         android:layout_height="100dp"
         android:layout_marginStart="140dp"
         android:layout_marginTop="20dp"
-        android:contentDescription="@string/imageView2"
+        android:contentDescription="@string/imageView3"
         android:src="@mipmap/ic_launcher_round"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/TheSecondDawnTextView3"
+        android:id="@+id/TheSecondDawnTextView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="112dp"
         android:layout_marginTop="120dp"
         android:fontFamily="sans-serif-black"
-        android:text="@string/textView3"
+        android:text="@string/textView7"
         android:textAlignment="center"
         android:textColor="@color/purple_700"
         android:textSize="60sp"
@@ -33,12 +33,12 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/TheSecondDawnTextView4"
+        android:id="@+id/TheSecondDawnTextView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="136dp"
         android:layout_marginTop="200dp"
-        android:text="@string/textView4"
+        android:text="@string/textView8"
         android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="italic"
@@ -46,13 +46,45 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/TheSecondDawnEditText1"
+        android:id="@+id/TheSecondDawnEditText3"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
         android:layout_marginBottom="375dp"
         android:ems="10"
-        android:hint="@string/editText1"
+        android:hint="@string/editText3"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/TheSecondDawnEditText4"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="225dp"
+        android:ems="10"
+        android:hint="@string/editText4"
+        android:inputType="date"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/TheSecondDawnEditText5"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="75dp"
+        android:ems="10"
+        android:hint="@string/editText5"
         android:inputType="textEmailAddress"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -62,13 +94,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/TheSecondDawnEditText2"
+        android:id="@+id/TheSecondDawnEditText6"
         android:layout_width="380dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="250dp"
-        android:layout_marginBottom="225dp"
+        android:layout_marginBottom="-75dp"
         android:ems="10"
-        android:hint="@string/editText2"
+        android:hint="@string/editText6"
         android:inputType="textPassword"
         android:textSize="20sp"
         android:textStyle="bold"
@@ -78,44 +110,20 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/TheSecondDawnButton1"
+        android:id="@+id/TheSecondDawnButton2"
         android:layout_width="360dp"
         android:layout_height="65dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="430dp"
-        android:text="@string/button1"
+        android:layout_marginTop="575dp"
+        android:text="@string/button2"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/TheSecondDawnTextView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="285dp"
-        android:layout_marginTop="525dp"
-        android:text="@string/textView5"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/TheSecondDawnTextView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="525dp"
-        android:text="@string/textView6"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ProgressBar
-        android:id="@+id/TheSecondDawnProgressBar1"
+        android:id="@+id/TheSecondDawnProgressBar2"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="50dp"
         android:layout_height="45dp"
