@@ -1,5 +1,26 @@
+/*
+Paramand Mohabir N01421732
+CENG322 Section 0NC
+Software Project
+*/
+/*
+Vladislav Vassilyev N01436627
+CENG322 Section 0NB
+Software Project
+*/
+/*
+Dave Patel N01465129
+CENG322 Section 0NA
+Software Project
+*/
+/*
+Paolo Brancato N01434080
+CENG322 Section ONC
+Software Project
+*/
+
 package ca.theseconddawn.it.a.l.i.e;
-/*Vladislav Vassilyev n01436627 */
+
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
@@ -15,7 +36,7 @@ public class ConfigurationActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.settings, new SettingsFragment())
+                    .replace(R.id.TheSecondDawnSettings, new SettingsFragment())
                     .commit();
         }
         ActionBar actionBar = getSupportActionBar();

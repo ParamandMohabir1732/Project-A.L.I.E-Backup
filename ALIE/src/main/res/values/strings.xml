@@ -1,41 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><!-- Paramand Mohabir N01421732 CENG322 Section 0NC Software Project -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Paramand Mohabir N01421732 CENG322 Section 0NC Software Project -->
 <!-- Vladislav Vassilyev N01436627 CENG322 SECTION 0NB Software Project -->
 <!-- Dave Patel N01465129 CENG322 SECTION 0NA Software Project -->
 <!-- Paolo Brancato N01434080 CENG322 SECTION 0NC Software Project -->
 <resources>
+    <!-- App Name -->
     <string name="app_name">A.L.I.E</string>
+
+    <!-- Alert Dialog -->
     <string name="builderTitle">A.L.I.E</string>
     <string name="builderMessage">Are you sure you want to exit?</string>
     <string name="builderNegativeButton">No</string>
     <string name="builderPositiveButton">Yes</string>
+
+    <!-- Navigation Menu Titles -->
     <string name="titleHome">Home</string>
-    <string name="imageView1">This is the image of my App Icon that will be displayed in the Navigation Drawer.</string>
+
+    <!-- ToolBar Menu Titles -->
+    <string name="titleSettings">Settings</string>
+
+    <!-- Navigation Header -->
     <string name="textView1">The Second Dawn</string>
     <string name="textView2">A.L.I.E@support.ca</string>
+    <string name="imageView1">This is the image of my App Icon that will be displayed in the Navigation Drawer.</string>
+
+    <!-- Navigation Drawer Toggle -->
     <string name="openNavigationDrawer">Open Navigation Drawer</string>
     <string name="closeNavigationDrawer">Close Navigation Drawer</string>
-    <string name="titleSettings">Settings</string>
+
+    <!-- Toast Messages -->
     <string name="toastMessage1">Opening Settings…</string>
     <string name="title_activity_configuration">ConfigurationActivity</string>
 
     <!-- Controls Titles -->
     <string name="Portrait">Orientation</string>
-    <string name="Loudness">Speaker loudness</string>
-    <string name="LED">LED control</string>
-    <string name="FanControl">Fan control</string>
+    <string name="Loudness">Speaker Volume</string>
+    <string name="LED">LED Control</string>
+    <string name="FanControl">Fan Control</string>
 
-    <!-- Sound control -->
+    <!-- Sound Control -->
     <string name="Volume">Speaker Volume</string>
-    
+
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
-    <string name="led_color">Set LED color</string>
+    <string name="led_color">Set LED Color</string>
 
     <!-- Sync Preferences -->
-    <string name="sync_title">Sync email periodically</string>
-    <string name="rotation_title">Current screen orientation</string>
+    <string name="sync_title">Sync Email Periodically</string>
+    <string name="rotation_title">Current Screen Orientation</string>
     <string name="rotation_summary_on">Landscape
     </string>
     <string name="rotation_summary_off">Portrait</string>
     <string name="Fan_on_off">Fan ON/OFF</string>
+
+    <!-- Login Screen -->
+    <string name="textView3">A.L.I.E</string>
+    <string name="imageView2">This is the image of my App Icon that will be displayed in the Login Screen</string>
+    <string name="textView4">Your Amazing A.I</string>
+    <string name="editText1">Email Address:</string>
+    <string name="editText2">Password:</string>
+    <string name="button1">LOGIN</string>
+    <string name="textView5">Register</string>
+    <string name="textView6">Forgot Password?</string>
 </resources>
