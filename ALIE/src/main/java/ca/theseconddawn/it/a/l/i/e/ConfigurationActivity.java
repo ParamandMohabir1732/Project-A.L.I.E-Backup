@@ -34,10 +34,7 @@ public class ConfigurationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.settings_activity);
         if (savedInstanceState == null) {
-            getSupportFragmentManager()
-                    .beginTransaction()
-                    .replace(R.id.TheSecondDawnSettings, new SettingsFragment())
-                    .commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnSettings, new SettingsFragment()).commit();
         }
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {

@@ -63,8 +63,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
 
         if (savedInstanceState == null) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new HomeFrag()).commit();
-        navigationView.setCheckedItem(R.id.TheSecondDawnNavHome);
+            getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new HomeFrag()).commit();
+            navigationView.setCheckedItem(R.id.TheSecondDawnNavHome);
         }
     }
 
@@ -95,11 +95,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return super.onOptionsItemSelected(item);
     }
 
-    public void onBackPressed () {
+    public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        }
-        else {
+        } else {
             super.onBackPressed();
         }
 
