@@ -29,10 +29,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -41,12 +45,14 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private EditText editTextUsername, editTextDate, editTextEmail, editTextPassword;
     private ProgressBar progressBar;
 
+    public FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
         title = findViewById(R.id.TheSecondDawnTextView7);
         title.setOnClickListener(this);
@@ -120,5 +126,30 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             editTextPassword.setError("Your Password Should be at Least 6 Characters Long!");
             editTextPassword.requestFocus();
         }
+
+        progressBar.setVisibility(View.VISIBLE);
+        mAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(task -> {
+                    if(task.isSuccessful()) {
+                        UserClass user = new UserClass(username, date, email);
+
+                        FirebaseDatabase.getInstance().getReference("Users")
+                                .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                                .setValue(user).addOnCompleteListener(task1 -> {
+                                    if (task1.isSuccessful()) {
+                                        Toast.makeText(getBaseContext(), "User has been Registered Successfully!", Toast.LENGTH_LONG).show();
+                                        progressBar.setVisibility(View.GONE);
+                                    } else {
+                                        Toast.makeText(getBaseContext(), "Failed to Register!", Toast.LENGTH_LONG).show();
+                                        progressBar.setVisibility(View.GONE);
+                                    }
+                                });
+                    }
+
+                    else {
+                        Toast.makeText(getBaseContext(), "Failed to Register!", Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.GONE);
+                    }
+                });
     }
 }
