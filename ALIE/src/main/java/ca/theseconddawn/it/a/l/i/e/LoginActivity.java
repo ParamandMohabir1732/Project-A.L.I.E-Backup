@@ -31,6 +31,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -112,6 +113,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 assert user != null;
                 if (user.isEmailVerified()) {
                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                    Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                 } else {
                     user.sendEmailVerification();
@@ -124,5 +126,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 progressBar.setVisibility(View.GONE);
             }
         });
+    }
+
+    public void onBackPressed() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+        builder.setTitle(R.string.builderTitle);
+        builder.setMessage(R.string.builderMessage);
+        builder.setIcon(R.mipmap.ic_launcher_round);
+        builder.setCancelable(true);
+        builder.setNegativeButton(R.string.builderNegativeButton, ((dialogInterface, i) -> dialogInterface.cancel()));
+        builder.setPositiveButton(R.string.builderPositiveButton, ((dialogInterface, i) -> finish()));
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
     }
 }
