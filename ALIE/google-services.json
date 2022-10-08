@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1054372553945",
+    "project_id": "alie-theseconddawn",
+    "storage_bucket": "alie-theseconddawn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054372553945:android:abf6876a4aee7162738ac8",
+        "android_client_info": {
+          "package_name": "ca.theseconddawn.it.a.l.i.e"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054372553945-roq48o2uba955m1e2n31ik8nj1q5b740.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACEG8XutYk5nhwK252l-DoUN2ZdY4v2hI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054372553945-roq48o2uba955m1e2n31ik8nj1q5b740.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
