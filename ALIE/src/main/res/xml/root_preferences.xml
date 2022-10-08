@@ -4,7 +4,6 @@
 
     <PreferenceCategory app:title="@string/Portrait">
         <SwitchPreferenceCompat
-            app:dependency="sync"
             app:key="attachment"
             app:summaryOff="@string/rotation_summary_off"
             app:summaryOn="@string/rotation_summary_on"
