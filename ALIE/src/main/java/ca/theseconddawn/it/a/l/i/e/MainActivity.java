@@ -95,6 +95,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(settings);
             return true;
         }
+        if (item.getItemId() == R.id.menu_item1) {
+            //do your function here
+            Toast.makeText (this, "Help", Toast.LENGTH_SHORT).show();
+        }
+        if (item.getItemId() == R.id.menu_item2) {
+            //do your function here
+            Toast.makeText(this , "Volume", Toast.LENGTH_SHORT).show();
+        }
+
+        if (item.getItemId() == R.id.menu_item3) {
+            //do your function here
+            Toast.makeText(this , "Color", Toast.LENGTH_SHORT).show();
+        }
+
+        if (item.getItemId() == R.id.menu_item4) {
+            //do your function here
+            Toast.makeText(this , "Review", Toast.LENGTH_SHORT).show();
+        }
+
+
         return super.onOptionsItemSelected(item);
     }
 
