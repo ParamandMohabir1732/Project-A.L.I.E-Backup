@@ -10,4 +10,11 @@
             android:title="@string/titleHome" />
     </group>
 
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/TheSecondDawnNavSpeaker"
+            android:icon="@drawable/ic_speaker"
+            android:title="@string/volume" />
+    </group>
+
 </menu>

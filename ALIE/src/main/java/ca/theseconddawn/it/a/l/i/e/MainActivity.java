@@ -73,7 +73,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (item.getItemId() == R.id.TheSecondDawnNavHome) {
             getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new HomeFrag()).commit();
         }
-        drawerLayout.closeDrawer(GravityCompat.START);
+        if (item.getItemId() == R.id.TheSecondDawnNavSpeaker) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new SpeakerFrag()).commit();
+        }
+            drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 

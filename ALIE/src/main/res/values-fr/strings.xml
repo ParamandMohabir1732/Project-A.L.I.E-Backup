@@ -36,4 +36,5 @@
     <string name="rotation_summary_on">Paysage</string>
     <string name="rotation_summary_off">Portrait</string>
     <string name="Fan_on_off">Ventilateur MARCHE/ARRÊT</string>
+    <string name="volume">Volume</string>
 </resources>
