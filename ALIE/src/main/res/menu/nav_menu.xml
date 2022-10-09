@@ -17,4 +17,11 @@
             android:title="@string/volume" />
     </group>
 
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/smart_fan"
+            android:icon="@drawable/smart_fan"
+            android:title="@string/smart_fan" />
+    </group>
+
 </menu>

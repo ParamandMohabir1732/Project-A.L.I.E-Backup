@@ -37,4 +37,5 @@
     <string name="rotation_summary_off">Portrait</string>
     <string name="Fan_on_off">Ventilateur MARCHE/ARRÊT</string>
     <string name="volume">Volume</string>
+    <string name="smart_fan">Smart Fan</string>
 </resources>
