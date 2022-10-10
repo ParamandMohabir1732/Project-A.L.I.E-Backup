@@ -22,6 +22,10 @@ Software Project
 package ca.theseconddawn.it.a.l.i.e;
 
 import static ca.theseconddawn.it.a.l.i.e.R.string.toastMessage1;
+import static ca.theseconddawn.it.a.l.i.e.R.string.toastMessage2;
+import static ca.theseconddawn.it.a.l.i.e.R.string.toastMessage3;
+import static ca.theseconddawn.it.a.l.i.e.R.string.toastMessage4;
+import static ca.theseconddawn.it.a.l.i.e.R.string.toastMessage5;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -73,10 +77,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (item.getItemId() == R.id.TheSecondDawnNavHome) {
             getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new HomeFrag()).commit();
         }
-        if (item.getItemId() == R.id.TheSecondDawnNavSpeaker) {
+
+        if (item.getItemId() == R.id.TheSecondDawnNavVolume) {
             getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new SpeakerFrag()).commit();
         }
-            drawerLayout.closeDrawer(GravityCompat.START);
+
+        if (item.getItemId() == R.id.TheSecondDawnNavFan) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new SmartFanFrag()).commit();
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 
@@ -95,26 +104,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             startActivity(settings);
             return true;
         }
-        if (item.getItemId() == R.id.menu_item1) {
-            //do your function here
-            Toast.makeText (this, "Help", Toast.LENGTH_SHORT).show();
-        }
-        if (item.getItemId() == R.id.menu_item2) {
-            //do your function here
-            Toast.makeText(this , "Volume", Toast.LENGTH_SHORT).show();
+
+        if (item.getItemId() == R.id.TheSecondDawnToolBarHelp) {
+            Toast.makeText(this, toastMessage2, Toast.LENGTH_LONG).show();
         }
 
-        if (item.getItemId() == R.id.menu_item3) {
-            //do your function here
-            Toast.makeText(this , "Color", Toast.LENGTH_SHORT).show();
+        if (item.getItemId() == R.id.TheSecondDawnToolBarVolume) {
+            Toast.makeText(this, toastMessage3, Toast.LENGTH_LONG).show();
         }
 
-        if (item.getItemId() == R.id.menu_item4) {
-            //do your function here
-            Toast.makeText(this , "Review", Toast.LENGTH_SHORT).show();
+        if (item.getItemId() == R.id.TheSecondDawnToolBarColor) {
+            Toast.makeText(this, toastMessage4, Toast.LENGTH_LONG).show();
         }
 
-
+        if (item.getItemId() == R.id.TheSecondDawnToolBarReview) {
+            Toast.makeText(this, toastMessage5, Toast.LENGTH_LONG).show();
+        }
         return super.onOptionsItemSelected(item);
     }
 
