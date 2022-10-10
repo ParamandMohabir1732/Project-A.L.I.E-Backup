@@ -64,8 +64,7 @@
     <!-- Sync Preferences -->
     <string name="sync_title">Sync Email Periodically</string>
     <string name="rotation_title">Current Screen Orientation</string>
-    <string name="rotation_summary_on">Landscape
-    </string>
+    <string name="rotation_summary_on">Landscape</string>
     <string name="rotation_summary_off">Portrait</string>
     <string name="Fan_on_off">Fan ON/OFF</string>
 

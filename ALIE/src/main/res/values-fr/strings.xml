@@ -29,11 +29,36 @@
     <string name="Volume">Volume du haut-parleur</string>
 
     <!-- Messages Preferences -->
+    <string name="signature_title">Votre signature</string>
     <string name="led_color">Contrôle des voyants</string>
 
     <!-- Sync Preferences -->
+    <string name="sync_title">Synchroniser périodiquement les e-mails</string>
     <string name="rotation_title">Orientation actuelle de lécran</string>
     <string name="rotation_summary_on">Paysage</string>
     <string name="rotation_summary_off">Portrait</string>
     <string name="Fan_on_off">Ventilateur MARCHE/ARRÊT</string>
+
+    <!-- Login Screen -->
+    <string name="textView3">A.L.I.E</string>
+    <string name="imageView2">Ceci est l'image de mon icône d'application qui sera affichée dans l'écran de connexion</string>
+    <string name="textView4">Votre incroyable A.I</string>
+    <string name="editText1">Adresse e-mail:</string>
+    <string name="editText2">Mot de passe:</string>
+    <string name="button1">CONNEXION</string>
+    <string name="textView5">S'inscrire</string>
+    <string name="textView6">Mot de passe oublié?</string>
+
+    <!-- Register Screen -->
+    <string name="textView7">A.L.I.E</string>
+    <string name="imageView3">Ceci est l'image de mon icône d'application qui sera affichée dans l'écran d'enregistrement</string>
+    <string name="textView8">Votre incroyable A.I</string>
+    <string name="editText3">Nom d'utilisateur:</string>
+    <string name="editText4">Date de naissance:</string>
+    <string name="editText5">Adresse e-mail:</string>
+    <string name="editText6">Mot de passe:</string>
+    <string name="button2">S'INSCRIRE</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button3">Autoriser l'accès aux fichiers</string>
 </resources>
