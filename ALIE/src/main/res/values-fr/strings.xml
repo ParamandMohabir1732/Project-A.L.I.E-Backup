@@ -41,24 +41,24 @@
 
     <!-- Login Screen -->
     <string name="textView3">A.L.I.E</string>
-    <string name="imageView2">Ceci est l'image de mon icône d'application qui sera affichée dans l'écran de connexion</string>
+    <string name="imageView2">Ceci est limage de mon icône dapplication qui sera affichée dans lécran de connexion</string>
     <string name="textView4">Votre incroyable A.I</string>
     <string name="editText1">Adresse e-mail:</string>
     <string name="editText2">Mot de passe:</string>
     <string name="button1">CONNEXION</string>
-    <string name="textView5">S'inscrire</string>
+    <string name="textView5">Sinscrire</string>
     <string name="textView6">Mot de passe oublié?</string>
 
     <!-- Register Screen -->
     <string name="textView7">A.L.I.E</string>
-    <string name="imageView3">Ceci est l'image de mon icône d'application qui sera affichée dans l'écran d'enregistrement</string>
+    <string name="imageView3">Ceci est limage de mon icône dapplication qui sera affichée dans lécran denregistrement</string>
     <string name="textView8">Votre incroyable A.I</string>
-    <string name="editText3">Nom d'utilisateur:</string>
+    <string name="editText3">Nom dutilisateur:</string>
     <string name="editText4">Date de naissance:</string>
     <string name="editText5">Adresse e-mail:</string>
     <string name="editText6">Mot de passe:</string>
-    <string name="button2">S'INSCRIRE</string>
+    <string name="button2">SINSCRIRE</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="button3">Autoriser l'accès aux fichiers</string>
+    <string name="button3">Autoriser laccès aux fichiers</string>
 </resources>
