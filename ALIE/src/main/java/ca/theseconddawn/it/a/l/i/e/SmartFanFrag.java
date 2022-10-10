@@ -61,7 +61,7 @@ public class SmartFanFrag extends Fragment {
             final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
             builder.setTitle(R.string.builder2Title);
             builder.setMessage(R.string.builder2Message);
-            builder.setPositiveButton(R.string.builder2PostiveButton, (dialog, which) -> ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION));
+            builder.setPositiveButton(R.string.builder2PositiveButton, (dialog, which) -> ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION));
             builder.setNegativeButton(R.string.builder2NegativeButton, (dialog, which) -> dialog.dismiss()).create().show();
         } else {
             ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION);

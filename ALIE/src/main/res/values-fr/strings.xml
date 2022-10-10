@@ -15,7 +15,7 @@
     <string name="builder2Title">Permission requise!</string>
     <string name="builder2Message">Une autorisation est requise pour accéder au stockage!</string>
     <string name="builder2NegativeButton">Refuser lautorisation</string>
-    <string name="builder2PostiveButton">Donner la permission</string>
+    <string name="builder2PositiveButton">Donner la permission</string>
 
     <!-- Navigation Menu Titles -->
     <string name="titleHome">Maison</string>

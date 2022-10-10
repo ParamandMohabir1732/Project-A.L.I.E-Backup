@@ -14,7 +14,7 @@
     <string name="builder2Title">Permission Needed!</string>
     <string name="builder2Message">Permission is Required to Access Storage!</string>
     <string name="builder2NegativeButton">Deny Permission</string>
-    <string name="builder2PostiveButton">Grant Permission</string>
+    <string name="builder2PositiveButton">Grant Permission</string>
 
     <!-- Navigation Menu Titles -->
     <string name="titleHome">Home</string>
