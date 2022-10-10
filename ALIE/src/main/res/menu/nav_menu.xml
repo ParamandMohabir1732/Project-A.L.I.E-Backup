@@ -12,16 +12,16 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/TheSecondDawnNavSpeaker"
+            android:id="@+id/TheSecondDawnNavVolume"
             android:icon="@drawable/ic_speaker"
-            android:title="@string/volume" />
+            android:title="@string/titleSpeaker" />
     </group>
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/smart_fan"
-            android:icon="@drawable/smart_fan"
-            android:title="@string/smart_fan" />
+            android:id="@+id/TheSecondDawnNavFan"
+            android:icon="@drawable/ic_fan"
+            android:title="@string/titleFan" />
     </group>
 
 </menu>

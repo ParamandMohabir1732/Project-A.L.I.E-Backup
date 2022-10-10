@@ -1,81 +1,80 @@
+/*
+Paramand Mohabir N01421732
+CENG322 Section 0NC
+Software Project
+*/
+/*
+Vladislav Vassilyev N01436627
+CENG322 Section 0NB
+Software Project
+*/
+/*
+Dave Patel N01465129
+CENG322 Section 0NA
+Software Project
+*/
+/*
+Paolo Brancato N01434080
+CENG322 Section ONC
+Software Project
+*/
+
 package ca.theseconddawn.it.a.l.i.e;
-/*Vladislav Vassilyev, N01436627 10/09/2022*/
+
 import android.Manifest;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+
 public class SmartFanFrag extends Fragment {
-    private int STORAGE_PERMISSION = 1;
 
-    public SmartFanFrag() {
-        // Required empty public constructor
-    }
-//Code for prompting for runtime permission
+    private Button requestPermission;
+    private final int STORAGE_PERMISSION = 1;
+
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        Button requestPermission = (Button) getView().findViewById(R.id.permission);
-        requestPermission.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)==PackageManager.PERMISSION_GRANTED){
-                    Toast.makeText(getActivity(), "The permision was granted", Toast.LENGTH_SHORT).show();
-                }
-                else{ requestStoragePermission(); }
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.fragment_fan, container, false);
 
-
+        requestPermission = view.findViewById(R.id.TheSecondDawnButton3);
+        requestPermission.setOnClickListener(v -> {
+            if (ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(getActivity(), R.string.toastMessage6, Toast.LENGTH_SHORT).show();
+            } else {
+                requestStoragePermission();
             }
         });
-
-        return inflater.inflate(R.layout.fan_frag, container, false);
+        return view;
     }
-    private void requestStoragePermission(){
-        if(ActivityCompat.shouldShowRequestPermissionRationale(getActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)){
-            new AlertDialog.Builder(getActivity())
-                    .setTitle("Permission Needed")
-                    .setMessage("permission needed for proper functionality")
-                    .setPositiveButton("Grant permission", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION);
 
-                        }
-                    })
-                    .setNegativeButton("Deny permission", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.dismiss();
-                        }
-                    })
-                    .create().show();
-        }
-        else {
-            ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION);
+    private void requestStoragePermission() {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)) {
+            final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+            builder.setTitle(R.string.builder2Title);
+            builder.setMessage(R.string.builder2Message);
+            builder.setPositiveButton(R.string.builder2PostiveButton, (dialog, which) -> ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION));
+            builder.setNegativeButton(R.string.builder2NegativeButton, (dialog, which) -> dialog.dismiss()).create().show();
+        } else {
+            ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION);
         }
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if(requestCode == STORAGE_PERMISSION){
-            if(grantResults.length > 0 && grantResults[0]  == PackageManager.PERMISSION_GRANTED){
-                Toast.makeText(getActivity(),"Permission Granted", Toast.LENGTH_LONG).show();
-            }
-            else{
-                Toast.makeText(getActivity(),"Permission Denied", Toast.LENGTH_LONG).show();
+        if (requestCode == STORAGE_PERMISSION) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(getActivity(), R.string.toastMessage7, Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getActivity(), R.string.toastMessage8, Toast.LENGTH_LONG).show();
             }
         }
     }

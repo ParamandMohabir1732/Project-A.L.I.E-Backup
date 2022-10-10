@@ -7,12 +7,12 @@
     tools:context=".SmartFanFrag">
 
     <Button
-        android:id="@+id/permission"
+        android:id="@+id/TheSecondDawnButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
         android:layout_marginEnd="162dp"
-        android:text="@string/request_permission"
+        android:text="@string/button3"
         android:layout_marginBottom="82dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

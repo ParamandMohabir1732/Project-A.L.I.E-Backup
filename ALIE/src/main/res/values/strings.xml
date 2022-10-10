@@ -6,17 +6,27 @@
     <!-- App Name -->
     <string name="app_name">A.L.I.E</string>
 
-    <!-- Alert Dialog -->
+    <!-- Alert Dialogs -->
     <string name="builderTitle">A.L.I.E</string>
     <string name="builderMessage">Are you sure you want to exit?</string>
     <string name="builderNegativeButton">No</string>
     <string name="builderPositiveButton">Yes</string>
+    <string name="builder2Title">Permission Needed!</string>
+    <string name="builder2Message">Permission is Required to Access Storage!</string>
+    <string name="builder2NegativeButton">Deny Permission</string>
+    <string name="builder2PostiveButton">Grant Permission</string>
 
     <!-- Navigation Menu Titles -->
     <string name="titleHome">Home</string>
+    <string name="titleSpeaker">Volume</string>
+    <string name="titleFan">Smart Fan</string>
 
     <!-- ToolBar Menu Titles -->
     <string name="titleSettings">Settings</string>
+    <string name="titleHelp">Help</string>
+    <string name="titleVolume">Volume</string>
+    <string name="titleColor">Color</string>
+    <string name="titleReview">Review</string>
 
     <!-- Navigation Header -->
     <string name="textView1">The Second Dawn</string>
@@ -29,6 +39,13 @@
 
     <!-- Toast Messages -->
     <string name="toastMessage1">Opening Settings…</string>
+    <string name="toastMessage2">Help</string>
+    <string name="toastMessage3">Volume</string>
+    <string name="toastMessage4">Color</string>
+    <string name="toastMessage5">Review</string>
+    <string name="toastMessage6">Permission is Granted!</string>
+    <string name="toastMessage7">Permission Granted!</string>
+    <string name="toastMessage8">Permission Denied!</string>
     <string name="title_activity_configuration">ConfigurationActivity</string>
 
     <!-- Controls Titles -->
@@ -63,23 +80,16 @@
     <string name="textView6">Forgot Password?</string>
 
     <!-- Register Screen -->
-    <string name="imageView3">This is the image of my App Icon that will be displayed in the Registration Screen</string>
     <string name="textView7">A.L.I.E</string>
-    <string name="textView8">Our Amazing App</string>
+    <string name="imageView3">This is the image of my App Icon that will be displayed in the Registration Screen</string>
+    <string name="textView8">Your Amazing A.I</string>
     <string name="editText3">Username:</string>
     <string name="editText4">Date of Birth:</string>
     <string name="editText5">Email Address:</string>
     <string name="editText6">Password:</string>
     <string name="button2">REGISTER</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="volume">Volume</string>
-    <string name="smart_fan">Smart Fan</string>
-    <string name="request_permission">Allow access to files</string>
-    <string name="menu_item1">Help</string>
-    <string name="menu_item4">Review</string>
-    <string name="menu_item2">Volume</string>
-    <string name="menu_item3">Color</string>
 
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="button3">Allow access to files</string>
 
 </resources>
