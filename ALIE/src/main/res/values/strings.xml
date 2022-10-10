@@ -20,6 +20,7 @@
     <string name="titleHome">Home</string>
     <string name="titleSpeaker">Volume</string>
     <string name="titleFan">Smart Fan</string>
+    <string name="titleLED">LED Lights</string>
 
     <!-- ToolBar Menu Titles -->
     <string name="titleSettings">Settings</string>

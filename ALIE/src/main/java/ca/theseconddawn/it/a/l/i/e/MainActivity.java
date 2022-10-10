@@ -85,6 +85,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if (item.getItemId() == R.id.TheSecondDawnNavFan) {
             getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new SmartFanFrag()).commit();
         }
+
+        if (item.getItemId() == R.id.TheSecondDawnNavLED) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new LEDFrag()).commit();
+        }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }

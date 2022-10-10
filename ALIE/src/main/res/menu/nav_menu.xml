@@ -24,4 +24,11 @@
             android:title="@string/titleFan" />
     </group>
 
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/TheSecondDawnNavLED"
+            android:icon="@drawable/ic_led"
+            android:title="@string/titleLED" />
+    </group>
+
 </menu>
