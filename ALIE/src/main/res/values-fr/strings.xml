@@ -36,6 +36,11 @@
     <string name="rotation_summary_on">Paysage</string>
     <string name="rotation_summary_off">Portrait</string>
     <string name="Fan_on_off">Ventilateur MARCHE/ARRÊT</string>
-    <string name="volume">Volume</string>
-    <string name="smart_fan">Smart Fan</string>
+    <string name="volume">Le volume</string>
+    <string name="smart_fan">Ventilateur intelligent</string>
+    <string name="request_permission">Autoriser l'accès aux fichiers</string>
+    <string name="menu_item1">Aider</string>
+    <string name="menu_item4">Examen</string>
+    <string name="menu_item2">Le volume</string>
+    <string name="menu_item3">Couleur</string>
 </resources>
