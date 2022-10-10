@@ -4,33 +4,63 @@
 <!-- Dave Patel N01465129 CENG322 SECTION 0NA Software Project -->
 <!-- Paolo Brancato N01434080 CENG322 SECTION 0NC Software Project -->
 <resources>
+    <!-- App Name -->
     <string name="app_name">A.L.I.E</string>
+
+    <!-- Alert Dialogs -->
     <string name="builderTitle">A.L.I.E</string>
-    <string name="builderMessage">Êtes-vous srû de vouloir quitter?</string>
+    <string name="builderMessage">Êtes-vous sûr de vouloir quitter?</string>
     <string name="builderNegativeButton">Non</string>
     <string name="builderPositiveButton">Oui</string>
+    <string name="builder2Title">Permission requise!</string>
+    <string name="builder2Message">Une autorisation est requise pour accéder au stockage!</string>
+    <string name="builder2NegativeButton">Refuser lautorisation</string>
+    <string name="builder2PostiveButton">Donner la permission</string>
+
+    <!-- Navigation Menu Titles -->
     <string name="titleHome">Maison</string>
-    <string name="imageView1">Il s\'agit de l\'image de l\'icône de mon application qui sera affichée dans le tiroir de navigation.</string>
-    <string name="textView1">La deuxième aube</string>
+    <string name="titleSpeaker">Le volume</string>
+    <string name="titleFan">Ventilateur intelligent</string>
+
+    <!-- ToolBar Menu Titles -->
+    <string name="titleSettings">Réglages</string>
+    <string name="titleHelp">Aider</string>
+    <string name="titleVolume">Le volume</string>
+    <string name="titleColor">Couleur</string>
+    <string name="titleReview">Examen</string>
+
+    <!-- Navigation Header -->
+    <string name="textView1">The Second Dawn</string>
     <string name="textView2">A.L.I.E@support.ca</string>
+    <string name="imageView1">Il sagit de limage de licône de mon application qui sera affichée dans le tiroir de navigation.</string>
+
+    <!-- Navigation Drawer Toggle -->
     <string name="openNavigationDrawer">Ouvrir le tiroir de navigation</string>
     <string name="closeNavigationDrawer">Fermer le tiroir de navigation</string>
-    <string name="titleSettings">Réglages</string>
-    <string name="toastMessage1">Paramètres douverture…</string>
-    <string name="title_activity_configuration">Activitédeconfiguration</string>
+
+    <!-- Toast Messages -->
+    <string name="toastMessage1">Ouverture des paramètres…</string>
+    <string name="toastMessage2">Aider</string>
+    <string name="toastMessage3">Le volume</string>
+    <string name="toastMessage4">Couleur</string>
+    <string name="toastMessage5">Examen</string>
+    <string name="toastMessage6">Lautorisation est accordée!</string>
+    <string name="toastMessage7">Permission accordée!</string>
+    <string name="toastMessage8">Permission refusée!</string>
+    <string name="title_activity_configuration">ConfigurationActivity</string>
 
     <!-- Controls Titles -->
     <string name="Portrait">Orientation</string>
     <string name="Loudness">Volume du haut-parleur</string>
-    <string name="LED">Contrôle des voyants</string>
+    <string name="LED">Contrôle des DEL</string>
     <string name="FanControl">Contrôle du ventilateur</string>
 
-    <!-- Sound control -->
+    <!-- Sound Control -->
     <string name="Volume">Volume du haut-parleur</string>
 
     <!-- Messages Preferences -->
     <string name="signature_title">Votre signature</string>
-    <string name="led_color">Contrôle des voyants</string>
+    <string name="led_color">Définir la couleur des voyants</string>
 
     <!-- Sync Preferences -->
     <string name="sync_title">Synchroniser périodiquement les e-mails</string>
@@ -59,6 +89,7 @@
     <string name="editText6">Mot de passe:</string>
     <string name="button2">SINSCRIRE</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment">Bonjour fragment vierge</string>
     <string name="button3">Autoriser laccès aux fichiers</string>
+
 </resources>
