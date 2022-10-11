@@ -92,4 +92,14 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="button3">Allow access to files</string>
 
+    <!-- LED Screen -->
+    <string name="textView9">LED Screen</string>
+    <string name="imageView4">This is an Image of my 1st LED Picture</string>
+    <string name="imageView5">This is an Image of my 2nd LED Picture</string>
+    <string name="imageView6">This is an Image of my 3rd LED Picture</string>
+    <string name="imageView7">This is an Image of my 4th LED Picture</string>
+    <string name="imageView8">This is an Image of my 5th LED Picture</string>
+    <string name="imageView9">This is an Image of my 6th LED Picture</string>
+
+
 </resources>
