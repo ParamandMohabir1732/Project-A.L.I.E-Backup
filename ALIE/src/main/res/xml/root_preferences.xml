@@ -30,7 +30,7 @@
     <PreferenceCategory android:title="@string/FanControl">
         <SwitchPreferenceCompat
             android:key="Fan"
-            android:title="@string/Fan_on_off" />
+            android:title="@string/fan_off_on" />
     </PreferenceCategory>
 
 </PreferenceScreen>

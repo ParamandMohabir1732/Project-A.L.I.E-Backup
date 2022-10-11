@@ -78,7 +78,7 @@
     <string name="rotation_title">Current Screen Orientation</string>
     <string name="rotation_summary_on">Landscape</string>
     <string name="rotation_summary_off">Portrait</string>
-    <string name="Fan_on_off">Fan ON/OFF</string>
+    <string name="fan_off_on">Fan OFF/ON</string>
 
     <!-- Login Screen -->
     <string name="textView3">A.L.I.E</string>

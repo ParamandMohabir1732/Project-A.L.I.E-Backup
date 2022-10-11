@@ -78,7 +78,7 @@
     <string name="rotation_title">Orientation actuelle de lécran</string>
     <string name="rotation_summary_on">Paysage</string>
     <string name="rotation_summary_off">Portrait</string>
-    <string name="Fan_on_off">Ventilateur MARCHE/ARRÊT</string>
+    <string name="fan_off_on">Ventilateur ARRÊT/MARCHE</string>
 
     <!-- Login Screen -->
     <string name="textView3">A.L.I.E</string>
