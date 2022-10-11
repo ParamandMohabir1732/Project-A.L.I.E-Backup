@@ -92,4 +92,12 @@
     <string name="hello_blank_fragment">Bonjour fragment vierge</string>
     <string name="button3">Autoriser laccès aux fichiers</string>
 
+    <!-- LED Screen -->
+    <string name="textView9">Ecran LED</string>
+    <string name="imageView4">Ceci est une image de ma 1ère image LED</string>
+    <string name="imageView5">Ceci est une image de ma 2ème image LED</string>
+    <string name="imageView6">Ceci est une image de ma 3ème image LED</string>
+    <string name="imageView7">Ceci est une image de ma 4ème image LED</string>
+    <string name="imageView8">Ceci est une image de ma 5ème image LED</string>
+    <string name="imageView9">Ceci est une image de ma 6ème image LED</string>
 </resources>
