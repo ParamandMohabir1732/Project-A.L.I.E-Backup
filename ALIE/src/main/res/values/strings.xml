@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!-- Paramand Mohabir N01421732 CENG322 Section 0NC Software Project -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Paramand Mohabir N01421732 CENG322 Section 0NC Software Project -->
 <!-- Vladislav Vassilyev N01436627 CENG322 SECTION 0NB Software Project -->
 <!-- Dave Patel N01465129 CENG322 SECTION 0NA Software Project -->
 <!-- Paolo Brancato N01434080 CENG322 SECTION 0NC Software Project -->
@@ -59,12 +60,22 @@
     <string name="snackbar1">Permission is Granted!</string>
     <string name="snackbar2">Permission is Denied!</string>
 
-    <!-- Settings Screen -->
+    <!-- Configuration Screen -->
     <!-- Controls Titles -->
     <string name="Portrait">Orientation</string>
     <string name="Loudness">Speaker Volume</string>
     <string name="LED">LED Control</string>
     <string name="FanControl">Fan Control</string>
+
+    <!-- Key Values -->
+    <string name="key1">Attachment</string>
+    <string name="key2">Volume</string>
+    <string name="key3">Reply</string>
+    <string name="key4">Fan</string>
+
+    <!-- Default Values -->
+    <string name="defaultValue">50</string>
+    <string name="defaultValue2">Red</string>
 
     <!-- Sound Control -->
     <string name="Volume">Speaker Volume</string>
