@@ -89,9 +89,6 @@
     <string name="editText6">Password:</string>
     <string name="button2">REGISTER</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="button3">Allow access to files</string>
-
     <!-- LED Screen -->
     <string name="textView9">LED Screen</string>
     <string name="imageView4">This is an Image of my 1st LED Picture</string>
@@ -101,5 +98,16 @@
     <string name="imageView8">This is an Image of my 5th LED Picture</string>
     <string name="imageView9">This is an Image of my 6th LED Picture</string>
 
+    <!-- Speaker Screen -->
+    <string name="textView10">Speaker Screen</string>
 
+    <!-- Smart Fan Screen -->
+    <string name="textView11">Smart Fan Screen</string>
+    <string name="imageView16">This is an Image of my 1st Fan Picture</string>
+    <string name="imageView17">This is an Image of my 2nd Fan Picture</string>
+    <string name="imageView18">This is an Image of my 3rd Fan Picture</string>
+    <string name="imageView19">This is an Image of my 4th Fan Picture</string>
+    <string name="imageView20">This is an Image of my 5th Fan Picture</string>
+    <string name="imageView21">This is an Image of my 6th Fan Picture</string>
+    <string name="button3">Allow access to files</string>
 </resources>

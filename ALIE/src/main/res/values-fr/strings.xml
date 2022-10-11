@@ -89,9 +89,6 @@
     <string name="editText6">Mot de passe:</string>
     <string name="button2">SINSCRIRE</string>
 
-    <string name="hello_blank_fragment">Bonjour fragment vierge</string>
-    <string name="button3">Autoriser laccès aux fichiers</string>
-
     <!-- LED Screen -->
     <string name="textView9">Ecran LED</string>
     <string name="imageView4">Ceci est une image de ma 1ère image LED</string>
@@ -100,4 +97,17 @@
     <string name="imageView7">Ceci est une image de ma 4ème image LED</string>
     <string name="imageView8">Ceci est une image de ma 5ème image LED</string>
     <string name="imageView9">Ceci est une image de ma 6ème image LED</string>
+
+    <!-- Speaker Screen -->
+    <string name="textView10">Speaker Screen</string>
+
+    <!-- Smart Fan Screen -->
+    <string name="textView11">Smart Fan Screen</string>
+    <string name="imageView16">This is an Image of my 1st Fan Picture</string>
+    <string name="imageView17">This is an Image of my 2nd Fan Picture</string>
+    <string name="imageView18">This is an Image of my 3rd Fan Picture</string>
+    <string name="imageView19">This is an Image of my 4th Fan Picture</string>
+    <string name="imageView20">This is an Image of my 5th Fan Picture</string>
+    <string name="imageView21">This is an Image of my 6th Fan Picture</string>
+    <string name="button3">Autoriser laccès aux fichiers</string>
 </resources>

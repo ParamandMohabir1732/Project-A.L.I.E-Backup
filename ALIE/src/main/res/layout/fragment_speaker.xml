@@ -4,84 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
-    android:orientation="horizontal"
+    android:background="@drawable/speaker_gradient"
     tools:context=".SpeakerFrag">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="45dp"
-        android:src="@drawable/speaker_1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="21dp"
-        android:layout_marginBottom="30dp"
-        android:src="@drawable/speaker_2"
-        app:layout_constraintBottom_toTopOf="@+id/imageView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView4"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="41dp"
-        android:layout_marginBottom="57dp"
-        android:src="@drawable/speaker_3"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+    <TextView
+        android:id="@+id/TheSecondDawnTextView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="@string/textView10"
+        android:textColor="@color/brightblue"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/TheSecondDawnImageView10"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="31dp"
-        android:src="@drawable/speaker_4"
-        app:layout_constraintBottom_toTopOf="@+id/imageView5"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        android:layout_marginTop="150dp"
+        android:contentDescription="@string/imageView4"
+        android:src="@drawable/led_lights_1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView6" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="45dp"
-        android:src="@drawable/speaker_5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        android:id="@+id/TheSecondDawnImageView11"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="150dp"
+        android:contentDescription="@string/imageView5"
+        android:src="@drawable/led_lights_2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="137dp"
-        android:layout_marginEnd="49dp"
-        android:layout_marginBottom="61dp"
-        android:src="@drawable/speaker_6"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        android:id="@+id/TheSecondDawnImageView12"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="310dp"
+        android:contentDescription="@string/imageView6"
+        android:src="@drawable/led_lights_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImageView13"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="310dp"
+        android:contentDescription="@string/imageView7"
+        android:src="@drawable/led_lights_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImageView14"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="470dp"
+        android:contentDescription="@string/imageView8"
+        android:src="@drawable/led_lights_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImageView15"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="470dp"
+        android:contentDescription="@string/imageView9"
+        android:src="@drawable/led_lights_6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
