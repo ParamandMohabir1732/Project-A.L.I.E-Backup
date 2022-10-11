@@ -49,6 +49,7 @@
     <string name="toastMessage8">Permission Denied!</string>
     <string name="title_activity_configuration">ConfigurationActivity</string>
 
+    <!-- Settings Screen -->
     <!-- Controls Titles -->
     <string name="Portrait">Orientation</string>
     <string name="Loudness">Speaker Volume</string>
