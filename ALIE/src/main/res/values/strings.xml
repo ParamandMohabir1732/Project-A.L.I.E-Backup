@@ -112,8 +112,6 @@
     <string name="lengthPasswordError2">Your Password Should be at Least 6 Characters Long!</string>
     <string name="firebaseReference">Users</string>
 
-    <!-- Home Screen -->
-
     <!-- LED Screen -->
     <string name="textView9">LED Screen</string>
     <string name="imageView4">This is an Image of my 1st LED Picture</string>
@@ -141,4 +139,9 @@
     <string name="imageView20">This is an Image of my 5th Fan Picture</string>
     <string name="imageView21">This is an Image of my 6th Fan Picture</string>
     <string name="button3">Allow access to files</string>
+
+    <!-- Home Screen -->
+    <string name="imageView22">This is an image of the App Icon in the Home Screen</string>
+    <string name="textView12">A.L.I.E</string>
+    <string name="textView13">Welcome to your Amazing A.I!</string>
 </resources>
