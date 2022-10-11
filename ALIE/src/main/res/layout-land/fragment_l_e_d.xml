@@ -4,97 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fan_gradient"
-    tools:context=".SmartFanFrag">
+    android:background="@drawable/led_gradient"
+    tools:context=".LEDFrag">
 
     <TextView
-        android:id="@+id/TheSecondDawnTextView11"
+        android:id="@+id/TheSecondDawnTextView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="236dp"
+        android:layout_marginStart="292dp"
         android:layout_marginTop="4dp"
         android:gravity="center"
-        android:text="@string/textView11"
-        android:textColor="@color/lightblue"
+        android:text="@string/textView9"
+        android:textColor="@color/orange"
         android:textSize="40sp"
         android:textStyle="bold|italic"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/TheSecondDawnImageView16"
+        android:id="@+id/TheSecondDawnImageView4"
         android:layout_width="165dp"
         android:layout_height="140dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="56dp"
-        android:contentDescription="@string/imageView16"
-        android:src="@drawable/smart_fan_1"
+        android:contentDescription="@string/imageView4"
+        android:src="@drawable/led_lights_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/TheSecondDawnImageView17"
+        android:id="@+id/TheSecondDawnImageView5"
         android:layout_width="165dp"
         android:layout_height="140dp"
         android:layout_marginStart="308dp"
         android:layout_marginTop="56dp"
-        android:contentDescription="@string/imageView17"
-        android:src="@drawable/smart_fan_2"
+        android:contentDescription="@string/imageView5"
+        android:src="@drawable/led_lights_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/TheSecondDawnImageView18"
+        android:id="@+id/TheSecondDawnImageView6"
         android:layout_width="165dp"
         android:layout_height="140dp"
         android:layout_marginStart="604dp"
         android:layout_marginTop="56dp"
-        android:contentDescription="@string/imageView18"
-        android:src="@drawable/smart_fan_3"
+        android:contentDescription="@string/imageView6"
+        android:src="@drawable/led_lights_3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/TheSecondDawnImageView19"
+        android:id="@+id/TheSecondDawnImageView7"
         android:layout_width="165dp"
         android:layout_height="140dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="196dp"
-        android:contentDescription="@string/imageView19"
-        android:src="@drawable/smart_fan_4"
+        android:contentDescription="@string/imageView7"
+        android:src="@drawable/led_lights_4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/TheSecondDawnImageView20"
+        android:id="@+id/TheSecondDawnImageView8"
         android:layout_width="165dp"
         android:layout_height="140dp"
         android:layout_marginStart="308dp"
         android:layout_marginTop="196dp"
-        android:contentDescription="@string/imageView20"
-        android:src="@drawable/smart_fan_5"
+        android:contentDescription="@string/imageView8"
+        android:src="@drawable/led_lights_5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/TheSecondDawnImageView21"
+        android:id="@+id/TheSecondDawnImageView9"
         android:layout_width="165dp"
         android:layout_height="140dp"
         android:layout_marginStart="604dp"
         android:layout_marginTop="196dp"
-        android:contentDescription="@string/imageView21"
-        android:src="@drawable/smart_fan_6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/TheSecondDawnButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="288dp"
-        android:layout_marginTop="172dp"
-        android:text="@string/button3"
-        android:textColor="@color/pink"
+        android:contentDescription="@string/imageView9"
+        android:src="@drawable/led_lights_6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
