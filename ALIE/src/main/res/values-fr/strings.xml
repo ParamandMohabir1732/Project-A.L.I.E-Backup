@@ -139,4 +139,15 @@
     <string name="imageView20">Ceci est une image de ma 5ème photo de fan</string>
     <string name="imageView21">Ceci est une image de ma 6ème photo de fan</string>
     <string name="button3">Autoriser laccès aux fichiers</string>
+
+    <!-- Home Screen -->
+    <string name="imageView22">Ceci est une image de licône de lapplication sur lécran daccueil</string>
+    <string name="textView12">A.L.I.E</string>
+    <string name="textView13">Bienvenue dans votre Amazing A.I!</string>
+    <string name="imageView23">Ceci est une image de ma 1ère photo à la maison</string>
+    <string name="imageView24">Ceci est une image de ma 2ème photo à la maison</string>
+    <string name="imageView25">Ceci est une image de ma 3ème photo à la maison</string>
+    <string name="imageView26">Ceci est une image de ma 4e photo à la maison</string>
+    <string name="imageView27">Ceci est une image de ma 5e photo à la maison</string>
+    <string name="imageView28">Ceci est une image de ma 6e photo à la maison</string>
 </resources>

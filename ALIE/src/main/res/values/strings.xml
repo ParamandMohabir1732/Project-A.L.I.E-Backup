@@ -144,4 +144,10 @@
     <string name="imageView22">This is an image of the App Icon in the Home Screen</string>
     <string name="textView12">A.L.I.E</string>
     <string name="textView13">Welcome to your Amazing A.I!</string>
+    <string name="imageView23">This is an Image of my 1st Home Picture</string>
+    <string name="imageView24">This is an Image of my 2nd Home Picture</string>
+    <string name="imageView25">This is an Image of my 3rd Home Picture</string>
+    <string name="imageView26">This is an Image of my 4th Home Picture</string>
+    <string name="imageView27">This is an Image of my 5th Home Picture</string>
+    <string name="imageView28">This is an Image of my 6th Home Picture</string>
 </resources>
