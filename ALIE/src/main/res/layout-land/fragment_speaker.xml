@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/speaker_gradient"
+    tools:context=".SpeakerFrag">
+
+    <TextView
+        android:id="@+id/TheSecondDawnTextView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="252dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="@string/textView10"
+        android:textColor="@color/brightblue"
+        android:textSize="40sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImageView10"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@string/imageView10"
+        android:src="@drawable/speaker_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImageView11"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@string/imageView11"
+        android:src="@drawable/speaker_2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImageView12"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="604dp"
+        android:layout_marginTop="56dp"
+        android:contentDescription="@string/imageView12"
+        android:src="@drawable/speaker_3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImageView13"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="196dp"
+        android:contentDescription="@string/imageView13"
+        android:src="@drawable/speaker_4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImageView14"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="308dp"
+        android:layout_marginTop="196dp"
+        android:contentDescription="@string/imageView14"
+        android:src="@drawable/speaker_5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImageView15"
+        android:layout_width="165dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="604dp"
+        android:layout_marginTop="196dp"
+        android:contentDescription="@string/imageView15"
+        android:src="@drawable/speaker_6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
