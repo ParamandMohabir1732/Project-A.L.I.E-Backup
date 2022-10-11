@@ -27,8 +27,8 @@
         android:layout_height="140dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="150dp"
-        android:contentDescription="@string/imageView4"
-        android:src="@drawable/led_lights_1"
+        android:contentDescription="@string/imageView10"
+        android:src="@drawable/speaker_1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,8 +38,8 @@
         android:layout_height="140dp"
         android:layout_marginStart="228dp"
         android:layout_marginTop="150dp"
-        android:contentDescription="@string/imageView5"
-        android:src="@drawable/led_lights_2"
+        android:contentDescription="@string/imageView11"
+        android:src="@drawable/speaker_2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -49,8 +49,8 @@
         android:layout_height="140dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="310dp"
-        android:contentDescription="@string/imageView6"
-        android:src="@drawable/led_lights_3"
+        android:contentDescription="@string/imageView12"
+        android:src="@drawable/speaker_3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -60,8 +60,8 @@
         android:layout_height="140dp"
         android:layout_marginStart="228dp"
         android:layout_marginTop="310dp"
-        android:contentDescription="@string/imageView7"
-        android:src="@drawable/led_lights_4"
+        android:contentDescription="@string/imageView13"
+        android:src="@drawable/speaker_4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -71,8 +71,8 @@
         android:layout_height="140dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="470dp"
-        android:contentDescription="@string/imageView8"
-        android:src="@drawable/led_lights_5"
+        android:contentDescription="@string/imageView14"
+        android:src="@drawable/speaker_5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -82,8 +82,8 @@
         android:layout_height="140dp"
         android:layout_marginStart="228dp"
         android:layout_marginTop="470dp"
-        android:contentDescription="@string/imageView9"
-        android:src="@drawable/led_lights_6"
+        android:contentDescription="@string/imageView15"
+        android:src="@drawable/speaker_6"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

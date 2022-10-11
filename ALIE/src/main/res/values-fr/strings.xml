@@ -123,6 +123,12 @@
 
     <!-- Speaker Screen -->
     <string name="textView10">Écran du haut-parleur</string>
+    <string name="imageView10">Ceci est une image de ma 1ère image de conférencier</string>
+    <string name="imageView11">Il sagit dune image de ma 2e image de haut-parleur</string>
+    <string name="imageView12">Ceci est une image de mon 3e intervenant</string>
+    <string name="imageView13">Ceci est une image de mon 4e intervenant</string>
+    <string name="imageView14">Ceci est une image de mon 5e intervenant</string>
+    <string name="imageView15">Ceci est une image de ma 6e image dorateur</string>
 
     <!-- Smart Fan Screen -->
     <string name="textView11">Écran de ventilateur intelligent</string>

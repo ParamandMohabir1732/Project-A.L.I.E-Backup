@@ -112,6 +112,8 @@
     <string name="lengthPasswordError2">Your Password Should be at Least 6 Characters Long!</string>
     <string name="firebaseReference">Users</string>
 
+    <!-- Home Screen -->
+
     <!-- LED Screen -->
     <string name="textView9">LED Screen</string>
     <string name="imageView4">This is an Image of my 1st LED Picture</string>
@@ -123,6 +125,12 @@
 
     <!-- Speaker Screen -->
     <string name="textView10">Speaker Screen</string>
+    <string name="imageView10">This is an Image of my 1st Speaker Picture</string>
+    <string name="imageView11">This is an Image of my 2nd Speaker Picture</string>
+    <string name="imageView12">This is an Image of my 3rd Speaker Picture</string>
+    <string name="imageView13">This is an Image of my 4th Speaker Picture</string>
+    <string name="imageView14">This is an Image of my 5th Speaker Picture</string>
+    <string name="imageView15">This is an Image of my 6th Speaker Picture</string>
 
     <!-- Smart Fan Screen -->
     <string name="textView11">Smart Fan Screen</string>
