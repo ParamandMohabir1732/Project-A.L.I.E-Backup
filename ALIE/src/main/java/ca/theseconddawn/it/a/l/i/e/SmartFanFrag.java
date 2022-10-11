@@ -36,6 +36,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class SmartFanFrag extends Fragment {
 
     private Button requestPermission;
@@ -48,7 +50,10 @@ public class SmartFanFrag extends Fragment {
         requestPermission = view.findViewById(R.id.TheSecondDawnButton3);
         requestPermission.setOnClickListener(v -> {
             if (ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(getActivity(), R.string.toastMessage6, Toast.LENGTH_SHORT).show();
+                Snackbar snackbar = Snackbar.make(requireView(), R.string.snackbar1, Snackbar.LENGTH_LONG);
+                snackbar.setBackgroundTint(getResources().getColor(R.color.brightgreen));
+                snackbar.setTextColor(getResources().getColor(R.color.black));
+                snackbar.show();
             } else {
                 requestStoragePermission();
             }
@@ -63,6 +68,10 @@ public class SmartFanFrag extends Fragment {
             builder.setMessage(R.string.builder2Message);
             builder.setPositiveButton(R.string.builder2PositiveButton, (dialog, which) -> ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION));
             builder.setNegativeButton(R.string.builder2NegativeButton, (dialog, which) -> dialog.dismiss()).create().show();
+            Snackbar snackbar = Snackbar.make(requireView(), R.string.snackbar2, Snackbar.LENGTH_SHORT);
+            snackbar.setBackgroundTint(getResources().getColor(R.color.brightred));
+            snackbar.setTextColor(getResources().getColor(R.color.black));
+            snackbar.show();
         } else {
             ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION);
         }

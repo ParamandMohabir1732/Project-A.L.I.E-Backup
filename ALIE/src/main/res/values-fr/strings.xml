@@ -55,6 +55,10 @@
     <string name="toastMessage13">Failed to Register!</string>
     <string name="toastMessage14">Failed to Register!</string>
 
+    <!-- Snackbar Messages -->
+    <string name="snackbar1">Lautorisation est accordée!</string>
+    <string name="snackbar2">Lautorisation est refusée!</string>
+
     <!-- Settings Screen -->
     <!-- Controls Titles -->
     <string name="Portrait">Orientation</string>
