@@ -87,43 +87,43 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         String password = editTextPassword.getText().toString().trim();
 
         if (username.isEmpty()) {
-            editTextUsername.setError("Username is Required!");
+            editTextUsername.setError(getString(R.string.emptyUserError1));
             editTextUsername.requestFocus();
             return;
         }
 
         if (username.length() < 6) {
-            editTextUsername.setError("Your Username Should be at Least 6 Characters Long!");
+            editTextUsername.setError(getString(R.string.lengthUserError1));
             editTextUsername.requestFocus();
             return;
         }
 
         if (date.isEmpty()) {
-            editTextDate.setError("Date of Birth is Required!");
+            editTextDate.setError(getString(R.string.emptyDateError1));
             editTextDate.requestFocus();
             return;
         }
 
         if (email.isEmpty()) {
-            editTextEmail.setError("Email Address is Required!");
+            editTextEmail.setError(getString(R.string.emptyEmailError2));
             editTextEmail.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            editTextEmail.setError("Please Enter a Valid Email Address:");
+            editTextEmail.setError(getString(R.string.matchEmailError2));
             editTextEmail.requestFocus();
             return;
         }
 
         if (password.isEmpty()) {
-            editTextPassword.setError("Password is Required!");
+            editTextPassword.setError(getString(R.string.emptyPasswordError2));
             editTextPassword.requestFocus();
             return;
         }
 
         if (password.length() < 6) {
-            editTextPassword.setError("Your Password Should be at Least 6 Characters Long!");
+            editTextPassword.setError(getString(R.string.lengthPasswordError2));
             editTextPassword.requestFocus();
         }
 
@@ -132,17 +132,17 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             if (task.isSuccessful()) {
                 UserClass user = new UserClass(username, date, email);
 
-                FirebaseDatabase.getInstance().getReference("Users").child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).setValue(user).addOnCompleteListener(task1 -> {
+                FirebaseDatabase.getInstance().getReference(getString(R.string.firebaseReference)).child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).setValue(user).addOnCompleteListener(task1 -> {
                     if (task1.isSuccessful()) {
-                        Toast.makeText(RegisterActivity.this, "User has been Registered Successfully!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(RegisterActivity.this, R.string.toastMessage12, Toast.LENGTH_LONG).show();
                         progressBar.setVisibility(View.GONE);
                     } else {
-                        Toast.makeText(RegisterActivity.this, "Failed to Register!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(RegisterActivity.this, R.string.toastMessage13, Toast.LENGTH_LONG).show();
                         progressBar.setVisibility(View.GONE);
                     }
                 });
             } else {
-                Toast.makeText(RegisterActivity.this, "Failed to Register!", Toast.LENGTH_LONG).show();
+                Toast.makeText(RegisterActivity.this, R.string.toastMessage14, Toast.LENGTH_LONG).show();
                 progressBar.setVisibility(View.GONE);
             }
         });

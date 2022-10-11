@@ -82,25 +82,25 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String password = editTextPassword.getText().toString().trim();
 
         if (email.isEmpty()) {
-            editTextEmail.setError("Email Address is Required!");
+            editTextEmail.setError(getString(R.string.emptyEmailError1));
             editTextEmail.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            editTextEmail.setError("Please Enter a Valid Email Address:");
+            editTextEmail.setError(getString(R.string.matchEmailError1));
             editTextEmail.requestFocus();
             return;
         }
 
         if (password.isEmpty()) {
-            editTextPassword.setError("Password is Required!");
+            editTextPassword.setError(getString(R.string.emptyPasswordError1));
             editTextPassword.requestFocus();
             return;
         }
 
         if (password.length() < 6) {
-            editTextPassword.setError("Your Password Should be at Least 6 Characters Long!");
+            editTextPassword.setError(getString(R.string.lengthPasswordError1));
             editTextPassword.requestFocus();
         }
 
@@ -113,16 +113,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 assert user != null;
                 if (user.isEmailVerified()) {
                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                    Toast.makeText(LoginActivity.this, "Login Successful!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, R.string.toastMessage9, Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                 } else {
                     user.sendEmailVerification();
-                    Toast.makeText(LoginActivity.this, "Please Check Your Email to Verify Your Account!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(LoginActivity.this, R.string.toastMessage10, Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
                 }
 
             } else {
-                Toast.makeText(LoginActivity.this, "Failed to Login! Please Check your Credentials!", Toast.LENGTH_LONG).show();
+                Toast.makeText(LoginActivity.this, R.string.toastMessage11, Toast.LENGTH_LONG).show();
                 progressBar.setVisibility(View.GONE);
             }
         });
