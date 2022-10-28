@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Paramand Mohabir N01421732 CENG322 Section 0NC Software Project -->
+<?xml version="1.0" encoding="utf-8"?><!-- Paramand Mohabir N01421732 CENG322 Section 0NC Software Project -->
 <!-- Vladislav Vassilyev N01436627 CENG322 SECTION 0NB Software Project -->
 <!-- Dave Patel N01465129 CENG322 SECTION 0NA Software Project -->
 <!-- Paolo Brancato N01434080 CENG322 SECTION 0NC Software Project -->
@@ -54,7 +53,7 @@
     <string name="toastMessage11">Failed to Login! Please Check your Credentials!</string>
     <string name="toastMessage12">User has been Registered Successfully!</string>
     <string name="toastMessage13">Failed to Register!</string>
-    <string name="toastMessage14">Failed to Register!</string>
+    <string name="toastMessage14">This Email is Taken Already!</string>
 
     <!-- Snackbar Messages -->
     <string name="snackbar1">Permission is Granted!</string>
@@ -109,14 +108,9 @@
     <string name="textView7">A.L.I.E</string>
     <string name="imageView3">This is the image of my App Icon that will be displayed in the Registration Screen</string>
     <string name="textView8">Your Amazing A.I</string>
-    <string name="editText3">Username:</string>
-    <string name="editText4">Date of Birth:</string>
-    <string name="editText5">Email Address:</string>
-    <string name="editText6">Password:</string>
+    <string name="editText3">Email Address:</string>
+    <string name="editText4">Password:</string>
     <string name="button2">REGISTER</string>
-    <string name="emptyUserError1">Username is Required!</string>
-    <string name="lengthUserError1">Your Username Should be at Least 6 Characters Long!</string>
-    <string name="emptyDateError1">Date of Birth is Required!</string>
     <string name="emptyEmailError2">Email Address is Required!</string>
     <string name="matchEmailError2">Please Enter a Valid Email Address:</string>
     <string name="emptyPasswordError2">Password is Required!</string>

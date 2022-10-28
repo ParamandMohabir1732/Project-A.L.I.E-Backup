@@ -79,43 +79,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.129" />
-
-    <EditText
-        android:id="@+id/TheSecondDawnEditText5"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="224dp"
-        android:layout_marginBottom="75dp"
-        android:ems="10"
-        android:hint="@string/editText5"
-        android:inputType="textEmailAddress"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/TheSecondDawnEditText6"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:layout_marginBottom="-75dp"
-        android:ems="10"
-        android:hint="@string/editText6"
-        android:inputType="textPassword"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.129" />
-
     <Button
         android:id="@+id/TheSecondDawnButton2"
         android:layout_width="360dp"

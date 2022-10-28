@@ -23,11 +23,9 @@ package ca.theseconddawn.it.a.l.i.e;
 
 public class UserClass {
 
-    public String username, date, email;
+    public String email;
 
-    public UserClass(String username, String date, String email) {
-        this.username = username;
-        this.date = date;
+    public UserClass(String email) {
         this.email = email;
     }
 }

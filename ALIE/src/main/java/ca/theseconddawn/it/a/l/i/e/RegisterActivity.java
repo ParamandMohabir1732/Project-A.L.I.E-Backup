@@ -41,7 +41,7 @@ import java.util.Objects;
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView title;
-    private EditText editTextUsername, editTextDate, editTextEmail, editTextPassword;
+    private EditText editTextEmail, editTextPassword;
     private Button registerUser;
     private ProgressBar progressBar;
 
@@ -60,10 +60,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         registerUser = findViewById(R.id.TheSecondDawnButton2);
         registerUser.setOnClickListener(this);
 
-        editTextUsername = findViewById(R.id.TheSecondDawnEditText3);
-        editTextDate = findViewById(R.id.TheSecondDawnEditText4);
-        editTextEmail = findViewById(R.id.TheSecondDawnEditText5);
-        editTextPassword = findViewById(R.id.TheSecondDawnEditText6);
+        editTextEmail = findViewById(R.id.TheSecondDawnEditText3);
+        editTextPassword = findViewById(R.id.TheSecondDawnEditText4);
 
         progressBar = findViewById(R.id.TheSecondDawnProgressBar2);
     }
@@ -81,28 +79,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void registerUser() {
-        String username = editTextUsername.getText().toString().trim();
-        String date = editTextDate.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
-
-        if (username.isEmpty()) {
-            editTextUsername.setError(getString(R.string.emptyUserError1));
-            editTextUsername.requestFocus();
-            return;
-        }
-
-        if (username.length() < 6) {
-            editTextUsername.setError(getString(R.string.lengthUserError1));
-            editTextUsername.requestFocus();
-            return;
-        }
-
-        if (date.isEmpty()) {
-            editTextDate.setError(getString(R.string.emptyDateError1));
-            editTextDate.requestFocus();
-            return;
-        }
 
         if (email.isEmpty()) {
             editTextEmail.setError(getString(R.string.emptyEmailError2));
@@ -130,7 +108,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-                UserClass user = new UserClass(username, date, email);
+                UserClass user = new UserClass(email);
 
                 FirebaseDatabase.getInstance().getReference(getString(R.string.firebaseReference)).child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).setValue(user).addOnCompleteListener(task1 -> {
                     if (task1.isSuccessful()) {

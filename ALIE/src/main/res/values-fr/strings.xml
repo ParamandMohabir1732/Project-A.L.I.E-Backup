@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Paramand Mohabir N01421732 CENG322 Section 0NC Software Project -->
+<?xml version="1.0" encoding="utf-8"?><!-- Paramand Mohabir N01421732 CENG322 Section 0NC Software Project -->
 <!-- Vladislav Vassilyev N01436627 CENG322 SECTION 0NB Software Project -->
 <!-- Dave Patel N01465129 CENG322 SECTION 0NA Software Project -->
 <!-- Paolo Brancato N01434080 CENG322 SECTION 0NC Software Project -->
@@ -54,7 +53,7 @@
     <string name="toastMessage11">Échec de la connexion! Veuillez vérifier vos informations didentification!</string>
     <string name="toastMessage12">Lutilisateur a été enregistré avec succès!</string>
     <string name="toastMessage13">Échec de linscription!</string>
-    <string name="toastMessage14">Échec de linscription!</string>
+    <string name="toastMessage14">Cet e-mail est déjà pris!</string>
 
     <!-- Snackbar Messages -->
     <string name="snackbar1">Lautorisation est accordée!</string>
@@ -109,14 +108,9 @@
     <string name="textView7">A.L.I.E</string>
     <string name="imageView3">Ceci est limage de mon icône dapplication qui sera affichée dans lécran denregistrement</string>
     <string name="textView8">Votre incroyable A.I</string>
-    <string name="editText3">Nom dutilisateur:</string>
-    <string name="editText4">Date de naissance:</string>
-    <string name="editText5">Adresse e-mail:</string>
-    <string name="editText6">Mot de passe:</string>
+    <string name="editText3">Adresse e-mail:</string>
+    <string name="editText4">Mot de passe:</string>
     <string name="button2">SINSCRIRE</string>
-    <string name="emptyUserError1">Nom dutilisateur est nécessaire!</string>
-    <string name="lengthUserError1">Votre nom dutilisateur doit comporter au moins 6 caractères!</string>
-    <string name="emptyDateError1">La date de naissance est obligatoire!</string>
     <string name="emptyEmailError2">Adresse e-mail est nécessaire!</string>
     <string name="matchEmailError2">Sil vous plaît, mettez une adresse email valide:</string>
     <string name="emptyPasswordError2">Mot de passe requis!</string>
