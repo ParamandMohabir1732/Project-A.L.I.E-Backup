@@ -102,6 +102,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if (password.length() < 6) {
             editTextPassword.setError(getString(R.string.lengthPasswordError1));
             editTextPassword.requestFocus();
+            return;
         }
 
         progressBar.setVisibility(View.VISIBLE);

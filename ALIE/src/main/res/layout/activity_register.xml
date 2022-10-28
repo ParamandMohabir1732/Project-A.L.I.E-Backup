@@ -77,12 +77,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/TheSecondDawnEditText5"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="75dp"
+        android:ems="10"
+        android:hint="@string/editText5"
+        android:inputType="textPassword"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/TheSecondDawnButton2"
         android:layout_width="360dp"
         android:layout_height="65dp"
         android:layout_marginStart="24dp"
-        android:layout_marginTop="575dp"
+        android:layout_marginTop="525dp"
         android:text="@string/button2"
         android:textColor="@color/white"
         android:textSize="25sp"

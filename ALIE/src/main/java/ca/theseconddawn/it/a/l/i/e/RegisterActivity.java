@@ -41,7 +41,7 @@ import java.util.Objects;
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView title;
-    private EditText editTextEmail, editTextPassword;
+    private EditText editTextEmail, editTextPassword, editTextConfirmPassword;
     private Button registerUser;
     private ProgressBar progressBar;
 
@@ -62,6 +62,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         editTextEmail = findViewById(R.id.TheSecondDawnEditText3);
         editTextPassword = findViewById(R.id.TheSecondDawnEditText4);
+        editTextConfirmPassword = findViewById(R.id.TheSecondDawnEditText5);
 
         progressBar = findViewById(R.id.TheSecondDawnProgressBar2);
     }
@@ -81,6 +82,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private void registerUser() {
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
+        String confirmPassword = editTextConfirmPassword.getText().toString().trim();
 
         if (email.isEmpty()) {
             editTextEmail.setError(getString(R.string.emptyEmailError2));
@@ -103,6 +105,13 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         if (password.length() < 6) {
             editTextPassword.setError(getString(R.string.lengthPasswordError2));
             editTextPassword.requestFocus();
+            return;
+        }
+
+        if (confirmPassword.isEmpty() || !confirmPassword.equals(password)) {
+            editTextConfirmPassword.setError(getString(R.string.confirmPasswordError1));
+            editTextConfirmPassword.requestFocus();
+            return;
         }
 
         progressBar.setVisibility(View.VISIBLE);
