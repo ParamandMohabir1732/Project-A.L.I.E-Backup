@@ -63,6 +63,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         editTextPassword = findViewById(R.id.TheSecondDawnEditText2);
 
         progressBar = findViewById(R.id.TheSecondDawnProgressBar1);
+
     }
 
     @Override
