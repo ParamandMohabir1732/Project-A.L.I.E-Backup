@@ -27,6 +27,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,17 +35,29 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.api.ApiException;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthCredential;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView register;
+    private ImageView googleImage;
     private EditText editTextEmail, editTextPassword;
     private Button signIn;
     private ProgressBar progressBar;
 
     private FirebaseAuth mAuth;
+    private GoogleSignInOptions mOptions;
+    private GoogleSignInClient mClient;
+    private final static int RC_SIGN_IN = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,10 +72,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         signIn = findViewById(R.id.TheSecondDawnButton1);
         signIn.setOnClickListener(this);
 
+        googleImage = findViewById(R.id.TheSecondDawnImageView29);
+        googleImage.setOnClickListener(this);
+
         editTextEmail = findViewById(R.id.TheSecondDawnEditText1);
         editTextPassword = findViewById(R.id.TheSecondDawnEditText2);
 
         progressBar = findViewById(R.id.TheSecondDawnProgressBar1);
+
+        createRequest();
 
     }
 
@@ -75,7 +93,46 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case R.id.TheSecondDawnButton1:
                 userLogin();
                 break;
+            case R.id.TheSecondDawnImageView29:
+                googleSignIn();
+                break;
         }
+    }
+
+    private void createRequest() {
+        mOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        mClient = GoogleSignIn.getClient(this, mOptions);
+    }
+
+    private void googleSignIn() {
+        Intent googleSignIn = mClient.getSignInIntent();
+        startActivityForResult(googleSignIn, RC_SIGN_IN);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == RC_SIGN_IN) {
+            Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
+            try {
+                GoogleSignInAccount account = task.getResult(ApiException.class);
+                googleAuth(account);
+            } catch (ApiException e) {
+                Toast.makeText(this, "Sign In Failed!", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private void googleAuth(GoogleSignInAccount account) {
+        AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
+        mAuth.signInWithCredential(credential).addOnCompleteListener(this, task -> {
+            if (task.isSuccessful()) {
+                FirebaseUser user = mAuth.getCurrentUser();
+            } else {
+                Toast.makeText(LoginActivity.this, "Authentication Failed!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void userLogin() {
