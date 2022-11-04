@@ -103,7 +103,8 @@
     <string name="matchEmailError1">Please Enter a Valid Email Address:</string>
     <string name="emptyPasswordError1">Password is Required!</string>
     <string name="lengthPasswordError1">Your Password Should be at Least 6 Characters Long!</string>
-    <string name="imageView29">This is an Image of Google Icon Used to Sign in With Google</string>
+    <string name="imageView29">This is an Image of Google Icon Used to Sign in</string>
+    <string name="imageView30">This is an Image of Facebook Icon Used to Sign in</string>
 
     <!-- Register Screen -->
     <string name="textView7">A.L.I.E</string>

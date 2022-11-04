@@ -130,5 +130,5 @@
         android:contentDescription="@string/imageView29"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/google_icon" />
+        app:srcCompat="@drawable/google_button" />
 </androidx.constraintlayout.widget.ConstraintLayout>

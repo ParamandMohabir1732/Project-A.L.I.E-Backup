@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_main"
+    android:orientation="vertical"
     tools:context=".LoginActivity">
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView2"
         android:layout_width="126dp"
         android:layout_height="100dp"
-        android:layout_marginStart="140dp"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:contentDescription="@string/imageView2"
         android:src="@mipmap/ic_launcher_round"
@@ -21,68 +23,85 @@
         android:id="@+id/TheSecondDawnTextView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="112dp"
-        android:layout_marginTop="120dp"
+        android:layout_gravity="center"
         android:fontFamily="sans-serif-black"
         android:text="@string/textView3"
         android:textAlignment="center"
         android:textColor="@color/purple_700"
         android:textSize="60sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/TheSecondDawnTextView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="136dp"
-        android:layout_marginTop="200dp"
+        android:layout_gravity="center"
         android:text="@string/textView4"
         android:textAlignment="center"
         android:textSize="18sp"
-        android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="italic" />
 
-    <EditText
-        android:id="@+id/TheSecondDawnEditText1"
-        android:layout_width="380dp"
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:layout_marginBottom="375dp"
-        android:ems="10"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
         android:hint="@string/editText1"
-        android:inputType="textEmailAddress"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/ic_email"
+        app:startIconTint="@color/black">
 
-    <EditText
-        android:id="@+id/TheSecondDawnEditText2"
-        android:layout_width="380dp"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TheSecondDawnEditText1"
+            android:layout_width="375dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_shape"
+            android:fontFamily="sans-serif-black"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:layout_marginBottom="225dp"
-        android:ems="10"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:hint="@string/editText2"
-        android:inputType="textPassword"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/black"
+        app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/ic_password"
+        app:startIconTint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TheSecondDawnEditText2"
+            android:layout_width="375dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_shape"
+            android:fontFamily="sans-serif-black"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/TheSecondDawnButton1"
         android:layout_width="360dp"
-        android:layout_height="65dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="430dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/button_shape"
         android:text="@string/button1"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -95,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="285dp"
-        android:layout_marginTop="525dp"
+        android:layout_marginTop="25dp"
         android:text="@string/textView5"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -106,8 +125,8 @@
         android:id="@+id/TheSecondDawnTextView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="525dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="-25dp"
         android:text="@string/textView6"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -119,20 +138,30 @@
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="50dp"
         android:layout_height="45dp"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_gravity="center"
+        android:layout_marginTop="-200dp"
+        android:visibility="gone" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView29"
-        android:layout_width="80dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="112dp"
-        android:layout_marginBottom="68dp"
+        android:layout_width="275dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:contentDescription="@string/imageView29"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/google_icon" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:srcCompat="@drawable/google_button" />
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImageView30"
+        android:layout_width="275dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="1dp"
+        android:contentDescription="@string/imageView30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/facebook_button" />
+</LinearLayout>
