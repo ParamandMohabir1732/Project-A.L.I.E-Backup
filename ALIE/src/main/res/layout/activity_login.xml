@@ -147,7 +147,7 @@
         android:layout_width="275dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:contentDescription="@string/imageView29"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"

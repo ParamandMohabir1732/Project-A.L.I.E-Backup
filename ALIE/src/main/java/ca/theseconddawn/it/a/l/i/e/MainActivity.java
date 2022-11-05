@@ -36,7 +36,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -125,23 +124,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Toast.makeText(this, toastMessage5, Toast.LENGTH_LONG).show();
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-
-        final AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-        builder.setTitle(R.string.builderTitle);
-        builder.setMessage(R.string.builderMessage);
-        builder.setIcon(R.mipmap.ic_launcher_round);
-        builder.setCancelable(true);
-        builder.setNegativeButton(R.string.builderNegativeButton, ((dialogInterface, i) -> dialogInterface.cancel()));
-        builder.setPositiveButton(R.string.builderPositiveButton, ((dialogInterface, i) -> finish()));
-        AlertDialog alertDialog = builder.create();
-        alertDialog.show();
     }
 }
