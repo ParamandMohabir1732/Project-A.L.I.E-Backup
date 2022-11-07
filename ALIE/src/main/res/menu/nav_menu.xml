@@ -8,27 +8,34 @@
             android:id="@+id/TheSecondDawnNavHome"
             android:icon="@drawable/ic_home"
             android:title="@string/titleHome" />
-    </group>
 
-    <group android:checkableBehavior="single">
         <item
             android:id="@+id/TheSecondDawnNavVolume"
             android:icon="@drawable/ic_speaker"
             android:title="@string/titleSpeaker" />
-    </group>
 
-    <group android:checkableBehavior="single">
         <item
             android:id="@+id/TheSecondDawnNavFan"
             android:icon="@drawable/ic_fan"
             android:title="@string/titleFan" />
-    </group>
 
-    <group android:checkableBehavior="single">
         <item
             android:id="@+id/TheSecondDawnNavLED"
             android:icon="@drawable/ic_led"
             android:title="@string/titleLED" />
     </group>
 
+    <item android:title="@string/titleAccount">
+        <menu>
+            <item
+                android:id="@+id/TheSecondDawnNavProfile"
+                android:icon="@drawable/ic_profile"
+                android:title="@string/titleProfile" />
+
+            <item
+                android:id="@+id/TheSecondDawnNavLogout"
+                android:icon="@drawable/ic_logout"
+                android:title="@string/titleLogout" />
+        </menu>
+    </item>
 </menu>

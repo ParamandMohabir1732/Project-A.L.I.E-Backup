@@ -21,6 +21,9 @@
     <string name="titleSpeaker">Volume</string>
     <string name="titleFan">Smart Fan</string>
     <string name="titleLED">LED Lights</string>
+    <string name="titleAccount">Account</string>
+    <string name="titleProfile">Profile</string>
+    <string name="titleLogout">Logout</string>
 
     <!-- ToolBar Menu Titles -->
     <string name="titleSettings">Settings</string>
@@ -159,4 +162,9 @@
     <string name="imageView26">This is an Image of my 4th Home Picture</string>
     <string name="imageView27">This is an Image of my 5th Home Picture</string>
     <string name="imageView28">This is an Image of my 6th Home Picture</string>
+
+    <!-- Profile Screen -->
+    <string name="button4">LOGOUT</string>
+    <string name="imageView31">This is an Image of the Default Profile Icon that will be Displayed on Profile Screen.</string>
+    <string name="textView14">Email Address:</string>
 </resources>
