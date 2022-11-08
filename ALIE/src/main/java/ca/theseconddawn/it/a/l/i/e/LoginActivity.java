@@ -50,7 +50,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView register;
+    private TextView register, forgetPassword;
     private ImageView googleImage;
     private EditText editTextEmail, editTextPassword;
     private CheckBox rememberMeCheckBox;
@@ -74,6 +74,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         register = findViewById(R.id.TheSecondDawnTextView5);
         register.setOnClickListener(this);
+
+        forgetPassword = findViewById(R.id.TheSecondDawnTextView6);
+        forgetPassword.setOnClickListener(this);
 
         signIn = findViewById(R.id.TheSecondDawnButton1);
         signIn.setOnClickListener(this);
@@ -105,6 +108,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         switch (view.getId()) {
             case R.id.TheSecondDawnTextView5:
                 startActivity(new Intent(this, RegisterActivity.class));
+                break;
+            case R.id.TheSecondDawnTextView6:
+                startActivity(new Intent(this, ResetPasswordActivity.class));
                 break;
             case R.id.TheSecondDawnButton1:
                 userLogin();
@@ -205,8 +211,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 editTextPassword.setError(getString(R.string.lengthPasswordError1));
                 editTextPassword.requestFocus();
                 return;
-            }
-            else {
+            } else {
                 getSharedPreferences(FILE_EMAIL, MODE_PRIVATE).edit().clear().apply();
             }
         }

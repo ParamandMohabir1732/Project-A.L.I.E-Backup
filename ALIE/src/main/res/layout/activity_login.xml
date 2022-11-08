@@ -15,9 +15,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:contentDescription="@string/imageView2"
-        android:src="@mipmap/ic_launcher_round"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@mipmap/ic_launcher_round" />
 
     <TextView
         android:id="@+id/TheSecondDawnTextView3"
@@ -116,9 +114,7 @@
         android:text="@string/textView6"
         android:textColor="@color/black"
         android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/TheSecondDawnButton1"
@@ -130,9 +126,7 @@
         android:text="@string/button1"
         android:textColor="@color/white"
         android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
     <ProgressBar
         android:id="@+id/TheSecondDawnProgressBar1"
@@ -150,8 +144,6 @@
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         android:contentDescription="@string/imageView29"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/google_button" />
 
     <ImageView
@@ -162,8 +154,6 @@
         android:layout_marginTop="15dp"
         android:layout_marginEnd="1dp"
         android:contentDescription="@string/imageView30"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/facebook_button" />
 
     <TextView
@@ -175,8 +165,6 @@
         android:text="@string/textView5"
         android:textColor="@color/black"
         android:textSize="14sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
 </LinearLayout>
