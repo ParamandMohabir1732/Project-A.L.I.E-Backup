@@ -167,14 +167,15 @@
     <string name="imageView28">This is an Image of my 6th Home Picture</string>
 
     <!-- Profile Screen -->
-    <string name="button4">LOGOUT</string>
     <string name="imageView31">This is an Image of the Default Profile Icon that will be Displayed on Profile Screen.</string>
     <string name="textView14">Email Address:</string>
+    <string name="button4">RESET PASSWORD</string>
+    <string name="button5">LOGOUT</string>
 
     <!-- Reset Password Screen -->
     <string name="imageView32">This is the image of my App Icon that will be displayed in the Reset Password Screen</string>
     <string name="textView16">A.L.I.E</string>
     <string name="textView17">Your Amazing A.I</string>
     <string name="editText6">Email Address:</string>
-    <string name="button5">RESET PASSWORD</string>
+    <string name="button6">RESET PASSWORD</string>
 </resources>

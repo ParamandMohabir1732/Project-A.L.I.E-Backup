@@ -157,7 +157,6 @@
     <string name="imageView28">Ceci est une image de ma 6e photo à la maison</string>
 
     <!-- Profile Screen -->
-    <string name="button4">LOGOUT</string>
     <string name="imageView31">This is an Image of the Default Profile Icon that will be Displayed on Profile Screen.</string>
     <string name="textView14">Email Address:</string>
 
@@ -166,5 +165,4 @@
     <string name="textView16">A.L.I.E</string>
     <string name="textView17">Votre incroyable A.I</string>
     <string name="editText6">Adresse e-mail:</string>
-    <string name="button5">RÉINITIALISER LE MOT DE PASSE</string>
 </resources>

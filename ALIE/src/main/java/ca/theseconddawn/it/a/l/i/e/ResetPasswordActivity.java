@@ -50,10 +50,10 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
 
         editTextEmail = findViewById(R.id.TheSecondDawnEditText6);
 
-        reset = findViewById(R.id.TheSecondDawnButton5);
+        reset = findViewById(R.id.TheSecondDawnButton6);
         reset.setOnClickListener(this);
 
-        progressBar = findViewById(R.id.TheSecondDawnProgressBar3);
+        progressBar = findViewById(R.id.TheSecondDawnProgressBar4);
     }
 
     @Override
