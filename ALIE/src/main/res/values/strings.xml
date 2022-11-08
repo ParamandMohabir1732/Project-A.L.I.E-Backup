@@ -62,6 +62,8 @@
     <string name="snackbar1">Permission is Granted!</string>
     <string name="snackbar2">Permission is Denied!</string>
 
+    <!-- SharedPref Messages -->
+
     <!-- Configuration Screen -->
     <!-- Controls Titles -->
     <string name="Portrait">Orientation</string>
@@ -108,6 +110,7 @@
     <string name="lengthPasswordError1">Your Password Should be at Least 6 Characters Long!</string>
     <string name="imageView29">This is an Image of Google Icon Used to Sign in</string>
     <string name="imageView30">This is an Image of Facebook Icon Used to Sign in</string>
+    <string name="checkBox">Remember Me</string>
 
     <!-- Register Screen -->
     <string name="textView7">A.L.I.E</string>

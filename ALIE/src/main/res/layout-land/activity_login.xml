@@ -96,6 +96,30 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <CheckBox
+        android:id="@+id/TheSecondDawnCheckBox"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="-125dp"
+        android:text="@string/checkBox"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TheSecondDawnTextView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="-35dp"
+        android:text="@string/textView6"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/TheSecondDawnButton1"
         android:layout_width="360dp"
@@ -106,32 +130,6 @@
         android:text="@string/button1"
         android:textColor="@color/white"
         android:textSize="25sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/TheSecondDawnTextView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginStart="275dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/textView5"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/TheSecondDawnTextView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="-25dp"
-        android:text="@string/textView6"
-        android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -147,10 +145,11 @@
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView29"
-        android:layout_width="225dp"
+        android:layout_width="200dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginTop="-25dp"
+        android:layout_marginStart="-175dp"
+        android:layout_marginTop="5dp"
         android:contentDescription="@string/imageView29"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -158,13 +157,27 @@
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView30"
-        android:layout_width="225dp"
-        android:layout_height="54dp"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginTop="-10dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="-45dp"
         android:contentDescription="@string/imageView30"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/facebook_button" />
+
+    <TextView
+        android:id="@+id/TheSecondDawnTextView5"
+        android:layout_width="wrap_content"
+        android:layout_height="-25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-35dp"
+        android:text="@string/textView5"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </LinearLayout>

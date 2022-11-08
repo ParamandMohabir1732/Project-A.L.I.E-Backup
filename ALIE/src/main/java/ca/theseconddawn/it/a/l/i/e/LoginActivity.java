@@ -22,10 +22,12 @@ Software Project
 package ca.theseconddawn.it.a.l.i.e;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -51,6 +53,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView register;
     private ImageView googleImage;
     private EditText editTextEmail, editTextPassword;
+    private CheckBox rememberMeCheckBox;
     private Button signIn;
     private ProgressBar progressBar;
 
@@ -58,6 +61,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private GoogleSignInOptions mOptions;
     private GoogleSignInClient mClient;
     private final static int RC_SIGN_IN = 1;
+    private static final String FILE_EMAIL = "Remember Me";
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +83,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         editTextEmail = findViewById(R.id.TheSecondDawnEditText1);
         editTextPassword = findViewById(R.id.TheSecondDawnEditText2);
+
+        rememberMeCheckBox = findViewById(R.id.TheSecondDawnCheckBox);
+        sharedPreferences = getSharedPreferences(FILE_EMAIL, MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
+        String email = sharedPreferences.getString("svEmail", "");
+        String password = sharedPreferences.getString("svPassword", "");
+
+        rememberMeCheckBox.setChecked(sharedPreferences.contains("checked") && sharedPreferences.getBoolean("checked", false));
+        editTextEmail.setText(email);
+        editTextPassword.setText(password);
 
         progressBar = findViewById(R.id.TheSecondDawnProgressBar1);
 
@@ -137,28 +154,61 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
-        if (email.isEmpty()) {
-            editTextEmail.setError(getString(R.string.emptyEmailError1));
-            editTextEmail.requestFocus();
-            return;
-        }
+        if (rememberMeCheckBox.isChecked()) {
+            editor.putBoolean("checked", true);
+            editor.apply();
+            StoreDataUsingSharedPref(email, password);
 
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            editTextEmail.setError(getString(R.string.matchEmailError1));
-            editTextEmail.requestFocus();
-            return;
-        }
+            if (email.isEmpty()) {
+                editTextEmail.setError(getString(R.string.emptyEmailError1));
+                editTextEmail.requestFocus();
+                return;
+            }
 
-        if (password.isEmpty()) {
-            editTextPassword.setError(getString(R.string.emptyPasswordError1));
-            editTextPassword.requestFocus();
-            return;
-        }
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                editTextEmail.setError(getString(R.string.matchEmailError1));
+                editTextEmail.requestFocus();
+                return;
+            }
 
-        if (password.length() < 6) {
-            editTextPassword.setError(getString(R.string.lengthPasswordError1));
-            editTextPassword.requestFocus();
-            return;
+            if (password.isEmpty()) {
+                editTextPassword.setError(getString(R.string.emptyPasswordError1));
+                editTextPassword.requestFocus();
+                return;
+            }
+
+            if (password.length() < 6) {
+                editTextPassword.setError(getString(R.string.lengthPasswordError1));
+                editTextPassword.requestFocus();
+                return;
+            }
+        } else {
+            if (email.isEmpty()) {
+                editTextEmail.setError(getString(R.string.emptyEmailError1));
+                editTextEmail.requestFocus();
+                return;
+            }
+
+            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                editTextEmail.setError(getString(R.string.matchEmailError1));
+                editTextEmail.requestFocus();
+                return;
+            }
+
+            if (password.isEmpty()) {
+                editTextPassword.setError(getString(R.string.emptyPasswordError1));
+                editTextPassword.requestFocus();
+                return;
+            }
+
+            if (password.length() < 6) {
+                editTextPassword.setError(getString(R.string.lengthPasswordError1));
+                editTextPassword.requestFocus();
+                return;
+            }
+            else {
+                getSharedPreferences(FILE_EMAIL, MODE_PRIVATE).edit().clear().apply();
+            }
         }
 
         progressBar.setVisibility(View.VISIBLE);
@@ -183,6 +233,13 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 progressBar.setVisibility(View.GONE);
             }
         });
+    }
+
+    private void StoreDataUsingSharedPref(String email, String password) {
+        SharedPreferences.Editor editor = getSharedPreferences(FILE_EMAIL, MODE_PRIVATE).edit();
+        editor.putString("svEmail", email);
+        editor.putString("svPassword", password);
+        editor.apply();
     }
 
     public void onBackPressed() {
