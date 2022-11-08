@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:contentDescription="@string/imageView31"
         android:src="@drawable/ic_profile" />
 

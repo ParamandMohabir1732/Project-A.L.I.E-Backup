@@ -25,6 +25,10 @@ public class UserClass {
 
     public String email;
 
+    public UserClass() {
+
+    }
+
     public UserClass(String email) {
         this.email = email;
     }

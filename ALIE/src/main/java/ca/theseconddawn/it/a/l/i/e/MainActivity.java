@@ -42,6 +42,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -87,6 +88,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (item.getItemId() == R.id.TheSecondDawnNavLED) {
             getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new LEDFrag()).commit();
+        }
+
+        if (item.getItemId() == R.id.TheSecondDawnNavProfile) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new ProfileFrag()).commit();
+        }
+
+        if (item.getItemId() == R.id.TheSecondDawnNavLogout) {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(this, LoginActivity.class));
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
