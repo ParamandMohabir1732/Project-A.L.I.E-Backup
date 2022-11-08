@@ -155,4 +155,16 @@
     <string name="imageView26">Ceci est une image de ma 4e photo à la maison</string>
     <string name="imageView27">Ceci est une image de ma 5e photo à la maison</string>
     <string name="imageView28">Ceci est une image de ma 6e photo à la maison</string>
+
+    <!-- Profile Screen -->
+    <string name="button4">LOGOUT</string>
+    <string name="imageView31">This is an Image of the Default Profile Icon that will be Displayed on Profile Screen.</string>
+    <string name="textView14">Email Address:</string>
+
+    <!-- Reset Password Screen -->
+    <string name="imageView32">Ceci est l\image de mon icône d\application qui sera affichée dans l\écran de réinitialisation du mot de passe</string>
+    <string name="textView16">A.L.I.E</string>
+    <string name="textView17">Votre incroyable A.I</string>
+    <string name="editText6">Adresse e-mail:</string>
+    <string name="button5">RÉINITIALISER LE MOT DE PASSE</string>
 </resources>
