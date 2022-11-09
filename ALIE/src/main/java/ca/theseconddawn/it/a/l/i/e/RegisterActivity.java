@@ -21,14 +21,13 @@ Software Project
 
 package ca.theseconddawn.it.a.l.i.e;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -40,10 +39,10 @@ import java.util.Objects;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView title;
     private EditText editTextEmail, editTextPassword, editTextConfirmPassword;
     private Button registerUser;
     private ProgressBar progressBar;
+    private ImageButton leftArrow;
 
     private FirebaseAuth mAuth;
 
@@ -54,11 +53,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         mAuth = FirebaseAuth.getInstance();
 
-        title = findViewById(R.id.TheSecondDawnTextView7);
-        title.setOnClickListener(this);
-
         registerUser = findViewById(R.id.TheSecondDawnButton2);
         registerUser.setOnClickListener(this);
+
+        leftArrow = findViewById(R.id.TheSecondDawnImageButton1);
+        leftArrow.setOnClickListener(this);
 
         editTextEmail = findViewById(R.id.TheSecondDawnEditText3);
         editTextPassword = findViewById(R.id.TheSecondDawnEditText4);
@@ -70,8 +69,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.TheSecondDawnTextView7:
-                startActivity(new Intent(this, LoginActivity.class));
+            case R.id.TheSecondDawnImageButton1:
+                finish();
                 break;
             case R.id.TheSecondDawnButton2:
                 registerUser();
