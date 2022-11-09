@@ -151,7 +151,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             if (task.isSuccessful()) {
                 FirebaseUser user = mAuth.getCurrentUser();
             } else {
-                Toast.makeText(LoginActivity.this, "Authentication Failed!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Authentication Failed!", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -225,16 +225,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 assert user != null;
                 if (user.isEmailVerified()) {
                     startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                    Toast.makeText(LoginActivity.this, R.string.toastMessage9, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, R.string.toastMessage9, Toast.LENGTH_SHORT).show();
                     progressBar.setVisibility(View.GONE);
                 } else {
                     user.sendEmailVerification();
-                    Toast.makeText(LoginActivity.this, R.string.toastMessage10, Toast.LENGTH_LONG).show();
+                    Toast.makeText(this, R.string.toastMessage10, Toast.LENGTH_LONG).show();
                     progressBar.setVisibility(View.GONE);
                 }
 
             } else {
-                Toast.makeText(LoginActivity.this, R.string.toastMessage11, Toast.LENGTH_LONG).show();
+                Toast.makeText(this, R.string.toastMessage11, Toast.LENGTH_LONG).show();
                 progressBar.setVisibility(View.GONE);
             }
         });
@@ -248,7 +248,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     public void onBackPressed() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.builderTitle);
         builder.setMessage(R.string.builderMessage);
         builder.setIcon(R.mipmap.ic_launcher_round);

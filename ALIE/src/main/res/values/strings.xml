@@ -57,6 +57,8 @@
     <string name="toastMessage12">User has been Registered Successfully!</string>
     <string name="toastMessage13">Failed to Register!</string>
     <string name="toastMessage14">This Email is Taken Already!</string>
+    <string name="toastMessage15">Please Check your Email to Reset your Password!</string>
+    <string name="toastMessage16">An Error has Occurred, Please Try Again!</string>
 
     <!-- Snackbar Messages -->
     <string name="snackbar1">Permission is Granted!</string>
@@ -183,7 +185,9 @@
     <!-- Reset Password Screen -->
     <string name="imageView32">This is the image of my Forgot Password Icon that will be displayed in the Reset Password Screen</string>
     <string name="textView16">Forgot Your Password?</string>
-    <string name="textView17">Please Enter Your Email Down Below To Reset Your Password.</string>
+    <string name="textView17">Please Enter your Email Down Below To Reset your Password.</string>
     <string name="editText6">Email Address:</string>
     <string name="button6">SUBMIT</string>
+    <string name="emptyEmailError3">Email Address is Required!</string>
+    <string name="matchEmailError3">Please Enter a Valid Email Address:</string>
 </resources>
