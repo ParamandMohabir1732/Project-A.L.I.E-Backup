@@ -181,9 +181,9 @@
     <string name="textView18">Change Profile</string>
 
     <!-- Reset Password Screen -->
-    <string name="imageView32">This is the image of my App Icon that will be displayed in the Reset Password Screen</string>
-    <string name="textView16">A.L.I.E</string>
-    <string name="textView17">Your Amazing A.I</string>
+    <string name="imageView32">This is the image of my Forgot Password Icon that will be displayed in the Reset Password Screen</string>
+    <string name="textView16">Forgot Your Password?</string>
+    <string name="textView17">Please Enter Your Email Down Below To Reset Your Password.</string>
     <string name="editText6">Email Address:</string>
-    <string name="button6">RESET PASSWORD</string>
+    <string name="button6">SUBMIT</string>
 </resources>
