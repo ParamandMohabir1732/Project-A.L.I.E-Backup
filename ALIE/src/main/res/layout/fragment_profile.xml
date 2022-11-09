@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,21 +8,44 @@
     android:orientation="vertical"
     tools:context=".ProfileFrag">
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/TheSecondDawnImageView31"
-        android:layout_width="match_parent"
+        android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:contentDescription="@string/imageView31"
-        android:src="@drawable/ic_profile" />
+        android:src="@drawable/ic_profile"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/TheSecondDawnTextView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/textView18"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImage33"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="-165dp"
+        android:layout_marginTop="35dp"
+        android:contentDescription="@string/imageView33"
+        android:src="@drawable/ic_email" />
 
     <TextView
         android:id="@+id/TheSecondDawnTextView14"
-        android:layout_width="350dp"
+        android:layout_width="325dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="-27dp"
         android:text="@string/textView14"
         android:textColor="@color/black"
         android:textSize="20sp"
@@ -66,7 +90,7 @@
         android:layout_width="50dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginTop="-200dp"
+        android:layout_marginTop="-250dp"
         android:visibility="gone" />
 
 </LinearLayout>

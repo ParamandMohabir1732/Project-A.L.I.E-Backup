@@ -21,17 +21,12 @@ Software Project
 
 package ca.theseconddawn.it.a.l.i.e;
 
-import android.content.pm.ActivityInfo;
-import android.content.res.Configuration;
-import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
-
-import java.util.Objects;
 
 public class ConfigurationActivity extends AppCompatActivity {
 

@@ -58,7 +58,7 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.TheSecondDawnButton5) {
+        if (view.getId() == R.id.TheSecondDawnButton6) {
             resetPassword();
         }
     }

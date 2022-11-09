@@ -21,9 +21,11 @@ Software Project
 
 package ca.theseconddawn.it.a.l.i.e;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.util.Patterns;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -43,16 +45,20 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class ProfileFrag extends Fragment {
 
     private FirebaseUser user;
     private FirebaseAuth mAuth;
     private DatabaseReference reference;
 
+    private Uri imageUri;
     private String userID;
+    private CircleImageView profileImage;
     private Button signOut, reset;
     private ProgressBar progressBar;
-    private TextView emailTextView;
+    private TextView emailTextView, changeProfile;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -66,7 +72,12 @@ public class ProfileFrag extends Fragment {
         signOut = view.findViewById(R.id.TheSecondDawnButton5);
         signOut.setOnClickListener(this::onClick);
 
+        profileImage = view.findViewById(R.id.TheSecondDawnImageView31);
+
         emailTextView = view.findViewById(R.id.TheSecondDawnTextView15);
+
+        changeProfile = view.findViewById(R.id.TheSecondDawnTextView18);
+        changeProfile.setOnClickListener(this::onClick);
 
         progressBar = view.findViewById(R.id.TheSecondDawnProgressBar3);
 
@@ -103,23 +114,15 @@ public class ProfileFrag extends Fragment {
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(getActivity(), LoginActivity.class));
                 break;
+            case R.id.TheSecondDawnTextView18:
+                Intent openGallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                startActivityForResult(openGallery, 1000);
+                break;
         }
     }
 
     private void resetPassword() {
         String email = emailTextView.getText().toString().trim();
-
-        if (email.isEmpty()) {
-            emailTextView.setError("Email Address is Required!");
-            emailTextView.requestFocus();
-            return;
-        }
-
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            emailTextView.setError("Please Enter a Valid Email Address:");
-            emailTextView.requestFocus();
-            return;
-        }
 
         progressBar.setVisibility(View.VISIBLE);
 
@@ -132,5 +135,16 @@ public class ProfileFrag extends Fragment {
                 progressBar.setVisibility(View.GONE);
             }
         });
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 1000) {
+            if (resultCode == Activity.RESULT_OK) {
+                imageUri = data.getData();
+                profileImage.setImageURI(imageUri);
+            }
+        }
     }
 }

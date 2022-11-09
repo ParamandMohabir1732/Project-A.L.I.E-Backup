@@ -91,10 +91,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         sharedPreferences = getSharedPreferences(FILE_EMAIL, MODE_PRIVATE);
         editor = sharedPreferences.edit();
 
-        String email = sharedPreferences.getString("svEmail", "");
-        String password = sharedPreferences.getString("svPassword", "");
+        String email = sharedPreferences.getString(getString(R.string.sharedPrefsvEmail), "");
+        String password = sharedPreferences.getString(getString(R.string.sharedPrefsvPassword), "");
 
-        rememberMeCheckBox.setChecked(sharedPreferences.contains("checked") && sharedPreferences.getBoolean("checked", false));
+        rememberMeCheckBox.setChecked(sharedPreferences.contains(getString(R.string.rememberMeCheckBoxChecked)) && sharedPreferences.getBoolean(getString(R.string.rememberMeCheckBoxCheckedBoolean), false));
         editTextEmail.setText(email);
         editTextPassword.setText(password);
 
@@ -161,7 +161,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         String password = editTextPassword.getText().toString().trim();
 
         if (rememberMeCheckBox.isChecked()) {
-            editor.putBoolean("checked", true);
+            editor.putBoolean(getString(R.string.rememberMeCheckbox), true);
             editor.apply();
             StoreDataUsingSharedPref(email, password);
 
@@ -242,8 +242,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     private void StoreDataUsingSharedPref(String email, String password) {
         SharedPreferences.Editor editor = getSharedPreferences(FILE_EMAIL, MODE_PRIVATE).edit();
-        editor.putString("svEmail", email);
-        editor.putString("svPassword", password);
+        editor.putString(getString(R.string.sharedPrefsvEmail), email);
+        editor.putString(getString(R.string.sharedPrefsvPassword), password);
         editor.apply();
     }
 

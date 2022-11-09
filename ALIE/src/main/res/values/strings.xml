@@ -111,6 +111,12 @@
     <string name="imageView29">This is an Image of Google Icon Used to Sign in</string>
     <string name="imageView30">This is an Image of Facebook Icon Used to Sign in</string>
     <string name="checkBox">Remember Me</string>
+    <string name="rememberMeCheckbox">checked</string>
+    <string name="sharedPrefsvEmail">svEmail</string>
+    <string name="sharedPrefsvPassword">svPassword</string>
+    <string name="file_Email">Remember Me</string>
+    <string name="rememberMeCheckBoxChecked">checked</string>
+    <string name="rememberMeCheckBoxCheckedBoolean">checked</string>
 
     <!-- Register Screen -->
     <string name="textView7">A.L.I.E</string>
@@ -167,10 +173,12 @@
     <string name="imageView28">This is an Image of my 6th Home Picture</string>
 
     <!-- Profile Screen -->
-    <string name="imageView31">This is an Image of the Default Profile Icon that will be Displayed on Profile Screen.</string>
+    <string name="imageView31">This is an Image of the Default Profile Icon that will be Displayed on Profile Screen</string>
     <string name="textView14">Email Address:</string>
+    <string name="imageView33">This is an Image of the Email Icon</string>
     <string name="button4">RESET PASSWORD</string>
     <string name="button5">LOGOUT</string>
+    <string name="textView18">Change Profile</string>
 
     <!-- Reset Password Screen -->
     <string name="imageView32">This is the image of my App Icon that will be displayed in the Reset Password Screen</string>
