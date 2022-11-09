@@ -26,6 +26,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -38,6 +39,7 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
     private EditText editTextEmail;
     private Button reset;
     private ProgressBar progressBar;
+    private ImageButton leftArrow;
 
     private FirebaseAuth mAuth;
 
@@ -50,6 +52,9 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
 
         editTextEmail = findViewById(R.id.TheSecondDawnEditText6);
 
+        leftArrow = findViewById(R.id.TheSecondDawnImageButton2);
+        leftArrow.setOnClickListener(this);
+
         reset = findViewById(R.id.TheSecondDawnButton6);
         reset.setOnClickListener(this);
 
@@ -60,6 +65,9 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
     public void onClick(View view) {
         if (view.getId() == R.id.TheSecondDawnButton6) {
             resetPassword();
+        }
+        if (view.getId() == R.id.TheSecondDawnImageButton2) {
+            finish();
         }
     }
 
