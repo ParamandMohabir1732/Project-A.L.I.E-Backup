@@ -8,12 +8,24 @@
     android:orientation="vertical"
     tools:context=".RegisterActivity">
 
+    <ImageButton
+        android:id="@+id/TheSecondDawnImageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@null"
+        android:contentDescription="@string/imageButton1"
+        android:src="@drawable/ic_left_arrow" />
+
     <ImageView
         android:id="@+id/TheSecondDawnImageView3"
         android:layout_width="126dp"
         android:layout_height="100dp"
         android:layout_gravity="start"
         android:layout_marginStart="150dp"
+        android:layout_marginTop="-20dp"
         android:contentDescription="@string/imageView3"
         android:src="@mipmap/ic_launcher_round" />
 

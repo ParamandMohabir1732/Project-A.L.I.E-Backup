@@ -30,7 +30,7 @@
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/TheSecondDawnImage33"
+        android:id="@+id/TheSecondDawnImageView33"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

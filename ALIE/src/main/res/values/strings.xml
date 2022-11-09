@@ -134,6 +134,7 @@
     <string name="lengthPasswordError2">Your Password Should be at Least 6 Characters Long!</string>
     <string name="confirmPasswordError1">Password Do Not Match!</string>
     <string name="firebaseReference">Users</string>
+    <string name="imageButton1">This is an Image Button of the Left Arrow in Register Screen</string>
 
     <!-- LED Screen -->
     <string name="textView9">LED Screen</string>
