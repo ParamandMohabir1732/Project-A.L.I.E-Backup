@@ -34,16 +34,25 @@ import androidx.fragment.app.Fragment;
 
 public class SpeakerFrag extends Fragment {
 
-    AudioManager audioManager;
+    MediaPlayer mediaPlayer;
 
+    public void play (View view) {
+        mediaPlayer.start();
+
+    }
+
+    public void pause (View view) {
+        mediaPlayer.pause();
+    }
+
+
+    AudioManager audioManager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_speaker, container, false);
 
-        MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), R.raw.sample);
-        mediaPlayer.start();
-
+        mediaPlayer = MediaPlayer.create(getActivity(), R.raw.sample);
         audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
         int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
@@ -70,7 +79,9 @@ public class SpeakerFrag extends Fragment {
             public void onStopTrackingTouch(SeekBar seekBar) {
 
             }
+
         });
+
         return view;
     }
 }
