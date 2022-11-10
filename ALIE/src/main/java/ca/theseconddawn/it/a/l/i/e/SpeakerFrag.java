@@ -23,6 +23,7 @@ package ca.theseconddawn.it.a.l.i.e;
 
 import android.content.Context;
 import android.media.AudioManager;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -39,6 +40,8 @@ public class SpeakerFrag extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_speaker, container, false);
+
+        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.birds)
 
         audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
