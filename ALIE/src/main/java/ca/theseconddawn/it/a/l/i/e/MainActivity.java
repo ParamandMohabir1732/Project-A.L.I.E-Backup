@@ -132,6 +132,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (item.getItemId() == R.id.TheSecondDawnToolBarReview) {
             Toast.makeText(this, toastMessage5, Toast.LENGTH_LONG).show();
+            startActivity(new Intent(this,  CustomerReviewActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
