@@ -41,7 +41,8 @@ public class SpeakerFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_speaker, container, false);
 
-        MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.birds)
+        MediaPlayer mediaPlayer = MediaPlayer.create(getActivity(), R.raw.sample);
+        mediaPlayer.start();
 
         audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
