@@ -60,7 +60,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private FirebaseAuth mAuth;
     private GoogleSignInOptions mOptions;
     private GoogleSignInClient mClient;
-    private final static int RC_SIGN_IN = 1;
     private static final String FILE_EMAIL = "Remember Me";
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
@@ -105,55 +104,58 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.TheSecondDawnTextView5:
-                startActivity(new Intent(this, RegisterActivity.class));
-                break;
-            case R.id.TheSecondDawnTextView6:
-                startActivity(new Intent(this, ResetPasswordActivity.class));
-                break;
-            case R.id.TheSecondDawnButton1:
-                userLogin();
-                break;
-            case R.id.TheSecondDawnImageView29:
-                googleSignIn();
-                break;
+        if (view.getId() == R.id.TheSecondDawnTextView5) {
+            startActivity(new Intent(this, RegisterActivity.class));
+        }
+        if (view.getId() == R.id.TheSecondDawnTextView6) {
+            startActivity(new Intent(this, ResetPasswordActivity.class));
+        }
+        if (view.getId() == R.id.TheSecondDawnButton1) {
+            userLogin();
+        }
+        if (view.getId() == R.id.TheSecondDawnImageView29) {
+            googleSignIn();
         }
     }
 
     private void createRequest() {
-        mOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        mOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build();
         mClient = GoogleSignIn.getClient(this, mOptions);
     }
 
     private void googleSignIn() {
         Intent googleSignIn = mClient.getSignInIntent();
-        startActivityForResult(googleSignIn, RC_SIGN_IN);
+        startActivityForResult(googleSignIn, 1000);
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == RC_SIGN_IN) {
+        if (requestCode == 1000) {
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try {
                 GoogleSignInAccount account = task.getResult(ApiException.class);
-                googleAuth(account);
+                googleFirebaseAuth(account);
             } catch (ApiException e) {
                 Toast.makeText(this, "Sign In Failed!", Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-    private void googleAuth(GoogleSignInAccount account) {
+    private void googleFirebaseAuth(GoogleSignInAccount account) {
         AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
         mAuth.signInWithCredential(credential).addOnCompleteListener(this, task -> {
             if (task.isSuccessful()) {
                 FirebaseUser user = mAuth.getCurrentUser();
+                enterMainActivity();
             } else {
                 Toast.makeText(this, "Authentication Failed!", Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    private void enterMainActivity() {
+        startActivity(new Intent(this, MainActivity.class));
     }
 
     private void userLogin() {
