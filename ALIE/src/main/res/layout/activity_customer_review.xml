@@ -9,6 +9,30 @@
     <com.google.android.material.textfield.TextInputLayout
 
         android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="500dp"
+        android:layout_marginEnd="40dp"
+        android:hint="comment"
+        app:counterEnabled="true"
+        app:counterMaxLength="500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:startIconDrawable="@drawable/ic_bubble">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInCommentEdit"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:maxLength="500" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="35dp"
         android:layout_marginTop="200dp"
@@ -31,6 +55,7 @@
             android:maxLength="20" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
 
         android:id="@+id/textInPhoneLayout"
