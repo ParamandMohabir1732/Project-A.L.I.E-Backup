@@ -196,4 +196,5 @@
     <string name="imageButton2">This is an Image Button of the Left Arrow in Reset Password Screen</string>
     <string name="btn1">PLAY</string>
     <string name="btn2">Pause</string>
+    <string name="Switch">Power</string>
 </resources>

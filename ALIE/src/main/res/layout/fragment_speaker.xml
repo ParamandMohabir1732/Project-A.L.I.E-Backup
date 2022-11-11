@@ -125,4 +125,15 @@
         app:layout_constraintStart_toEndOf="@+id/playButton"
         tools:text="Pause" />
 
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="94dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="9dp"
+        android:text="@string/Switch"
+        android:trackTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TheSecondDawnTextView10" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

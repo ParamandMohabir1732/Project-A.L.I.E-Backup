@@ -30,7 +30,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.SeekBar;
+import android.widget.Switch;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
@@ -38,6 +41,7 @@ public class SpeakerFrag extends Fragment {
 
     private Button playBtn, pauseBtn;
 
+    Switch aSwitch;
     MediaPlayer mediaPlayer;
     AudioManager audioManager;
 
@@ -46,9 +50,20 @@ public class SpeakerFrag extends Fragment {
         View view = inflater.inflate(R.layout.fragment_speaker, container, false);
 
 
-
+        aSwitch = view.findViewById(R.id.switch1);
         playBtn = view.findViewById(R.id.playButton);
         pauseBtn = view.findViewById(R.id.pauseButton);
+
+        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if (b == true) {
+                    Toast.makeText(getActivity().getBaseContext(), "ON", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getActivity().getBaseContext(), "OFF", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
         playBtn.setOnClickListener(new View.OnClickListener() {
             @Override
