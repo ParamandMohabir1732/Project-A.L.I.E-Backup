@@ -29,6 +29,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -36,7 +38,9 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.slider.Slider;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.switchmaterial.SwitchMaterial;
 
 public class SmartFanFrag extends Fragment {
 
@@ -58,6 +62,25 @@ public class SmartFanFrag extends Fragment {
                 requestStoragePermission();
             }
         });
+
+       Switch fanContorl = view.findViewById(R.id.fanControl);
+
+       Slider fanSpeed = view.findViewById(R.id.RotationControl);
+       fanSpeed.setEnabled(false);
+
+
+        fanContorl.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(fanContorl.isChecked()) {
+                    fanSpeed.setEnabled(true);
+                }
+                else fanSpeed.setEnabled(false);
+                }
+
+        });
+
+
         return view;
     }
 
