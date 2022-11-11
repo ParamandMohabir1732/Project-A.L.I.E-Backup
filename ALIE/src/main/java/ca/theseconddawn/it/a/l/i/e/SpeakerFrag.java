@@ -22,7 +22,6 @@ Software Project
 package ca.theseconddawn.it.a.l.i.e;
 
 import android.content.Context;
-import android.content.DialogInterface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -54,38 +53,23 @@ public class SpeakerFrag extends Fragment {
         playBtn = view.findViewById(R.id.playButton);
         pauseBtn = view.findViewById(R.id.pauseButton);
 
-        aSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b == true) {
-                    Toast.makeText(getActivity().getBaseContext(), "ON", Toast.LENGTH_SHORT).show();
-                }else{
-                    Toast.makeText(getActivity().getBaseContext(), "OFF", Toast.LENGTH_SHORT).show();
-                }
+        aSwitch.setOnCheckedChangeListener((compoundButton, b) -> {
+            if (b) {
+                Toast.makeText(getActivity().getBaseContext(), "ON", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(getActivity().getBaseContext(), "OFF", Toast.LENGTH_SHORT).show();
             }
         });
 
-        playBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                play(view);
+        playBtn.setOnClickListener(view1 -> play());
 
-            }
-        });
-
-        pauseBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                pause(view);
-            }
-        });
+        pauseBtn.setOnClickListener(view2 -> pause());
 
         mediaPlayer = MediaPlayer.create(getActivity(), R.raw.sample);
         audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
 
         int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
         int currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
-
 
         SeekBar seekBar = (SeekBar) view.findViewById(R.id.volumeSeekbar);
         seekBar.setMax(maxVolume);
@@ -94,7 +78,7 @@ public class SpeakerFrag extends Fragment {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, i ,0 );
+                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, i, 0);
 
             }
 
@@ -113,14 +97,12 @@ public class SpeakerFrag extends Fragment {
         return view;
     }
 
-
-
-    public void play (View view) {
+    public void play() {
         mediaPlayer.start();
 
     }
 
-    public void pause (View view) {
+    public void pause() {
         mediaPlayer.pause();
     }
 
