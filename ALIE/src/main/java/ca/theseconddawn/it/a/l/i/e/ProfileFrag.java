@@ -106,18 +106,16 @@ public class ProfileFrag extends Fragment {
     }
 
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.TheSecondDawnButton4:
-                resetPassword();
-                break;
-            case R.id.TheSecondDawnButton5:
-                FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(getActivity(), LoginActivity.class));
-                break;
-            case R.id.TheSecondDawnTextView18:
-                Intent openGallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                startActivityForResult(openGallery, 1000);
-                break;
+        if (view.getId() == R.id.TheSecondDawnButton4) {
+            resetPassword();
+        }
+        if (view.getId() == R.id.TheSecondDawnButton5) {
+            FirebaseAuth.getInstance().signOut();
+            startActivity(new Intent(getActivity(), LoginActivity.class));
+        }
+        if (view.getId() == R.id.TheSecondDawnTextView18) {
+            Intent openGallery = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+            startActivityForResult(openGallery, 1000);
         }
     }
 

@@ -68,13 +68,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.TheSecondDawnImageButton1:
-                finish();
-                break;
-            case R.id.TheSecondDawnButton2:
-                registerUser();
-                break;
+        if (view.getId() == R.id.TheSecondDawnImageButton1) {
+            finish();
+        }
+        if (view.getId() == R.id.TheSecondDawnButton2) {
+            registerUser();
         }
     }
 
