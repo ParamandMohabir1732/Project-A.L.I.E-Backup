@@ -137,6 +137,7 @@
         android:layout_height="55dp"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
+        android:background="@drawable/button_shape"
         android:text="@string/button2"
         android:textColor="@color/white"
         android:textSize="25sp"

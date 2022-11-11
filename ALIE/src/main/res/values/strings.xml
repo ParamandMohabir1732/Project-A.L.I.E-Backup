@@ -159,23 +159,12 @@
     <!-- Smart Fan Screen -->
     <string name="textView11">Smart Fan Screen</string>
     <string name="imageView16">This is an Image of my 1st Fan Picture</string>
-    <string name="imageView17">This is an Image of my 2nd Fan Picture</string>
-    <string name="imageView18">This is an Image of my 3rd Fan Picture</string>
-    <string name="imageView19">This is an Image of my 4th Fan Picture</string>
-    <string name="imageView20">This is an Image of my 5th Fan Picture</string>
-    <string name="imageView21">This is an Image of my 6th Fan Picture</string>
     <string name="button3">Store Use data</string>
 
     <!-- Home Screen -->
     <string name="imageView22">This is an image of the App Icon in the Home Screen</string>
     <string name="textView12">A.L.I.E</string>
     <string name="textView13">Welcome to your Amazing A.I!</string>
-    <string name="imageView23">This is an Image of my 1st Home Picture</string>
-    <string name="imageView24">This is an Image of my 2nd Home Picture</string>
-    <string name="imageView25">This is an Image of my 3rd Home Picture</string>
-    <string name="imageView26">This is an Image of my 4th Home Picture</string>
-    <string name="imageView27">This is an Image of my 5th Home Picture</string>
-    <string name="imageView28">This is an Image of my 6th Home Picture</string>
 
     <!-- Profile Screen -->
     <string name="imageView31">This is an Image of the Default Profile Icon that will be Displayed on Profile Screen</string>
