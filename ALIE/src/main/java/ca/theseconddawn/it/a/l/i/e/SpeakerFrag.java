@@ -22,35 +22,48 @@ Software Project
 package ca.theseconddawn.it.a.l.i.e;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.SeekBar;
 
 import androidx.fragment.app.Fragment;
 
 public class SpeakerFrag extends Fragment {
 
+    private Button playBtn, pauseBtn;
+
     MediaPlayer mediaPlayer;
-
-    public void play (View view) {
-        mediaPlayer.start();
-
-    }
-
-    public void pause (View view) {
-        mediaPlayer.pause();
-    }
-
-
     AudioManager audioManager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_speaker, container, false);
+
+
+
+        playBtn = view.findViewById(R.id.playButton);
+        pauseBtn = view.findViewById(R.id.pauseButton);
+
+        playBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                play(view);
+
+            }
+        });
+
+        pauseBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                pause(view);
+            }
+        });
 
         mediaPlayer = MediaPlayer.create(getActivity(), R.raw.sample);
         audioManager = (AudioManager) getActivity().getSystemService(Context.AUDIO_SERVICE);
@@ -84,4 +97,16 @@ public class SpeakerFrag extends Fragment {
 
         return view;
     }
+
+
+
+    public void play (View view) {
+        mediaPlayer.start();
+
+    }
+
+    public void pause (View view) {
+        mediaPlayer.pause();
+    }
+
 }
