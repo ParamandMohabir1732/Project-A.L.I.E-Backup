@@ -21,6 +21,7 @@ Software Project
 
 package ca.theseconddawn.it.a.l.i.e;
 
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
@@ -62,11 +63,14 @@ public class ConfigurationActivity extends AppCompatActivity implements View.OnC
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             setPreferencesFromResource(R.xml.settings_preferences, rootKey);
-            Preference orientation = (Preference) findPreference("Attachment");
+            Preference orientation = findPreference("Attachment");
             orientation.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 @Override
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
-
+                        if(orientation.isEnabled()){
+                            getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+                        }
+                        else if(orientation.isCopyingEnabled())getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
                     return true;
                 }
             });
