@@ -67,6 +67,8 @@
     <!-- SharedPref Messages -->
 
     <!-- Configuration Screen -->
+    <string name="imageButton3">This is an Image Button of the Left Arrow in Settings Screen</string>
+
     <!-- Controls Titles -->
     <string name="Portrait">Orientation</string>
     <string name="Loudness">Speaker Volume</string>

@@ -17,7 +17,7 @@
         android:layout_marginTop="15dp"
         android:background="@null"
         android:contentDescription="@string/imageButton1"
-        android:src="@drawable/ic_left_arrow" />
+        android:src="@drawable/ic_left_arrow_state" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView3"
