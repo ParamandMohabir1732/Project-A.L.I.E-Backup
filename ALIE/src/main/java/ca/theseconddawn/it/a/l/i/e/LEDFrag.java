@@ -47,12 +47,7 @@ public class LEDFrag extends Fragment {
         LEDLayout = (ConstraintLayout) view.findViewById(R.id.Layout);
         LEDButton = view.findViewById(R.id.button);
         LEDDefaultColor = ContextCompat.getColor(getActivity(), com.google.android.material.R.color.design_default_color_on_primary);
-        LEDButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openColorPicker();
-            }
-        });
+        LEDButton.setOnClickListener(view1 -> openColorPicker());
         return view;
     }
 
@@ -67,11 +62,8 @@ public class LEDFrag extends Fragment {
             public void onOk(AmbilWarnaDialog dialog, int color) {
                 LEDDefaultColor = color;
                 LEDLayout.setBackgroundColor(LEDDefaultColor);
-
             }
-        }
-        );
+        });
         colorPicker.show();
     }
 }
-

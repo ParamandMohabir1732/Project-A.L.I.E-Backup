@@ -155,16 +155,22 @@
     <string name="imageView13">This is an Image of my 4th Speaker Picture</string>
     <string name="imageView14">This is an Image of my 5th Speaker Picture</string>
     <string name="imageView15">This is an Image of my 6th Speaker Picture</string>
+    <string name="btn1">PLAY</string>
+    <string name="btn2">Pause</string>
+    <string name="Switch">Power</string>
 
     <!-- Smart Fan Screen -->
     <string name="textView11">Smart Fan Screen</string>
     <string name="imageView16">This is an Image of my 1st Fan Picture</string>
     <string name="button3">Store Use data</string>
+    <string name="fanSpeed">Rotation speed</string>
+    <string name="fanOnn">Turn ON</string>
 
     <!-- Home Screen -->
     <string name="imageView22">This is an image of the App Icon in the Home Screen</string>
     <string name="textView12">A.L.I.E</string>
     <string name="textView13">Welcome to your Amazing A.I!</string>
+    <string name="imageButton4">This is an Image of the Microphone Icon that will be used to record your voice.</string>
 
     <!-- Profile Screen -->
     <string name="imageView31">This is an Image of the Default Profile Icon that will be Displayed on Profile Screen</string>
@@ -173,6 +179,18 @@
     <string name="button4">RESET PASSWORD</string>
     <string name="button5">LOGOUT</string>
     <string name="textView18">Change Profile</string>
+
+    <!-- Help Screen -->
+    <string name="edit_profile">Call</string>
+    <string name="ph_number">Toll free: 1 (800) 998–1498</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="help">Help</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="notifications">Notifications</string>
+    <string name="private_account">Private Account</string>
+    <string name="message">Send us a message</string>
+    <string name="about_us">About Us</string>
+    <string name="faq">FAQ</string>
 
     <!-- Reset Password Screen -->
     <string name="imageView32">This is the image of my Forgot Password Icon that will be displayed in the Reset Password Screen</string>
@@ -183,19 +201,4 @@
     <string name="emptyEmailError3">Email Address is Required!</string>
     <string name="matchEmailError3">Please Enter a Valid Email Address:</string>
     <string name="imageButton2">This is an Image Button of the Left Arrow in Reset Password Screen</string>
-    <string name="btn1">PLAY</string>
-    <string name="btn2">Pause</string>
-    <string name="Switch">Power</string>
-    <string name="fanSpeed">Rotation speed</string>
-    <string name="fanOnn">Turn ON</string>
-    <string name="edit_profile">Call</string>
-    <string name="ph_number">Toll free: 1 (800) 998-1498</string>
-    <string name="contact_us">Contact Us</string>
-    <string name="help">Help</string>
-    <string name="night_mode">Night Mode</string>
-    <string name="notifications">Notifications</string>
-    <string name="private_account">Private Account</string>
-    <string name="message">Send us a message</string>
-    <string name="about_us">About Us</string>
-    <string name="faq">FAQ</string>
 </resources>

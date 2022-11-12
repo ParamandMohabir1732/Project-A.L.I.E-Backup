@@ -29,7 +29,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.Toast;
@@ -40,14 +39,14 @@ public class SpeakerFrag extends Fragment {
 
     private Button playBtn, pauseBtn;
 
-    Switch aSwitch;
-    MediaPlayer mediaPlayer;
-    AudioManager audioManager;
+    private Switch aSwitch;
+    private SeekBar seekBar;
+    private MediaPlayer mediaPlayer;
+    private AudioManager audioManager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_speaker, container, false);
-
 
         aSwitch = view.findViewById(R.id.switch1);
         playBtn = view.findViewById(R.id.playButton);
@@ -62,7 +61,6 @@ public class SpeakerFrag extends Fragment {
         });
 
         playBtn.setOnClickListener(view1 -> play());
-
         pauseBtn.setOnClickListener(view2 -> pause());
 
         mediaPlayer = MediaPlayer.create(getActivity(), R.raw.sample);
@@ -71,7 +69,7 @@ public class SpeakerFrag extends Fragment {
         int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
         int currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 
-        SeekBar seekBar = (SeekBar) view.findViewById(R.id.volumeSeekbar);
+        seekBar = view.findViewById(R.id.volumeSeekbar);
         seekBar.setMax(maxVolume);
         seekBar.setProgress(currentVolume);
 
