@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,9 +14,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:contentDescription="@string/imageView22"
-        android:src="@mipmap/ic_launcher_round"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@mipmap/ic_launcher_round" />
 
     <TextView
         android:id="@+id/TheSecondDawnTextView12"
@@ -29,9 +26,7 @@
         android:textAlignment="center"
         android:textColor="@color/purple_700"
         android:textSize="60sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/TheSecondDawnTextView13"
@@ -41,16 +36,26 @@
         android:text="@string/textView13"
         android:textAlignment="center"
         android:textSize="18sp"
-        android:textStyle="italic"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/TheSecondDawnTextView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/textView19"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton4"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="250dp"
         android:background="@null"
         android:contentDescription="@string/imageButton4"
         android:scaleType="fitCenter"
