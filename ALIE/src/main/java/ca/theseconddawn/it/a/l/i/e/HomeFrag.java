@@ -61,7 +61,7 @@ public class HomeFrag extends Fragment {
         Intent voice = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         voice.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         voice.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
-        voice.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hi Please Enter a Command!");
+        voice.putExtra(RecognizerIntent.EXTRA_PROMPT, "Hi, Please Enter a Command!");
 
         try {
             startActivityForResult(voice, REQUEST_CODE_SPEECH_INPUT);

@@ -60,6 +60,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private FirebaseAuth mAuth;
     private GoogleSignInOptions mOptions;
     private GoogleSignInClient mClient;
+
     private static final String FILE_EMAIL = "Remember Me";
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
