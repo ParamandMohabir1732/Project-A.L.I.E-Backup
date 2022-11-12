@@ -120,6 +120,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (item.getItemId() == R.id.TheSecondDawnToolBarHelp) {
             Toast.makeText(this, toastMessage2, Toast.LENGTH_LONG).show();
+            Intent help = new Intent(MainActivity.this, HelpActivity.class);
+            startActivity(help);
         }
 
         if (item.getItemId() == R.id.TheSecondDawnToolBarVolume) {
