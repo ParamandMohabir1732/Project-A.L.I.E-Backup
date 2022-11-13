@@ -51,6 +51,8 @@
         android:textStyle="bold||italic" />
 
     <ImageButton
+        android:id="@+id/TheSecondDawnImageButton5"
+        android:contentDescription="@string/imageButton5"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_gravity="center"
@@ -60,7 +62,9 @@
         android:src="@drawable/home_button_off" />
 
     <ImageView
-        android:layout_width="100dp"
+        android:id="@+id/TheSecondDawnImageView34"
+        android:contentDescription="@string/imageView34"
+        android:layout_width="75dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="-175dp"
@@ -68,6 +72,8 @@
         android:src="@drawable/ic_speaker"/>
 
     <ImageButton
+        android:id="@+id/TheSecondDawnImageButton6"
+        android:contentDescription="@string/imageButton6"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_gravity="center"
@@ -78,12 +84,36 @@
         android:src="@drawable/home_button_off" />
 
     <ImageView
-        android:layout_width="100dp"
+        android:id="@+id/TheSecondDawnImageView35"
+        android:contentDescription="@string/imageView35"
+        android:layout_width="75dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="-175dp"
         android:layout_marginStart="100dp"
         android:src="@drawable/ic_led"/>
+
+    <ImageButton
+        android:id="@+id/TheSecondDawnImageButton7"
+        android:contentDescription="@string/imageButton7"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="-100dp"
+        android:layout_marginTop="25dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:src="@drawable/home_button_off" />
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImageView36"
+        android:contentDescription="@string/imageView36"
+        android:layout_width="75dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-175dp"
+        android:layout_marginStart="100dp"
+        android:src="@drawable/ic_fan"/>
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton4"
