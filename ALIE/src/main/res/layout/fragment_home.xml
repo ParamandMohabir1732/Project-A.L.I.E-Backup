@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="0dp"
         android:text="@string/textView19"
         android:textAlignment="center"
         android:textColor="@color/brightgreen"
@@ -180,16 +180,5 @@
         android:text="@string/switch4"
         android:textColor="@color/black"
         android:textStyle="bold" />
-
-    <ImageButton
-        android:id="@+id/TheSecondDawnImageButton4"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:background="@null"
-        android:contentDescription="@string/imageButton4"
-        android:scaleType="fitCenter"
-        android:src="@drawable/microphone_icon" />
 
 </LinearLayout>

@@ -41,7 +41,7 @@ import java.util.Locale;
 public class HomeFrag extends Fragment {
 
     public TextView voiceInput;
-    private ImageButton voiceInputButton, voiceButton, speakerButton, ledButton, fanButton;
+    private ImageButton voiceButton, speakerButton, ledButton, fanButton;
     private SwitchCompat speakerSwitch, ledSwitch, fanSwitch, voiceSwitch;
     private int currentSpeakerImage, currentLedImage, currentFanImage, currentVoiceImage;
 
@@ -58,9 +58,6 @@ public class HomeFrag extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         voiceInput = view.findViewById(R.id.TheSecondDawnTextView19);
-
-        voiceInputButton = view.findViewById(R.id.TheSecondDawnImageButton4);
-        voiceInputButton.setOnClickListener(view1 -> setVoiceInput());
 
         speakerButton = view.findViewById(R.id.TheSecondDawnImageButton5);
         speakerButton.setOnClickListener(view12 -> {
@@ -79,6 +76,7 @@ public class HomeFrag extends Fragment {
 
         voiceButton = view.findViewById(R.id.TheSecondDawnImageButton8);
         voiceButton.setOnClickListener(view15 -> {
+            setVoiceInput();
         });
 
         speakerSwitch = view.findViewById(R.id.TheSecondDawnSwitch1);
