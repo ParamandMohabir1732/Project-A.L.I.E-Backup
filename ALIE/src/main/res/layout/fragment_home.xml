@@ -60,7 +60,7 @@
         android:background="@null"
         android:contentDescription="@string/imageButton5"
         android:scaleType="fitCenter"
-        android:src="@drawable/home_button_off" />
+        android:src="@drawable/speaker_button_off" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView34"
@@ -93,7 +93,7 @@
         android:background="@null"
         android:contentDescription="@string/imageButton6"
         android:scaleType="centerInside"
-        android:src="@drawable/home_button_off" />
+        android:src="@drawable/led_button_off" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView35"
@@ -125,7 +125,7 @@
         android:background="@null"
         android:contentDescription="@string/imageButton7"
         android:scaleType="fitCenter"
-        android:src="@drawable/home_button_off" />
+        android:src="@drawable/fan_button_off" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView36"
@@ -158,7 +158,7 @@
         android:background="@null"
         android:contentDescription="@string/imageButton8"
         android:scaleType="fitCenter"
-        android:src="@drawable/home_button_off" />
+        android:src="@drawable/voice_button_off" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView37"

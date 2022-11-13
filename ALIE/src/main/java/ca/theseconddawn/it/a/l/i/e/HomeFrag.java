@@ -43,6 +43,12 @@ public class HomeFrag extends Fragment {
     public TextView voiceInput;
     private ImageButton voiceInputButton, speakerButton, ledButton, fanButton;
     private SwitchCompat speakerSwitch, ledSwitch, fanSwitch, voiceSwitch;
+    private int currentImage;
+
+    int[] speakerImages = {R.drawable.speaker_button_off, R.drawable.speaker_button_on};
+    int[] ledImages = {R.drawable.led_button_off, R.drawable.led_button_on};
+    int[] fanImages = {R.drawable.fan_button_off, R.drawable.fan_button_on};
+    int[] voiceImages = {R.drawable.voice_button_off, R.drawable.voice_button_on};
 
     private static final int REQUEST_CODE_SPEECH_INPUT = 1;
     private static final int RESULT_OK = -1;
@@ -72,12 +78,38 @@ public class HomeFrag extends Fragment {
         });
 
         speakerSwitch = view.findViewById(R.id.TheSecondDawnSwitch1);
+        speakerSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            currentImage++;
+            currentImage = currentImage % speakerImages.length;
+            speakerButton.setImageResource(speakerImages[currentImage]);
+            }
+        });
 
         ledSwitch = view.findViewById(R.id.TheSecondDawnSwitch2);
+        ledSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                currentImage++;
+                currentImage = currentImage % ledImages.length;
+                ledButton.setImageResource(ledImages[currentImage]);
+            }
+        });
 
         fanSwitch = view.findViewById(R.id.TheSecondDawnSwitch3);
+        fanSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            }
+        });
 
         voiceSwitch = view.findViewById(R.id.TheSecondDawnSwitch4);
+        voiceSwitch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            }
+        });
 
         return view;
     }
