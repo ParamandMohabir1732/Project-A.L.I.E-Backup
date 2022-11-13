@@ -13,20 +13,34 @@
         android:id="@+id/switchLed"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="248dp"
-        android:layout_marginEnd="271dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginEnd="140dp"
         android:text="lights off/on"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TheSecondDawnTextView9" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchLed2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="145dp"
+        android:text="white/RGB"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switchLed" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="139dp"
-        android:layout_marginTop="472dp"
+        android:layout_marginTop="560dp"
         android:layout_marginEnd="139dp"
         android:text="Color picker"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,16 +52,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="107dp"
         android:gravity="center"
-        android:text="@string/textView9"
-        android:textColor="@color/orange"
+        android:text="Led Controls"
+        android:textColor="@color/aqua"
         android:textSize="40sp"
         android:textStyle="bold|italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="410dp"
+        android:layout_height="361dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/led_lights_3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TheSecondDawnTextView9" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
