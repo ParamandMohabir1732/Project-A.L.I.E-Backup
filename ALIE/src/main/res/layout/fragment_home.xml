@@ -54,10 +54,36 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:layout_gravity="center"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="100dp"
         android:scaleType="fitCenter"
         android:background="@null"
-        android:src="@drawable/speaker_button_off" />
+        android:src="@drawable/home_button_off" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-175dp"
+        android:layout_marginStart="-100dp"
+        android:src="@drawable/ic_speaker"/>
+
+    <ImageButton
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="-100dp"
+        android:layout_marginTop="-175dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:src="@drawable/home_button_off" />
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-175dp"
+        android:layout_marginStart="100dp"
+        android:src="@drawable/ic_led"/>
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton4"
