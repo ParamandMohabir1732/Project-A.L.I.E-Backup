@@ -79,9 +79,9 @@
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="100dp"
+        android:text="@string/switch1"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="@string/switch1" />
+        android:textStyle="bold" />
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton6"
@@ -112,9 +112,9 @@
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="-100dp"
+        android:text="@string/switch2"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="@string/switch2" />
+        android:textStyle="bold" />
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton7"
@@ -144,17 +144,17 @@
         android:layout_gravity="center"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="-100dp"
+        android:text="@string/switch3"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="@string/switch3" />
+        android:textStyle="bold" />
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton8"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:layout_marginEnd="100dp"
         android:layout_marginTop="-188dp"
+        android:layout_marginEnd="100dp"
         android:background="@null"
         android:contentDescription="@string/imageButton8"
         android:scaleType="fitCenter"
@@ -177,9 +177,9 @@
         android:layout_gravity="center"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="100dp"
+        android:text="@string/switch4"
         android:textColor="@color/black"
-        android:textStyle="bold"
-        android:text="@string/switch4" />
+        android:textStyle="bold" />
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton4"

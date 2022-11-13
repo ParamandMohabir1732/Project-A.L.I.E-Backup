@@ -41,14 +41,14 @@ import java.util.Locale;
 public class HomeFrag extends Fragment {
 
     public TextView voiceInput;
-    private ImageButton voiceInputButton, speakerButton, ledButton, fanButton;
+    private ImageButton voiceInputButton, voiceButton, speakerButton, ledButton, fanButton;
     private SwitchCompat speakerSwitch, ledSwitch, fanSwitch, voiceSwitch;
-    private int currentImage;
+    private int currentSpeakerImage, currentLedImage, currentFanImage, currentVoiceImage;
 
-    int[] speakerImages = {R.drawable.speaker_button_off, R.drawable.speaker_button_on};
-    int[] ledImages = {R.drawable.led_button_off, R.drawable.led_button_on};
-    int[] fanImages = {R.drawable.fan_button_off, R.drawable.fan_button_on};
-    int[] voiceImages = {R.drawable.voice_button_off, R.drawable.voice_button_on};
+    private final int[] speakerImages = {R.drawable.speaker_button_off, R.drawable.speaker_button_on};
+    private final int[] ledImages = {R.drawable.led_button_off, R.drawable.led_button_on};
+    private final int[] fanImages = {R.drawable.fan_button_off, R.drawable.fan_button_on};
+    private final int[] voiceImages = {R.drawable.voice_button_off, R.drawable.voice_button_on};
 
     private static final int REQUEST_CODE_SPEECH_INPUT = 1;
     private static final int RESULT_OK = -1;
@@ -77,38 +77,36 @@ public class HomeFrag extends Fragment {
         fanButton.setOnClickListener(view13 -> {
         });
 
+        voiceButton = view.findViewById(R.id.TheSecondDawnImageButton8);
+        voiceButton.setOnClickListener(view15 -> {
+        });
+
         speakerSwitch = view.findViewById(R.id.TheSecondDawnSwitch1);
-        speakerSwitch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            currentImage++;
-            currentImage = currentImage % speakerImages.length;
-            speakerButton.setImageResource(speakerImages[currentImage]);
-            }
+        speakerSwitch.setOnClickListener(view16 -> {
+            currentSpeakerImage++;
+            currentSpeakerImage = currentSpeakerImage % speakerImages.length;
+            speakerButton.setImageResource(speakerImages[currentSpeakerImage]);
         });
 
         ledSwitch = view.findViewById(R.id.TheSecondDawnSwitch2);
-        ledSwitch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                currentImage++;
-                currentImage = currentImage % ledImages.length;
-                ledButton.setImageResource(ledImages[currentImage]);
-            }
+        ledSwitch.setOnClickListener(view17 -> {
+            currentLedImage++;
+            currentLedImage = currentLedImage % ledImages.length;
+            ledButton.setImageResource(ledImages[currentLedImage]);
         });
 
         fanSwitch = view.findViewById(R.id.TheSecondDawnSwitch3);
-        fanSwitch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
+        fanSwitch.setOnClickListener(view18 -> {
+            currentFanImage++;
+            currentFanImage = currentFanImage % fanImages.length;
+            fanButton.setImageResource(fanImages[currentFanImage]);
         });
 
         voiceSwitch = view.findViewById(R.id.TheSecondDawnSwitch4);
-        voiceSwitch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-            }
+        voiceSwitch.setOnClickListener(view19 -> {
+            currentVoiceImage++;
+            currentVoiceImage = currentVoiceImage % voiceImages.length;
+            voiceButton.setImageResource(voiceImages[currentVoiceImage]);
         });
 
         return view;
