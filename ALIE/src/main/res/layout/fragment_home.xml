@@ -48,94 +48,138 @@
         android:textAlignment="center"
         android:textColor="@color/brightgreen"
         android:textSize="20sp"
-        android:textStyle="bold||italic" />
+        android:textStyle="bold|italic" />
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton5"
-        android:contentDescription="@string/imageButton5"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="100dp"
-        android:scaleType="fitCenter"
         android:background="@null"
+        android:contentDescription="@string/imageButton5"
+        android:scaleType="fitCenter"
         android:src="@drawable/home_button_off" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView34"
-        android:contentDescription="@string/imageView34"
         android:layout_width="75dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:layout_marginTop="-175dp"
+        android:layout_marginTop="-125dp"
         android:layout_marginEnd="100dp"
-        android:src="@drawable/ic_speaker"/>
+        android:contentDescription="@string/imageView34"
+        android:src="@drawable/ic_speaker" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/TheSecondDawnSwitch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="100dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="@string/switch1" />
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton6"
-        android:contentDescription="@string/imageButton6"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
+        android:layout_marginTop="-199dp"
         android:layout_marginEnd="-100dp"
-        android:layout_marginTop="-175dp"
-        android:scaleType="fitCenter"
         android:background="@null"
+        android:contentDescription="@string/imageButton6"
+        android:scaleType="centerInside"
         android:src="@drawable/home_button_off" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView35"
-        android:contentDescription="@string/imageView35"
         android:layout_width="75dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:layout_marginTop="-175dp"
+        android:layout_marginTop="-125dp"
         android:layout_marginEnd="-100dp"
-        android:src="@drawable/ic_led"/>
+        android:contentDescription="@string/imageView35"
+        android:src="@drawable/ic_led" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/TheSecondDawnSwitch2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="-100dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="@string/switch2" />
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton7"
-        android:contentDescription="@string/imageButton7"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginEnd="-100dp"
-        android:layout_marginTop="25dp"
-        android:scaleType="fitCenter"
         android:background="@null"
+        android:contentDescription="@string/imageButton7"
+        android:scaleType="fitCenter"
         android:src="@drawable/home_button_off" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView36"
-        android:contentDescription="@string/imageView36"
         android:layout_width="75dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:layout_marginTop="-175dp"
+        android:layout_marginTop="-125dp"
         android:layout_marginEnd="-100dp"
-        android:src="@drawable/ic_fan"/>
+        android:contentDescription="@string/imageView36"
+        android:src="@drawable/ic_fan" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/TheSecondDawnSwitch3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="-100dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="@string/switch3" />
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton8"
-        android:contentDescription="@string/imageButton8"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginEnd="100dp"
-        android:layout_marginTop="-175dp"
-        android:scaleType="fitCenter"
+        android:layout_marginTop="-188dp"
         android:background="@null"
+        android:contentDescription="@string/imageButton8"
+        android:scaleType="fitCenter"
         android:src="@drawable/home_button_off" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView37"
-        android:contentDescription="@string/imageView37"
         android:layout_width="75dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:layout_marginTop="-175dp"
+        android:layout_marginTop="-125dp"
         android:layout_marginEnd="100dp"
-        android:src="@drawable/ic_mic"/>
+        android:contentDescription="@string/imageView37"
+        android:src="@drawable/ic_mic" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/TheSecondDawnSwitch4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="100dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:text="@string/switch4" />
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton4"
@@ -147,4 +191,5 @@
         android:contentDescription="@string/imageButton4"
         android:scaleType="fitCenter"
         android:src="@drawable/microphone_icon" />
+
 </LinearLayout>
