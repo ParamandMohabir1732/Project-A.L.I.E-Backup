@@ -15,6 +15,10 @@
     <string name="builder2Message">Permission is Required to Access Storage!</string>
     <string name="builder2NegativeButton">Deny Permission</string>
     <string name="builder2PositiveButton">Grant Permission</string>
+    <string name="builder3Title">Permission Needed!</string>
+    <string name="builder3Message">Permission is Required to Access Network Location!</string>
+    <string name="builder3NegativeButton">Deny Permission</string>
+    <string name="builder3PositiveButton">Grant Permission</string>
 
     <!-- Navigation Menu Titles -->
     <string name="titleHome">Home</string>
@@ -59,15 +63,20 @@
     <string name="toastMessage14">This Email is Taken Already!</string>
     <string name="toastMessage15">Please Check your Email to Reset your Password!</string>
     <string name="toastMessage16">An Error has Occurred, Please Try Again!</string>
+    <string name="toastMessage17">Permission Granted!</string>
+    <string name="toastMessage18">Permission Denied!</string>
 
     <!-- Snackbar Messages -->
     <string name="snackbar1">Permission is Granted!</string>
     <string name="snackbar2">Permission is Denied!</string>
+    <string name="snackbar3">Permission is Granted!</string>
+    <string name="snackbar4">Permission is Denied!</string>
 
     <!-- SharedPref Messages -->
 
     <!-- Configuration Screen -->
     <string name="imageButton3">This is an Image Button of the Left Arrow in Settings Screen</string>
+    <string name="textView20">Settings Screen</string>
 
     <!-- Controls Titles -->
     <string name="Portrait">Orientation</string>
@@ -139,13 +148,12 @@
     <string name="imageButton1">This is an Image Button of the Left Arrow in Register Screen</string>
 
     <!-- LED Screen -->
-    <string name="textView9">LED Screen</string>
-    <string name="imageView4">This is an Image of my 1st LED Picture</string>
-    <string name="imageView5">This is an Image of my 2nd LED Picture</string>
-    <string name="imageView6">This is an Image of my 3rd LED Picture</string>
-    <string name="imageView7">This is an Image of my 4th LED Picture</string>
-    <string name="imageView8">This is an Image of my 5th LED Picture</string>
-    <string name="imageView9">This is an Image of my 6th LED Picture</string>
+    <string name="textView9">LED Controls</string>
+    <string name="switch5">Lights OFF/ON</string>
+    <string name="switch6">White/RGB</string>
+    <string name="button7">Color Picker</string>
+    <string name="imageView38">This is an Image of the LED Icon</string>
+    <string name="button8">Bluetooth Connection</string>
 
     <!-- Speaker Screen -->
     <string name="textView10">Speaker Screen</string>

@@ -27,7 +27,7 @@
             android:layout_marginTop="15dp"
             android:background="@null"
             android:padding="144dp"
-            android:src="@drawable/back_btn" />
+            android:src="@drawable/ic_left_arrow_state" />
 
 
         <TextView

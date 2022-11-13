@@ -37,27 +37,37 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
+import com.google.android.material.snackbar.Snackbar;
+
 import yuku.ambilwarna.AmbilWarnaDialog;
 
 public class LEDFrag extends Fragment {
-    private final int NETWORK_PERMISSION_CODE = 1;
-    ConstraintLayout LEDLayout;
-    int LEDDefaultColor;
-    Button LEDButton;
+
+    private final int ACCESS_LOCATION_CODE = 1;
+
+    private ConstraintLayout LEDLayout;
+    private int LEDDefaultColor;
+    private Button LEDButton, buttonRequest;
+    private AmbilWarnaDialog colorPicker;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_l_e_d, container, false);
 
-        LEDLayout = view.findViewById(R.id.Layout);
-        LEDButton = view.findViewById(R.id.button);
+        LEDLayout = view.findViewById(R.id.TheSecondDawnLEDLayout);
+
         LEDDefaultColor = ContextCompat.getColor(getActivity(), com.google.android.material.R.color.design_default_color_on_primary);
+
+        LEDButton = view.findViewById(R.id.TheSecondDawnButton7);
         LEDButton.setOnClickListener(view1 -> openColorPicker());
 
-        Button buttonRequest = view.findViewById(R.id.permissionsBtn);
+        buttonRequest = view.findViewById(R.id.TheSecondDawnButton8);
         buttonRequest.setOnClickListener(view12 -> {
-            if (ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.BLUETOOTH_SCAN) == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(getActivity(), "you have already granted this permission! ", Toast.LENGTH_SHORT).show();
+            if (ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION) == PackageManager.PERMISSION_GRANTED) {
+                Snackbar snackbar = Snackbar.make(requireView(), R.string.snackbar3, Snackbar.LENGTH_LONG);
+                snackbar.setBackgroundTint(getResources().getColor(R.color.brightgreen));
+                snackbar.setTextColor(getResources().getColor(R.color.black));
+                snackbar.show();
             } else {
                 requestInternetPermission();
             }
@@ -65,31 +75,35 @@ public class LEDFrag extends Fragment {
         return view;
     }
 
-
     private void requestInternetPermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), Manifest.permission.BLUETOOTH_SCAN)) {
+        if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION)) {
             final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-            builder.setTitle("A.L.I.E");
-            builder.setMessage("This permission is needed to allow led control to access your wifi connection");
-            builder.setPositiveButton("ok", (dialogInterface, which) -> ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.ACCESS_WIFI_STATE}, NETWORK_PERMISSION_CODE));
-            builder.setNegativeButton("Cancel", (dialogInterface, which) -> dialogInterface.dismiss()).create().show();
+            builder.setTitle(R.string.builder3Title);
+            builder.setMessage(R.string.builder3Message);
+            builder.setPositiveButton(R.string.builder3PositiveButton, (dialog, which) -> ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, ACCESS_LOCATION_CODE));
+            builder.setNegativeButton(R.string.builder3NegativeButton, (dialog, which) -> dialog.dismiss()).create().show();
+            Snackbar snackbar = Snackbar.make(requireView(), R.string.snackbar4, Snackbar.LENGTH_SHORT);
+            snackbar.setBackgroundTint(getResources().getColor(R.color.brightred));
+            snackbar.setTextColor(getResources().getColor(R.color.black));
+            snackbar.show();
         } else {
-            ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.BLUETOOTH_SCAN}, NETWORK_PERMISSION_CODE);
+            ActivityCompat.requestPermissions(requireActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, ACCESS_LOCATION_CODE);
         }
     }
 
+    @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == NETWORK_PERMISSION_CODE) {
+        if (requestCode == ACCESS_LOCATION_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(getActivity(), "Permission GRANTED", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), R.string.toastMessage17, Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(getActivity(), "Permission DENIED", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), R.string.toastMessage18, Toast.LENGTH_SHORT).show();
             }
         }
     }
 
-    public void openColorPicker() {
-        AmbilWarnaDialog colorPicker = new AmbilWarnaDialog(getActivity(), LEDDefaultColor, new AmbilWarnaDialog.OnAmbilWarnaListener() {
+    private void openColorPicker() {
+        colorPicker = new AmbilWarnaDialog(getActivity(), LEDDefaultColor, new AmbilWarnaDialog.OnAmbilWarnaListener() {
             @Override
             public void onCancel(AmbilWarnaDialog dialog) {
 

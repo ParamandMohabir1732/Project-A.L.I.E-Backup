@@ -118,7 +118,6 @@
     <string name="firebaseReference">Utilisatrices</string>
 
     <!-- LED Screen -->
-    <string name="textView9">Ecran LED</string>
     <string name="imageView4">Ceci est une image de ma 1ère image LED</string>
     <string name="imageView5">Ceci est une image de ma 2ème image LED</string>
     <string name="imageView6">Ceci est une image de ma 3ème image LED</string>
