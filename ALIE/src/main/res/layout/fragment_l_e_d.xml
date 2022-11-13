@@ -8,6 +8,19 @@
     android:background="@drawable/gradient_led"
     tools:context=".LEDFrag">
 
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchLed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="248dp"
+        android:layout_marginEnd="271dp"
+        android:text="lights off/on"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TheSecondDawnTextView9" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
@@ -26,11 +39,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="104dp"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="107dp"
         android:gravity="center"
         android:text="@string/textView9"
         android:textColor="@color/orange"
         android:textSize="40sp"
         android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
