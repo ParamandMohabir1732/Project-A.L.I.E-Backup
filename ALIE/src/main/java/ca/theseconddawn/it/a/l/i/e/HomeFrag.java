@@ -23,9 +23,6 @@ package ca.theseconddawn.it.a.l.i.e;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.speech.RecognizerIntent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -34,13 +31,18 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.widget.SwitchCompat;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
 public class HomeFrag extends Fragment {
 
     public TextView voiceInput;
-    private ImageButton voiceButton;
+    private ImageButton voiceInputButton, speakerButton, ledButton, fanButton;
+    private SwitchCompat speakerSwitch, ledSwitch, fanSwitch, voiceSwitch;
 
     private static final int REQUEST_CODE_SPEECH_INPUT = 1;
     private static final int RESULT_OK = -1;
@@ -51,8 +53,31 @@ public class HomeFrag extends Fragment {
 
         voiceInput = view.findViewById(R.id.TheSecondDawnTextView19);
 
-        voiceButton = view.findViewById(R.id.TheSecondDawnImageButton4);
-        voiceButton.setOnClickListener(view1 -> setVoiceInput());
+        voiceInputButton = view.findViewById(R.id.TheSecondDawnImageButton4);
+        voiceInputButton.setOnClickListener(view1 -> setVoiceInput());
+
+        speakerButton = view.findViewById(R.id.TheSecondDawnImageButton5);
+        speakerButton.setOnClickListener(view12 -> {
+            SpeakerFrag speakerFrag = new SpeakerFrag();
+            FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.TheSecondDawnDrawerLayout, speakerFrag, speakerFrag.getTag()).commit();
+        });
+
+        ledButton = view.findViewById(R.id.TheSecondDawnImageButton6);
+        ledButton.setOnClickListener(view14 -> {
+        });
+
+        fanButton = view.findViewById(R.id.TheSecondDawnImageButton7);
+        fanButton.setOnClickListener(view13 -> {
+        });
+
+        speakerSwitch = view.findViewById(R.id.TheSecondDawnSwitch1);
+
+        ledSwitch = view.findViewById(R.id.TheSecondDawnSwitch2);
+
+        fanSwitch = view.findViewById(R.id.TheSecondDawnSwitch3);
+
+        voiceSwitch = view.findViewById(R.id.TheSecondDawnSwitch4);
 
         return view;
     }
