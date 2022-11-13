@@ -107,9 +107,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View view) {
         if (view.getId() == R.id.TheSecondDawnTextView5) {
             startActivity(new Intent(this, RegisterActivity.class));
+            overridePendingTransition(R.anim.slide_in_left, R.anim.stay);
         }
         if (view.getId() == R.id.TheSecondDawnTextView6) {
             startActivity(new Intent(this, ResetPasswordActivity.class));
+            overridePendingTransition(R.anim.slide_in_right, R.anim.stay);
         }
         if (view.getId() == R.id.TheSecondDawnButton1) {
             userLogin();
