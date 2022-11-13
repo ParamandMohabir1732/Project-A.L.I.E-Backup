@@ -46,16 +46,25 @@
         android:layout_marginTop="20dp"
         android:text="@string/textView19"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/brightgreen"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold||italic" />
+
+    <ImageButton
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="80dp"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:src="@drawable/speaker_button_off" />
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton4"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="50dp"
         android:background="@null"
         android:contentDescription="@string/imageButton4"
         android:scaleType="fitCenter"

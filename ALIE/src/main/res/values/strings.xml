@@ -171,6 +171,7 @@
     <string name="textView12">A.L.I.E</string>
     <string name="textView13">Welcome to your Amazing A.I!</string>
     <string name="textView19">Press MIC Button to Input Voice</string>
+    <string name="voicePrompt">Hi, Please Enter a Command!</string>
     <string name="imageButton4">This is an Image of the Microphone Icon that will be used to record your voice.</string>
 
     <!-- Profile Screen -->
