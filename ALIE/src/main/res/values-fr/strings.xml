@@ -15,12 +15,20 @@
     <string name="builder2Message">Une autorisation est requise pour accéder au stockage!</string>
     <string name="builder2NegativeButton">Refuser lautorisation</string>
     <string name="builder2PositiveButton">Donner la permission</string>
+    <string name="builder3Title">Permission requise !</string>
+    <string name="builder3Message">Une autorisation est requise pour accéder à l\emplacement du réseau !</string>
+    <string name="builder3NegativeButton">Refuser l\autorisation</string>
+    <string name="builder3PositiveButton">Donner la permission</string>
 
     <!-- Navigation Menu Titles -->
     <string name="titleHome">Maison</string>
     <string name="titleSpeaker">Le volume</string>
     <string name="titleFan">Ventilateur intelligent</string>
     <string name="titleLED">Lumières LED</string>
+    <string name="titleAccount">Compte</string>
+    <string name="titleProfile">Profil</string>
+    <string name="titleLogout">Se déconnecter</string>
+
 
     <!-- ToolBar Menu Titles -->
     <string name="titleSettings">Réglages</string>
@@ -54,12 +62,30 @@
     <string name="toastMessage12">Lutilisateur a été enregistré avec succès!</string>
     <string name="toastMessage13">Échec de linscription!</string>
     <string name="toastMessage14">Cet e-mail est déjà pris!</string>
+    <string name="toastMessage15">Veuillez vérifier votre e-mail pour réinitialiser votre mot de passe !</string>
+    <string name="toastMessage16">Une erreur s\est produite, veuillez réessayer !</string>
+    <string name="toastMessage17">Permission accordée!</string>
+    <string name="toastMessage18">Permission refusée!</string>
+    <string name="toastMessage19">La connexion a échoué !</string>
+    <string name="toastMessage20">Authentification échouée!</string>
+    <string name="toastMessage21">Activation du Bluetooth…</string>
+    <string name="toastMessage22">Le Bluetooth est déjà activé !</string>
+    <string name="toastMessage23">Rendre l\appareil détectable !</string>
+    <string name="toastMessage24">Bluetooth désactivé</string>
+    <string name="toastMessage25">Le Bluetooth est déjà désactivé !</string>
+    <string name="toastMessage26">Activez Bluetooth pour afficher les appareils jumelés !</string>
+    <string name="toastMessage27">Le Bluetooth est maintenant activé !</string>
+    <string name="toastMessage28">Impossible d\activer le Bluetooth !</string>
 
     <!-- Snackbar Messages -->
     <string name="snackbar1">Lautorisation est accordée!</string>
     <string name="snackbar2">Lautorisation est refusée!</string>
-
+    <string name="snackbar3">Lautorisation est accordée!</string>
+    <string name="snackbar4">Lautorisation est refusée!</string>
     <!-- Configuration Screen -->
+    <string name="imageButton3">Ceci est un bouton d\image de la flèche gauche dans l\écran des paramètres</string>
+    <string name="textView20">Settings Screen</string>
+
     <!-- Controls Titles -->
     <string name="Portrait">Orientation</string>
     <string name="Loudness">Volume du haut-parleur</string>
@@ -103,6 +129,15 @@
     <string name="matchEmailError1">Sil vous plaît, mettez une adresse email valide:</string>
     <string name="emptyPasswordError1">Mot de passe requis!</string>
     <string name="lengthPasswordError1">Votre mot de passe doit comporter au moins 6 caractères!</string>
+    <string name="imageView29">Ceci est une image de l\icône Google utilisée pour se connecter</string>
+    <string name="imageView30">Ceci est une image de l\icône Facebook utilisée pour se connecter</string>
+    <string name="checkBox">Souviens-toi de moi</string>
+    <string name="rememberMeCheckbox">vérifié</string>
+    <string name="sharedPrefsvEmail">svEmail</string>
+    <string name="sharedPrefsvPassword">svPasse</string>
+    <string name="file_Email">Souviens-toi de moi</string>
+    <string name="rememberMeCheckBoxChecked">vérifié</string>
+    <string name="rememberMeCheckBoxCheckedBoolean">vérifié</string>
 
     <!-- Register Screen -->
     <string name="textView7">A.L.I.E</string>
@@ -116,14 +151,20 @@
     <string name="emptyPasswordError2">Mot de passe requis!</string>
     <string name="lengthPasswordError2">Votre mot de passe doit comporter au moins 6 caractères!</string>
     <string name="firebaseReference">Utilisatrices</string>
+    <string name="confirmPasswordError1">Le mot de passe ne correspond pas !</string>
+    <string name="imageButton1">Ceci est un bouton d\image de la flèche gauche dans l\écran d'enregistrement</string>
+    <string name="editText5">Confirmez le mot de passe:</string>
+
+
 
     <!-- LED Screen -->
-    <string name="imageView4">Ceci est une image de ma 1ère image LED</string>
-    <string name="imageView5">Ceci est une image de ma 2ème image LED</string>
-    <string name="imageView6">Ceci est une image de ma 3ème image LED</string>
-    <string name="imageView7">Ceci est une image de ma 4ème image LED</string>
-    <string name="imageView8">Ceci est une image de ma 5ème image LED</string>
-    <string name="imageView9">Ceci est une image de ma 6ème image LED</string>
+    <string name="textView9">Commandes DEL</string>
+    <string name="switch5">Lumières éteintes/allumées</string>
+    <string name="switch6">Blanc/RVB</string>
+    <string name="button7">Pipette à couleurs</string>
+    <string name="imageView38">Ceci est une image de l\icône LED</string>
+    <string name="button8">Autorisation de localisation</string>
+
 
     <!-- Speaker Screen -->
     <string name="textView10">Écran du haut-parleur</string>
@@ -133,35 +174,78 @@
     <string name="imageView13">Ceci est une image de mon 4e intervenant</string>
     <string name="imageView14">Ceci est une image de mon 5e intervenant</string>
     <string name="imageView15">Ceci est une image de ma 6e image dorateur</string>
+    <string name="btn1">JOUER</string>
+    <string name="btn2">Pause</string>
+    <string name="Switch">Du pouvoir</string>
 
     <!-- Smart Fan Screen -->
     <string name="textView11">Écran de ventilateur intelligent</string>
     <string name="imageView16">Ceci est une image de ma 1ère photo de fan</string>
-    <string name="imageView17">Ceci est une image de ma 2ème photo de fan</string>
-    <string name="imageView18">Ceci est une image de ma 3ème photo de fan</string>
-    <string name="imageView19">Ceci est une image de ma 4ème photo de fan</string>
-    <string name="imageView20">Ceci est une image de ma 5ème photo de fan</string>
-    <string name="imageView21">Ceci est une image de ma 6ème photo de fan</string>
     <string name="button3">Autoriser laccès aux fichiers</string>
+    <string name="fanSpeed">Vitesse de rotation</string>
+    <string name="fanOnn">Allumer</string>
 
     <!-- Home Screen -->
     <string name="imageView22">Ceci est une image de licône de lapplication sur lécran daccueil</string>
     <string name="textView12">A.L.I.E</string>
     <string name="textView13">Bienvenue dans votre Amazing A.I!</string>
-    <string name="imageView23">Ceci est une image de ma 1ère photo à la maison</string>
-    <string name="imageView24">Ceci est une image de ma 2ème photo à la maison</string>
-    <string name="imageView25">Ceci est une image de ma 3ème photo à la maison</string>
-    <string name="imageView26">Ceci est une image de ma 4e photo à la maison</string>
-    <string name="imageView27">Ceci est une image de ma 5e photo à la maison</string>
-    <string name="imageView28">Ceci est une image de ma 6e photo à la maison</string>
+    <string name="textView19">Appuyez sur le bouton MIC pour entrer la voix</string>
+    <string name="imageButton5">Il s\agit un bouton dégradé bleu clair qui sera utilisé pour allumer/éteindre le haut-parleur.</string>
+    <string name="imageView34">Ceci est une image de l\icône du haut-parleur</string>
+    <string name="imageButton6">Il s\agit un bouton dégradé bleu clair qui sera utilisé pour allumer/éteindre la LED.</string>
+    <string name="imageView35">Ceci est une image de l\icône LED</string>
+    <string name="imageButton7">Il s\agit un bouton dégradé bleu clair qui sera utilisé pour allumer/éteindre le ventilateur intelligent.</string>
+    <string name="imageView36">Ceci est une image de l\icône du ventilateur intelligent</string>
+    <string name="imageButton8">Il s\agit un bouton dégradé bleu clair qui sera utilisé pour allumer/éteindre l\appareil vocal.</string>
+    <string name="imageView37">Ceci est une image de l\icône du microphone</string>
+    <string name="voicePrompt">Bonjour, veuillez saisir une commande !</string>
+    <string name="switch1">Éteint/allumé</string>
+    <string name="switch2">Éteint/allumé</string>
+    <string name="switch3">Éteint/allumé</string>
+    <string name="switch4">Éteint/allumé</string>
+    <string name="imageButton4">Il s\agit une image de l\icône du microphone qui sera utilisée pour enregistrer votre voix.</string>
 
     <!-- Profile Screen -->
-    <string name="imageView31">This is an Image of the Default Profile Icon that will be Displayed on Profile Screen.</string>
-    <string name="textView14">Email Address:</string>
+    <string name="imageView31">Ceci est une image de l\icône de profil par défaut qui sera affichée sur le profil filtrer.</string>
+    <string name="textView14">Adresse e-mail:</string>
+    <string name="imageView33">Ceci est une image de l\icône de courrier électronique</string>
+    <string name="button4">RÉINITIALISER LE MOT DE PASSE</string>
+    <string name="button5">SE DÉCONNECTER</string>
+    <string name="textView18">Change de profil</string>
+
+    <!-- Help Screen -->
+    <string name="edit_profile">Appel</string>
+    <string name="ph_number">Sans frais : 1 (800) 998–1498</string>
+    <string name="contact_us">Nous contacter</string>
+    <string name="help">Aider</string>
+    <string name="night_mode">Mode nuit</string>
+    <string name="notifications">Avis</string>
+    <string name="private_account">Compte privé</string>
+    <string name="message">Envoie-nous un message</string>
+    <string name="about_us">À propos de nous</string>
+    <string name="faq">FAQ</string>
+
+    <!-- Bluetooth Screen -->
+    <string name="imageView39">Il s\agit d\ne image de l\état de la connexion Bluetooth.</string>
+    <string name="button9">Sur</string>
+    <string name="button10">À l\arrêt</string>
+    <string name="button11">Découvrable</string>
+    <string name="button12">Associer l\appareil</string>
+    <string name="bluetoothStatus1">Bluetooth n\est pas disponible</string>
+    <string name="bluetoothStatus2">Bluetooth est disponible</string>
+    <string name="bluetoothPaired1">Appareils jumelés</string>
+    <string name="bluetoothPaired2">\"\nDispositif: \"</string>
+    <string name="imageButton9">Ceci est un bouton d\image de la flèche gauche dans l\écran Bluetooth</string>
 
     <!-- Reset Password Screen -->
     <string name="imageView32">Ceci est l\image de mon icône d\application qui sera affichée dans l\écran de réinitialisation du mot de passe</string>
     <string name="textView16">A.L.I.E</string>
     <string name="textView17">Votre incroyable A.I</string>
     <string name="editText6">Adresse e-mail:</string>
+    <string name="button6">NOUS FAIRE PARVENIR</string>
+    <string name="emptyEmailError3">Adresse e-mail est nécessaire!</string>
+    <string name="matchEmailError3">S\il vous plaît, mettez une adresse email valide:</string>
+    <string name="imageButton2">Ceci est un bouton d\image de la flèche gauche dans l\écran de réinitialisation du mot de passe</string>
+    <string name="fragspeaker_volume">Le volume</string>
+    <string name="speakerfrag_file">Choisir le fichier:</string>
 </resources>
