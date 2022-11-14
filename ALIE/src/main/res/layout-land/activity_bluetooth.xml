@@ -4,9 +4,9 @@
     android:id="@+id/TheSecondDawnBluetoothLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_main"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:background="@drawable/gradient_main"
     tools:context=".BluetoothActivity">
 
     <TextView
@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:text=""
         android:textAlignment="center"
         android:textColor="@color/aqua"
@@ -22,26 +22,28 @@
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView39"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:contentDescription="@string/imageView39" />
 
     <Button
         android:id="@+id/TheSecondDawnButton9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="250dp"
+        android:layout_marginTop="10dp"
         android:text="@string/button9" />
 
     <Button
         android:id="@+id/TheSecondDawnButton10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="-48dp"
+        android:layout_marginEnd="250dp"
         android:text="@string/button10" />
 
     <Button
@@ -49,7 +51,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
         android:text="@string/button11" />
 
     <Button
@@ -57,7 +58,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
         android:text="@string/Button12" />
 
     <Button
@@ -65,7 +65,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
         android:text="@string/button13" />
 
     <TextView
