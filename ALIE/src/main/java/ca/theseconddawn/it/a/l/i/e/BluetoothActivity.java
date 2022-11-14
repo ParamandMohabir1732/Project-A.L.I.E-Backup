@@ -31,7 +31,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,12 +44,11 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
     private static final int REQUEST_ENABLE_BT = 0;
     private static final int REQUEST_DISCOVER_BT = 1;
 
-    private TextView mStatusBluetooth, mPairedSpeaker;
+    private TextView mStatusBluetooth, mPairedDevices;
     private ImageView mBluetoothImg;
     private ImageButton leftArrow;
     private Button mBlueBtnOn, mBlueBtnOff, mBlueBtnDiscoverable, mBlueBtnPaired;
 
-    private LinearLayout linearLayout;
     private BluetoothAdapter mBlueAdapter;
 
     @Override
@@ -58,10 +56,8 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bluetooth);
 
-        linearLayout = findViewById(R.id.TheSecondDawnBluetoothLayout);
-
         mStatusBluetooth = findViewById(R.id.TheSecondDawnTextView21);
-        mPairedSpeaker = findViewById(R.id.TheSecondDawnTextView22);
+        mPairedDevices = findViewById(R.id.TheSecondDawnTextView22);
         mBluetoothImg = findViewById(R.id.TheSecondDawnImageView39);
 
         mBlueBtnOn = findViewById(R.id.TheSecondDawnButton9);
@@ -128,12 +124,12 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
         mBlueBtnPaired.setOnClickListener(view -> {
 
             if (mBlueAdapter.isEnabled()) {
-                mBlueBtnPaired.setText(R.string.bluetoothPaired1);
+                mPairedDevices.setText(R.string.bluetoothPaired1);
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
                 }
                 Set<BluetoothDevice> devices = mBlueAdapter.getBondedDevices();
                 for (BluetoothDevice device : devices) {
-                    mBlueBtnPaired.append(getString(R.string.bluetoothPaired2) + device.getName() + "," + device);
+                    mPairedDevices.append(getString(R.string.bluetoothPaired2) + device.getName() + "," + device);
                 }
             } else {
 
