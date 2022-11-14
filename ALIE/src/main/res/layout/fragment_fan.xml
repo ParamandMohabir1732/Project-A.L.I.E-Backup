@@ -94,4 +94,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="116dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <RadioButton
+            android:id="@+id/fanSpeedLow"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/fnaSpeedLow"
+            android:textColor="#FDFDFD"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/fanSpeedMed"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/fnaSpeedMed"
+            android:textColor="#FDFDFD"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/fanSpeedHigh"
+            android:layout_width="96dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/fnaSpeedHigh"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
