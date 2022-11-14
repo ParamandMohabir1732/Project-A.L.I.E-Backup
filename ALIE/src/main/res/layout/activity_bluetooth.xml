@@ -9,16 +9,27 @@
     android:orientation="vertical"
     tools:context=".BluetoothActivity">
 
+    <ImageButton
+        android:id="@+id/TheSecondDawnImageButton9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@null"
+        android:contentDescription="@string/imageButton9"
+        android:src="@drawable/ic_left_arrow_state" />
+
     <TextView
         android:id="@+id/TheSecondDawnTextView21"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="-25dp"
         android:text=""
-        android:textAlignment="center"
-        android:textColor="@color/aqua"
-        android:textSize="20sp" />
+        android:textColor="@color/grey"
+        android:textSize="30sp"
+        android:textStyle="bold|italic" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView39"

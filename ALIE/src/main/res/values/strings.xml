@@ -230,10 +230,11 @@
     <string name="button10">Off</string>
     <string name="button11">Discoverable</string>
     <string name="button12">Pair device</string>
-    <string name="bluetoothStatus1">Bluetooth is not available</string>
-    <string name="bluetoothStatus2">Bluetooth is available</string>
+    <string name="bluetoothStatus1">Bluetooth is not Available</string>
+    <string name="bluetoothStatus2">Bluetooth is Available</string>
     <string name="bluetoothPaired1">Paired Devices</string>
     <string name="bluetoothPaired2">\"\nDevice: \"</string>
+    <string name="imageButton9">This is an Image Button of the Left Arrow in Bluetooth Screen</string>
 
     <!-- Reset Password Screen -->
     <string name="imageView32">This is the image of my Forgot Password Icon that will be displayed in the Reset Password Screen</string>

@@ -27,7 +27,9 @@ import android.bluetooth.BluetoothDevice;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -38,13 +40,14 @@ import androidx.core.app.ActivityCompat;
 
 import java.util.Set;
 
-public class BluetoothActivity extends AppCompatActivity {
+public class BluetoothActivity extends AppCompatActivity implements View.OnClickListener {
 
     private static final int REQUEST_ENABLE_BT = 0;
     private static final int REQUEST_DISCOVER_BT = 1;
 
     private TextView mStatusBluetooth, mPairedSpeaker;
     private ImageView mBluetoothImg;
+    private ImageButton leftArrow;
     private Button mBlueBtnOn, mBlueBtnOff, mBlueBtnDiscoverable, mBlueBtnPaired;
 
     private LinearLayout linearLayout;
@@ -66,12 +69,17 @@ public class BluetoothActivity extends AppCompatActivity {
         mBlueBtnDiscoverable = findViewById(R.id.TheSecondDawnButton11);
         mBlueBtnPaired = findViewById(R.id.TheSecondDawnButton12);
 
+        leftArrow = findViewById(R.id.TheSecondDawnImageButton9);
+        leftArrow.setOnClickListener(this);
+
         mBlueAdapter = BluetoothAdapter.getDefaultAdapter();
 
         if (mBlueAdapter == null) {
             mStatusBluetooth.setText(R.string.bluetoothStatus1);
+            mStatusBluetooth.setTextColor(getColor(R.color.grey));
         } else {
             mStatusBluetooth.setText(R.string.bluetoothStatus2);
+            mStatusBluetooth.setTextColor(getColor(R.color.brightblue));
         }
 
         if (mBlueAdapter.isEnabled()) {
@@ -89,6 +97,7 @@ public class BluetoothActivity extends AppCompatActivity {
 
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED)
                     startActivityForResult(intent, REQUEST_ENABLE_BT);
+                mStatusBluetooth.setTextColor(getColor(R.color.brightgreen));
             } else {
                 Toast.makeText(this, R.string.toastMessage22, Toast.LENGTH_SHORT).show();
             }
@@ -110,6 +119,7 @@ public class BluetoothActivity extends AppCompatActivity {
                     mBlueAdapter.disable();
                 Toast.makeText(this, R.string.toastMessage24, Toast.LENGTH_SHORT).show();
                 mBluetoothImg.setImageResource(R.drawable.ic_bluetoothoff);
+                mStatusBluetooth.setTextColor(getColor(R.color.brightred));
             } else {
                 Toast.makeText(this, R.string.toastMessage25, Toast.LENGTH_SHORT).show();
             }
@@ -130,6 +140,13 @@ public class BluetoothActivity extends AppCompatActivity {
                 Toast.makeText(this, R.string.toastMessage26, Toast.LENGTH_SHORT).show();
             }
         });
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.TheSecondDawnImageButton9) {
+            finish();
+        }
     }
 
     @Override
