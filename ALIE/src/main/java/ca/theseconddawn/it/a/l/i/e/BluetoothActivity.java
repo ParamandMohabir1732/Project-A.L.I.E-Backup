@@ -45,13 +45,12 @@ public class BluetoothActivity extends AppCompatActivity {
     private static final int REQUEST_ENABLE_BT = 0;
     private static final int REQUEST_DISCOVER_BT = 1;
 
-    TextView mStatusBluetooth, mPairedSpeaker;
-    ImageView mBluetoothImg;
-    Button mBlueBtnOn, mBlueBtnOff, mBlueBtnDiscoverable, mBlueBtnPaired, mBlueBtnDevices;
+    private TextView mStatusBluetooth, mPairedSpeaker;
+    private ImageView mBluetoothImg;
+    private Button mBlueBtnOn, mBlueBtnOff, mBlueBtnDiscoverable, mBlueBtnPaired, mBlueBtnDevices;
 
-    LinearLayout linearLayout;
-
-    BluetoothAdapter mBlueAdapter;
+    private LinearLayout linearLayout;
+    private BluetoothAdapter mBlueAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,14 +59,15 @@ public class BluetoothActivity extends AppCompatActivity {
 
         linearLayout = findViewById(R.id.TheSecondDawnBluetoothLayout);
 
-        mStatusBluetooth = findViewById(R.id.StatusBluetooth);
-        mPairedSpeaker = findViewById(R.id.PairedSpeaker);
-        mBluetoothImg = findViewById(R.id.BluetoothImg);
-        mBlueBtnOn = findViewById(R.id.BlueBtnOn);
-        mBlueBtnOff = findViewById(R.id.BlueBtnOff);
-        mBlueBtnDiscoverable = findViewById(R.id.BlueBtnDiscoverable);
-        mBlueBtnPaired = findViewById(R.id.BlueBtnPaired);
-        mBlueBtnDevices = findViewById(R.id.BlueBtnDevices);
+        mStatusBluetooth = findViewById(R.id.TheSecondDawnTextView21);
+        mPairedSpeaker = findViewById(R.id.TheSecondDawnTextView22);
+        mBluetoothImg = findViewById(R.id.TheSecondDawnImageView39);
+
+        mBlueBtnOn = findViewById(R.id.TheSecondDawnButton9);
+        mBlueBtnOff = findViewById(R.id.TheSecondDawnButton10);
+        mBlueBtnDiscoverable = findViewById(R.id.TheSecondDawnButton11);
+        mBlueBtnPaired = findViewById(R.id.TheSecondDawnButton12);
+        mBlueBtnDevices = findViewById(R.id.TheSecondDawnButton13);
 
         mBlueAdapter = BluetoothAdapter.getDefaultAdapter();
 
@@ -99,10 +99,6 @@ public class BluetoothActivity extends AppCompatActivity {
 
         mBlueBtnDiscoverable.setOnClickListener(view -> {
             if (ActivityCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED) {
-                Snackbar snackbar = Snackbar.make(linearLayout, R.string.snackbar1, Snackbar.LENGTH_LONG);
-                snackbar.setBackgroundTint(getResources().getColor(R.color.brightgreen));
-                snackbar.setTextColor(getResources().getColor(R.color.black));
-                snackbar.show();
             }
             if (!mBlueAdapter.isDiscovering()) {
                 Toast.makeText(BluetoothActivity.this, "Making Device Discoverable!", Toast.LENGTH_SHORT).show();

@@ -1,67 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android ="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/TheSecondDawnBluetoothLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/TheSecondDawnBluetoothLayout"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
     tools:context=".BluetoothActivity">
 
     <TextView
-        android:id="@+id/StatusBluetooth"
+        android:id="@+id/TheSecondDawnTextView21"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
         android:text=""
         android:textAlignment="center"
         android:textColor="@color/aqua"
         android:textSize="20sp" />
 
     <ImageView
-        android:id="@+id/BluetoothImg"
-        android:layout_width="200dp"
-        android:layout_height="200dp" />
+        android:id="@+id/TheSecondDawnImageView39"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:contentDescription="@string/imageView39" />
 
     <Button
-        android:id="@+id/BlueBtnOn"
+        android:id="@+id/TheSecondDawnButton9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="On" />
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/button9" />
 
     <Button
-        android:id="@+id/BlueBtnOff"
+        android:id="@+id/TheSecondDawnButton10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Off"
-        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/button10" />
 
     <Button
-        android:id="@+id/BlueBtnDiscoverable"
+        android:id="@+id/TheSecondDawnButton11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Discoverable"
-        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/button11" />
 
     <Button
-        android:id="@+id/BlueBtnPaired"
+        android:id="@+id/TheSecondDawnButton12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pair device"
-        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/Button12" />
 
     <Button
-        android:id="@+id/BlueBtnDevices"
+        android:id="@+id/TheSecondDawnButton13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Show Devices paired"
-        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="@string/button13" />
 
     <TextView
-        android:id="@+id/PairedSpeaker"
-        android:minWidth="200dp"
-        android:text=""
+        android:id="@+id/TheSecondDawnTextView22"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:minWidth="200dp"
+        android:text="" />
 
 </LinearLayout>
