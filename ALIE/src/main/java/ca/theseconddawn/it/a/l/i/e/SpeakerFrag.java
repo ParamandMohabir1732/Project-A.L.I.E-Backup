@@ -30,16 +30,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.SeekBar;
-import android.widget.Switch;
 import android.widget.Toast;
 
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.Fragment;
 
 public class SpeakerFrag extends Fragment {
 
     private Button playBtn, pauseBtn;
 
-    private Switch aSwitch;
+    private SwitchCompat aSwitch;
     private SeekBar seekBar;
     private MediaPlayer mediaPlayer;
     private AudioManager audioManager;
@@ -48,15 +48,15 @@ public class SpeakerFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_speaker, container, false);
 
-        aSwitch = view.findViewById(R.id.switch1);
-        playBtn = view.findViewById(R.id.playButton);
-        pauseBtn = view.findViewById(R.id.pauseButton);
+        playBtn = view.findViewById(R.id.TheSecondDawnButton14);
+        pauseBtn = view.findViewById(R.id.TheSecondDawnButton15);
+        aSwitch = view.findViewById(R.id.TheSecondDawnSwitch7);
 
         aSwitch.setOnCheckedChangeListener((compoundButton, b) -> {
             if (b) {
-                Toast.makeText(getActivity().getBaseContext(), "ON", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), R.string.toastMessage29, Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(getActivity().getBaseContext(), "OFF", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), R.string.toastMessage30, Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -69,7 +69,7 @@ public class SpeakerFrag extends Fragment {
         int maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC);
         int currentVolume = audioManager.getStreamVolume(AudioManager.STREAM_MUSIC);
 
-        seekBar = view.findViewById(R.id.volumeSeekbar);
+        seekBar = view.findViewById(R.id.TheSecondDawnSeekBar1);
         seekBar.setMax(maxVolume);
         seekBar.setProgress(currentVolume);
 

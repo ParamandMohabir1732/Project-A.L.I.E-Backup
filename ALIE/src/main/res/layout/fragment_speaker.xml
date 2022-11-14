@@ -1,29 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/gradient_speaker"
+    android:orientation="vertical"
     tools:context=".SpeakerFrag">
 
     <TextView
         android:id="@+id/TheSecondDawnTextView10"
-        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:text="@string/textView10"
         android:textColor="@color/brightblue"
         android:textSize="40sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintEnd_toStartOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold|italic" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/TheSecondDawnImageView41"
         android:layout_width="71dp"
         android:layout_height="54dp"
         android:layout_gravity="center"
@@ -31,39 +27,30 @@
         android:layout_marginTop="-55dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="0dp"
+        android:contentDescription="@string/imageView41"
         android:rotation="15"
-        android:src="@drawable/ic_baseline_music_note"
-        app:layout_constraintBottom_toTopOf="@+id/volumeSeekbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/TheSecondDawnTextView10"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/ic_baseline_music_note" />
 
-    <Switch
-        android:id="@+id/switch1"
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/TheSecondDawnSwitch7"
         android:layout_width="139dp"
         android:layout_height="69dp"
         android:layout_gravity="center"
-        android:text="@string/Switch"
+        android:text="@string/switch7"
         android:textColor="@color/brightred"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:trackTint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TheSecondDawnTextView10" />
+        android:trackTint="#FFFFFF" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView10"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center"
-        android:layout_marginEnd="75dp"
         android:layout_marginTop="50dp"
+        android:layout_marginEnd="75dp"
         android:contentDescription="@string/imageView10"
-        android:src="@drawable/speaker_1"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/speaker_1" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView14"
@@ -72,103 +59,80 @@
         android:layout_marginStart="220dp"
         android:layout_marginTop="-150dp"
         android:contentDescription="@string/imageView14"
-        android:src="@drawable/speaker_5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:src="@drawable/speaker_5" />
 
     <Button
-        android:id="@+id/playButton"
+        android:id="@+id/TheSecondDawnButton14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="98dp"
+        android:layout_marginStart="75dp"
         android:layout_marginTop="50dp"
         android:backgroundTint="@color/brightgreen"
-        android:onClick="play"
-        android:text="@string/btn1"
+        android:text="@string/button14"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/pauseButton"
-        app:layout_constraintHorizontal_bias="0.225"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         tools:text="Play" />
 
     <Button
-        android:id="@+id/pauseButton"
+        android:id="@+id/TheSecondDawnButton15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/brightred"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="-50dp"
         android:layout_gravity="center"
-        android:onClick="pause"
-        android:text="@string/btn2"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="-48dp"
+        android:backgroundTint="@color/brightred"
+        android:text="@string/button15"
         android:textColor="@color/black"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         tools:text="Pause" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/TheSecondDawnTextView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="75dp"
-        android:text="@string/fragspeaker_volume"
+        android:text="@string/textView25"
         android:textColor="@color/black"
         android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:textStyle="bold" />
 
     <SeekBar
-        android:id="@+id/volumeSeekbar"
-        android:layout_width="328dp"
+        android:id="@+id/TheSecondDawnSeekBar1"
+        android:layout_width="300dp"
         android:layout_height="51dp"
         android:layout_gravity="center"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="0dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:layout_marginTop="0dp" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/TheSecondDawnImageView42"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_marginStart="7dp"
         android:layout_marginTop="-45dp"
-        android:src="@drawable/ic_speaker"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:contentDescription="@string/imageView42"
+        android:src="@drawable/ic_speaker" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/TheSecondDawnTextView26"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:layout_marginTop="40dp"
-        android:text="@string/speakerfrag_file"
+        android:text="@string/textView26"
         android:textColor="@color/black"
         android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        android:textStyle="bold" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/TheSecondDawnImageButton11"
         android:layout_width="26dp"
         android:layout_height="49dp"
         android:layout_marginStart="228dp"
         android:layout_marginTop="-35dp"
         android:background="@null"
-        android:src="@drawable/ic_baseline_folder_open_24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:contentDescription="@string/imageButton11"
+        android:src="@drawable/ic_baseline_folder_open_24" />
 
 </LinearLayout>

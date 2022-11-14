@@ -47,8 +47,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
         android:text="@string/textView23"
-        android:textColor="@color/black"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="15sp"
         android:textStyle="bold|italic" />
 
@@ -57,7 +57,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:rating="5" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
@@ -176,6 +177,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
+        android:backgroundTint="@color/brightblue"
         android:text="@string/button13" />
 
 </LinearLayout>
