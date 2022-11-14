@@ -21,8 +21,8 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/TheSecondDawnToolBarColor"
-        android:title="@string/titleColor"
+        android:id="@+id/TheSecondDawnToolBarBluetooth"
+        android:title="@string/titleBluetooth"
         app:showAsAction="never" />
 
     <item

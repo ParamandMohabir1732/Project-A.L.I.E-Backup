@@ -26,7 +26,7 @@
     <string name="titleSettings">Réglages</string>
     <string name="titleHelp">Aider</string>
     <string name="titleVolume">Le volume</string>
-    <string name="titleColor">Couleur</string>
+    <string name="titleBluetooth">Blueteth</string>
     <string name="titleReview">Examen</string>
     <string name="title_activity_configuration">ConfigurationActivity</string>
 

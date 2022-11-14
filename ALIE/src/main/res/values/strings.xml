@@ -33,7 +33,7 @@
     <string name="titleSettings">Settings</string>
     <string name="titleHelp">Help</string>
     <string name="titleVolume">Volume</string>
-    <string name="titleColor">Color</string>
+    <string name="titleBluetooth">Bluetooth</string>
     <string name="titleReview">Review</string>
     <string name="title_activity_configuration">ConfigurationActivity</string>
 
