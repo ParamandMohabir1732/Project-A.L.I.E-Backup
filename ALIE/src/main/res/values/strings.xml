@@ -229,8 +229,7 @@
     <string name="button9">On</string>
     <string name="button10">Off</string>
     <string name="button11">Discoverable</string>
-    <string name="Button12">Pair device</string>
-    <string name="button13">Show Devices paired</string>
+    <string name="button12">Pair device</string>
     <string name="bluetoothStatus1">Bluetooth is not available</string>
     <string name="bluetoothStatus2">Bluetooth is available</string>
     <string name="bluetoothPaired1">Paired Devices</string>
