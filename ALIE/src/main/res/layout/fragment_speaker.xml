@@ -1,139 +1,174 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@drawable/gradient_speaker"
     tools:context=".SpeakerFrag">
 
     <TextView
         android:id="@+id/TheSecondDawnTextView10"
+        android:layout_marginTop="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginTop="40dp"
-        android:gravity="center"
+        android:layout_gravity="center"
         android:text="@string/textView10"
         android:textColor="@color/brightblue"
         android:textSize="40sp"
         android:textStyle="bold|italic"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="71dp"
+        android:layout_height="54dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="190dp"
+        android:layout_marginTop="-55dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="0dp"
+        android:rotation="15"
+        android:src="@drawable/ic_baseline_music_note"
+        app:layout_constraintBottom_toTopOf="@+id/volumeSeekbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/TheSecondDawnTextView10"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="139dp"
+        android:layout_height="69dp"
+        android:layout_gravity="center"
+        android:text="@string/Switch"
+        android:textColor="@color/brightred"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:trackTint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TheSecondDawnTextView10" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView10"
-        android:layout_width="165dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="140dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="75dp"
+        android:layout_marginTop="50dp"
         android:contentDescription="@string/imageView10"
         android:src="@drawable/speaker_1"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/TheSecondDawnImageView11"
-        android:layout_width="165dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="140dp"
-        android:contentDescription="@string/imageView11"
-        android:src="@drawable/speaker_2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/TheSecondDawnImageView12"
-        android:layout_width="165dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="292dp"
-        android:contentDescription="@string/imageView12"
-        android:src="@drawable/speaker_3"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/TheSecondDawnImageView13"
-        android:layout_width="165dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="292dp"
-        android:contentDescription="@string/imageView13"
-        android:src="@drawable/speaker_4"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView14"
-        android:layout_width="165dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="448dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="-150dp"
         android:contentDescription="@string/imageView14"
         android:src="@drawable/speaker_5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/TheSecondDawnImageView15"
-        android:layout_width="165dp"
-        android:layout_height="140dp"
-        android:layout_marginStart="228dp"
-        android:layout_marginTop="448dp"
-        android:contentDescription="@string/imageView15"
-        android:src="@drawable/speaker_6"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <SeekBar
-        android:id="@+id/volumeSeekbar"
-        android:layout_width="409dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
-
     <Button
         android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="2dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/brightgreen"
         android:onClick="play"
         android:text="@string/btn1"
+        android:textColor="@color/black"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/pauseButton"
+        app:layout_constraintHorizontal_bias="0.225"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         tools:text="Play" />
 
     <Button
         android:id="@+id/pauseButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="23dp"
-        android:layout_marginBottom="68dp"
+        android:backgroundTint="@color/brightred"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-50dp"
+        android:layout_gravity="center"
         android:onClick="pause"
         android:text="@string/btn2"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/playButton"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="Pause" />
 
-    <Switch
-        android:id="@+id/switch1"
-        android:layout_width="94dp"
-        android:layout_height="24dp"
-        android:layout_marginTop="9dp"
-        android:text="@string/Switch"
-        android:trackTint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="parent"
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="75dp"
+        android:text="@string/fragspeaker_volume"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/TheSecondDawnTextView10" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <SeekBar
+        android:id="@+id/volumeSeekbar"
+        android:layout_width="328dp"
+        android:layout_height="51dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="-45dp"
+        android:src="@drawable/ic_speaker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/speakerfrag_file"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="26dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="228dp"
+        android:layout_marginTop="-35dp"
+        android:background="@null"
+        android:src="@drawable/ic_baseline_folder_open_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>
