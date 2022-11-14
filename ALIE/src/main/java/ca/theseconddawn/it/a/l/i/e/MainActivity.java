@@ -130,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (item.getItemId() == R.id.TheSecondDawnToolBarColor) {
             Toast.makeText(this, toastMessage4, Toast.LENGTH_LONG).show();
+            startActivity(new Intent(this, BluetoothActivity.class));
         }
 
         if (item.getItemId() == R.id.TheSecondDawnToolBarReview) {

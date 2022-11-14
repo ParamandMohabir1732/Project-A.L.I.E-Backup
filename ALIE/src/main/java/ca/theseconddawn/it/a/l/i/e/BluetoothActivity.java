@@ -1,21 +1,55 @@
+/*
+Paramand Mohabir N01421732
+CENG322 Section 0NC
+Software Project
+*/
+/*
+Vladislav Vassilyev N01436627
+CENG322 Section 0NB
+Software Project
+*/
+/*
+Dave Patel N01465129
+CENG322 Section 0NA
+Software Project
+*/
+/*
+Paolo Brancato N01434080
+CENG322 Section ONC
+Software Project
+*/
+
 package ca.theseconddawn.it.a.l.i.e;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+
+import com.google.android.material.snackbar.Snackbar;
+
+import java.util.Set;
 
 public class BluetoothActivity extends AppCompatActivity {
 
-    private static final int REQUEST_ENABLE_BT=0;
-    private static final int REQUEST_DISCOVER_BT= 1;
+    private static final int REQUEST_ENABLE_BT = 0;
+    private static final int REQUEST_DISCOVER_BT = 1;
 
     TextView mStatusBluetooth, mPairedSpeaker;
     ImageView mBluetoothImg;
-    Button mBlueBtnOn, mBlueBtnOff, mBlueBtnDiscoverable, mBlueBtnPaired, mBlueBtnDevices ;
+    Button mBlueBtnOn, mBlueBtnOff, mBlueBtnDiscoverable, mBlueBtnPaired, mBlueBtnDevices;
+
+    LinearLayout linearLayout;
 
     BluetoothAdapter mBlueAdapter;
 
@@ -24,28 +58,107 @@ public class BluetoothActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bluetooth);
 
+        linearLayout = findViewById(R.id.TheSecondDawnBluetoothLayout);
+
         mStatusBluetooth = findViewById(R.id.StatusBluetooth);
-        mPairedSpeaker =findViewById(R.id.PairedSpeaker);
-        mBluetoothImg =findViewById(R.id.BluetoothImg);
-        mBlueBtnOn =findViewById(R.id.BlueBtnOn);
-        mBlueBtnOff =findViewById(R.id.BlueBtnOff);
-        mBlueBtnDiscoverable =findViewById(R.id.BlueBtnDiscoverable);
-        mBlueBtnPaired =findViewById(R.id.BlueBtnPaired);
-        mBlueBtnDevices =findViewById(R.id.BlueBtnDevices);
+        mPairedSpeaker = findViewById(R.id.PairedSpeaker);
+        mBluetoothImg = findViewById(R.id.BluetoothImg);
+        mBlueBtnOn = findViewById(R.id.BlueBtnOn);
+        mBlueBtnOff = findViewById(R.id.BlueBtnOff);
+        mBlueBtnDiscoverable = findViewById(R.id.BlueBtnDiscoverable);
+        mBlueBtnPaired = findViewById(R.id.BlueBtnPaired);
+        mBlueBtnDevices = findViewById(R.id.BlueBtnDevices);
 
-        mBlueAdapter =BluetoothAdapter.getDefaultAdapter();
+        mBlueAdapter = BluetoothAdapter.getDefaultAdapter();
 
-        if(mBlueAdapter == null) {
-
+        if (mBlueAdapter == null) {
             mStatusBluetooth.setText("Bluetooth is not available");
-        }
-        else{
+        } else {
             mStatusBluetooth.setText("Bluetooth is available");
-            }
-
-
-
         }
 
+        if (mBlueAdapter.isEnabled()) {
+            mBluetoothImg.setImageResource(R.drawable.ic_bluetoothon);
 
+        } else {
+            mBluetoothImg.setImageResource(R.drawable.ic_bluetoothoff);
+        }
+
+        mBlueBtnOn.setOnClickListener(view -> {
+            if (!mBlueAdapter.isEnabled()) {
+                Toast.makeText(BluetoothActivity.this, "Turning on Bluetooth...", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+
+                if (ActivityCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED)
+                    startActivityForResult(intent, REQUEST_ENABLE_BT);
+            } else {
+                Toast.makeText(BluetoothActivity.this, "Bluetooth is Already On!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        mBlueBtnDiscoverable.setOnClickListener(view -> {
+            if (ActivityCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED) {
+                Snackbar snackbar = Snackbar.make(linearLayout, R.string.snackbar1, Snackbar.LENGTH_LONG);
+                snackbar.setBackgroundTint(getResources().getColor(R.color.brightgreen));
+                snackbar.setTextColor(getResources().getColor(R.color.black));
+                snackbar.show();
+            }
+            if (!mBlueAdapter.isDiscovering()) {
+                Toast.makeText(BluetoothActivity.this, "Making Device Discoverable!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+                startActivityForResult(intent, REQUEST_DISCOVER_BT);
+
+            }
+        });
+
+        mBlueBtnOff.setOnClickListener(view -> {
+            if (mBlueAdapter.isEnabled()) {
+                if (ActivityCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                }
+                mBlueAdapter.disable();
+                Toast.makeText(BluetoothActivity.this, "Bluetooth Off", Toast.LENGTH_SHORT).show();
+                mBluetoothImg.setImageResource(R.drawable.ic_bluetoothoff);
+            } else {
+                Toast.makeText(BluetoothActivity.this, "Bluetooth is Already Off!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        mBlueBtnPaired.setOnClickListener(view -> {
+
+            if (mBlueAdapter.isEnabled()) {
+                mBlueBtnPaired.setText("Paired Devices");
+                if (ActivityCompat.checkSelfPermission(BluetoothActivity.this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                    Snackbar snackbar = Snackbar.make(linearLayout, R.string.snackbar1, Snackbar.LENGTH_LONG);
+                    snackbar.setBackgroundTint(getResources().getColor(R.color.brightgreen));
+                    snackbar.setTextColor(getResources().getColor(R.color.black));
+                    snackbar.show();
+                }
+                Set<BluetoothDevice> devices = mBlueAdapter.getBondedDevices();
+                for (BluetoothDevice device : devices) {
+                    mBlueBtnPaired.append("\nDevice: " + device.getName() + "," + device);
+                }
+            } else {
+
+                Toast.makeText(BluetoothActivity.this, "Turn on Bluetooth to Show Paired Devices!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == REQUEST_ENABLE_BT) {
+            if (resultCode == RESULT_OK) {
+                mBluetoothImg.setImageResource(R.drawable.ic_bluetoothon);
+                Toast.makeText(BluetoothActivity.this, "Bluetooth is Now Turned On!", Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(BluetoothActivity.this, "Unable to Turn on Bluetooth!", Toast.LENGTH_SHORT).show();
+
+            }
+        }
+        super.onActivityResult(resultCode, resultCode, data);
+    }
+
+}
+
+
