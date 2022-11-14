@@ -9,7 +9,7 @@
     tools:context=".CustomerReviewActivity">
 
     <ImageButton
-        android:id="@+id/TheSecondDawnImageButton"
+        android:id="@+id/TheSecondDawnImageButton10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
