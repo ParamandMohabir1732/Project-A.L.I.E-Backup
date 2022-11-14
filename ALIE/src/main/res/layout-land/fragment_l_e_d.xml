@@ -5,8 +5,8 @@
     android:id="@+id/TheSecondDawnLEDLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@drawable/gradient_led"
+    android:orientation="vertical"
     tools:context=".LEDFrag">
 
     <TextView
@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView38"
-        android:layout_width="400dp"
-        android:layout_height="400dp"
+        android:layout_width="250dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
         android:contentDescription="@string/imageView38"
         android:src="@drawable/led_lights_3" />
@@ -32,6 +32,7 @@
         android:id="@+id/TheSecondDawnButton7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:text="@string/button7" />
 
@@ -39,7 +40,6 @@
         android:id="@+id/TheSecondDawnButton8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:text="@string/button8" />
 
@@ -47,9 +47,9 @@
         android:id="@+id/TheSecondDawnSwitch5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:text="@string/switch5"
+        android:layout_marginStart="-75dp"
         android:textColor="@color/white"
         android:textStyle="bold" />
 
@@ -58,8 +58,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="-50dp"
+        android:layout_marginStart="75dp"
         android:text="@string/switch6"
         android:textColor="@color/white"
         android:textStyle="bold" />
-
 </LinearLayout>
