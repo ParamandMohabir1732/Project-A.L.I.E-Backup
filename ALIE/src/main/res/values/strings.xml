@@ -239,7 +239,9 @@
     <string name="imageButton9">This is an Image Button of the Left Arrow in Bluetooth Screen</string>
 
     <!-- Customer Review Screen -->
-    <string name="textView23">!!Please Rate our app!!</string>
+    <string name="imageView40">This is the image of my App Icon that will be displayed in the Registration Screen</string>
+    <string name="textView24">A.L.I.E</string>
+    <string name="textView23">Thank You for Using our App. Please Leave a Review and Rate our App!</string>
     <string name="imageButton10">This is an Image Button of the Left Arrow in Customer Review Screen.</string>
     <string name="editText7">Name</string>
     <string name="editText8">Email</string>
