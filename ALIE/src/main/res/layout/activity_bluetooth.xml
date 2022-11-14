@@ -4,9 +4,9 @@
     android:id="@+id/TheSecondDawnBluetoothLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_main"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:background="@drawable/gradient_main"
     tools:context=".BluetoothActivity">
 
     <TextView

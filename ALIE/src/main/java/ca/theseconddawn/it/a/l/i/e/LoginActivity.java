@@ -140,7 +140,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 GoogleSignInAccount account = task.getResult(ApiException.class);
                 googleFirebaseAuth(account);
             } catch (ApiException e) {
-                Toast.makeText(this, "Sign In Failed!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.toastMessage19, Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -152,7 +152,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 FirebaseUser user = mAuth.getCurrentUser();
                 enterMainActivity();
             } else {
-                Toast.makeText(this, "Authentication Failed!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, R.string.toastMessage20, Toast.LENGTH_SHORT).show();
             }
         });
     }
