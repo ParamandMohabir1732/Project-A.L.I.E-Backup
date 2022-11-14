@@ -21,8 +21,7 @@
     <ImageView
         android:id="@+id/TheSecondDawnImageView16"
         android:layout_width="350dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
+        android:layout_height="100dp"
         android:layout_gravity="center"
         android:contentDescription="@string/imageView16"
         android:src="@drawable/smart_fan_1" />
@@ -31,7 +30,7 @@
         android:id="@+id/TheSecondDawnSwitch8"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:fontFamily="sans-serif-black"
         android:text="@string/switch8"
@@ -44,7 +43,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:fontFamily="sans-serif-black"
-        android:layout_marginTop="25dp"
         android:text="@string/textView27"
         android:textColor="#F8F8F8"
         android:textSize="16sp" />
@@ -64,7 +62,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp"
         android:orientation="horizontal" >
 
         <RadioButton
@@ -100,7 +97,6 @@
         android:id="@+id/TheSecondDawnButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:layout_gravity="center"
         android:text="@string/button3"
         android:textColor="@color/snowwhite"
