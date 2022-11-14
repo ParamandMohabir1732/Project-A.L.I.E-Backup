@@ -92,6 +92,7 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
             if (task.isSuccessful()) {
                 Toast.makeText(this, R.string.toastMessage15, Toast.LENGTH_LONG).show();
                 progressBar.setVisibility(View.GONE);
+                finish();
             } else {
                 Toast.makeText(this, R.string.toastMessage16, Toast.LENGTH_LONG).show();
                 progressBar.setVisibility(View.GONE);

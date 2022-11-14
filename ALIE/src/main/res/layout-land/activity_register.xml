@@ -150,5 +150,7 @@
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="50dp"
         android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-200dp"
         android:visibility="gone" />
 </LinearLayout>
