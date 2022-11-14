@@ -184,11 +184,12 @@
     <string name="textView11">Smart Fan Screen</string>
     <string name="imageView16">This is an Image of my 1st Fan Picture</string>
     <string name="button3">Store Use data</string>
-    <string name="fanSpeed">Rotation speed</string>
-    <string name="fanOnn">Turn ON</string>
-    <string name="fnaSpeedLow">Low</string>
-    <string name="fnaSpeedMed">Med</string>
-    <string name="fnaSpeedHigh">High</string>
+    <string name="textView27">Fan Speed</string>
+    <string name="switch8">Turn ON</string>
+    <string name="slider1">This is a Slider for Fan Speed</string>
+    <string name="TheSecondDawnRadioButton1">Low</string>
+    <string name="TheSecondDawnRadioButton2">Med</string>
+    <string name="TheSecondDawnRadioButton3">High</string>
 
     <!-- Home Screen -->
     <string name="imageView22">This is an image of the App Icon in the Home Screen</string>
