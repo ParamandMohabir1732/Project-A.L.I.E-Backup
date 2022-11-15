@@ -77,14 +77,11 @@ public class SmartFanFrag extends Fragment {
         });
 
         fanSpeed.setEnabled(false);
-        radGroup.setEnabled(false);
-        low.setEnabled(false);
-        med.setEnabled(false);
-        high.setEnabled(false);
+
 
 
         fanControl.setOnCheckedChangeListener((compoundButton, b) -> fanSpeed.setEnabled(fanControl.isChecked()));
-        fanControl.setOnCheckedChangeListener((compoundButton, b) -> low.setEnabled(fanControl.isChecked()));
+
 
         return view;
     }
