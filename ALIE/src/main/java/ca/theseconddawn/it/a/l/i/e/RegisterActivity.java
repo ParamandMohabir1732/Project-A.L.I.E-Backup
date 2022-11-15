@@ -116,7 +116,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             if (task.isSuccessful()) {
                 UserClass user = new UserClass(email);
 
-                FirebaseDatabase.getInstance().getReference(getString(R.string.firebaseReference)).child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).setValue(user).addOnCompleteListener(task1 -> {
+                FirebaseDatabase.getInstance().getReference(getString(R.string.firebaseReference1)).child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).setValue(user).addOnCompleteListener(task1 -> {
                     if (task1.isSuccessful()) {
                         Toast.makeText(RegisterActivity.this, R.string.toastMessage12, Toast.LENGTH_LONG).show();
                         progressBar.setVisibility(View.GONE);

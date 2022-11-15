@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (item.getItemId() == R.id.TheSecondDawnNavLogout) {
             FirebaseAuth.getInstance().signOut();
-            startActivity(new Intent(this, LoginActivity.class));
+            finish();
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

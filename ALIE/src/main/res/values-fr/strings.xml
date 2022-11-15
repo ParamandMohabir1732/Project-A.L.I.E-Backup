@@ -166,21 +166,12 @@
     <!-- Speaker Screen -->
     <string name="textView10">Écran du haut-parleur</string>
     <string name="imageView10">Ceci est une image de ma 1ère image de conférencier</string>
-    <string name="imageView11">Il sagit dune image de ma 2e image de haut-parleur</string>
-    <string name="imageView12">Ceci est une image de mon 3e intervenant</string>
-    <string name="imageView13">Ceci est une image de mon 4e intervenant</string>
-    <string name="imageView14">Ceci est une image de mon 5e intervenant</string>
-    <string name="imageView15">Ceci est une image de ma 6e image dorateur</string>
-    <string name="btn1">JOUER</string>
-    <string name="btn2">Pause</string>
-    <string name="Switch">Du pouvoir</string>
+
 
     <!-- Smart Fan Screen -->
     <string name="textView11">Écran de ventilateur intelligent</string>
     <string name="imageView16">Ceci est une image de ma 1ère photo de fan</string>
     <string name="button3">Autoriser laccès aux fichiers</string>
-    <string name="fanSpeed">Vitesse de rotation</string>
-    <string name="fanOnn">Allumer</string>
 
     <!-- Home Screen -->
     <string name="imageView22">Ceci est une image de licône de lapplication sur lécran daccueil</string>
@@ -243,6 +234,4 @@
     <string name="emptyEmailError3">Adresse e-mail est nécessaire!</string>
     <string name="matchEmailError3">Sil vous plait, mettez une adresse email valide:</string>
     <string name="imageButton2">Ceci est un bouton d\image de la flèche gauche dans l\écran de réinitialisation du mot de passe</string>
-    <string name="fragspeaker_volume">Le volume</string>
-    <string name="speakerfrag_file">Choisir le fichier:</string>
 </resources>

@@ -77,6 +77,9 @@
     <string name="toastMessage28">Unable to Turn on Bluetooth!</string>
     <string name="toastMessage29">ON</string>
     <string name="toastMessage30">OFF</string>
+    <string name="toastMessage31">Failed to Retrieve!</string>
+    <string name="toastMessage32">Please Check Your Email to Reset your Password!</string>
+    <string name="toastMessage33">An Error has Occurred, Please Try Again!</string>
 
     <!-- Snackbar Messages -->
     <string name="snackbar1">Permission is Granted!</string>
@@ -156,7 +159,7 @@
     <string name="emptyPasswordError2">Password is Required!</string>
     <string name="lengthPasswordError2">Your Password Should be at Least 6 Characters Long!</string>
     <string name="confirmPasswordError1">Password Do Not Match!</string>
-    <string name="firebaseReference">Users</string>
+    <string name="firebaseReference1">Users</string>
     <string name="imageButton1">This is an Image Button of the Left Arrow in Register Screen</string>
 
     <!-- LED Screen -->
@@ -218,6 +221,7 @@
     <string name="button4">RESET PASSWORD</string>
     <string name="button5">LOGOUT</string>
     <string name="textView18">Change Profile</string>
+    <string name="firebaseReference2">Users</string>
 
     <!-- Help Screen -->
     <string name="edit_profile">Call</string>
@@ -263,4 +267,5 @@
     <string name="emptyEmailError3">Email Address is Required!</string>
     <string name="matchEmailError3">Please Enter a Valid Email Address:</string>
     <string name="imageButton2">This is an Image Button of the Left Arrow in Reset Password Screen</string>
+    <string name="firebaseReference2">Users</string>
 </resources>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_main"
+    android:orientation="vertical"
+    tools:context=".ProfileFrag">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/TheSecondDawnImageView31"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/imageView31"
+        android:src="@drawable/ic_profile"
+        app:civ_border_color="@color/black"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/TheSecondDawnTextView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/textView18"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImageView33"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="-165dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/imageView33"
+        android:src="@drawable/ic_email" />
+
+    <TextView
+        android:id="@+id/TheSecondDawnTextView14"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="-27dp"
+        android:text="@string/textView14"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TheSecondDawnTextView15"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/TheSecondDawnButton4"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/button4"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/TheSecondDawnButton5"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/button5"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/TheSecondDawnProgressBar3"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-250dp"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -82,7 +82,7 @@ public class ProfileFrag extends Fragment {
         progressBar = view.findViewById(R.id.TheSecondDawnProgressBar3);
 
         user = FirebaseAuth.getInstance().getCurrentUser();
-        reference = FirebaseDatabase.getInstance().getReference("Users");
+        reference = FirebaseDatabase.getInstance().getReference(getString(R.string.firebaseReference2));
         userID = user.getUid();
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -99,7 +99,7 @@ public class ProfileFrag extends Fragment {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                Toast.makeText(getActivity(), "Failed to Retrieve!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), R.string.toastMessage31, Toast.LENGTH_SHORT).show();
             }
         });
         return view;
@@ -126,10 +126,10 @@ public class ProfileFrag extends Fragment {
 
         mAuth.sendPasswordResetEmail(email).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-                Toast.makeText(getActivity(), "Please Check Your Email to Reset your Password!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), R.string.toastMessage32, Toast.LENGTH_LONG).show();
                 progressBar.setVisibility(View.GONE);
             } else {
-                Toast.makeText(getActivity(), "An Error has Occurred, Please Try Again!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getActivity(), R.string.toastMessage33, Toast.LENGTH_LONG).show();
                 progressBar.setVisibility(View.GONE);
             }
         });

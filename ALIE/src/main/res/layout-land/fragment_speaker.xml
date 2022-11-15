@@ -32,12 +32,12 @@
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/TheSecondDawnSwitch7"
-        android:layout_width="150dp"
-        android:layout_height="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/switch7"
         android:textColor="@color/brightred"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:trackTint="#FFFFFF" />
 
