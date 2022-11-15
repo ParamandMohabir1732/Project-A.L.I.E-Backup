@@ -20,9 +20,10 @@
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView16"
-        android:layout_width="350dp"
+        android:layout_width="200dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
+        android:layout_marginEnd="200dp"
         android:contentDescription="@string/imageView16"
         android:src="@drawable/smart_fan_1" />
 
@@ -30,8 +31,8 @@
         android:id="@+id/TheSecondDawnSwitch8"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
+        android:layout_marginTop="-75dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/switch8"
         android:textColor="#FFFFFF"
@@ -42,6 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/textView27"
         android:textColor="#F8F8F8"

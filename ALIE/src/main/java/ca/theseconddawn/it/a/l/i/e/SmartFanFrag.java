@@ -78,8 +78,6 @@ public class SmartFanFrag extends Fragment {
 
         fanSpeed.setEnabled(false);
 
-
-
         fanControl.setOnCheckedChangeListener((compoundButton, b) -> fanSpeed.setEnabled(fanControl.isChecked()));
 
 
