@@ -146,7 +146,7 @@
         android:layout_marginStart="175dp"
         android:layout_marginTop="-45dp"
         android:contentDescription="@string/imageView30"
-        app:srcCompat="@drawable/facebook_button" />
+        app:srcCompat="@null" />
 
     <TextView
         android:id="@+id/TheSecondDawnTextView5"

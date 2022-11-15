@@ -90,8 +90,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new LEDFrag()).commit();
         }
 
-        if (item.getItemId() == R.id.TheSecondDawnNavProfile) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new ProfileFrag()).commit();
+        if (item.getItemId() == R.id.TheSecondDawnNavSettings) {
+            startActivity(new Intent(this, ConfigurationActivity.class));
         }
 
         if (item.getItemId() == R.id.TheSecondDawnNavLogout) {
@@ -120,12 +120,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (item.getItemId() == R.id.TheSecondDawnToolBarHelp) {
             Toast.makeText(this, toastMessage2, Toast.LENGTH_LONG).show();
-            Intent help = new Intent(MainActivity.this, HelpActivity.class);
-            startActivity(help);
+            startActivity(new Intent(MainActivity.this, HelpActivity.class));
         }
 
         if (item.getItemId() == R.id.TheSecondDawnToolBarVolume) {
             Toast.makeText(this, toastMessage3, Toast.LENGTH_LONG).show();
+            getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new SpeakerFrag()).commit();
         }
 
         if (item.getItemId() == R.id.TheSecondDawnToolBarBluetooth) {

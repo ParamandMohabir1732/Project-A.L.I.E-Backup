@@ -75,7 +75,7 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
         if (view.getId() == R.id.TheSecondDawnImageButton10) {
             finish();
         }
-        if(view.getId() == R.id.TheSecondDawnButton13) {
+        if (view.getId() == R.id.TheSecondDawnButton13) {
             registerReviewUser();
         }
     }
@@ -88,38 +88,38 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
         String review = editTextMessage.getText().toString();
 
         if (name.isEmpty()) {
-            editTextName.setError("Your Name is Required!");
+            editTextName.setError(getString(R.string.emptyNameError1));
             editTextName.requestFocus();
             return;
         }
 
         if (email.isEmpty()) {
-            editTextEmail.setError("Email Address is Required!");
+            editTextEmail.setError(getString(R.string.emptyEmailError4));
             editTextEmail.requestFocus();
             return;
         }
 
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            editTextEmail.setError("Please Enter a Valid Email Address!");
+            editTextEmail.setError(getString(R.string.matchEmailError4));
             editTextEmail.requestFocus();
             return;
         }
 
 
         if (phone.isEmpty()) {
-            editTextPhoneNumber.setError("Your Phone Number is Required!");
+            editTextPhoneNumber.setError(getString(R.string.emptyPhoneError1));
             editTextPhoneNumber.requestFocus();
             return;
         }
 
         if (!Patterns.PHONE.matcher(phone).matches()) {
-            editTextPhoneNumber.setError("Please Enter a Valid Phone Number!");
+            editTextPhoneNumber.setError(getString(R.string.matchPhoneError1));
             editTextPhoneNumber.requestFocus();
             return;
         }
 
         if (review.isEmpty()) {
-            editTextMessage.setError("Your Review is Required!");
+            editTextMessage.setError(getString(R.string.emptyReviewError1));
             editTextMessage.requestFocus();
             return;
         }

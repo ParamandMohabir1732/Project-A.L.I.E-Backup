@@ -28,6 +28,7 @@
     <string name="titleAccount">Account</string>
     <string name="titleProfile">Profile</string>
     <string name="titleLogout">Logout</string>
+    <string name="titleSettings2">Settings</string>
 
     <!-- ToolBar Menu Titles -->
     <string name="titleSettings">Settings</string>
@@ -93,6 +94,7 @@
     <!-- Configuration Screen -->
     <string name="imageButton3">This is an Image Button of the Left Arrow in Settings Screen</string>
     <string name="textView20">Settings Screen</string>
+    <string name="sharedPrefKey">Attachment</string>
 
     <!-- Controls Titles -->
     <string name="Portrait">Orientation</string>
@@ -235,6 +237,7 @@
     <string name="message">Send us a message</string>
     <string name="about_us">About Us</string>
     <string name="faq">FAQ</string>
+    <string name="intentPhoneUri">tel:18009981498</string>
 
     <!-- Bluetooth Screen -->
     <string name="imageView39">This is an Image of the Status of the Bluetooth Connection.</string>
@@ -259,6 +262,12 @@
     <string name="editText10">Leave a Review:</string>
     <string name="button13">SUBMIT</string>
     <string name="firebaseReference3">Customer Reviews</string>
+    <string name="emptyNameError1">Your Name is Required!</string>
+    <string name="emptyEmailError3">Email Address is Required!</string>
+    <string name="matchEmailError4">Please Enter a Valid Email Address!</string>
+    <string name="emptyPhoneError1">Your Phone Number is Required!</string>
+    <string name="matchPhoneError1">Please Enter a Valid Phone Number!</string>
+    <string name="emptyReviewError1">Your Review is Required!</string>
 
     <!-- Reset Password Screen -->
     <string name="imageView32">This is the image of my Forgot Password Icon that will be displayed in the Reset Password Screen</string>
@@ -266,7 +275,7 @@
     <string name="textView17">Please Enter your Email Down Below to Reset your Password</string>
     <string name="editText6">Email Address:</string>
     <string name="button6">SUBMIT</string>
-    <string name="emptyEmailError3">Email Address is Required!</string>
+    <string name="emptyEmailError4">Email Address is Required!</string>
     <string name="matchEmailError3">Please Enter a Valid Email Address:</string>
     <string name="imageButton2">This is an Image Button of the Left Arrow in Reset Password Screen</string>
 </resources>

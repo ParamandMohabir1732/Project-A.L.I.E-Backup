@@ -27,9 +27,9 @@
         <item android:title="@string/titleAccount">
             <menu>
                 <item
-                    android:id="@+id/TheSecondDawnNavProfile"
-                    android:icon="@drawable/ic_profile"
-                    android:title="@string/titleProfile" />
+                    android:id="@+id/TheSecondDawnNavSettings"
+                    android:icon="@drawable/ic_settings"
+                    android:title="@string/titleSettings2" />
 
                 <item
                     android:id="@+id/TheSecondDawnNavLogout"
