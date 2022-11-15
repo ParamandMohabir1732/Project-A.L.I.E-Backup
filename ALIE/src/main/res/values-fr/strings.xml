@@ -28,6 +28,8 @@
     <string name="titleAccount">Compte</string>
     <string name="titleProfile">Profil</string>
     <string name="titleLogout">Se déconnecter</string>
+    <string name="titleSettings2">Réglages</string>
+
 
 
     <!-- ToolBar Menu Titles -->
@@ -76,6 +78,12 @@
     <string name="toastMessage26">Activez Bluetooth pour afficher les appareils jumelés !</string>
     <string name="toastMessage27">Le Bluetooth est maintenant activé !</string>
     <string name="toastMessage28">Impossible d\activer le Bluetooth !</string>
+    <string name="toastMessage29">SUR</string>
+    <string name="toastMessage30">À L\ARRÊT</string>
+    <string name="toastMessage31">Échec de la récupération !</string>
+    <string name="toastMessage32">Veuillez vérifier votre e-mail pour réinitialiser votre mot de passe !</string>
+    <string name="toastMessage33">Une erreur s\est produite, veuillez réessayer !</string>
+    <string name="toastMessage34">Votre avis a été envoyé ! Merci :)</string>
 
     <!-- Snackbar Messages -->
     <string name="snackbar1">Lautorisation est accordée!</string>
@@ -85,6 +93,7 @@
     <!-- Configuration Screen -->
     <string name="imageButton3">Ceci est un bouton d\image de la flèche gauche dans l\écran des paramètres</string>
     <string name="textView20">Settings Screen</string>
+    <string name="sharedPrefKey">Attachement</string>
 
     <!-- Controls Titles -->
     <string name="Portrait">Orientation</string>
@@ -150,10 +159,10 @@
     <string name="matchEmailError2">Sil vous plaît, mettez une adresse email valide:</string>
     <string name="emptyPasswordError2">Mot de passe requis!</string>
     <string name="lengthPasswordError2">Votre mot de passe doit comporter au moins 6 caractères!</string>
-    <string name="firebaseReference">Utilisatrices</string>
     <string name="confirmPasswordError1">Le mot de passe ne correspond pas !</string>
     <string name="imageButton1">Ceci est un bouton dimage de la flèche gauche dans lécran denregistrement</string>
     <string name="editText5">Confirmez le mot de passe:</string>
+    <string name="firebaseReference1">Utilisatrices</string>
 
     <!-- LED Screen -->
     <string name="textView9">Commandes DEL</string>
@@ -166,12 +175,28 @@
     <!-- Speaker Screen -->
     <string name="textView10">Écran du haut-parleur</string>
     <string name="imageView10">Ceci est une image de ma 1ère image de conférencier</string>
+    <string name="imageView14">Ceci est une image de mon image de haut-parleur</string>
+    <string name="imageView41">Ceci est une image de l\icône de la musique</string>
+    <string name="imageView42">Ceci est une image de l\icône du haut-parleur.</string>
+    <string name="imageButton11">Ceci est une image de l\icône du fichier.</string>
+    <string name="button14">JOUER</string>
+    <string name="button15">Pause</string>
+    <string name="switch7">Du pouvoir</string>
+    <string name="textView25">Le volume</string>
+    <string name="textView26">Choisir le fichier:</string>
+
 
 
     <!-- Smart Fan Screen -->
     <string name="textView11">Écran de ventilateur intelligent</string>
     <string name="imageView16">Ceci est une image de ma 1ère photo de fan</string>
     <string name="button3">Autoriser laccès aux fichiers</string>
+    <string name="textView27">Vitesse du ventilateur</string>
+    <string name="switch8">Allumer</string>
+    <string name="slider1">Ceci est un curseur pour la vitesse du ventilateur</string>
+    <string name="TheSecondDawnRadioButton1">Bas</string>
+    <string name="TheSecondDawnRadioButton2">Médium</string>
+    <string name="TheSecondDawnRadioButton3">Haute</string>
 
     <!-- Home Screen -->
     <string name="imageView22">Ceci est une image de licône de lapplication sur lécran daccueil</string>
@@ -200,6 +225,7 @@
     <string name="button4">RÉINITIALISER LE MOT DE PASSE</string>
     <string name="button5">SE DÉCONNECTER</string>
     <string name="textView18">Change de profil</string>
+    <string name="firebaseReference2">Utilisatrices</string>
 
     <!-- Help Screen -->
     <string name="edit_profile">Appel</string>
@@ -212,6 +238,8 @@
     <string name="message">Envoie-nous un message</string>
     <string name="about_us">À propos de nous</string>
     <string name="faq">FAQ</string>
+    <string name="intentPhoneUri">tel:18009981498</string>
+
 
     <!-- Bluetooth Screen -->
     <string name="imageView39">Il s\agit d\ne image de l\état de la connexion Bluetooth.</string>
@@ -231,7 +259,25 @@
     <string name="textView17">Votre incroyable A.I</string>
     <string name="editText6">Adresse e-mail:</string>
     <string name="button6">NOUS FAIRE PARVENIR</string>
-    <string name="emptyEmailError3">Adresse e-mail est nécessaire!</string>
+    <string name="emptyEmailError4">Adresse e-mail est nécessaire!</string>
     <string name="matchEmailError3">Sil vous plait, mettez une adresse email valide:</string>
     <string name="imageButton2">Ceci est un bouton d\image de la flèche gauche dans l\écran de réinitialisation du mot de passe</string>
+
+    <!-- Customer Review Screen -->
+    <string name="imageView40">Ceci est l\image de mon icône d\application qui sera affichée dans l\écran d'enregistrement</string>
+    <string name="textView24">A.L.I.E</string>
+    <string name="textView23">Merci utiliser notre application. S\il vous plaît laissez un commentaire et évaluez notre application!</string>
+    <string name="imageButton10">Il s\agit un bouton d\image de la flèche gauche dans l\écran d\évaluation des clients.</string>
+    <string name="editText7">Nom:</string>
+    <string name="editText8">Adresse e-mail:</string>
+    <string name="editText9">Numéro de téléphone:</string>
+    <string name="editText10">Laisser un commentaire:</string>
+    <string name="button13">NOUS FAIRE PARVENIR</string>
+    <string name="firebaseReference3">Avis des clients</string>
+    <string name="emptyNameError1">Votre nom est requis !</string>
+    <string name="emptyEmailError3">Adresse e-mail est nécessaire!</string>
+    <string name="matchEmailError4">S\il vous plaît, mettez une adresse email valide!</string>
+    <string name="emptyPhoneError1">Votre numéro de téléphone est requis !</string>
+    <string name="matchPhoneError1">S\il vous plaît entrer un numéro de téléphone valide!</string>
+    <string name="emptyReviewError1">Votre avis est requis !</string>
 </resources>
