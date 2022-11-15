@@ -48,14 +48,11 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
     private DatabaseReference databaseReference;
 
     private ProgressBar progressBar;
-    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customer_review);
-
-        mAuth = FirebaseAuth.getInstance();
 
         ratingBar = findViewById(R.id.TheSecondDawnRatingBar);
         editTextName = findViewById(R.id.TheSecondDawnEditText7);
@@ -78,10 +75,24 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
             finish();
         }
         if(view.getId() == R.id.TheSecondDawnButton13) {
-        firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("Customer Reviews");
-
-        databaseReference.setValue("");
+            registerReviewUser();
         }
+    }
+
+    private void registerReviewUser() {
+        float rating = ratingBar.getRating();
+        String name = editTextName.getText().toString();
+        String email = editTextEmail.getText().toString();
+        String phone = editTextPhoneNumber.getText().toString();
+        String review = editTextMessage.getText().toString();
+
+
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference(getString(R.string.firebaseReference3));
+
+        UserReviewClass reviewClass = new UserReviewClass(rating, name, email, phone, review);
+
+        databaseReference.setValue(reviewClass);
     }
 }

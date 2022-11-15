@@ -23,48 +23,59 @@ package ca.theseconddawn.it.a.l.i.e;
 
 public class UserReviewClass {
 
-    String reviewName, reviewEmail, reviewPhoneNo, reviewMessage;
+    float rating;
+    String name, email, phoneNo, message;
 
     public UserReviewClass() {
 
     }
 
-    public UserReviewClass(String reviewName, String reviewEmail, String reviewPhoneNo, String reviewMessage) {
-        this.reviewName = reviewName;
-        this.reviewEmail = reviewEmail;
-        this.reviewPhoneNo = reviewPhoneNo;
-        this.reviewMessage = reviewMessage;
+    public UserReviewClass(float rating, String name, String email, String phoneNo, String message) {
+        this.rating = rating;
+        this.name = name;
+        this.email = email;
+        this.phoneNo = phoneNo;
+        this.message = message;
     }
 
-    public String getReviewName() {
-        return reviewName;
+    public float getRating() {
+        return rating;
     }
 
-    public void setReviewName(String reviewName) {
-        this.reviewName = reviewName;
+    public void setRating(float rating) {
+        this.rating = rating;
     }
 
-    public String getReviewEmail() {
-        return reviewEmail;
+    public String getName() {
+        return name;
     }
 
-    public void setReviewEmail(String reviewEmail) {
-        this.reviewEmail = reviewEmail;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getReviewPhoneNo() {
-        return reviewPhoneNo;
+    public String getEmail() {
+        return email;
     }
 
-    public void setReviewPhoneNo(String reviewPhoneNo) {
-        this.reviewPhoneNo = reviewPhoneNo;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getReviewMessage() {
-        return reviewMessage;
+    public String getPhoneNo() {
+        return phoneNo;
     }
 
-    public void setReviewMessage(String reviewMessage) {
-        this.reviewMessage = reviewMessage;
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }
+
