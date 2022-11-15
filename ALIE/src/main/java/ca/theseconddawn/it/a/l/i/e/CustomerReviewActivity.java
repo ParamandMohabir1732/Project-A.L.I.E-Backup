@@ -22,6 +22,7 @@ Software Project
 package ca.theseconddawn.it.a.l.i.e;
 
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,10 +30,10 @@ import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -86,13 +87,49 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
         String phone = editTextPhoneNumber.getText().toString();
         String review = editTextMessage.getText().toString();
 
+        if (name.isEmpty()) {
+            editTextName.setError("Your Name is Required!");
+            editTextName.requestFocus();
+            return;
+        }
 
+        if (email.isEmpty()) {
+            editTextEmail.setError("Email Address is Required!");
+            editTextEmail.requestFocus();
+            return;
+        }
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            editTextEmail.setError("Please Enter a Valid Email Address!");
+            editTextEmail.requestFocus();
+            return;
+        }
+
+
+        if (phone.isEmpty()) {
+            editTextPhoneNumber.setError("Your Phone Number is Required!");
+            editTextPhoneNumber.requestFocus();
+            return;
+        }
+
+        if (!Patterns.PHONE.matcher(phone).matches()) {
+            editTextPhoneNumber.setError("Please Enter a Valid Phone Number!");
+            editTextPhoneNumber.requestFocus();
+            return;
+        }
+
+        if (review.isEmpty()) {
+            editTextMessage.setError("Your Review is Required!");
+            editTextMessage.requestFocus();
+            return;
+        }
 
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference(getString(R.string.firebaseReference3));
 
         UserReviewClass reviewClass = new UserReviewClass(rating, name, email, phone, review);
 
-        databaseReference.setValue(reviewClass);
+        databaseReference.child(name).setValue(reviewClass);
+        Toast.makeText(this, R.string.toastMessage34, Toast.LENGTH_SHORT).show();
     }
 }

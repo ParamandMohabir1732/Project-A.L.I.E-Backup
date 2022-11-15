@@ -80,6 +80,7 @@
     <string name="toastMessage31">Failed to Retrieve!</string>
     <string name="toastMessage32">Please Check Your Email to Reset your Password!</string>
     <string name="toastMessage33">An Error has Occurred, Please Try Again!</string>
+    <string name="toastMessage34">Your Review has Been Sent! Thank You :)</string>
 
     <!-- Snackbar Messages -->
     <string name="snackbar1">Permission is Granted!</string>
