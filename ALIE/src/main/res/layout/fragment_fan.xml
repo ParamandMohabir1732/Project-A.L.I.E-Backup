@@ -65,7 +65,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:id="@+id/TheSecondDawnRadioGroup">
 
         <RadioButton
             android:id="@+id/TheSecondDawnRadioButton1"

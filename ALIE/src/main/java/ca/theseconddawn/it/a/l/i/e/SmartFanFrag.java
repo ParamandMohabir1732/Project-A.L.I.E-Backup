@@ -29,6 +29,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -46,6 +48,10 @@ public class SmartFanFrag extends Fragment {
     private final int STORAGE_PERMISSION = 1;
     private SwitchCompat fanControl;
     private Slider fanSpeed;
+    private RadioGroup radGroup;
+    private RadioButton low;
+    private RadioButton med;
+    private RadioButton high;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -53,6 +59,10 @@ public class SmartFanFrag extends Fragment {
 
         fanControl = view.findViewById(R.id.TheSecondDawnSwitch8);
         fanSpeed = view.findViewById(R.id.TheSecondDawnSlider1);
+        radGroup = view.findViewById(R.id.TheSecondDawnRadioGroup);
+        low = view.findViewById(R.id.TheSecondDawnRadioButton1);
+        med = view.findViewById(R.id.TheSecondDawnRadioButton2);
+        high = view.findViewById(R.id.TheSecondDawnRadioButton3);
 
         requestPermission = view.findViewById(R.id.TheSecondDawnButton3);
         requestPermission.setOnClickListener(v -> {
@@ -67,9 +77,14 @@ public class SmartFanFrag extends Fragment {
         });
 
         fanSpeed.setEnabled(false);
+        radGroup.setEnabled(false);
+        low.setEnabled(false);
+        med.setEnabled(false);
+        high.setEnabled(false);
+
 
         fanControl.setOnCheckedChangeListener((compoundButton, b) -> fanSpeed.setEnabled(fanControl.isChecked()));
-
+        fanControl.setOnCheckedChangeListener((compoundButton, b) -> low.setEnabled(fanControl.isChecked()));
 
         return view;
     }
