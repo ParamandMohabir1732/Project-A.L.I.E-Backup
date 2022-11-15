@@ -11,13 +11,6 @@
         tools:ignore="AlwaysShowAction" />
 
     <item
-        android:id="@+id/TheSecondDawnToolBarProfile"
-        android:icon="@drawable/ic_profile"
-        android:title="@string/titleProfile"
-        app:showAsAction="always"
-        tools:ignore="AlwaysShowAction" />
-
-    <item
         android:id="@+id/TheSecondDawnToolBarHelp"
         android:title="@string/titleHelp"
         app:showAsAction="never" />

@@ -90,6 +90,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new LEDFrag()).commit();
         }
 
+        if (item.getItemId() == R.id.TheSecondDawnNavProfile) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new ProfileFrag()).commit();
+
+        }
+
         if (item.getItemId() == R.id.TheSecondDawnNavSettings) {
             startActivity(new Intent(this, ConfigurationActivity.class));
         }
