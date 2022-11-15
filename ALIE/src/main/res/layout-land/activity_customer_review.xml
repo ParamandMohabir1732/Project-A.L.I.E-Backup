@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="200dp"
         android:layout_marginTop="-15dp"
         android:text=""
         android:textAlignment="center"
@@ -35,8 +35,9 @@
         android:id="@+id/TheSecondDawnImageView40"
         android:layout_width="126dp"
         android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="-15dp"
+        android:layout_gravity="start"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="-45dp"
         android:contentDescription="@string/imageView40"
         android:src="@mipmap/ic_launcher_round" />
 
@@ -45,6 +46,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="-100dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/textView3"
         android:textAlignment="center"
@@ -69,13 +71,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
         android:rating="5" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="325dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:hint="@string/editText7"
         app:boxStrokeColor="@color/black"
@@ -88,9 +90,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TheSecondDawnEditText7"
-            android:layout_width="375dp"
+            android:layout_width="325dp"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_gravity="start"
             android:background="@drawable/edittext_shape"
             android:fontFamily="sans-serif-black"
             android:inputType="textPersonName"
@@ -100,10 +102,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="325dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="-56dp"
+        android:layout_marginEnd="10dp"
         android:hint="@string/editText8"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
@@ -115,9 +118,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TheSecondDawnEditText8"
-            android:layout_width="375dp"
+            android:layout_width="325dp"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_gravity="end"
             android:background="@drawable/edittext_shape"
             android:fontFamily="sans-serif-black"
             android:inputType="textEmailAddress"
@@ -127,9 +130,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="325dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:hint="@string/editText9"
         app:boxStrokeColor="@color/black"
@@ -142,9 +146,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TheSecondDawnEditText9"
-            android:layout_width="375dp"
+            android:layout_width="325dp"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_gravity="start"
             android:background="@drawable/edittext_shape"
             android:fontFamily="sans-serif-black"
             android:inputType="phone"
@@ -154,10 +158,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="-56dp"
+        android:layout_marginEnd="10dp"
         android:hint="@string/editText10"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
@@ -171,9 +176,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TheSecondDawnEditText10"
-            android:layout_width="375dp"
+            android:layout_width="325dp"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_gravity="end"
             android:background="@drawable/edittext_shape"
             android:fontFamily="sans-serif-black"
             android:inputType="textShortMessage|textMultiLine"
@@ -188,7 +193,6 @@
         android:layout_width="360dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
         android:background="@drawable/button_shape"
         android:text="@string/button13"
         android:textColor="@color/white"

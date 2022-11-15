@@ -248,10 +248,10 @@
     <string name="textView24">A.L.I.E</string>
     <string name="textView23">Thank You for Using our App. Please Leave a Review and Rate our App!</string>
     <string name="imageButton10">This is an Image Button of the Left Arrow in Customer Review Screen.</string>
-    <string name="editText7">Name</string>
-    <string name="editText8">Email</string>
-    <string name="editText9">Phone</string>
-    <string name="editText10">Comment</string>
+    <string name="editText7">Name:</string>
+    <string name="editText8">Email Address:</string>
+    <string name="editText9">Phone Number:</string>
+    <string name="editText10">Leave a Review:</string>
     <string name="button13">SUBMIT</string>
 
     <!-- Reset Password Screen -->
