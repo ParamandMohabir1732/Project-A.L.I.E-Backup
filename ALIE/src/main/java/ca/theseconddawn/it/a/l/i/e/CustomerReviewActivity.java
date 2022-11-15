@@ -44,8 +44,8 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
     private EditText editTextName, editTextEmail, editTextPhoneNumber, editTextMessage;
     private Button submitReview;
 
-    private FirebaseDatabase rootNode;
-    private DatabaseReference dataReference;
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
 
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
@@ -78,7 +78,10 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
             finish();
         }
         if(view.getId() == R.id.TheSecondDawnButton13) {
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("Customer Reviews");
 
+        databaseReference.setValue("");
         }
     }
 }
