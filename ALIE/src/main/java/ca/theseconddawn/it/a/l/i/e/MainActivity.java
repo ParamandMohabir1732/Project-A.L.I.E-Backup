@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (item.getItemId() == R.id.TheSecondDawnNavProfile) {
             getSupportFragmentManager().beginTransaction().replace(R.id.TheSecondDawnFragmentContainer, new ProfileFrag()).commit();
-
         }
 
         if (item.getItemId() == R.id.TheSecondDawnNavSettings) {
@@ -140,12 +139,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (item.getItemId() == R.id.TheSecondDawnToolBarReview) {
             Toast.makeText(this, toastMessage5, Toast.LENGTH_LONG).show();
-            startActivity(new Intent(this,  CustomerReviewActivity.class));
+            startActivity(new Intent(this, CustomerReviewActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
 
     public void onBackPressed() {
-    finish();
+        finish();
     }
 }

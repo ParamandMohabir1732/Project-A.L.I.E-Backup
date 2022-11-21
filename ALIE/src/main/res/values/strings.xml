@@ -6,6 +6,11 @@
     <!-- App Name -->
     <string name="app_name">A.L.I.E</string>
 
+    <!-- Facebook Login -->
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+
     <!-- Alert Dialogs -->
     <string name="builderTitle">A.L.I.E</string>
     <string name="builderMessage">Are you sure you want to exit?</string>

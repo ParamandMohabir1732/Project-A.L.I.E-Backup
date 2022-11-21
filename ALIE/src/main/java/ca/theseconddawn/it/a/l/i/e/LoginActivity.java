@@ -51,7 +51,7 @@ import com.google.firebase.auth.GoogleAuthProvider;
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView register, forgetPassword;
-    private ImageView googleImage;
+    private ImageView googleImage, facebookImage;
     private EditText editTextEmail, editTextPassword;
     private CheckBox rememberMeCheckBox;
     private Button signIn;
@@ -83,6 +83,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         googleImage = findViewById(R.id.TheSecondDawnImageView29);
         googleImage.setOnClickListener(this);
+
+        facebookImage = findViewById(R.id.TheSecondDawnImageView30);
+        facebookImage.setOnClickListener(this);
 
         editTextEmail = findViewById(R.id.TheSecondDawnEditText1);
         editTextPassword = findViewById(R.id.TheSecondDawnEditText2);
@@ -118,6 +121,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
         if (view.getId() == R.id.TheSecondDawnImageView29) {
             googleSignIn();
+        }
+        if (view.getId() == R.id.TheSecondDawnImageView30) {
         }
     }
 
