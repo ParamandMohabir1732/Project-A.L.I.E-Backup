@@ -55,6 +55,33 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
+        android:hint="@string/editText11"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/ic_profile"
+        app:startIconTint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TheSecondDawnEditText11"
+            android:layout_width="375dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_shape"
+            android:fontFamily="sans-serif-black"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:hint="@string/editText3"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
