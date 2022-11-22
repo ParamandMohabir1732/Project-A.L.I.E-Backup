@@ -105,9 +105,14 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
             return;
         }
 
-
         if (phone.isEmpty()) {
             editTextPhoneNumber.setError(getString(R.string.emptyPhoneError1));
+            editTextPhoneNumber.requestFocus();
+            return;
+        }
+
+        if (phone.length() < 10) {
+            editTextPhoneNumber.setError(getString(R.string.lengthPhoneError1));
             editTextPhoneNumber.requestFocus();
             return;
         }

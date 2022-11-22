@@ -173,7 +173,8 @@
     <string name="editText12">Phone Number:</string>
     <string name="emptyNameError2">Full Name is Required!</string>
     <string name="emptyPhoneError2">Phone Number is Required!</string>
-    <string name="lengthPhoneError2">Phone Number Must be 10 Digits Long!</string>
+    <string name="lengthPhoneError2">Your Phone Number Must be 10 Digits Long!</string>
+    <string name="matchPhoneError2">Please Enter a Valid Phone Number!</string>
 
     <!-- LED Screen -->
     <string name="textView9">LED Controls</string>
@@ -276,6 +277,7 @@
     <string name="emptyEmailError3">Email Address is Required!</string>
     <string name="matchEmailError4">Please Enter a Valid Email Address!</string>
     <string name="emptyPhoneError1">Your Phone Number is Required!</string>
+    <string name="lengthPhoneError1">Your Phone Number Must be 10 Digits Long!</string>
     <string name="matchPhoneError1">Please Enter a Valid Phone Number!</string>
     <string name="emptyReviewError1">Your Review is Required!</string>
 

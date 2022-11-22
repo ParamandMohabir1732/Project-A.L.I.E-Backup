@@ -133,6 +133,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
+        if (!Patterns.PHONE.matcher(phone).matches()) {
+            editTextPhoneNumber.setError(getString(R.string.matchPhoneError2));
+            editTextPhoneNumber.requestFocus();
+            return;
+        }
+
         progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
