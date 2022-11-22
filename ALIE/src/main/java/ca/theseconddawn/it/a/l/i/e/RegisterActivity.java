@@ -79,9 +79,17 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     }
 
     private void registerUser() {
+        String name = editTextFullName.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
         String confirmPassword = editTextConfirmPassword.getText().toString().trim();
+        String phone = editTextPhoneNumber.getText().toString().trim();
+
+        if (name.isEmpty()) {
+            editTextFullName.setError(getString(R.string.emptyNameError2));
+            editTextFullName.requestFocus();
+            return;
+        }
 
         if (email.isEmpty()) {
             editTextEmail.setError(getString(R.string.emptyEmailError2));

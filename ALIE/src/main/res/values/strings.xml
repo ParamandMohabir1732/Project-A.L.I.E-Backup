@@ -171,6 +171,7 @@
     <string name="imageButton1">This is an Image Button of the Left Arrow in Register Screen</string>
     <string name="editText11">Full Name:</string>
     <string name="editText12">Phone Number:</string>
+    <string name="emptyNameError2">Full Name is Required!</string>
 
     <!-- LED Screen -->
     <string name="textView9">LED Controls</string>
