@@ -39,7 +39,7 @@ import java.util.Objects;
 
 public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private EditText editTextEmail, editTextPassword, editTextConfirmPassword;
+    private EditText editTextFullName, editTextEmail, editTextPassword, editTextConfirmPassword, editTextPhoneNumber;
     private Button registerUser;
     private ProgressBar progressBar;
     private ImageButton leftArrow;
@@ -59,9 +59,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         leftArrow = findViewById(R.id.TheSecondDawnImageButton1);
         leftArrow.setOnClickListener(this);
 
+        editTextFullName = findViewById(R.id.TheSecondDawnEditText11);
         editTextEmail = findViewById(R.id.TheSecondDawnEditText3);
         editTextPassword = findViewById(R.id.TheSecondDawnEditText4);
         editTextConfirmPassword = findViewById(R.id.TheSecondDawnEditText5);
+        editTextPhoneNumber = findViewById(R.id.TheSecondDawnEditText12);
 
         progressBar = findViewById(R.id.TheSecondDawnProgressBar2);
     }
