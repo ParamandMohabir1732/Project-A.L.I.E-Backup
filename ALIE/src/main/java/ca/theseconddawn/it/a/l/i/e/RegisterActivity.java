@@ -121,6 +121,18 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
+        if (phone.isEmpty()) {
+            editTextPhoneNumber.setError(getString(R.string.emptyPhoneError2));
+            editTextPhoneNumber.requestFocus();
+            return;
+        }
+
+        if (phone.length() < 10) {
+            editTextPhoneNumber.setError(getString(R.string.lengthPhoneError2));
+            editTextPhoneNumber.requestFocus();
+            return;
+        }
+
         progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {

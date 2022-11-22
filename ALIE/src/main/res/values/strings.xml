@@ -166,12 +166,14 @@
     <string name="matchEmailError2">Please Enter a Valid Email Address:</string>
     <string name="emptyPasswordError2">Password is Required!</string>
     <string name="lengthPasswordError2">Your Password Should be at Least 6 Characters Long!</string>
-    <string name="confirmPasswordError1">Password Do Not Match!</string>
+    <string name="confirmPasswordError1">Passwords Do Not Match!</string>
     <string name="firebaseReference1">Users</string>
     <string name="imageButton1">This is an Image Button of the Left Arrow in Register Screen</string>
     <string name="editText11">Full Name:</string>
     <string name="editText12">Phone Number:</string>
     <string name="emptyNameError2">Full Name is Required!</string>
+    <string name="emptyPhoneError2">Phone Number is Required!</string>
+    <string name="lengthPhoneError2">Phone Number Must be 10 Digits Long!</string>
 
     <!-- LED Screen -->
     <string name="textView9">LED Controls</string>
