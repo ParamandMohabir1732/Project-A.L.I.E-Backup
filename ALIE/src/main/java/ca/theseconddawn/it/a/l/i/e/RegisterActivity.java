@@ -115,6 +115,18 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 
+        if (!password.matches(".*[0-9].*")) {
+            editTextPassword.setError(getString(R.string.matchPasswordError1Digit));
+            editTextPassword.requestFocus();
+            return;
+        }
+
+        if (!password.matches(".*[a-z].*")) {
+            editTextPassword.setError(getString(R.string.matchPasswordError1LowerLetter));
+            editTextPassword.requestFocus();
+            return;
+        }
+
         if (confirmPassword.isEmpty() || !confirmPassword.equals(password)) {
             editTextConfirmPassword.setError(getString(R.string.confirmPasswordError1));
             editTextConfirmPassword.requestFocus();

@@ -290,4 +290,6 @@
     <string name="emptyEmailError4">Email Address is Required!</string>
     <string name="matchEmailError3">Please Enter a Valid Email Address:</string>
     <string name="imageButton2">This is an Image Button of the Left Arrow in Reset Password Screen</string>
+    <string name="matchPasswordError1Digit">Password Should have at Least 1 Digit!</string>
+    <string name="matchPasswordError1LowerLetter">Password Should Contain at Least 1 Lower Case Letter!</string>
 </resources>
