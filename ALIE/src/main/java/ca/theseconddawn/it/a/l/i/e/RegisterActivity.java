@@ -166,7 +166,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-                UserClass user = new UserClass(email);
+                UserClass user = new UserClass(name, email, phone);
 
                 FirebaseDatabase.getInstance().getReference(getString(R.string.firebaseReference1)).child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).setValue(user).addOnCompleteListener(task1 -> {
                     if (task1.isSuccessful()) {
