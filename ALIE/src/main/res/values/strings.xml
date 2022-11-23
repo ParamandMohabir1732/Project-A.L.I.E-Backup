@@ -166,6 +166,10 @@
     <string name="matchEmailError2">Please Enter a Valid Email Address:</string>
     <string name="emptyPasswordError2">Password is Required!</string>
     <string name="lengthPasswordError2">Your Password Should be at Least 6 Characters Long!</string>
+    <string name="matchPasswordErrorAlphabetNum">Your Password Should Include Alphabetic Letters and Numbers!</string>
+    <string name="matchPasswordError1Char">Your Password Should have at Least 1 Special Character!</string>
+    <string name="matchPasswordError1UpperLetter">Your Password Should have at Least 1 Upper Case Letter!</string>
+    <string name="matchPasswordError1Digit">Your Password Should have at Least 1 Digit!</string>
     <string name="confirmPasswordError1">Passwords Do Not Match!</string>
     <string name="firebaseReference1">Users</string>
     <string name="imageButton1">This is an Image Button of the Left Arrow in Register Screen</string>
@@ -290,7 +294,4 @@
     <string name="emptyEmailError4">Email Address is Required!</string>
     <string name="matchEmailError3">Please Enter a Valid Email Address:</string>
     <string name="imageButton2">This is an Image Button of the Left Arrow in Reset Password Screen</string>
-    <string name="matchPasswordError1Digit">Password Should have at Least 1 Digit!</string>
-    <string name="matchPasswordError1UpperLetter">Password Should Contain at Least 1 Upper Case Letter!</string>
-    <string name="matchPasswordError1Char">Password Should Contain at Least 1 Special Character!</string>
 </resources>
