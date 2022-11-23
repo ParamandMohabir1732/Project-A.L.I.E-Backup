@@ -47,7 +47,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class ProfileFrag extends Fragment {
+public class ProfileFrag extends Fragment implements View.OnClickListener {
 
     private FirebaseUser user;
     private FirebaseAuth mAuth;
@@ -58,7 +58,7 @@ public class ProfileFrag extends Fragment {
     private CircleImageView profileImage;
     private Button signOut, reset;
     private ProgressBar progressBar;
-    private TextView emailTextView, changeProfile;
+    private TextView emailTextView, fullNameTextView, changeProfile;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -67,17 +67,18 @@ public class ProfileFrag extends Fragment {
         mAuth = FirebaseAuth.getInstance();
 
         reset = view.findViewById(R.id.TheSecondDawnButton4);
-        reset.setOnClickListener(this::onClick);
+        reset.setOnClickListener(this);
 
         signOut = view.findViewById(R.id.TheSecondDawnButton5);
-        signOut.setOnClickListener(this::onClick);
+        signOut.setOnClickListener(this);
 
         profileImage = view.findViewById(R.id.TheSecondDawnImageView31);
 
         emailTextView = view.findViewById(R.id.TheSecondDawnTextView15);
+        fullNameTextView = view.findViewById(R.id.TheSecondDawnTextView30);
 
         changeProfile = view.findViewById(R.id.TheSecondDawnTextView18);
-        changeProfile.setOnClickListener(this::onClick);
+        changeProfile.setOnClickListener(this);
 
         progressBar = view.findViewById(R.id.TheSecondDawnProgressBar3);
 
@@ -91,8 +92,10 @@ public class ProfileFrag extends Fragment {
                 UserClass userProfile = snapshot.getValue(UserClass.class);
 
                 if (userProfile != null) {
+                    String name = userProfile.name;
                     String email = userProfile.email;
 
+                    fullNameTextView.setText(name);
                     emailTextView.setText(email);
                 }
             }

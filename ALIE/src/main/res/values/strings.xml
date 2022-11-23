@@ -240,6 +240,8 @@
     <string name="button5">LOGOUT</string>
     <string name="textView18">Change Profile</string>
     <string name="firebaseReference2">Users</string>
+    <string name="imageView43">This is an Image of Profile Icon</string>
+    <string name="textView29">Full Name:</string>
 
     <!-- Help Screen -->
     <string name="edit_profile">Call</string>

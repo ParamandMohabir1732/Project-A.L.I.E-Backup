@@ -30,12 +30,44 @@
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/TheSecondDawnImageView33"
+        android:id="@+id/TheSecondDawnImageView43"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="-165dp"
         android:layout_marginTop="35dp"
+        android:contentDescription="@string/imageView43"
+        android:src="@drawable/ic_profile" />
+
+    <TextView
+        android:id="@+id/TheSecondDawnTextView29"
+        android:layout_width="325dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="-27dp"
+        android:text="@string/textView29"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/TheSecondDawnTextView30"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/TheSecondDawnImageView33"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="-165dp"
+        android:layout_marginTop="15dp"
         android:contentDescription="@string/imageView33"
         android:src="@drawable/ic_email" />
 
