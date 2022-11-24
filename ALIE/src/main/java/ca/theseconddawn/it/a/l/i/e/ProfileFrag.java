@@ -58,7 +58,7 @@ public class ProfileFrag extends Fragment implements View.OnClickListener {
     private CircleImageView profileImage;
     private Button signOut, reset;
     private ProgressBar progressBar;
-    private TextView emailTextView, fullNameTextView, changeProfile;
+    private TextView emailTextView, fullNameTextView, phoneNoTextView, changeProfile;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -76,6 +76,7 @@ public class ProfileFrag extends Fragment implements View.OnClickListener {
 
         emailTextView = view.findViewById(R.id.TheSecondDawnTextView15);
         fullNameTextView = view.findViewById(R.id.TheSecondDawnTextView30);
+        phoneNoTextView = view.findViewById(R.id.TheSecondDawnTextView32);
 
         changeProfile = view.findViewById(R.id.TheSecondDawnTextView18);
         changeProfile.setOnClickListener(this);
@@ -94,9 +95,11 @@ public class ProfileFrag extends Fragment implements View.OnClickListener {
                 if (userProfile != null) {
                     String name = userProfile.name;
                     String email = userProfile.email;
+                    String phone = userProfile.phoneNo;
 
                     fullNameTextView.setText(name);
                     emailTextView.setText(email);
+                    phoneNoTextView.setText(phone);
                 }
             }
 

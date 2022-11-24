@@ -240,8 +240,10 @@
     <string name="button5">LOGOUT</string>
     <string name="textView18">Change Profile</string>
     <string name="firebaseReference2">Users</string>
-    <string name="imageView43">This is an Image of Profile Icon</string>
+    <string name="imageView43">This is an Image of the Profile Icon</string>
     <string name="textView29">Full Name:</string>
+    <string name="imageView44">This is an Image of the Phone Icon</string>
+    <string name="textView31">Phone Number:</string>
 
     <!-- Help Screen -->
     <string name="edit_profile">Call</string>
@@ -296,6 +298,4 @@
     <string name="emptyEmailError4">Email Address is Required!</string>
     <string name="matchEmailError3">Please Enter a Valid Email Address:</string>
     <string name="imageButton2">This is an Image Button of the Left Arrow in Reset Password Screen</string>
-    <string name="imageView44">This is an Image Icon of the Phone</string>
-    <string name="textView31">Phone Number:</string>
 </resources>
