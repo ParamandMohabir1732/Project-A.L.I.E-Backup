@@ -64,12 +64,15 @@ public class ConfigurationActivity extends AppCompatActivity implements View.OnC
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
             setPreferencesFromResource(R.xml.settings_preferences, rootKey);
             Preference orientation = findPreference(getString(R.string.sharedPrefKey));
+            assert orientation != null;
             orientation.setOnPreferenceChangeListener((preference, newValue) -> {
                     if(orientation.isEnabled()){
                         getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
                     }
-                    else if(orientation.isCopyingEnabled())getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-                return true;
+                    else {
+                        getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+                    }
+                    return true;
             });
         }
     }
