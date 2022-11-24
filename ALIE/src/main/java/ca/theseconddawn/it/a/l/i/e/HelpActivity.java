@@ -28,8 +28,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
-public class HelpActivity extends AppCompatActivity {
+public class HelpActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,15 +38,43 @@ public class HelpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_help);
 
         Button btn = (Button) findViewById(R.id.appCompatButton);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse(getString(R.string.intentPhoneUri)));
-                startActivity(intent);
-            }
-        });
+        btn.setOnClickListener(this);
+
+        ImageButton contactUs = findViewById(R.id.imageView33);
+        contactUs.setOnClickListener(this);
+
+        ImageButton AboutUs = findViewById(R.id.imageView34);
+        AboutUs.setOnClickListener(this);
+
+        ImageButton FAQ = findViewById(R.id.imageView36);
+        FAQ.setOnClickListener(this);
+
 
 
     }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.appCompatButton) {
+            Intent intent = new Intent(Intent.ACTION_DIAL);
+            intent.setData(Uri.parse(getString(R.string.intentPhoneUri)));
+            startActivity(intent);
+        }
+        if (view.getId() == R.id.imageView33) {
+            startActivity(new Intent(this, ContactUsActivity.class));
+        }
+        if (view.getId() == R.id.imageView34) {
+            startActivity(new Intent(this, AboutUsActivity.class));
+        }
+        if (view.getId() == R.id.imageView36) {
+            startActivity(new Intent(this, FAQActivity.class));
+        }
+
+    }
 }
+
+
+
+
+
+
