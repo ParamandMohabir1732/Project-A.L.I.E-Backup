@@ -58,6 +58,7 @@
         android:value="10"
         android:valueFrom="0"
         android:valueTo="100"
+        app:labelBehavior="gone"
         app:haloColor="#F80000" />
 
     <RadioGroup
