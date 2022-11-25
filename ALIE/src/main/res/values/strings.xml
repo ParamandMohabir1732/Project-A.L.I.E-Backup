@@ -96,11 +96,6 @@
 
     <!-- SharedPref Messages -->
 
-    <!-- Configuration Screen -->
-    <string name="imageButton3">This is an Image Button of the Left Arrow in Settings Screen</string>
-    <string name="textView20">Settings Screen</string>
-    <string name="sharedPrefKey">Attachment</string>
-
     <!-- Controls Titles -->
     <string name="Portrait">Orientation</string>
     <string name="Loudness">Speaker Volume</string>
@@ -231,6 +226,13 @@
     <string name="switch3">Off/On</string>
     <string name="switch4">Off/On</string>
     <string name="imageButton4">This is an Image of the Microphone Icon that will be used to record your voice.</string>
+
+    <!-- Settings Screen -->
+    <string name="imageButton3">This is an Image Button of the Left Arrow in Settings Screen</string>
+    <string name="textView20">Settings Screen</string>
+    <string name="sharedPrefKey">Attachment</string>
+    <string name="textView33">Orientation:</string>
+    <string name="switch9">Portrait</string>
 
     <!-- Profile Screen -->
     <string name="imageView31">This is an Image of the Default Profile Icon that will be Displayed on Profile Screen</string>
