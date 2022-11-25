@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/textView11"
-        android:textColor="@color/lightblue"
+        android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold|italic" />
 
@@ -101,8 +101,8 @@
         android:id="@+id/TheSecondDawnButton3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
         android:layout_gravity="center"
+        android:layout_marginTop="25dp"
         android:text="@string/button3"
         android:textColor="@color/snowwhite"
         app:layout_constraintBottom_toBottomOf="parent" />
