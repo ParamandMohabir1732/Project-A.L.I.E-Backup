@@ -91,6 +91,9 @@ public class SmartFanFrag extends Fragment {
                 else if(med.isChecked()){
                     fanSpeed.setValue(50);
                 }
+                else if(high.isChecked()){
+                    fanSpeed.setValue(75);
+                }
             }
         });
 
