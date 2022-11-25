@@ -91,7 +91,7 @@ public class SmartFanFrag extends Fragment {
                 low.setClickable(fanControl.isChecked());
                 med.setClickable(fanControl.isChecked());
                 high.setClickable(fanControl.isChecked());
-
+                radGroup.clearCheck();
 
             }
         });
