@@ -231,9 +231,12 @@
     <!-- Settings Screen -->
     <string name="imageButton3">This is an Image Button of the Left Arrow in Settings Screen</string>
     <string name="textView20">Settings Screen</string>
-    <string name="textView33">Orientation:</string>
+    <string name="textView33">Orientation</string>
     <string name="switch9">Portrait</string>
-    <string name="textView34">Current Screen Orientation</string>
+    <string name="textView34">Current Screen Orientation:</string>
+    <string name="textView35">Volume</string>
+    <string name="textView36">Current Volume:</string>
+    <string name="imageView45">This is an Image of the Speaker Icon</string>
 
     <!-- Profile Screen -->
     <string name="imageView31">This is an Image of the Default Profile Icon that will be Displayed on Profile Screen</string>
@@ -301,6 +304,4 @@
     <string name="emptyEmailError4">Email Address is Required!</string>
     <string name="matchEmailError3">Please Enter a Valid Email Address:</string>
     <string name="imageButton2">This is an Image Button of the Left Arrow in Reset Password Screen</string>
-    <string name="textView35">Volume</string>
-    <string name="textView36">Current Volume</string>
 </resources>
