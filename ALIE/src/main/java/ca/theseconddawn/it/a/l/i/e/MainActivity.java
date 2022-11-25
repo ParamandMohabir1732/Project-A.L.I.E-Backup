@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         if (item.getItemId() == R.id.TheSecondDawnNavSettings) {
-            startActivity(new Intent(this, ConfigurationActivity.class));
+            startActivity(new Intent(this, SettingsActivity.class));
         }
 
         if (item.getItemId() == R.id.TheSecondDawnNavLogout) {

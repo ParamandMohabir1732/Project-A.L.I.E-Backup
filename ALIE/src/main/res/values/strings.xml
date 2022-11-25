@@ -237,6 +237,16 @@
     <string name="textView35">Volume</string>
     <string name="textView36">Current Volume:</string>
     <string name="imageView45">This is an Image of the Speaker Icon</string>
+    <string name="textView38">LED Controls</string>
+    <string name="textView39">Current LED Color:</string>
+
+    <!-- Spinner Array -->
+    <string-array name="colors">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>White</item>
+    </string-array>
 
     <!-- Profile Screen -->
     <string name="imageView31">This is an Image of the Default Profile Icon that will be Displayed on Profile Screen</string>

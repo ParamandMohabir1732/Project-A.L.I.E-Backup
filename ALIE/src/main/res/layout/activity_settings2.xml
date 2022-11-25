@@ -68,7 +68,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="50dp"
             android:text="@string/textView35"
             android:textColor="@color/teal_200"
             android:textSize="20sp"
@@ -88,18 +88,18 @@
         <SeekBar
             android:id="@+id/TheSecondDawnSeekBar2"
             android:layout_width="300dp"
-            android:layout_marginTop="15dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp" />
 
         <ImageView
             android:id="@+id/TheSecondDawnImageView45"
-            android:contentDescription="@string/imageView45"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
             android:layout_marginStart="30dp"
             android:layout_marginTop="-22dp"
+            android:contentDescription="@string/imageView45"
             android:src="@drawable/ic_speaker" />
 
         <TextView
@@ -114,5 +114,34 @@
             android:textSize="15sp"
             android:textStyle="bold" />
 
+        <TextView
+            android:id="@+id/TheSecondDawnTextView38"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:text="@string/textView38"
+            android:textColor="@color/teal_200"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TheSecondDawnTextView39"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="@string/textView39"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/TheSecondDawnSpinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:textAlignment="center"/>
     </LinearLayout>
 </ScrollView>
