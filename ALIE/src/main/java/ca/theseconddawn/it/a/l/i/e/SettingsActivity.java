@@ -21,15 +21,29 @@ Software Project
 
 package ca.theseconddawn.it.a.l.i.e;
 
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
+public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
-public class SettingsActivity extends AppCompatActivity {
+    private ImageButton leftArrow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings2);
+
+        leftArrow = findViewById(R.id.TheSecondDawnImageButton3);
+        leftArrow.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.TheSecondDawnImageButton3) {
+            finish();
+        }
     }
 }
