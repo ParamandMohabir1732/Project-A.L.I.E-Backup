@@ -79,12 +79,17 @@ public class SmartFanFrag extends Fragment {
         });
 
         fanSpeed.setEnabled(false);
+        low.setClickable(false);
+        med.setClickable(false);
+        high.setClickable(false);
 
         //fanControl.setOnCheckedChangeListener((compoundButton, b) -> fanSpeed.setEnabled(fanControl.isChecked()));
         fanControl.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 fanSpeed.setEnabled(fanControl.isChecked());
+                low.setClickable(fanControl.isChecked());
+
             }
         });
 
