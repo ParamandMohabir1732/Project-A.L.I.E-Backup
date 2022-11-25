@@ -95,6 +95,7 @@
     <string name="snackbar4">Permission is Denied!</string>
 
     <!-- SharedPref Messages -->
+    <string name="sharedPrefKey">Attachment</string>
 
     <!-- Controls Titles -->
     <string name="Portrait">Orientation</string>
@@ -230,7 +231,6 @@
     <!-- Settings Screen -->
     <string name="imageButton3">This is an Image Button of the Left Arrow in Settings Screen</string>
     <string name="textView20">Settings Screen</string>
-    <string name="sharedPrefKey">Attachment</string>
     <string name="textView33">Orientation:</string>
     <string name="switch9">Portrait</string>
     <string name="textView34">Current Screen Orientation</string>
@@ -301,4 +301,6 @@
     <string name="emptyEmailError4">Email Address is Required!</string>
     <string name="matchEmailError3">Please Enter a Valid Email Address:</string>
     <string name="imageButton2">This is an Image Button of the Left Arrow in Reset Password Screen</string>
+    <string name="textView35">Volume</string>
+    <string name="textView36">Current Volume</string>
 </resources>

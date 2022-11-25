@@ -13,55 +13,83 @@
         android:orientation="vertical">
 
         <ImageButton
-        android:id="@+id/TheSecondDawnImageButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="start"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:background="@null"
-        android:contentDescription="@string/imageButton3"
-        android:src="@drawable/ic_left_arrow_state" />
+            android:id="@+id/TheSecondDawnImageButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@null"
+            android:contentDescription="@string/imageButton3"
+            android:src="@drawable/ic_left_arrow_state" />
 
-    <TextView
-        android:id="@+id/TheSecondDawnTextView20"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="-25dp"
-        android:text="@string/textView20"
-        android:textColor="@color/aqua"
-        android:textSize="30sp"
-        android:textStyle="bold|italic" />
+        <TextView
+            android:id="@+id/TheSecondDawnTextView20"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="-25dp"
+            android:text="@string/textView20"
+            android:textColor="@color/aqua"
+            android:textSize="30sp"
+            android:textStyle="bold|italic" />
 
         <TextView
             android:id="@+id/TheSecondDawnTextView33"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:text="@string/textView33"
-            android:textSize="15sp"
-            android:textStyle="bold"
-            android:layout_gravity="center"
-            android:textColor="@color/teal_200"/>
+            android:textColor="@color/teal_200"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/TheSecondDawnTextView34"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="@string/textView34"
-            android:textSize="15sp"
-            android:textStyle="bold"
             android:layout_gravity="center"
-            android:textColor="@color/black"/>
+            android:layout_marginTop="25dp"
+            android:text="@string/textView34"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/TheSecondDawnSwitch9"
             android:layout_width="wrap_content"
             android:layout_height="10dp"
             android:layout_gravity="center"
-            android:textAlignment="center"
-            android:text="@string/switch9" />
+            android:text="@string/switch9"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/TheSecondDawnTextView35"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="@string/textView35"
+            android:textColor="@color/teal_200"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TheSecondDawnTextView36"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="@string/textView36"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/TheSecondDawnSeekBar2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
     </LinearLayout>
 </ScrollView>
