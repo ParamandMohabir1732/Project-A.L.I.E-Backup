@@ -328,5 +328,6 @@
     <string name="textview20">No. By default A.L.I.E is designed not to store or send audio to the cloud unless the device detects the wake word.</string>
     <string name="textview21">3. What happens when I speak to A.L.I.E? </string>
     <string name="textview22">When you ask A.L.I.E a question, a recording of your conversation is uploaded to TheSecondDawn\'s Firebase cloud, where we process your request and respond to you. For instance, when you ask A.L.I.E to play Music, we use the recording of your request to play your selected media.</string>
+    <string name="textview23">For more help...</string>
 
 </resources>
