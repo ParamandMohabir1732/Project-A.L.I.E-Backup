@@ -2,8 +2,10 @@ package ca.theseconddawn.it.a.l.i.e;
 
 import static android.os.Build.VERSION_CODES.S;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.robolectric.Shadows.shadowOf;
 
+import android.app.Activity;
 import android.content.Intent;
 
 import org.junit.Test;
@@ -24,19 +26,38 @@ import org.robolectric.annotation.Implements;
 @RunWith(RobolectricTestRunner.class)
 @Implements(value = org.robolectric.shadows.ShadowBackdropFrameRenderer.class, minSdk = S, isInAndroidSdk = false)
 public class inflaterCheck {
-    @Test
 
-    public void checkInflatorSettings() {
+    @Test
+    //check if button for inflator is there
+    public void checkInflatorNavigation() {
+        try(ActivityController<MainActivity> controller = Robolectric.buildActivity(MainActivity.class)){
+            controller.setup();
+            MainActivity activity = controller.get();
+
+            activity.findViewById(R.id.TheSecondDawnNavigationView).performClick();
+            assertNotNull(activity);
+        }
+
+    }
+    //Check if the button actually inflates
+    @Test
+    public void unflateNavigation() {
+
 
         try (ActivityController<MainActivity> controller = Robolectric.buildActivity(MainActivity.class)) {
             controller.setup();
             MainActivity activity = controller.get();
 
-            activity.findViewById(R.id.TheSecondDawnToolBarSettings).performClick();
+            activity.findViewById(R.id.TheSecondDawnNavigationView).performClick();
             Intent expectedIntent = new Intent(activity, ConfigurationActivity.class);
             Intent actual = shadowOf(RuntimeEnvironment.getApplication()).getNextStartedActivity();
             assertEquals(expectedIntent.getComponent(), actual.getComponent());
         }
+        //no it does not
     }
-}
+
+    }
+
+
+
 
