@@ -22,6 +22,7 @@ Software Project
 package ca.theseconddawn.it.a.l.i.e;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
 import android.media.AudioManager;
 import android.os.Bundle;
@@ -45,6 +46,11 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private TextView volumeProgress;
     private AudioManager audioManager;
     private Spinner ledControls;
+
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
+    private static final String SETTINGS = "Settings Pref";
+    private static final String SWITCH_ORIENTATION = "Screen Orientation";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -101,13 +107,26 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         orientation = findViewById(R.id.TheSecondDawnSwitch9);
         orientation.setOnCheckedChangeListener((compoundButton, isChecked) -> {
             if (isChecked) {
+                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+                editor.putBoolean(SWITCH_ORIENTATION, true);
+                editor.apply();
+                orientation.setChecked(true);
+
                 orientation.setText("Landscape");
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
             } else {
+                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+                editor.putBoolean(SWITCH_ORIENTATION, false);
+                editor.apply();
+                orientation.setChecked(false);
+
                 orientation.setText("Portrait");
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
             }
         });
+
+        sharedPreferences = getSharedPreferences(SETTINGS, MODE_PRIVATE);
+        orientation.setChecked(sharedPreferences.getBoolean(SWITCH_ORIENTATION, false));
 
         fanControl = findViewById(R.id.TheSecondDawnSwitch10);
         fanControl.setOnCheckedChangeListener((compoundButton, isChecked) -> {
