@@ -4,6 +4,149 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ContactUsActivity">
+
+    <TextView
+        android:id="@+id/TheSecondDawnTextView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="75dp"
+
+        android:text="@string/textview_contactus" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="@string/editText7"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/ic_profile"
+        app:startIconTint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TheSecondDawnEditText7"
+            android:layout_width="375dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_shape"
+            android:fontFamily="sans-serif-black"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="@string/editText8"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/ic_email"
+        app:startIconTint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TheSecondDawnEditText8"
+            android:layout_width="375dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_shape"
+            android:fontFamily="sans-serif-black"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="@string/editText9"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconTint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TheSecondDawnEditText9"
+            android:layout_width="375dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_shape"
+            android:fontFamily="sans-serif-black"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="@string/editText10"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="500"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/ic_baseline_message_24"
+        app:startIconTint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TheSecondDawnEditText10"
+            android:layout_width="375dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_shape"
+            android:fontFamily="sans-serif-black"
+            android:inputType="textShortMessage|textMultiLine"
+            android:maxLength="500"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/TheSecondDawnButton13"
+        android:layout_width="360dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_shape"
+        android:text="@string/button13"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <ProgressBar
+        android:id="@+id/TheSecondDawnProgressBar5"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-200dp"
+        android:visibility="gone" />
 
 </LinearLayout>
