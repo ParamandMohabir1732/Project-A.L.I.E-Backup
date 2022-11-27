@@ -136,7 +136,6 @@
             android:textSize="15sp"
             android:textStyle="bold" />
 
-        
         <Spinner
             android:id="@+id/TheSecondDawnSpinner1"
             android:layout_width="wrap_content"
@@ -144,5 +143,35 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:textAlignment="center"/>
+
+        <TextView
+            android:id="@+id/TheSecondDawnTextView40"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="@string/textView40"
+            android:textColor="@color/teal_200"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/TheSecondDawnTextView41"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="25dp"
+            android:text="@string/textView41"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/TheSecondDawnSwitch10"
+            android:layout_width="wrap_content"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:text="@string/switch10"
+            android:textAlignment="center" />
     </LinearLayout>
 </ScrollView>

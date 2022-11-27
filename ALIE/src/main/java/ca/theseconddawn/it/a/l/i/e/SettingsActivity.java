@@ -40,7 +40,7 @@ import androidx.appcompat.widget.SwitchCompat;
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageButton leftArrow;
-    private SwitchCompat orientation;
+    private SwitchCompat orientation, fanControl;
     private SeekBar volume;
     private TextView volumeProgress;
     private AudioManager audioManager;
@@ -106,6 +106,15 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             } else {
                 orientation.setText("Portrait");
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+            }
+        });
+
+        fanControl = findViewById(R.id.TheSecondDawnSwitch10);
+        fanControl.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+            if (isChecked) {
+                fanControl.setText("ON");
+            } else {
+                fanControl.setText("OFF");
             }
         });
     }

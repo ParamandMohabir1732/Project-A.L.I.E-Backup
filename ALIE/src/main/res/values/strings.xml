@@ -6,11 +6,6 @@
     <!-- App Name -->
     <string name="app_name">A.L.I.E</string>
 
-    <!-- Facebook Login -->
-    <string name="facebook_app_id">1234</string>
-    <string name="fb_login_protocol_scheme">fb1234</string>
-    <string name="facebook_client_token">56789</string>
-
     <!-- Alert Dialogs -->
     <string name="builderTitle">A.L.I.E</string>
     <string name="builderMessage">Are you sure you want to exit?</string>
@@ -239,6 +234,9 @@
     <string name="imageView45">This is an Image of the Speaker Icon</string>
     <string name="textView38">LED Controls</string>
     <string name="textView39">Current LED Color:</string>
+    <string name="textView40">Fan Controls</string>
+    <string name="textView41">Current Fan Control:</string>
+    <string name="switch10">OFF</string>
 
     <!-- Spinner Array -->
     <string-array name="colors">
@@ -315,7 +313,7 @@
     <string name="matchEmailError3">Please Enter a Valid Email Address:</string>
     <string name="imageButton2">This is an Image Button of the Left Arrow in Reset Password Screen</string>
 
-    <!-- ContactUs Screen -->
+    <!-- Contact Us Screen -->
     <string name="textview_contactus">Contact Us</string>
     <string name="Name">Name</string>
     <string name="editText13">Send us a message</string>
@@ -328,8 +326,8 @@
     <string name="textview20">No. By default A.L.I.E is designed not to store or send audio to the cloud unless the device detects the wake word.</string>
     <string name="textview21">3. What happens when I speak to A.L.I.E? </string>
     <string name="textview22">When you ask A.L.I.E a question, a recording of your conversation is uploaded to TheSecondDawn\'s Firebase cloud, where we process your request and respond to you. For instance, when you ask A.L.I.E to play Music, we use the recording of your request to play your selected media.</string>
-    <string name="textview23">For more help...</string>
+    <string name="textview23">For more help…</string>
     <string name="textview24">A.L.I.E was founded in 2022 with the goal of providing a voice-activated device that can control different PCB board components. A.L.I.E includes an integrated LED function, fan, and speaker amplifier. The voice recognition system will allow you to issue numerous instructions, the led lights and fan will switch on and off at your request plus much more! </string>
-    <string name="textview25">A.L.I.E was created with the consumer in mind. We wanted to create a device that would make life easier and more convenient for people. We are always striving to improve our product and make it the best it can be!</string>
+    <string name="textview25">A.L.I.E was created with the consumer in mind. We wanted to create a device that would make life easier and more convenient for people. We are always striving to improve our product and make it the best it can be!</string>>
 
 </resources>

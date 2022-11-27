@@ -30,7 +30,7 @@ public class inflaterCheck {
     @Test
     //check if button for inflator is there
     public void checkInflatorNavigation() {
-        try(ActivityController<MainActivity> controller = Robolectric.buildActivity(MainActivity.class)){
+        try (ActivityController<MainActivity> controller = Robolectric.buildActivity(MainActivity.class)) {
             controller.setup();
             MainActivity activity = controller.get();
 
@@ -39,10 +39,10 @@ public class inflaterCheck {
         }
 
     }
+
     //Check if the button actually inflates
     @Test
     public void unflateNavigation() {
-
 
         try (ActivityController<MainActivity> controller = Robolectric.buildActivity(MainActivity.class)) {
             controller.setup();
@@ -56,7 +56,7 @@ public class inflaterCheck {
         //no it does not
     }
 
-    }
+}
 
 
 
