@@ -113,8 +113,10 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         fanControl.setOnCheckedChangeListener((compoundButton, isChecked) -> {
             if (isChecked) {
                 fanControl.setText("ON");
+                fanControl.setTextColor(getResources().getColor(R.color.brightgreen));
             } else {
                 fanControl.setText("OFF");
+                fanControl.setTextColor(getResources().getColor(R.color.brightred));
             }
         });
     }

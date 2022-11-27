@@ -142,7 +142,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
-            android:textAlignment="center"/>
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/TheSecondDawnTextView40"
@@ -172,6 +172,7 @@
             android:layout_height="10dp"
             android:layout_gravity="center"
             android:text="@string/switch10"
+            android:textColor="@color/brightred"
             android:textAlignment="center" />
     </LinearLayout>
 </ScrollView>
