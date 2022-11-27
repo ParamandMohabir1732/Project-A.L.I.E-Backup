@@ -5,6 +5,7 @@ import static android.os.Build.VERSION_CODES.S;
 import static junit.framework.TestCase.assertNotNull;
 import static junit.framework.TestCase.assertTrue;
 
+import android.content.pm.ActivityInfo;
 import android.widget.TextView;
 
 import com.google.firebase.database.annotations.NotNull;
@@ -19,6 +20,7 @@ import org.robolectric.annotation.Implements;
 @RunWith(RobolectricTestRunner.class)
 @Implements(value = org.robolectric.shadows.ShadowBackdropFrameRenderer.class, minSdk = S, isInAndroidSdk = false)
 public class settingsCheck {
+    //see if the text view exists
     @Test
     public void textViewCheck(){
         try(ActivityController<SettingsActivity> controller = Robolectric.buildActivity(SettingsActivity.class)){
@@ -32,4 +34,17 @@ public class settingsCheck {
 
         }
     }
+    //check whether you can put the screen to the landscape
+    @Test
+    public void checkLandscape(){
+        try(ActivityController<SettingsActivity> controller = Robolectric.buildActivity(SettingsActivity.class)){
+            controller.setup();
+            SettingsActivity activity = controller.get();
+
+            activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+
+        }
+    }
+
 }
