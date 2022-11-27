@@ -5,17 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/primary"
     tools:context=".ContactUsActivity">
 
+    <TextView
+        android:id="@+id/TheSecondDawnTextView33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="75dp"
 
+        android:text="@string/textview_contactus" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:hint="@string/editText7"
-        android:layout_marginTop="170dp"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
         app:endIconMode="clear_text"
@@ -97,7 +103,7 @@
         android:layout_height="100dp"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:hint="@string/editText13"
+        android:hint="@string/editText10"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
         app:counterEnabled="true"
@@ -123,23 +129,16 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/TheSecondDawnButton15"
+        android:id="@+id/TheSecondDawnButton13"
         android:layout_width="360dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button_shape"
-        android:text="@string/button16"
+        android:text="@string/button13"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_marginTop="-310dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/contact_us" />
 
     <ProgressBar
         android:id="@+id/TheSecondDawnProgressBar5"
@@ -149,13 +148,5 @@
         android:layout_gravity="center"
         android:layout_marginTop="-200dp"
         android:visibility="gone" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="182dp"
-        android:layout_height="137dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="-710dp"
-        app:srcCompat="@drawable/contact_us2" />
 
 </LinearLayout>
