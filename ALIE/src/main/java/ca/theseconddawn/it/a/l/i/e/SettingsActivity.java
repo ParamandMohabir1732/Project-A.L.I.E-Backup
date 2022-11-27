@@ -51,6 +51,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private SharedPreferences.Editor editor;
     private static final String SETTINGS = "Settings Pref";
     private static final String SWITCH_ORIENTATION = "Screen Orientation";
+    private static final String FAN_CONTROL = "Fan Control";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,13 +132,27 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         fanControl = findViewById(R.id.TheSecondDawnSwitch10);
         fanControl.setOnCheckedChangeListener((compoundButton, isChecked) -> {
             if (isChecked) {
+                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+                editor.putBoolean(FAN_CONTROL, true);
+                editor.apply();
+                fanControl.setChecked(true);
+
                 fanControl.setText("ON");
                 fanControl.setTextColor(getResources().getColor(R.color.brightgreen));
             } else {
+                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+                editor.putBoolean(FAN_CONTROL, false);
+                editor.apply();
+                fanControl.setChecked(false);
+
                 fanControl.setText("OFF");
                 fanControl.setTextColor(getResources().getColor(R.color.brightred));
             }
         });
+
+        sharedPreferences = getSharedPreferences(SETTINGS, MODE_PRIVATE);
+        fanControl.setChecked(sharedPreferences.getBoolean(FAN_CONTROL, false));
+
     }
 
     @Override
