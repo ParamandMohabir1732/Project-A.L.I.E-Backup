@@ -329,5 +329,7 @@
     <string name="textview21">3. What happens when I speak to A.L.I.E? </string>
     <string name="textview22">When you ask A.L.I.E a question, a recording of your conversation is uploaded to TheSecondDawn\'s Firebase cloud, where we process your request and respond to you. For instance, when you ask A.L.I.E to play Music, we use the recording of your request to play your selected media.</string>
     <string name="textview23">For more help...</string>
+    <string name="textview24">A.L.I.E was founded in 2022 with the goal of providing a voice-activated device that can control different PCB board components. A.L.I.E includes an integrated LED function, fan, and speaker amplifier. The voice recognition system will allow you to issue numerous instructions, the led lights and fan will switch on and off at your request plus much more! </string>
+    <string name="textview25">A.L.I.E was created with the consumer in mind. We wanted to create a device that would make life easier and more convenient for people. We are always striving to improve our product and make it the best it can be!</string>
 
 </resources>
