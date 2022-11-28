@@ -87,6 +87,7 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
         String name = editTextName.getText().toString();
         String email = editTextEmail.getText().toString();
         String phone = editTextPhoneNumber.getText().toString();
+        String device = deviceModel.getText().toString();
         String review = editTextMessage.getText().toString();
 
         if (name.isEmpty()) {
@@ -134,7 +135,7 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference(getString(R.string.firebaseReference3));
 
-        UserReviewClass reviewClass = new UserReviewClass(rating, name, email, phone, review);
+        UserReviewClass reviewClass = new UserReviewClass(rating, name, email, phone, device, review);
 
         databaseReference.child(name).setValue(reviewClass);
         Toast.makeText(this, R.string.toastMessage34, Toast.LENGTH_SHORT).show();

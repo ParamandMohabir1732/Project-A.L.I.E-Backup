@@ -24,17 +24,18 @@ package ca.theseconddawn.it.a.l.i.e;
 public class UserReviewClass {
 
     float rating;
-    String name, email, phoneNo, message;
+    String name, email, phoneNumber, deviceModel, message;
 
     public UserReviewClass() {
 
     }
 
-    public UserReviewClass(float rating, String name, String email, String phoneNo, String message) {
+    public UserReviewClass(float rating, String name, String email, String phoneNumber, String deviceModel, String message) {
         this.rating = rating;
         this.name = name;
         this.email = email;
-        this.phoneNo = phoneNo;
+        this.phoneNumber = phoneNumber;
+        this.deviceModel = deviceModel;
         this.message = message;
     }
 
@@ -62,12 +63,20 @@ public class UserReviewClass {
         this.email = email;
     }
 
-    public String getPhoneNo() {
-        return phoneNo;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhoneNo(String phoneNo) {
-        this.phoneNo = phoneNo;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public String getDeviceModel() {
+        return deviceModel;
+    }
+
+    public void setDeviceModel(String deviceModel) {
+        this.deviceModel = deviceModel;
     }
 
     public String getMessage() {
@@ -78,4 +87,3 @@ public class UserReviewClass {
         this.message = message;
     }
 }
-
