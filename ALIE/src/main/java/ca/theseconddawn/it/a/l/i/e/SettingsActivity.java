@@ -27,13 +27,9 @@ import android.content.pm.ActivityInfo;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
-import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
@@ -45,14 +41,12 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private SeekBar volume;
     private TextView volumeProgress;
     private AudioManager audioManager;
-    private Spinner ledControls;
 
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
     private static final String SETTINGS = "Settings Pref";
     private static final String SWITCH_ORIENTATION = "Screen Orientation";
     private static final String FAN_CONTROL = "Fan Control";
-    private static final String LED_SPINNER = "LED Control";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,30 +57,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
         leftArrow = findViewById(R.id.TheSecondDawnImageButton3);
         leftArrow.setOnClickListener(this);
-
-        ledControls = findViewById(R.id.TheSecondDawnSpinner1);
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.colors, android.R.layout.simple_spinner_item);
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        ledControls.setAdapter(adapter);
-        ledControls.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
-                String LED = ledControls.getItemAtPosition(position).toString();
-                Toast.makeText(adapterView.getContext(), LED, Toast.LENGTH_SHORT).show();
-
-                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                editor.putString(LED_SPINNER, String.valueOf(ledControls.getSelectedItemPosition()));
-                editor.apply();
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
-        });
-
-        sharedPreferences = getSharedPreferences(SETTINGS, MODE_PRIVATE);
-        sharedPreferences.getString(LED_SPINNER, String.valueOf(ledControls.getSelectedItemPosition()));
 
         volumeProgress = findViewById(R.id.TheSecondDawnTextView37);
         audioManager = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
