@@ -27,7 +27,10 @@ import android.content.pm.ActivityInfo;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -42,11 +45,15 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private TextView volumeProgress;
     private AudioManager audioManager;
 
+    private RadioGroup LEDGroup;
+    private RadioButton redLED, greenLED, blueLED;
+
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
     private static final String SETTINGS = "Settings Pref";
     private static final String SWITCH_ORIENTATION = "Screen Orientation";
     private static final String FAN_CONTROL = "Fan Control";
+    private static final String LED_CONTROL = "LED Control";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -131,6 +138,32 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         sharedPreferences = getSharedPreferences(SETTINGS, MODE_PRIVATE);
         fanControl.setChecked(sharedPreferences.getBoolean(FAN_CONTROL, false));
 
+        LEDGroup = findViewById(R.id.TheSecondDawnRadioGroup2);
+        redLED = findViewById(R.id.TheSecondDawnRadioButton4);
+        greenLED = findViewById(R.id.TheSecondDawnRadioButton5);
+        blueLED = findViewById(R.id.TheSecondDawnRadioButton6);
+
+        sharedPreferences = getSharedPreferences(SETTINGS, MODE_PRIVATE);
+        int radioGroup = sharedPreferences.getInt(LED_CONTROL, 2);
+
+        if (radioGroup == 0) {
+            redLED.setChecked(true);
+        } else if (radioGroup == 1) {
+            greenLED.setChecked(true);
+        } else if (radioGroup == 2) {
+            blueLED.setChecked(true);
+        }
+
+        LEDGroup.setOnCheckedChangeListener((radioGroup1, checkedId) -> {
+            if (checkedId == R.id.TheSecondDawnRadioButton4) {
+                editor.putInt(LED_CONTROL, 0);
+            } else if (checkedId == R.id.TheSecondDawnRadioButton5) {
+                editor.putInt(LED_CONTROL, 1);
+            } else if (checkedId == R.id.TheSecondDawnButton6) {
+                editor.putInt(LED_CONTROL, 2);
+            }
+            editor.commit();
+        });
     }
 
     @Override
