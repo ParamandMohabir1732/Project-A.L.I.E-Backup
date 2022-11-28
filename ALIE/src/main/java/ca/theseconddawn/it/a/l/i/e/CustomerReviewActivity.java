@@ -21,6 +21,7 @@ Software Project
 
 package ca.theseconddawn.it.a.l.i.e;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -65,6 +66,7 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
         submitReview.setOnClickListener(this);
 
         deviceModel = findViewById(R.id.TheSecondDawnTextView28);
+        getPhoneModel();
 
         leftArrow = findViewById(R.id.TheSecondDawnImageButton10);
         leftArrow.setOnClickListener(this);
@@ -136,5 +138,10 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
 
         databaseReference.child(name).setValue(reviewClass);
         Toast.makeText(this, R.string.toastMessage34, Toast.LENGTH_SHORT).show();
+    }
+
+    private void getPhoneModel() {
+        String modelText = Build.MODEL;
+        deviceModel.setText(modelText);
     }
 }
