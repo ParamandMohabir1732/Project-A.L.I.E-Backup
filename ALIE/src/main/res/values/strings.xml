@@ -237,9 +237,12 @@
     <string name="radioButton4">Red</string>
     <string name="radioButton5">Green</string>
     <string name="radioButton6">Blue</string>>
-    <string name="textView40">Fan Controls</string>
+    <string name="textView40">Fan Control</string>
     <string name="textView41">Current Fan Control:</string>
     <string name="switch10">OFF</string>
+    <string name="imageView46">This is an Image of the Fan Icon</string>
+    <string name="imageView47">This is an Image of the Rotation Icon</string>
+    <string name="imageView48">This is an Image of the LED Icon</string>
 
     <!-- Profile Screen -->
     <string name="imageView31">This is an Image of the Default Profile Icon that will be Displayed on Profile Screen</string>
@@ -325,5 +328,4 @@
     <string name="textview24">A.L.I.E was founded in 2022 with the goal of providing a voice-activated device that can control different PCB board components. A.L.I.E includes an integrated LED function, fan, and speaker amplifier. The voice recognition system will allow you to issue numerous instructions, the led lights and fan will switch on and off at your request plus much more! </string>
     <string name="textview25">A.L.I.E was created with the consumer in mind. We wanted to create a device that would make life easier and more convenient for people. We are always striving to improve our product and make it the best it can be!</string>
     <string name="button17">SAVE</string>
-
 </resources>

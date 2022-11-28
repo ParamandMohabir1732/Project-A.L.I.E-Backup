@@ -63,6 +63,15 @@
             android:text="@string/switch9"
             android:textAlignment="center" />
 
+        <ImageView
+            android:id="@+id/TheSecondDawnImageView47"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="-25dp"
+            android:contentDescription="@string/imageView47"
+            android:src="@drawable/ic_screen_rotation" />
+
         <TextView
             android:id="@+id/TheSecondDawnTextView35"
             android:layout_width="wrap_content"
@@ -175,6 +184,15 @@
                 android:textColor="@color/brightblue"
                 android:textSize="15sp"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/TheSecondDawnImageView48"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="-37dp"
+                android:contentDescription="@string/imageView48"
+                android:src="@drawable/ic_led" />
         </RadioGroup>
 
         <TextView
@@ -208,5 +226,14 @@
             android:textAlignment="center"
             android:textColor="@color/brightred"
             android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/TheSecondDawnImageView46"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="130dp"
+            android:layout_marginTop="-25dp"
+            android:contentDescription="@string/imageView46"
+            android:src="@drawable/ic_fan" />
     </LinearLayout>
 </ScrollView>

@@ -50,6 +50,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
+
     private static final String SETTINGS = "Settings Pref";
     private static final String SWITCH_ORIENTATION = "Screen Orientation";
     private static final String FAN_CONTROL = "Fan Control";
@@ -144,23 +145,26 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         blueLED = findViewById(R.id.TheSecondDawnRadioButton6);
 
         sharedPreferences = getSharedPreferences(SETTINGS, MODE_PRIVATE);
-        int radioGroup = sharedPreferences.getInt(LED_CONTROL, 2);
+        int radioGroup = sharedPreferences.getInt(LED_CONTROL, MODE_PRIVATE);
 
-        if (radioGroup == 0) {
+        if (radioGroup == 1) {
             redLED.setChecked(true);
-        } else if (radioGroup == 1) {
-            greenLED.setChecked(true);
         } else if (radioGroup == 2) {
+            greenLED.setChecked(true);
+        } else if (radioGroup == 3) {
             blueLED.setChecked(true);
         }
 
         LEDGroup.setOnCheckedChangeListener((radioGroup1, checkedId) -> {
             if (checkedId == R.id.TheSecondDawnRadioButton4) {
-                editor.putInt(LED_CONTROL, 0);
-            } else if (checkedId == R.id.TheSecondDawnRadioButton5) {
+                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
                 editor.putInt(LED_CONTROL, 1);
-            } else if (checkedId == R.id.TheSecondDawnButton6) {
+            } else if (checkedId == R.id.TheSecondDawnRadioButton5) {
+                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
                 editor.putInt(LED_CONTROL, 2);
+            } else if (checkedId == R.id.TheSecondDawnButton6) {
+                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+                editor.putInt(LED_CONTROL, 3);
             }
             editor.commit();
         });
