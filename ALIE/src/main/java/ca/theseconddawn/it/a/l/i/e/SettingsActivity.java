@@ -52,6 +52,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private static final String SETTINGS = "Settings Pref";
     private static final String SWITCH_ORIENTATION = "Screen Orientation";
     private static final String FAN_CONTROL = "Fan Control";
+    private static final String LED_SPINNER = "LED Control";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +73,10 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             public void onItemSelected(AdapterView<?> adapterView, View view, int position, long l) {
                 String LED = ledControls.getItemAtPosition(position).toString();
                 Toast.makeText(adapterView.getContext(), LED, Toast.LENGTH_SHORT).show();
+
+                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+                editor.putString(LED_SPINNER, String.valueOf(ledControls.getSelectedItemPosition()));
+                editor.apply();
             }
 
             @Override
@@ -79,6 +84,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
             }
         });
+
+        sharedPreferences = getSharedPreferences(SETTINGS, MODE_PRIVATE);
+        sharedPreferences.getString(LED_SPINNER, String.valueOf(ledControls.getSelectedItemPosition()));
 
         volumeProgress = findViewById(R.id.TheSecondDawnTextView37);
         audioManager = (AudioManager) this.getSystemService(Context.AUDIO_SERVICE);
@@ -122,7 +130,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 orientation.setChecked(false);
 
                 orientation.setText("Portrait");
-                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
             }
         });
 
