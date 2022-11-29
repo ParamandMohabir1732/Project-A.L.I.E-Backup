@@ -98,6 +98,7 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
         if (view.getId() == R.id.TheSecondDawnImageButton9) {
             finish();
         }
+
         if (view.getId() == R.id.TheSecondDawnButton9) {
             if (!mBlueAdapter.isEnabled()) {
                 Toast.makeText(this, R.string.toastMessage21, Toast.LENGTH_SHORT).show();
@@ -121,6 +122,7 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
                 Toast.makeText(this, R.string.toastMessage25, Toast.LENGTH_SHORT).show();
             }
         }
+
         if (view.getId() == R.id.TheSecondDawnButton11) {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED)
                 if (!mBlueAdapter.isDiscovering()) {

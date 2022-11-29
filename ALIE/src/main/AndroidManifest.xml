@@ -118,15 +118,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity
-            android:name=".ConfigurationActivity"
-            android:exported="false"
-            android:label="@string/title_activity_configuration"
-            android:theme="@style/Theme.ALIE.NoActionBar">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
     </application>
 
 </manifest>

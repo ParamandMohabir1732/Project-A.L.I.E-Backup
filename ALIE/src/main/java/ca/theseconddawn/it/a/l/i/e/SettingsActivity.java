@@ -58,7 +58,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings2);
+        setContentView(R.layout.activity_settings);
 
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
