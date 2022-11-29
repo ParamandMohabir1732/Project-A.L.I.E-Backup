@@ -8,10 +8,24 @@
     android:background="@color/primary"
     tools:context=".AboutUsActivity">
 
+    <ImageButton
+        android:id="@+id/TheSecondDawnImageButton14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@null"
+        android:contentDescription="@string/imageButton14"
+        android:src="@drawable/ic_left_arrow_state" />
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="225dp"
+        android:layout_width="325dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-15dp"
+
         app:srcCompat="@drawable/about_us_image" />
 
     <TextView

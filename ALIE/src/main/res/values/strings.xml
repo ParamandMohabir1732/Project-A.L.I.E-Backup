@@ -262,19 +262,6 @@
     <string name="imageView44">This is an Image of the Phone Icon</string>
     <string name="textView31">Phone Number:</string>
 
-    <!-- Help Screen -->
-    <string name="edit_profile">Call</string>
-    <string name="ph_number">Toll free: 1 (800) 998–1498</string>
-    <string name="contact_us">Contact Us</string>
-    <string name="help">Help</string>
-    <string name="night_mode">Night Mode</string>
-    <string name="notifications">Notifications</string>
-    <string name="private_account">Private Account</string>
-    <string name="message">Send us a message</string>
-    <string name="about_us">About Us</string>
-    <string name="faq">FAQ</string>
-    <string name="intentPhoneUri">tel:18009981498</string>
-
     <!-- Bluetooth Screen -->
     <string name="imageView39">This is an Image of the Status of the Bluetooth Connection.</string>
     <string name="button9">On</string>
@@ -317,12 +304,30 @@
     <string name="matchEmailError3">Please Enter a Valid Email Address:</string>
     <string name="imageButton2">This is an Image Button of the Left Arrow in Reset Password Screen</string>
 
+    <!-- Help Screen -->
+    <string name="edit_profile">Call</string>
+    <string name="ph_number">Toll free: 1 (800) 998–1498</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="help">Help</string>
+    <string name="night_mode">Night Mode</string>
+    <string name="notifications">Notifications</string>
+    <string name="private_account">Private Account</string>
+    <string name="message">Send us a message</string>
+    <string name="about_us">About Us</string>
+    <string name="faq">FAQ</string>
+    <string name="intentPhoneUri">tel:18009981498</string>
+
     <!-- Contact Us Screen -->
     <string name="imageButton13">This is an Image Button of the Left Arrow in Contact Us Screen</string>
     <string name="textview_contactus">Contact Us</string>
     <string name="Name">Name</string>
     <string name="editText13">Send us a message</string>
     <string name="button16">SUBMIT</string>
+
+    <!-- About Us Screen -->
+    <string name="imageButton14">This is an Image Button of the Left Arrow in About Us Screen</string>
+    <string name="textview24">A.L.I.E was founded in 2022 with the goal of providing a voice-activated device that can control different PCB board components. A.L.I.E includes an integrated LED function, fan, and speaker amplifier. The voice recognition system will allow you to issue numerous instructions, the led lights and fan will switch on and off at your request plus much more! </string>
+    <string name="textview25">A.L.I.E was created with the consumer in mind. We wanted to create a device that would make life easier and more convenient for people. We are always striving to improve our product and make it the best it can be!</string>
 
     <!-- FAQ Screen -->
     <string name="imageButton12">This is an Image Button of the Left Arrow in FAQ Screen</string>
@@ -333,6 +338,4 @@
     <string name="textview21">3. What happens when I speak to A.L.I.E? </string>
     <string name="textview22">When you ask A.L.I.E a question, a recording of your conversation is uploaded to TheSecondDawn\'s Firebase cloud, where we process your request and respond to you. For instance, when you ask A.L.I.E to play Music, we use the recording of your request to play your selected media.</string>
     <string name="textview23">For more help…</string>
-    <string name="textview24">A.L.I.E was founded in 2022 with the goal of providing a voice-activated device that can control different PCB board components. A.L.I.E includes an integrated LED function, fan, and speaker amplifier. The voice recognition system will allow you to issue numerous instructions, the led lights and fan will switch on and off at your request plus much more! </string>
-    <string name="textview25">A.L.I.E was created with the consumer in mind. We wanted to create a device that would make life easier and more convenient for people. We are always striving to improve our product and make it the best it can be!</string>
 </resources>
