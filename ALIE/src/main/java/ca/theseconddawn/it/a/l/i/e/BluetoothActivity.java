@@ -61,9 +61,16 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
         mBluetoothImg = findViewById(R.id.TheSecondDawnImageView39);
 
         mBlueBtnOn = findViewById(R.id.TheSecondDawnButton9);
+        mBlueBtnOn.setOnClickListener(this);
+
         mBlueBtnOff = findViewById(R.id.TheSecondDawnButton10);
+        mBlueBtnOff.setOnClickListener(this);
+
         mBlueBtnDiscoverable = findViewById(R.id.TheSecondDawnButton11);
+        mBlueBtnDiscoverable.setOnClickListener(this);
+
         mBlueBtnPaired = findViewById(R.id.TheSecondDawnButton12);
+        mBlueBtnPaired.setOnClickListener(this);
 
         leftArrow = findViewById(R.id.TheSecondDawnImageButton9);
         leftArrow.setOnClickListener(this);
@@ -84,32 +91,26 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
         } else {
             mBluetoothImg.setImageResource(R.drawable.ic_bluetoothoff);
         }
+    }
 
-        mBlueBtnOn.setOnClickListener(view -> {
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.TheSecondDawnImageButton9) {
+            finish();
+        }
+        if (view.getId() == R.id.TheSecondDawnButton9) {
             if (!mBlueAdapter.isEnabled()) {
                 Toast.makeText(this, R.string.toastMessage21, Toast.LENGTH_SHORT).show();
-
                 Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
-
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED)
                     startActivityForResult(intent, REQUEST_ENABLE_BT);
                 mStatusBluetooth.setTextColor(getColor(R.color.brightgreen));
             } else {
                 Toast.makeText(this, R.string.toastMessage22, Toast.LENGTH_SHORT).show();
             }
-        });
+        }
 
-        mBlueBtnDiscoverable.setOnClickListener(view -> {
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED)
-                if (!mBlueAdapter.isDiscovering()) {
-                    Toast.makeText(this, R.string.toastMessage23, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
-                    startActivityForResult(intent, REQUEST_DISCOVER_BT);
-
-                }
-        });
-
-        mBlueBtnOff.setOnClickListener(view -> {
+        if (view.getId() == R.id.TheSecondDawnButton10) {
             if (mBlueAdapter.isEnabled()) {
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED)
                     mBlueAdapter.disable();
@@ -119,29 +120,28 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
             } else {
                 Toast.makeText(this, R.string.toastMessage25, Toast.LENGTH_SHORT).show();
             }
-        });
+        }
+        if (view.getId() == R.id.TheSecondDawnButton11) {
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED)
+                if (!mBlueAdapter.isDiscovering()) {
+                    Toast.makeText(this, R.string.toastMessage23, Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(BluetoothAdapter.ACTION_REQUEST_DISCOVERABLE);
+                    startActivityForResult(intent, REQUEST_DISCOVER_BT);
+                }
+        }
 
-        mBlueBtnPaired.setOnClickListener(view -> {
-
+        if (view.getId() == R.id.TheSecondDawnButton12) {
             if (mBlueAdapter.isEnabled()) {
                 mPairedDevices.setText(R.string.bluetoothPaired1);
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+                    Set<BluetoothDevice> devices = mBlueAdapter.getBondedDevices();
+                    for (BluetoothDevice device : devices) {
+                        mPairedDevices.append(getString(R.string.bluetoothPaired2) + device.getName() + "," + device);
+                    }
+                } else {
+                    Toast.makeText(this, R.string.toastMessage26, Toast.LENGTH_SHORT).show();
                 }
-                Set<BluetoothDevice> devices = mBlueAdapter.getBondedDevices();
-                for (BluetoothDevice device : devices) {
-                    mPairedDevices.append(getString(R.string.bluetoothPaired2) + device.getName() + "," + device);
-                }
-            } else {
-
-                Toast.makeText(this, R.string.toastMessage26, Toast.LENGTH_SHORT).show();
             }
-        });
-    }
-
-    @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.TheSecondDawnImageButton9) {
-            finish();
         }
     }
 
