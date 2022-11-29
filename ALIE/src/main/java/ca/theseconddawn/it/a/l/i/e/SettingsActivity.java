@@ -27,7 +27,6 @@ import android.content.pm.ActivityInfo;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -77,7 +76,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
                 audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, progress, 0);
-                volumeProgress.setText("" + progress);
+                volumeProgress.setText(getString(R.string.volumeText1) + progress);
             }
 
             @Override
@@ -99,7 +98,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 editor.apply();
                 orientation.setChecked(true);
 
-                orientation.setText("Landscape");
+                orientation.setText(R.string.orientationText1);
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
             } else {
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
@@ -107,7 +106,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 editor.apply();
                 orientation.setChecked(false);
 
-                orientation.setText("Portrait");
+                orientation.setText(R.string.orientationText2);
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
             }
         });
@@ -123,7 +122,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 editor.apply();
                 fanControl.setChecked(true);
 
-                fanControl.setText("ON");
+                fanControl.setText(R.string.fanControlText1);
                 fanControl.setTextColor(getResources().getColor(R.color.brightgreen));
             } else {
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
@@ -131,7 +130,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 editor.apply();
                 fanControl.setChecked(false);
 
-                fanControl.setText("OFF");
+                fanControl.setText(R.string.fanControlText2);
                 fanControl.setTextColor(getResources().getColor(R.color.brightred));
             }
         });

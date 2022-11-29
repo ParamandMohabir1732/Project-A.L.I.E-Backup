@@ -54,7 +54,6 @@ public class SmartFanFrag extends Fragment {
     private RadioButton med;
     private RadioButton high;
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_fan, container, false);
@@ -83,7 +82,6 @@ public class SmartFanFrag extends Fragment {
         med.setClickable(false);
         high.setClickable(false);
 
-        //fanControl.setOnCheckedChangeListener((compoundButton, b) -> fanSpeed.setEnabled(fanControl.isChecked()));
         fanControl.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -93,7 +91,6 @@ public class SmartFanFrag extends Fragment {
                 high.setClickable(fanControl.isChecked());
                 radGroup.clearCheck();
                 fanSpeed.setValue(10);
-
             }
         });
 
@@ -111,9 +108,6 @@ public class SmartFanFrag extends Fragment {
                 }
             }
         });
-
-
-
 
         return view;
     }
