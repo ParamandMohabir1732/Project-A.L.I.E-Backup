@@ -32,25 +32,29 @@ import android.widget.ImageButton;
 
 public class HelpActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private ImageButton leftArrow;
+    private Button callUs;
+    private ImageButton contactUs, aboutUs, faq;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_help);
 
-        Button btn = (Button) findViewById(R.id.appCompatButton);
-        btn.setOnClickListener(this);
+        leftArrow = findViewById(R.id.TheSecondDawnImageButton15);
+        leftArrow.setOnClickListener(this);
 
-        ImageButton contactUs = findViewById(R.id.imageView33);
+        callUs = findViewById(R.id.appCompatButton);
+        callUs.setOnClickListener(this);
+
+        contactUs = findViewById(R.id.imageView33);
         contactUs.setOnClickListener(this);
 
-        ImageButton AboutUs = findViewById(R.id.imageView34);
-        AboutUs.setOnClickListener(this);
+        aboutUs = findViewById(R.id.imageView34);
+        aboutUs.setOnClickListener(this);
 
-        ImageButton FAQ = findViewById(R.id.imageView36);
-        FAQ.setOnClickListener(this);
-
-
-
+        faq = findViewById(R.id.imageView36);
+        faq.setOnClickListener(this);
     }
 
     @Override
@@ -69,7 +73,9 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
         if (view.getId() == R.id.imageView36) {
             startActivity(new Intent(this, FAQActivity.class));
         }
-
+        if (view.getId() == R.id.TheSecondDawnImageButton15) {
+            finish();
+        }
     }
 }
 
