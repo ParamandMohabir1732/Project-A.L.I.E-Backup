@@ -38,7 +38,7 @@ import androidx.fragment.app.FragmentManager;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class HomeFrag extends Fragment {
+public class HomeFrag extends Fragment implements View.OnClickListener {
 
     public TextView voiceInput;
     private ImageButton voiceButton, speakerButton, ledButton, fanButton;
@@ -60,54 +60,72 @@ public class HomeFrag extends Fragment {
         voiceInput = view.findViewById(R.id.TheSecondDawnTextView19);
 
         speakerButton = view.findViewById(R.id.TheSecondDawnImageButton5);
-        speakerButton.setOnClickListener(view12 -> {
+        speakerButton.setOnClickListener(this);
+
+        ledButton = view.findViewById(R.id.TheSecondDawnImageButton6);
+        ledButton.setOnClickListener(this);
+
+        fanButton = view.findViewById(R.id.TheSecondDawnImageButton7);
+        fanButton.setOnClickListener(this);
+
+        voiceButton = view.findViewById(R.id.TheSecondDawnImageButton8);
+        voiceButton.setOnClickListener(this);
+
+        speakerSwitch = view.findViewById(R.id.TheSecondDawnSwitch1);
+        speakerSwitch.setOnClickListener(this);
+
+        ledSwitch = view.findViewById(R.id.TheSecondDawnSwitch2);
+        ledSwitch.setOnClickListener(this);
+
+        fanSwitch = view.findViewById(R.id.TheSecondDawnSwitch3);
+        fanSwitch.setOnClickListener(this);
+
+        voiceSwitch = view.findViewById(R.id.TheSecondDawnSwitch4);
+        voiceSwitch.setOnClickListener(this);
+
+        return view;
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.TheSecondDawnImageButton5) {
             SpeakerFrag speakerFrag = new SpeakerFrag();
             FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
             fragmentManager.beginTransaction().replace(R.id.TheSecondDawnDrawerLayout, speakerFrag, speakerFrag.getTag()).commit();
-        });
+        }
 
-        ledButton = view.findViewById(R.id.TheSecondDawnImageButton6);
-        ledButton.setOnClickListener(view14 -> {
-        });
+        if (view.getId() == R.id.TheSecondDawnImageButton6) {
+        }
 
-        fanButton = view.findViewById(R.id.TheSecondDawnImageButton7);
-        fanButton.setOnClickListener(view13 -> {
-        });
-
-        voiceButton = view.findViewById(R.id.TheSecondDawnImageButton8);
-        voiceButton.setOnClickListener(view15 -> {
+        if (view.getId() == R.id.TheSecondDawnImageButton7) {
+        }
+        if (view.getId() == R.id.TheSecondDawnImageButton8) {
             setVoiceInput();
-        });
+        }
 
-        speakerSwitch = view.findViewById(R.id.TheSecondDawnSwitch1);
-        speakerSwitch.setOnClickListener(view16 -> {
+        if (view.getId() == R.id.TheSecondDawnSwitch1) {
             currentSpeakerImage++;
             currentSpeakerImage = currentSpeakerImage % speakerImages.length;
             speakerButton.setImageResource(speakerImages[currentSpeakerImage]);
-        });
+        }
 
-        ledSwitch = view.findViewById(R.id.TheSecondDawnSwitch2);
-        ledSwitch.setOnClickListener(view17 -> {
+        if (view.getId() == R.id.TheSecondDawnSwitch2) {
             currentLedImage++;
             currentLedImage = currentLedImage % ledImages.length;
             ledButton.setImageResource(ledImages[currentLedImage]);
-        });
+        }
 
-        fanSwitch = view.findViewById(R.id.TheSecondDawnSwitch3);
-        fanSwitch.setOnClickListener(view18 -> {
+        if (view.getId() == R.id.TheSecondDawnSwitch3) {
             currentFanImage++;
             currentFanImage = currentFanImage % fanImages.length;
             fanButton.setImageResource(fanImages[currentFanImage]);
-        });
+        }
 
-        voiceSwitch = view.findViewById(R.id.TheSecondDawnSwitch4);
-        voiceSwitch.setOnClickListener(view19 -> {
+        if (view.getId() == R.id.TheSecondDawnSwitch4) {
             currentVoiceImage++;
             currentVoiceImage = currentVoiceImage % voiceImages.length;
             voiceButton.setImageResource(voiceImages[currentVoiceImage]);
-        });
-
-        return view;
+        }
     }
 
     private void setVoiceInput() {
