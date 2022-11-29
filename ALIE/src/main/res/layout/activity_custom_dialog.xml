@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="50dp"
-    tools:context=".CustomDialog">
+    android:background="@drawable/gradient_main"
+    android:padding="50dp">
 
     <ProgressBar
         android:id="@+id/TheSecondDawnProgressBar5"
@@ -13,7 +12,7 @@
         android:layout_width="50dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="25dp"
         android:visibility="visible" />
 
     <TextView
@@ -22,8 +21,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="15dp"
-        android:textSize="18sp"
+        android:text="@string/textView42"
         android:textColor="@color/black"
-        android:text="@string/textView42"/>
+        android:textSize="18sp" />
 
 </LinearLayout>
