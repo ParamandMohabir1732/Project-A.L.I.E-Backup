@@ -45,6 +45,7 @@ import com.google.android.material.snackbar.Snackbar;
 
 public class SmartFanFrag extends Fragment {
 
+    //defining local controls
     private Button requestPermission;
     private final int STORAGE_PERMISSION = 1;
     private SwitchCompat fanControl;
@@ -58,6 +59,7 @@ public class SmartFanFrag extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_fan, container, false);
 
+        //define local variables and link them to their ID's
         fanControl = view.findViewById(R.id.TheSecondDawnSwitch8);
         fanSpeed = view.findViewById(R.id.TheSecondDawnSlider1);
         radGroup = view.findViewById(R.id.TheSecondDawnRadioGroup);
@@ -66,6 +68,7 @@ public class SmartFanFrag extends Fragment {
         high = view.findViewById(R.id.TheSecondDawnRadioButton3);
 
         requestPermission = view.findViewById(R.id.TheSecondDawnButton3);
+        //Request user permission for data usage
         requestPermission.setOnClickListener(v -> {
             if (ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                 Snackbar snackbar = Snackbar.make(requireView(), R.string.snackbar1, Snackbar.LENGTH_LONG);
@@ -77,11 +80,13 @@ public class SmartFanFrag extends Fragment {
             }
         });
 
+        //disable buttons if the fan is off
         fanSpeed.setEnabled(false);
         low.setClickable(false);
         med.setClickable(false);
         high.setClickable(false);
 
+        //Enable buttons if the fan is on
         fanControl.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -93,7 +98,7 @@ public class SmartFanFrag extends Fragment {
                 fanSpeed.setValue(10);
             }
         });
-
+        //Predefined values for radio buttons
         radGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
@@ -112,6 +117,7 @@ public class SmartFanFrag extends Fragment {
         return view;
     }
 
+    //request permission
     private void requestStoragePermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)) {
             final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
