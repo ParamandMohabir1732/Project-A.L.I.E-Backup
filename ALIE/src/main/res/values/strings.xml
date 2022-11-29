@@ -300,6 +300,7 @@
     <string name="lengthPhoneError1">Your Phone Number Must be 10 Digits Long!</string>
     <string name="matchPhoneError1">Please Enter a Valid Phone Number!</string>
     <string name="emptyReviewError1">Your Review is Required!</string>
+    <string name="textView42">Loading…</string>
 
     <!-- Reset Password Screen -->
     <string name="imageView32">This is the image of my Forgot Password Icon that will be displayed in the Reset Password Screen</string>
@@ -327,5 +328,4 @@
     <string name="textview23">For more help…</string>
     <string name="textview24">A.L.I.E was founded in 2022 with the goal of providing a voice-activated device that can control different PCB board components. A.L.I.E includes an integrated LED function, fan, and speaker amplifier. The voice recognition system will allow you to issue numerous instructions, the led lights and fan will switch on and off at your request plus much more! </string>
     <string name="textview25">A.L.I.E was created with the consumer in mind. We wanted to create a device that would make life easier and more convenient for people. We are always striving to improve our product and make it the best it can be!</string>
-    <string name="button17">SAVE</string>
 </resources>

@@ -49,8 +49,6 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
 
-    private ProgressBar progressBar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,4 +143,6 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
         String modelText = Build.MODEL;
         deviceModel.setText(modelText);
     }
+
+
 }
