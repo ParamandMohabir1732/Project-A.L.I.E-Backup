@@ -8,14 +8,23 @@
     android:background="@color/primary"
     tools:context=".ContactUsActivity">
 
-
+    <ImageButton
+        android:id="@+id/TheSecondDawnImageButton13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@null"
+        android:contentDescription="@string/imageButton13"
+        android:src="@drawable/ic_left_arrow_state" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:hint="@string/editText7"
-        android:layout_marginTop="170dp"
+        android:layout_marginTop="155dp"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
         app:endIconMode="clear_text"

@@ -318,6 +318,7 @@
     <string name="imageButton2">This is an Image Button of the Left Arrow in Reset Password Screen</string>
 
     <!-- Contact Us Screen -->
+    <string name="imageButton13">This is an Image Button of the Left Arrow in Contact Us Screen</string>
     <string name="textview_contactus">Contact Us</string>
     <string name="Name">Name</string>
     <string name="editText13">Send us a message</string>
