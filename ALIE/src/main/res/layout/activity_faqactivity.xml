@@ -8,10 +8,23 @@
     android:background="@color/primary"
     tools:context=".FAQActivity">
 
+    <ImageButton
+        android:id="@+id/TheSecondDawnImageButton12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@null"
+        android:contentDescription="@string/imageButton12"
+        android:src="@drawable/ic_left_arrow_state" />
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="388dp"
-        android:layout_height="211dp"
+        android:layout_width="325dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="-15dp"
+        android:layout_gravity="center"
         app:srcCompat="@drawable/faq_image" />
 
     <TextView
@@ -19,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="5dp"
         android:layout_marginStart="10dp"
         android:layout_marginEnd="10dp"
         android:textColor="@color/white"
