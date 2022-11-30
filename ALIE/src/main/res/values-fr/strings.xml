@@ -163,6 +163,16 @@
     <string name="imageButton1">Ceci est un bouton dimage de la flèche gauche dans lécran denregistrement</string>
     <string name="editText5">Confirmez le mot de passe:</string>
     <string name="firebaseReference1">Utilisatrices</string>
+    <string name="matchPasswordErrorAlphabetNum">Votre mot de passe doit inclure des lettres alphabétiques et des chiffres !</string>
+    <string name="matchPasswordError1Char">Votre mot de passe doit contenir au moins 1 caractère spécial !</string>
+    <string name="matchPasswordError1UpperLetter">Votre mot de passe doit contenir au moins 1 lettre majuscule !</string>
+    <string name="matchPasswordError1Digit">Votre mot de passe doit comporter au moins 1 chiffre !</string>
+    <string name="editText11">Nom et prénom:</string>
+    <string name="editText12">Numéro de téléphone:</string>
+    <string name="emptyNameError2">Le nom complet est requis !</string>
+    <string name="emptyPhoneError2">Le numéro de téléphone est requis !</string>
+    <string name="lengthPhoneError2">Votre numéro de téléphone doit comporter 10 chiffres !</string>
+    <string name="matchPhoneError2">S'il vous plaît entrer un numéro de téléphone valide!</string>
 
     <!-- LED Screen -->
     <string name="textView9">Commandes DEL</string>
@@ -218,6 +228,30 @@
     <string name="switch4">Éteint/allumé</string>
     <string name="imageButton4">Il s\agit une image de l\icône du microphone qui sera utilisée pour enregistrer votre voix.</string>
 
+    <!-- Settings Screen -->
+    <string name="textView33">Orientation</string>
+    <string name="switch9">Portrait</string>
+    <string name="textView34">Orientation actuelle de l\écran:</string>
+    <string name="textView35">Le volume</string>
+    <string name="textView36">Volume actuel :</string>
+    <string name="imageView45">Ceci est une image de l/icône du haut-parleur</string>
+    <string name="textView38">Commandes DEL</string>
+    <string name="textView39">Couleur LED actuelle :</string>
+    <string name="radioButton4">Rouge</string>
+    <string name="radioButton5">Vert</string>
+    <string name="radioButton6">Bleu</string>>
+    <string name="textView40">Contrôle du ventilateur</string>
+    <string name="textView41">Contrôle actuel du ventilateur :</string>
+    <string name="switch10">À L/ARRÊT</string>
+    <string name="imageView46">Ceci est une image de l/icône du ventilateur</string>
+    <string name="imageView47">Ceci est une image de l/icône de rotation</string>
+    <string name="imageView48">Ceci est une image de l/icône LED</string>
+    <string name="orientationText1">Landscape</string>
+    <string name="orientationText2">Portrait</string>
+    <string name="fanControlText1">SUR</string>
+    <string name="fanControlText2">À L/ARRÊT</string>
+    <string name="volumeText1" />
+
     <!-- Profile Screen -->
     <string name="imageView31">Ceci est une image de l\icône de profil par défaut qui sera affichée sur le profil filtrer.</string>
     <string name="textView14">Adresse e-mail:</string>
@@ -226,6 +260,11 @@
     <string name="button5">SE DÉCONNECTER</string>
     <string name="textView18">Change de profil</string>
     <string name="firebaseReference2">Utilisatrices</string>
+    <string name="imageView43">Ceci est une image de l/icône de profil</string>
+    <string name="textView29">Nom et prénom:</string>
+    <string name="imageView44">Ceci est une image de l\icône du téléphone</string>
+    <string name="textView31">Numéro de téléphone:</string>
+
 
     <!-- Help Screen -->
     <string name="edit_profile">Appel</string>
@@ -280,4 +319,29 @@
     <string name="emptyPhoneError1">Votre numéro de téléphone est requis !</string>
     <string name="matchPhoneError1">S\il vous plaît entrer un numéro de téléphone valide!</string>
     <string name="emptyReviewError1">Votre avis est requis !</string>
+    <string name="lengthPhoneError1">Votre numéro de téléphone doit comporter 10 chiffres !</string>
+    <string name="textView42">Chargement…</string>
+
+
+    <!-- Contact Us Screen -->
+    <string name="imageButton13">Ceci est un bouton d\image de la flèche gauche dans l\écran Contactez-nous</string>
+    <string name="textview_contactus">Nous contacter</string>
+    <string name="Name">Nom</string>
+    <string name="editText13">Envoie-nous un message</string>
+    <string name="button16">NOUS FAIRE PARVENIR</string>
+
+    <!-- About Us Screen -->
+    <string name="imageButton14">Ceci est un bouton d\image de la flèche gauche dans l\écran À propos de nous</string>
+    <string name="textview24">A.L.I.E a été fondée en 2022 dans le but de fournir un appareil à commande vocale capable de contrôler différents composants de la carte PCB. A.L.I.E comprend une fonction LED intégrée, un ventilateur et un amplificateur de haut-parleur. Le système de reconnaissance vocale vous permettra d\émettre de nombreuses instructions, les lumières LED et le ventilateur s\allumeront et s\éteindront à votre demande et bien plus encore</string>
+    <string name="textview25">A.L.I.E a été créé en pensant au consommateur. Nous voulions créer un appareil qui rendrait la vie plus facile et plus pratique pour les gens. Nous nous efforçons toujours d\améliorer notre produit et de le rendre le meilleur possible!</string>
+
+    <!-- FAQ Screen -->
+    <string name="imageButton12">Ceci est un bouton d\image de la flèche gauche dans l\écran FAQ</string>
+    <string name="textview17">1. Comment utiliser A.L.I.E ?</string>
+    <string name="textview18">A.L.I.E vous permet de poser des questions et de faire des demandes en utilisant uniquement votre voix. Par exemple, vous pouvez poser une question à A.L.I.E, telle que \"Quel temps fait-il aujourd\hui à Toronto ?\", ou dire à A.L.I.E de faire quelque chose, comme \"Changer la couleur de la LED en rouge\" ou \"Jouer de la musique \". Lorsque vous parlez à A.L.I.E, un enregistrement de ce que vous avez demandé à A.L.I.E est envoyé à notre Firebase Cloud afin que nous puissions traiter et répondre à votre demande.</string>
+    <string name="textview19">2. Est-ce qu\A.L.I.E enregistre mes conversations ?</string>
+    <string name="textview20">Non. Par défaut, A.L.I.E n\est pas conçu pour stocker ou envoyer de l\audio vers le cloud à moins que l\appareil ne détecte le mot de réveil.</string>
+    <string name="textview21">3. Que se passe-t-il lorsque je parle à A.L.I.E ?</string>
+    <string name="textview22">Lorsque vous posez une question à A.L.I.E, un enregistrement de votre conversation est téléchargé sur le cloud Firebase de TheSecondDawn, où nous traitons votre demande et vous répondons. Par exemple, lorsque vous demandez à A.L.I.E de jouer de la musique, nous utilisons l/enregistrement de votre demande pour lire le média sélectionné.</string>
+    <string name="textview23">For more help…</string>
 </resources>
