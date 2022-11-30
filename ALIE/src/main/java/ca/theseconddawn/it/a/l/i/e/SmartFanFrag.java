@@ -69,6 +69,8 @@ public class SmartFanFrag extends Fragment {
 
         requestPermission = view.findViewById(R.id.TheSecondDawnButton3);
         //Request user permission for data usage
+        //this potion of code is based on the dependency injection design principle since the code for rquesting the storage is not here
+        //This is just an instance of the request storage permission. There could be multiple instances created with the same function
         requestPermission.setOnClickListener(v -> {
             if (ContextCompat.checkSelfPermission(requireActivity(), Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                 Snackbar snackbar = Snackbar.make(requireView(), R.string.snackbar1, Snackbar.LENGTH_LONG);
@@ -87,6 +89,11 @@ public class SmartFanFrag extends Fragment {
         high.setClickable(false);
 
         //Enable buttons if the fan is on
+        //Design pattern of this portion of code is composite pattern
+        //It is a logical operation with a strong hierarchy of elements within it
+        //If the fan is off you cannot control it
+        //If the fan if off no radio button should be selected
+        //if the fans is on then It should not get to the max level of rotation and so on
         fanControl.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -118,6 +125,7 @@ public class SmartFanFrag extends Fragment {
     }
 
     //request permission
+    //Dependency injection class that
     private void requestStoragePermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), Manifest.permission.READ_EXTERNAL_STORAGE)) {
             final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
