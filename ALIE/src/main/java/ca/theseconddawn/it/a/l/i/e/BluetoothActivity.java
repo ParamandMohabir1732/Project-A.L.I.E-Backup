@@ -51,6 +51,8 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
 
     private BluetoothAdapter mBlueAdapter;
 
+
+    // main function/declaring variables
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -93,12 +95,14 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
         }
     }
 
+
     @Override
     public void onClick(View view) {
+        //left image button/back button
         if (view.getId() == R.id.TheSecondDawnImageButton9) {
             finish();
         }
-
+        //turn on bluetooth when button clicked
         if (view.getId() == R.id.TheSecondDawnButton9) {
             if (!mBlueAdapter.isEnabled()) {
                 Toast.makeText(this, R.string.toastMessage21, Toast.LENGTH_SHORT).show();
@@ -110,7 +114,7 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
                 Toast.makeText(this, R.string.toastMessage22, Toast.LENGTH_SHORT).show();
             }
         }
-
+        //turns off bluetooth when clicking off button
         if (view.getId() == R.id.TheSecondDawnButton10) {
             if (mBlueAdapter.isEnabled()) {
                 if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED)
@@ -122,7 +126,7 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
                 Toast.makeText(this, R.string.toastMessage25, Toast.LENGTH_SHORT).show();
             }
         }
-
+        //makes this device discoverable with bluetooth via button
         if (view.getId() == R.id.TheSecondDawnButton11) {
             if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_SCAN) != PackageManager.PERMISSION_GRANTED)
                 if (!mBlueAdapter.isDiscovering()) {
@@ -131,7 +135,7 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
                     startActivityForResult(intent, REQUEST_DISCOVER_BT);
                 }
         }
-
+        //shows paired devices on bluetooth
         if (view.getId() == R.id.TheSecondDawnButton12) {
             if (mBlueAdapter.isEnabled()) {
                 mPairedDevices.setText(R.string.bluetoothPaired1);
@@ -147,6 +151,8 @@ public class BluetoothActivity extends AppCompatActivity implements View.OnClick
         }
     }
 
+
+    //changes on/off icon for bluetooth
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == REQUEST_ENABLE_BT) {
