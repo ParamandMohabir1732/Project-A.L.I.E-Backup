@@ -51,6 +51,8 @@ public class LEDFrag extends Fragment {
     private Button LEDButton, buttonRequest;
     private AmbilWarnaDialog colorPicker;
 
+
+    //main function
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_l_e_d, container, false);
@@ -76,6 +78,8 @@ public class LEDFrag extends Fragment {
         return view;
     }
 
+
+    //used to gain internet permissions from user
     private void requestInternetPermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(requireActivity(), Manifest.permission.ACCESS_FINE_LOCATION)) {
             final AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
@@ -92,6 +96,8 @@ public class LEDFrag extends Fragment {
         }
     }
 
+
+    //toast message alert info receive and given to user
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode == ACCESS_LOCATION_CODE) {
@@ -103,6 +109,8 @@ public class LEDFrag extends Fragment {
         }
     }
 
+
+    //used to open and select color with RGB picking options
     private void openColorPicker() {
         colorPicker = new AmbilWarnaDialog(getActivity(), LEDDefaultColor, new AmbilWarnaDialog.OnAmbilWarnaListener() {
             @Override

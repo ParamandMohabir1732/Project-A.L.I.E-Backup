@@ -172,7 +172,7 @@
     <string name="emptyNameError2">Le nom complet est requis !</string>
     <string name="emptyPhoneError2">Le numéro de téléphone est requis !</string>
     <string name="lengthPhoneError2">Votre numéro de téléphone doit comporter 10 chiffres !</string>
-    <string name="matchPhoneError2">S'il vous plaît entrer un numéro de téléphone valide!</string>
+    <string name="matchPhoneError2">Sil vous plaît entrer un numéro de téléphone valide!</string>
 
     <!-- LED Screen -->
     <string name="textView9">Commandes DEL</string>
