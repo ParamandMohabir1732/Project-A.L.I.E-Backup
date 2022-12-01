@@ -251,7 +251,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     private void StoreDataUsingSharedPref(String email, String password) {
-        SharedPreferences.Editor editor = getSharedPreferences(FILE_EMAIL, MODE_PRIVATE).edit();
+        editor = getSharedPreferences(FILE_EMAIL, MODE_PRIVATE).edit();
         editor.putString(getString(R.string.sharedPrefsvEmail), email);
         editor.putString(getString(R.string.sharedPrefsvPassword), password);
         editor.apply();

@@ -21,8 +21,11 @@ Software Project
 
 package ca.theseconddawn.it.a.l.i.e;
 
+import static android.content.Context.MODE_PRIVATE;
+
 import android.Manifest;
 import android.app.AlertDialog;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -33,7 +36,6 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -51,6 +53,11 @@ public class LEDFrag extends Fragment {
     private Button LEDButton, buttonRequest;
     private AmbilWarnaDialog colorPicker;
 
+    private static final String LED = "LED";
+    private static final String LED_COLOR = "LED Color";
+
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
 
     //main function
     @Override
@@ -58,7 +65,6 @@ public class LEDFrag extends Fragment {
         View view = inflater.inflate(R.layout.fragment_l_e_d, container, false);
 
         LEDLayout = view.findViewById(R.id.TheSecondDawnLEDLayout);
-
         LEDDefaultColor = ContextCompat.getColor(getActivity(), com.google.android.material.R.color.design_default_color_on_primary);
 
         LEDButton = view.findViewById(R.id.TheSecondDawnButton7);
@@ -120,10 +126,17 @@ public class LEDFrag extends Fragment {
 
             @Override
             public void onOk(AmbilWarnaDialog dialog, int color) {
+                editor = getActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
+                editor.putInt(LED_COLOR, color);
+                editor.apply();
+
                 LEDDefaultColor = color;
                 LEDLayout.setBackgroundColor(LEDDefaultColor);
             }
+
         });
+        sharedPreferences = getActivity().getSharedPreferences(LED, MODE_PRIVATE);
+        LEDLayout.setBackgroundColor(sharedPreferences.getInt(LED_COLOR, 0));
         colorPicker.show();
     }
 }

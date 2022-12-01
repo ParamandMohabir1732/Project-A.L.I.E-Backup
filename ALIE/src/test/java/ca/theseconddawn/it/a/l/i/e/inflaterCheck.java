@@ -49,7 +49,7 @@ public class inflaterCheck {
             MainActivity activity = controller.get();
 
             activity.findViewById(R.id.TheSecondDawnNavigationView).performClick();
-            Intent expectedIntent = new Intent(activity, ConfigurationActivity.class);
+            Intent expectedIntent = new Intent(activity, SettingsActivity.class);
             Intent actual = shadowOf(RuntimeEnvironment.getApplication()).getNextStartedActivity();
             assertEquals(expectedIntent.getComponent(), actual.getComponent());
         }

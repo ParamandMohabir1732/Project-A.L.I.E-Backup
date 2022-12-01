@@ -1,25 +1,17 @@
 package ca.theseconddawn.it.a.l.i.e;
 
 import static android.os.Build.VERSION_CODES.S;
-
 import static junit.framework.TestCase.assertNotNull;
 import static junit.framework.TestCase.assertTrue;
 
-import static org.junit.Assert.assertEquals;
-import static org.robolectric.Shadows.shadowOf;
-
-import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.widget.TextView;
-
-import com.google.firebase.database.annotations.NotNull;
 
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
 import org.robolectric.RobolectricTestRunner;
-import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.controller.ActivityController;
 import org.robolectric.annotation.Implements;
 
@@ -28,8 +20,8 @@ import org.robolectric.annotation.Implements;
 public class settingsCheck {
     //see if the text view exists
     @Test
-    public void textViewCheck(){
-        try(ActivityController<SettingsActivity> controller = Robolectric.buildActivity(SettingsActivity.class)){
+    public void textViewCheck() {
+        try (ActivityController<SettingsActivity> controller = Robolectric.buildActivity(SettingsActivity.class)) {
             controller.setup();
             SettingsActivity activity = controller.get();
 
@@ -40,10 +32,11 @@ public class settingsCheck {
 
         }
     }
+
     //check whether you can put the screen to the landscape
     @Test
-    public void checkLandscape(){
-        try(ActivityController<SettingsActivity> controller = Robolectric.buildActivity(SettingsActivity.class)){
+    public void checkLandscape() {
+        try (ActivityController<SettingsActivity> controller = Robolectric.buildActivity(SettingsActivity.class)) {
             controller.setup();
             SettingsActivity activity = controller.get();
 
