@@ -120,7 +120,7 @@
 
         <!-- Notifications -->
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/nightmode_switch"
             android:layout_width="98dp"
             android:layout_height="20dp"
@@ -156,7 +156,7 @@
 
         <!-- Private Account -->
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/notifications_switch"
             android:layout_width="98dp"
             android:layout_height="20dp"
@@ -190,7 +190,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Switch
+        <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/private_switch"
             android:layout_width="98dp"
             android:layout_height="20dp"
