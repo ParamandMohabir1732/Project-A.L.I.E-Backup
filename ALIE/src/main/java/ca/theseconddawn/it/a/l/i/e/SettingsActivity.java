@@ -50,6 +50,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
 
+    //defining the local instances of the settings
     private static final String SETTINGS = "Settings Pref";
     private static final String SWITCH_ORIENTATION = "Screen Orientation";
     private static final String FAN_CONTROL = "Fan Control";
@@ -59,6 +60,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+
 
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
@@ -72,6 +74,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         volume.setMax(audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC));
         volume.setProgress(audioManager.getStreamVolume(AudioManager.STREAM_MUSIC));
 
+        //changes the volume with the slider values change
         volume.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean b) {
@@ -91,7 +94,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         });
 
         orientation = findViewById(R.id.TheSecondDawnSwitch9);
+        //sets the orientaion
         orientation.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+           //if the orientation switch is clicked then the orientation would be set so landscape
             if (isChecked) {
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
                 editor.putBoolean(SWITCH_ORIENTATION, true);
@@ -100,7 +105,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
                 orientation.setText(R.string.orientationText1);
                 setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-            } else {
+            }
+            //else the orientation would turn to portrait
+            else {
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
                 editor.putBoolean(SWITCH_ORIENTATION, false);
                 editor.apply();
@@ -115,6 +122,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         orientation.setChecked(sharedPreferences.getBoolean(SWITCH_ORIENTATION, false));
 
         fanControl = findViewById(R.id.TheSecondDawnSwitch10);
+        //sets the fan to on if switched
         fanControl.setOnCheckedChangeListener((compoundButton, isChecked) -> {
             if (isChecked) {
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
@@ -124,7 +132,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
                 fanControl.setText(R.string.fanControlText1);
                 fanControl.setTextColor(getResources().getColor(R.color.brightgreen));
-            } else {
+            }
+            //sets the fann off on the switch click
+            else {
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
                 editor.putBoolean(FAN_CONTROL, false);
                 editor.apply();
@@ -145,7 +155,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
         sharedPreferences = getSharedPreferences(SETTINGS, MODE_PRIVATE);
         int radioGroup = sharedPreferences.getInt(LED_CONTROL, MODE_PRIVATE);
-
+        //sets the LED according to the selected color
         if (radioGroup == 1) {
             redLED.setChecked(true);
         } else if (radioGroup == 2) {
