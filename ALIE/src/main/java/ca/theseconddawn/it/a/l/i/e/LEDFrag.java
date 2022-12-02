@@ -81,9 +81,9 @@ public class LEDFrag extends Fragment {
                 requestInternetPermission();
             }
         });
+        retrieveLEDSharedPref();
         return view;
     }
-
 
     //used to gain internet permissions from user
     private void requestInternetPermission() {
@@ -102,7 +102,6 @@ public class LEDFrag extends Fragment {
         }
     }
 
-
     //toast message alert info receive and given to user
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
@@ -114,7 +113,6 @@ public class LEDFrag extends Fragment {
             }
         }
     }
-
 
     //used to open and select color with RGB picking options
     private void openColorPicker() {
@@ -133,10 +131,12 @@ public class LEDFrag extends Fragment {
                 LEDDefaultColor = color;
                 LEDLayout.setBackgroundColor(LEDDefaultColor);
             }
-
         });
+        colorPicker.show();
+    }
+
+    private void retrieveLEDSharedPref() {
         sharedPreferences = getActivity().getSharedPreferences(LED, MODE_PRIVATE);
         LEDLayout.setBackgroundColor(sharedPreferences.getInt(LED_COLOR, 0));
-        colorPicker.show();
     }
 }
