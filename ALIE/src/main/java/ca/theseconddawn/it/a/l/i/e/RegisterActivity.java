@@ -67,7 +67,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         progressBar = findViewById(R.id.TheSecondDawnProgressBar2);
     }
-
+//sets clicking properties of what items are clicked
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.TheSecondDawnImageButton1) {
@@ -77,26 +77,26 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             registerUser();
         }
     }
-
+//used for registering the user
     private void registerUser() {
         String name = editTextFullName.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
         String confirmPassword = editTextConfirmPassword.getText().toString().trim();
         String phone = editTextPhoneNumber.getText().toString().trim();
-
+//to check if edit text of the name is empty if so will notify user of error
         if (name.isEmpty()) {
             editTextFullName.setError(getString(R.string.emptyNameError2));
             editTextFullName.requestFocus();
             return;
         }
-
+//to check if edit text of the email is empty if so will notify user of error
         if (email.isEmpty()) {
             editTextEmail.setError(getString(R.string.emptyEmailError2));
             editTextEmail.requestFocus();
             return;
         }
-
+//to notify user if email entered is not valid
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
             editTextEmail.setError(getString(R.string.matchEmailError2));
             editTextEmail.requestFocus();
