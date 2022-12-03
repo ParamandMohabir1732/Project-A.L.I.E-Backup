@@ -156,7 +156,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             editTextPhoneNumber.requestFocus();
             return;
         }
-
+//not entering a valid phone receives a error
         if (!Patterns.PHONE.matcher(phone).matches()) {
             editTextPhoneNumber.setError(getString(R.string.matchPhoneError2));
             editTextPhoneNumber.requestFocus();
@@ -164,12 +164,16 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         }
 
         progressBar.setVisibility(View.VISIBLE);
+        //creates firebase data with users email and password
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
                 UserClass user = new UserClass(name, email, phone);
 
+                //create firebase data structure called users
                 FirebaseDatabase.getInstance().getReference(getString(R.string.firebaseReference1)).child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid()).setValue(user).addOnCompleteListener(task1 -> {
                     if (task1.isSuccessful()) {
+
+                        //if users registers successfully user will be notified of it
                         Toast.makeText(RegisterActivity.this, R.string.toastMessage12, Toast.LENGTH_LONG).show();
                         progressBar.setVisibility(View.GONE);
                         finish();
