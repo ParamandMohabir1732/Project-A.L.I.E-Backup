@@ -35,6 +35,8 @@ import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.util.ArrayList;
 import java.util.Locale;
 
@@ -43,6 +45,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     public TextView voiceInput;
     private ImageButton voiceButton, speakerButton, ledButton, fanButton;
     private SwitchCompat speakerSwitch, ledSwitch, fanSwitch, voiceSwitch;
+    private FloatingActionButton voiceInputButton;
     private int currentSpeakerImage, currentLedImage, currentFanImage, currentVoiceImage;
 
     private final int[] speakerImages = {R.drawable.speaker_button_off, R.drawable.speaker_button_on};
@@ -58,6 +61,9 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
 
         voiceInput = view.findViewById(R.id.TheSecondDawnTextView19);
+
+        voiceInputButton = view.findViewById(R.id.TheSecondDawnFloatingButton1);
+        voiceInputButton.setOnClickListener(this);
 
         speakerButton = view.findViewById(R.id.TheSecondDawnImageButton5);
         speakerButton.setOnClickListener(this);
@@ -100,7 +106,6 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         if (view.getId() == R.id.TheSecondDawnImageButton7) {
         }
         if (view.getId() == R.id.TheSecondDawnImageButton8) {
-            setVoiceInput();
         }
 
         if (view.getId() == R.id.TheSecondDawnSwitch1) {
@@ -125,6 +130,10 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             currentVoiceImage++;
             currentVoiceImage = currentVoiceImage % voiceImages.length;
             voiceButton.setImageResource(voiceImages[currentVoiceImage]);
+        }
+
+        if (view.getId() == R.id.TheSecondDawnFloatingButton1) {
+            setVoiceInput();
         }
     }
 
