@@ -24,3 +24,4 @@ public class ExampleInstrumentedTest {
         assertEquals("ca.theseconddawn.it.a.l.i.e", appContext.getPackageName());
     }
 }
+

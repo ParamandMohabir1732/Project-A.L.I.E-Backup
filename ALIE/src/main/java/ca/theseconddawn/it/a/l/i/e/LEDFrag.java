@@ -55,7 +55,7 @@ public class LEDFrag extends Fragment {
 
     private static final String LED = "LED";
     private static final String LED_COLOR = "LED Color";
-
+    public static String LEDStatus;
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
 
