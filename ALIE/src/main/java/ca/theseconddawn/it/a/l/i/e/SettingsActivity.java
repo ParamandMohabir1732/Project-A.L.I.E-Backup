@@ -28,6 +28,7 @@ import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
@@ -36,6 +37,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SwitchCompat;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class SettingsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageButton leftArrow;
@@ -43,6 +46,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
     private SeekBar volume;
     private TextView volumeProgress;
     private AudioManager audioManager;
+    private LinearLayout settingsLayout;
 
     private RadioGroup LEDGroup;
     private RadioButton redLED, greenLED, blueLED;
@@ -62,6 +66,8 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         setContentView(R.layout.activity_settings);
 
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
+
+        settingsLayout = findViewById(R.id.TheSecondDawnSettingsLayout);
 
         leftArrow = findViewById(R.id.TheSecondDawnImageButton3);
         leftArrow.setOnClickListener(this);
@@ -93,9 +99,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         });
 
         orientation = findViewById(R.id.TheSecondDawnSwitch9);
-        //sets the orientaion
+        //sets the orientation
         orientation.setOnCheckedChangeListener((compoundButton, isChecked) -> {
-           //if the orientation switch is clicked then the orientation would be set so landscape
+            //if the orientation switch is clicked then the orientation would be set so landscape
             if (isChecked) {
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
                 editor.putBoolean(SWITCH_ORIENTATION, true);
@@ -132,7 +138,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 fanControl.setText(R.string.fanControlText1);
                 fanControl.setTextColor(getResources().getColor(R.color.brightgreen));
             }
-            //sets the fann off on the switch click
+            //sets the fan off on the switch click
             else {
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
                 editor.putBoolean(FAN_CONTROL, false);
@@ -155,26 +161,41 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         sharedPreferences = getSharedPreferences(SETTINGS, MODE_PRIVATE);
         int radioGroup = sharedPreferences.getInt(LED_CONTROL, MODE_PRIVATE);
         //sets the LED according to the selected color
-        if (radioGroup == 0) {
+        if (radioGroup == R.id.TheSecondDawnRadioButton4) {
             redLED.setChecked(true);
-        } else if (radioGroup == 1) {
+        } if (radioGroup == R.id.TheSecondDawnRadioButton5) {
             greenLED.setChecked(true);
-        } else if (radioGroup == 2) {
+        }  if (radioGroup == R.id.TheSecondDawnRadioButton6) {
             blueLED.setChecked(true);
         }
 
         LEDGroup.setOnCheckedChangeListener((radioGroup1, checkedId) -> {
             if (checkedId == R.id.TheSecondDawnRadioButton4) {
+                Snackbar snackbar = Snackbar.make(settingsLayout, R.string.snackbar5, Snackbar.LENGTH_SHORT);
+                snackbar.setBackgroundTint(getResources().getColor(R.color.brightred));
+                snackbar.setTextColor(getResources().getColor(R.color.black));
+                snackbar.show();
+
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                editor.putInt(LED_CONTROL, 0);
+                editor.putInt(LED_CONTROL, R.id.TheSecondDawnRadioButton4);
                 editor.apply();
-            } else if (checkedId == R.id.TheSecondDawnRadioButton5) {
+            } if (checkedId == R.id.TheSecondDawnRadioButton5) {
+                Snackbar snackbar = Snackbar.make(settingsLayout, R.string.snackbar6, Snackbar.LENGTH_SHORT);
+                snackbar.setBackgroundTint(getResources().getColor(R.color.brightgreen));
+                snackbar.setTextColor(getResources().getColor(R.color.black));
+                snackbar.show();
+
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                editor.putInt(LED_CONTROL, 1);
+                editor.putInt(LED_CONTROL, R.id.TheSecondDawnRadioButton5);
                 editor.apply();
-            } else if (checkedId == R.id.TheSecondDawnButton6) {
+            } if (checkedId == R.id.TheSecondDawnButton6) {
+                Snackbar snackbar = Snackbar.make(settingsLayout, R.string.snackbar7, Snackbar.LENGTH_SHORT);
+                snackbar.setBackgroundTint(getResources().getColor(R.color.brightblue));
+                snackbar.setTextColor(getResources().getColor(R.color.black));
+                snackbar.show();
+
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                editor.putInt(LED_CONTROL, 2);
+                editor.putInt(LED_CONTROL, R.id.TheSecondDawnRadioButton6);
                 editor.apply();
             }
         });

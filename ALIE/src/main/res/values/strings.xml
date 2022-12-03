@@ -88,6 +88,9 @@
     <string name="snackbar2">Permission is Denied!</string>
     <string name="snackbar3">Permission is Granted!</string>
     <string name="snackbar4">Permission is Denied!</string>
+    <string name="snackbar5">Red Color is Selected!</string>
+    <string name="snackbar6">Green Color is Selected!</string>
+    <string name="snackbar7">Blue Color is Selected!</string>
 
     <!-- SharedPref Messages -->
     <string name="sharedPrefKey">Attachment</string>
