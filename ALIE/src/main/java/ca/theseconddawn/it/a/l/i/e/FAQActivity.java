@@ -31,7 +31,7 @@ import android.widget.ImageView;
 
 public class FAQActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageView imageView;
+    private ImageView messageButton;
     private ImageButton leftArrow;
 
     @Override
@@ -44,20 +44,21 @@ public class FAQActivity extends AppCompatActivity implements View.OnClickListen
 
         // initialize imageView
         // with method findViewById()
-        imageView = findViewById(R.id.imageView4);
+        messageButton = findViewById(R.id.TheSecondDawnImageView52);
 
         // Apply OnClickListener  to imageView to
         // switch from one activity to another
-        imageView.setOnClickListener(v -> {
-            Intent intent = new Intent(FAQActivity.this, ContactUsActivity.class);
-            startActivity(intent);
-        });
+        messageButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View view) {
         if (view.getId() == R.id.TheSecondDawnImageButton12) {
             finish();
+        }
+        if (view.getId() == R.id.TheSecondDawnImageView52) {
+            Intent intent = new Intent(FAQActivity.this, ContactUsActivity.class);
+            startActivity(intent);
         }
     }
 }

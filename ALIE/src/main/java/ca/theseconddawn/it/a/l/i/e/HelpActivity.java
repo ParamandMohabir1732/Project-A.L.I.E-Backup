@@ -54,19 +54,19 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
         leftArrow = findViewById(R.id.TheSecondDawnImageButton15);
         leftArrow.setOnClickListener(this);
 
-        callUs = findViewById(R.id.appCompatButton);
+        callUs = findViewById(R.id.TheSecondDawnButton16);
         callUs.setOnClickListener(this);
 
-        contactUs = findViewById(R.id.imageView33);
+        contactUs = findViewById(R.id.TheSecondDawnImageButton16);
         contactUs.setOnClickListener(this);
 
-        aboutUs = findViewById(R.id.imageView34);
+        aboutUs = findViewById(R.id.TheSecondDawnImageButton17);
         aboutUs.setOnClickListener(this);
 
-        faq = findViewById(R.id.imageView36);
+        faq = findViewById(R.id.TheSecondDawnImageButton18);
         faq.setOnClickListener(this);
 
-        switchCompat = findViewById(R.id.nightmode_switch);
+        switchCompat = findViewById(R.id.TheSecondDawnSwitch11);
         switchCompat.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 editor = getSharedPreferences(NIGHT, MODE_PRIVATE).edit();
@@ -91,22 +91,22 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == R.id.appCompatButton) {
+        if (view.getId() == R.id.TheSecondDawnButton16) {
             Intent intent = new Intent(Intent.ACTION_DIAL);
             intent.setData(Uri.parse(getString(R.string.intentPhoneUri)));
             startActivity(intent);
         }
-        if (view.getId() == R.id.imageView33) {
-            startActivity(new Intent(this, ContactUsActivity.class));
-        }
-        if (view.getId() == R.id.imageView34) {
-            startActivity(new Intent(this, AboutUsActivity.class));
-        }
-        if (view.getId() == R.id.imageView36) {
-            startActivity(new Intent(this, FAQActivity.class));
-        }
         if (view.getId() == R.id.TheSecondDawnImageButton15) {
             finish();
+        }
+        if (view.getId() == R.id.TheSecondDawnImageButton16) {
+            startActivity(new Intent(this, ContactUsActivity.class));
+        }
+        if (view.getId() == R.id.TheSecondDawnImageButton17) {
+            startActivity(new Intent(this, AboutUsActivity.class));
+        }
+        if (view.getId() == R.id.TheSecondDawnImageButton18) {
+            startActivity(new Intent(this, FAQActivity.class));
         }
     }
 }
