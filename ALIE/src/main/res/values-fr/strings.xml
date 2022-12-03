@@ -30,8 +30,6 @@
     <string name="titleLogout">Se déconnecter</string>
     <string name="titleSettings2">Réglages</string>
 
-
-
     <!-- ToolBar Menu Titles -->
     <string name="titleSettings">Réglages</string>
     <string name="titleHelp">Aider</string>
@@ -90,40 +88,6 @@
     <string name="snackbar2">Lautorisation est refusée!</string>
     <string name="snackbar3">Lautorisation est accordée!</string>
     <string name="snackbar4">Lautorisation est refusée!</string>
-    <!-- Configuration Screen -->
-    <string name="imageButton3">Ceci est un bouton d\image de la flèche gauche dans l\écran des paramètres</string>
-    <string name="textView20">Settings Screen</string>
-    <string name="sharedPrefKey">Attachement</string>
-
-    <!-- Controls Titles -->
-    <string name="Portrait">Orientation</string>
-    <string name="Loudness">Volume du haut-parleur</string>
-    <string name="LED">Contrôle des DEL</string>
-    <string name="FanControl">Contrôle du ventilateur</string>
-
-    <!-- Key Values -->
-    <string name="key1">Attachement</string>
-    <string name="key2">Le volume</string>
-    <string name="key3">Réponse</string>
-    <string name="key4">Ventilateur</string>
-
-    <!-- Default Values -->
-    <string name="defaultValue">50</string>
-    <string name="defaultValue2">Rouge</string>
-
-    <!-- Sound Control -->
-    <string name="Volume">Volume du haut-parleur</string>
-
-    <!-- Messages Preferences -->
-    <string name="signature_title">Votre signature</string>
-    <string name="led_color">Définir la couleur des voyants</string>
-
-    <!-- Sync Preferences -->
-    <string name="sync_title">Synchroniser périodiquement les e-mails</string>
-    <string name="rotation_title">Orientation actuelle de lécran</string>
-    <string name="rotation_summary_on">Paysage</string>
-    <string name="rotation_summary_off">Portrait</string>
-    <string name="fan_off_on">Ventilateur ARRÊT/MARCHE</string>
 
     <!-- Login Screen -->
     <string name="textView3">A.L.I.E</string>
@@ -194,8 +158,6 @@
     <string name="switch7">Du pouvoir</string>
     <string name="textView25">Le volume</string>
     <string name="textView26">Choisir le fichier:</string>
-
-
 
     <!-- Smart Fan Screen -->
     <string name="textView11">Écran de ventilateur intelligent</string>
@@ -321,7 +283,6 @@
     <string name="emptyReviewError1">Votre avis est requis !</string>
     <string name="lengthPhoneError1">Votre numéro de téléphone doit comporter 10 chiffres !</string>
     <string name="textView42">Chargement…</string>
-
 
     <!-- Contact Us Screen -->
     <string name="imageButton13">Ceci est un bouton d\image de la flèche gauche dans l\écran Contactez-nous</string>
