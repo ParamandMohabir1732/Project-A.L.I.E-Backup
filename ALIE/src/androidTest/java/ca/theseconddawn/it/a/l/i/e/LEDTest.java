@@ -52,4 +52,9 @@ public class LEDTest {
     public void titleColor() {
         onView(withId(R.id.TheSecondDawnTextView9)).check(matches(hasTextColor(R.color.aqua)));
     }
+
+    @Test
+    public void LEDImage() {
+        onView(withId(R.id.TheSecondDawnImageView38)).check(matches(withContentDescription(R.string.imageView38)));
+    }
 }
