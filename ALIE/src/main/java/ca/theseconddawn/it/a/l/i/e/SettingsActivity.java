@@ -105,28 +105,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         orientation.setChecked(sharedPreferences.getBoolean(SWITCH_ORIENTATION, false));
 
         fanControl = findViewById(R.id.TheSecondDawnSwitch10);
-        //sets the fan to on if switched
-        fanControl.setOnCheckedChangeListener((compoundButton, isChecked) -> {
-            if (isChecked) {
-                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                editor.putBoolean(FAN_CONTROL, true);
-                editor.apply();
-                fanControl.setChecked(true);
-
-                fanControl.setText(R.string.fanControlText1);
-                fanControl.setTextColor(getResources().getColor(R.color.brightgreen));
-            }
-            //sets the fan off on the switch click
-            else {
-                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                editor.putBoolean(FAN_CONTROL, false);
-                editor.apply();
-                fanControl.setChecked(false);
-
-                fanControl.setText(R.string.fanControlText2);
-                fanControl.setTextColor(getResources().getColor(R.color.brightred));
-            }
-        });
+        fanControl.setOnCheckedChangeListener((compoundButton, isChecked) -> fanControl(isChecked));
 
         sharedPreferences = getSharedPreferences(SETTINGS, MODE_PRIVATE);
         fanControl.setChecked(sharedPreferences.getBoolean(FAN_CONTROL, false));
@@ -208,6 +187,29 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
             orientation.setText(R.string.orientationText2);
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
+    }
+
+    private void fanControl(boolean isChecked) {
+        //sets the fan to ON if switched
+        if (isChecked) {
+            editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+            editor.putBoolean(FAN_CONTROL, true);
+            editor.apply();
+            fanControl.setChecked(true);
+
+            fanControl.setText(R.string.fanControlText1);
+            fanControl.setTextColor(getResources().getColor(R.color.brightgreen));
+        }
+        //sets the fan OFF on the switch click
+        else {
+            editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+            editor.putBoolean(FAN_CONTROL, false);
+            editor.apply();
+            fanControl.setChecked(false);
+
+            fanControl.setText(R.string.fanControlText2);
+            fanControl.setTextColor(getResources().getColor(R.color.brightred));
         }
     }
 
