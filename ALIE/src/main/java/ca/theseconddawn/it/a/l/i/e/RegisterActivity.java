@@ -126,31 +126,31 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             editTextPassword.requestFocus();
             return;
         }
-
+//if password does not contain one uppercase letter error occurs
         if (!password.matches(".*[A-Z].*")) {
             editTextPassword.setError(getString(R.string.matchPasswordError1UpperLetter));
             editTextPassword.requestFocus();
             return;
         }
-
+//if password does not contain at least one digit error occurs
         if (!password.matches(".*[0-9].*")) {
             editTextPassword.setError(getString(R.string.matchPasswordError1Digit));
             editTextPassword.requestFocus();
             return;
         }
-
+//if passwords do not match each other error occurs
         if (confirmPassword.isEmpty() || !confirmPassword.equals(password)) {
             editTextConfirmPassword.setError(getString(R.string.confirmPasswordError1));
             editTextConfirmPassword.requestFocus();
             return;
         }
-
+//if user has not entered phone number error occurs
         if (phone.isEmpty()) {
             editTextPhoneNumber.setError(getString(R.string.emptyPhoneError2));
             editTextPhoneNumber.requestFocus();
             return;
         }
-
+//if users phone number does not contain 10 values error occurs
         if (phone.length() < 10) {
             editTextPhoneNumber.setError(getString(R.string.lengthPhoneError2));
             editTextPhoneNumber.requestFocus();
