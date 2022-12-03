@@ -31,4 +31,9 @@ public class LEDTest {
     public void colorPickerButton() {
         onView(ViewMatchers.withId(R.id.TheSecondDawnButton7)).perform(click());
     }
+
+    @Test
+    public void locationPermissionButton() {
+        onView(ViewMatchers.withId(R.id.TheSecondDawnButton8)).perform(click());
+    }
 }
