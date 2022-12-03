@@ -187,10 +187,10 @@
     <string name="imageButton8">This is a Light Blue Gradient Button that will be used to Turn the Voice Device ON/OFF</string>
     <string name="imageView37">This is an Image of the Microphone Icon</string>
     <string name="voicePrompt">Hi, Please Say a Command!</string>
-    <string name="switch1">Off/On</string>
-    <string name="switch2">Off/On</string>
-    <string name="switch3">Off/On</string>
-    <string name="switch4">Off/On</string>
+    <string name="switch1">OFF</string>
+    <string name="switch2">OFF</string>
+    <string name="switch3">OFF</string>
+    <string name="switch4">OFF</string>
     <string name="floatingButton1">This is an Mic Icon for the Floating Button That will be used to Record your Voice</string>
 
     <!-- Settings Screen -->

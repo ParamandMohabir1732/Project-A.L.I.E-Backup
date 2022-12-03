@@ -49,9 +49,8 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     private ImageButton voiceButton, speakerButton, ledButton, fanButton;
     private SwitchCompat speakerSwitch, ledSwitch, fanSwitch, voiceSwitch;
     private FloatingActionButton voiceInputButton;
-    private int currentLedImage, currentFanImage, currentVoiceImage;
+    private int currentFanImage, currentVoiceImage;
 
-    private final int[] ledImages = {R.drawable.led_button_off, R.drawable.led_button_on};
     private final int[] fanImages = {R.drawable.fan_button_off, R.drawable.fan_button_on};
     private final int[] voiceImages = {R.drawable.voice_button_off, R.drawable.voice_button_on};
 
@@ -60,6 +59,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
 
     private static final String HOME = "Home Pref";
     private static final String SPEAKER = "Speaker Switch";
+    private static final String LED = "LED Switch";
 
     private static final int REQUEST_CODE_SPEECH_INPUT = 1;
     private static final int RESULT_OK = -1;
@@ -112,7 +112,30 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         speakerSwitch.setChecked(sharedPreferences.getBoolean(SPEAKER, false));
 
         ledSwitch = view.findViewById(R.id.TheSecondDawnSwitch2);
-        ledSwitch.setOnClickListener(this);
+        ledSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+            if (isChecked) {
+                editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+                editor = editor.putBoolean(LED, true);
+                editor.apply();
+
+                ledSwitch.setChecked(true);
+                ledSwitch.setText("ON");
+                ledSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
+                ledButton.setImageResource(R.drawable.led_button_on);
+            } else {
+                editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+                editor = editor.putBoolean(LED, false);
+                editor.apply();
+
+                ledSwitch.setChecked(false);
+                ledSwitch.setText("OFF");
+                ledSwitch.setTextColor(getResources().getColor(R.color.brightred));
+                ledButton.setImageResource(R.drawable.led_button_off);
+            }
+        });
+
+        sharedPreferences = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE);
+        ledSwitch.setChecked(sharedPreferences.getBoolean(LED, false));
 
         fanSwitch = view.findViewById(R.id.TheSecondDawnSwitch3);
         fanSwitch.setOnClickListener(this);
@@ -137,12 +160,6 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         if (view.getId() == R.id.TheSecondDawnImageButton7) {
         }
         if (view.getId() == R.id.TheSecondDawnImageButton8) {
-        }
-
-        if (view.getId() == R.id.TheSecondDawnSwitch2) {
-            currentLedImage++;
-            currentLedImage = currentLedImage % ledImages.length;
-            ledButton.setImageResource(ledImages[currentLedImage]);
         }
 
         if (view.getId() == R.id.TheSecondDawnSwitch3) {

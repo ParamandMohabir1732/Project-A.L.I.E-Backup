@@ -81,7 +81,7 @@
         android:layout_marginStart="56dp"
         android:layout_marginTop="25dp"
         android:text="@string/switch1"
-        android:textColor="@color/black"
+        android:textColor="@color/brightred"
         android:textStyle="bold" />
 
     <ImageButton
@@ -114,7 +114,7 @@
         android:layout_marginStart="232dp"
         android:layout_marginTop="25dp"
         android:text="@string/switch2"
-        android:textColor="@color/black"
+        android:textColor="@color/brightred"
         android:textStyle="bold" />
 
     <ImageButton
@@ -147,7 +147,7 @@
         android:layout_marginStart="407dp"
         android:layout_marginTop="25dp"
         android:text="@string/switch3"
-        android:textColor="@color/black"
+        android:textColor="@color/brightred"
         android:textStyle="bold" />
 
     <ImageButton
@@ -180,7 +180,7 @@
         android:layout_marginStart="580dp"
         android:layout_marginTop="26dp"
         android:text="@string/switch4"
-        android:textColor="@color/black"
+        android:textColor="@color/brightred"
         android:textStyle="bold" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
