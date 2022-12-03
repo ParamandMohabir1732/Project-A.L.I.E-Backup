@@ -99,29 +99,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         });
 
         orientation = findViewById(R.id.TheSecondDawnSwitch9);
-        //sets the orientation
-        orientation.setOnCheckedChangeListener((compoundButton, isChecked) -> {
-            //if the orientation switch is clicked then the orientation would be set so landscape
-            if (isChecked) {
-                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                editor.putBoolean(SWITCH_ORIENTATION, true);
-                editor.apply();
-                orientation.setChecked(true);
-
-                orientation.setText(R.string.orientationText1);
-                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-            }
-            //else the orientation would turn to portrait
-            else {
-                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                editor.putBoolean(SWITCH_ORIENTATION, false);
-                editor.apply();
-                orientation.setChecked(false);
-
-                orientation.setText(R.string.orientationText2);
-                setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-            }
-        });
+        orientation.setOnCheckedChangeListener((compoundButton, isChecked) -> setOrientation(isChecked));
 
         sharedPreferences = getSharedPreferences(SETTINGS, MODE_PRIVATE);
         orientation.setChecked(sharedPreferences.getBoolean(SWITCH_ORIENTATION, false));
@@ -163,11 +141,9 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         //sets the LED according to the selected color
         if (radioGroup == R.id.TheSecondDawnRadioButton4) {
             redLED.setChecked(true);
-        }
-        else if (radioGroup == R.id.TheSecondDawnRadioButton5) {
+        } else if (radioGroup == R.id.TheSecondDawnRadioButton5) {
             greenLED.setChecked(true);
-        }
-        else if (radioGroup == R.id.TheSecondDawnRadioButton6) {
+        } else if (radioGroup == R.id.TheSecondDawnRadioButton6) {
             blueLED.setChecked(true);
         }
 
@@ -210,6 +186,29 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                     editor.apply();
             }
         });
+    }
+
+    private void setOrientation(boolean isChecked) {
+        //sets the orientation to landscape
+        if (isChecked) {
+            editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+            editor.putBoolean(SWITCH_ORIENTATION, true);
+            editor.apply();
+            orientation.setChecked(true);
+
+            orientation.setText(R.string.orientationText1);
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        }
+        //else the orientation would turn to portrait
+        else {
+            editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+            editor.putBoolean(SWITCH_ORIENTATION, false);
+            editor.apply();
+            orientation.setChecked(false);
+
+            orientation.setText(R.string.orientationText2);
+            setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        }
     }
 
     @Override
