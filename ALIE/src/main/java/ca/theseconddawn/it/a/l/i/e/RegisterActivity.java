@@ -102,25 +102,25 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             editTextEmail.requestFocus();
             return;
         }
-
+//to check if edit text of the password is empty if so will notify user of error
         if (password.isEmpty()) {
             editTextPassword.setError(getString(R.string.emptyPasswordError2));
             editTextPassword.requestFocus();
             return;
         }
-
+//if password is lower then 6 values error
         if (password.length() < 6) {
             editTextPassword.setError(getString(R.string.lengthPasswordError2));
             editTextPassword.requestFocus();
             return;
         }
-
+//if password does not contain both text and numbers error
         if (!password.matches(".*[a-zA-Z0-9].*")) {
             editTextPassword.setError(getString(R.string.matchPasswordErrorAlphabetNum));
             editTextPassword.requestFocus();
             return;
         }
-
+//if password does not contain one special minimum error occurs
         if (!password.matches(".*[@#$%^&+=].*")) {
             editTextPassword.setError(getString(R.string.matchPasswordError1Char));
             editTextPassword.requestFocus();
