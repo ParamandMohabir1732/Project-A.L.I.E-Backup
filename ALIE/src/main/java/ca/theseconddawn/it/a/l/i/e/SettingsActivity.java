@@ -126,9 +126,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
             blueLED.setChecked(true);
         }
 
-        LEDGroup.setOnCheckedChangeListener((radioGroup1, checkedId) -> {
-            setLEDColor(checkedId);
-        });
+        LEDGroup.setOnCheckedChangeListener((radioGroup1, checkedId) -> setLEDColor(checkedId));
     }
 
     //Refactored Orientation from OnCreate Method to its own Method setOrientation
@@ -155,6 +153,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
+    //Refactored Fan Control from OnCreate Method to its own Method fanControl
     private void fanControl(boolean isChecked) {
         //sets the fan to ON if switched
         if (isChecked) {
@@ -178,11 +177,13 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         }
     }
 
+    //Refactored LED Color from OnCreate Method to its own Method setLEDColor
     private void setLEDColor(int checkedId) {
 
         Snackbar snackbar;
 
         switch (checkedId) {
+            //if Red Radio Button is chosen, Display Snackbar in Red and Store into SharedPref
             case R.id.TheSecondDawnRadioButton4:
                 snackbar = Snackbar.make(settingsLayout, R.string.snackbar5, Snackbar.LENGTH_SHORT);
                 snackbar.setBackgroundTint(getResources().getColor(R.color.brightred));
@@ -194,6 +195,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 editor.apply();
                 break;
 
+            //if Green Radio Button is chosen, Display Snackbar in Green and Store into SharedPref
             case R.id.TheSecondDawnRadioButton5:
                 snackbar = Snackbar.make(settingsLayout, R.string.snackbar6, Snackbar.LENGTH_SHORT);
                 snackbar.setBackgroundTint(getResources().getColor(R.color.brightgreen));
@@ -206,6 +208,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
                 break;
 
+            //if Blue Radio Button is chosen, Display Snackbar in Blue and Store into SharedPref
             case R.id.TheSecondDawnRadioButton6:
                 snackbar = Snackbar.make(settingsLayout, R.string.snackbar7, Snackbar.LENGTH_SHORT);
                 snackbar.setBackgroundTint(getResources().getColor(R.color.brightblue));
@@ -220,6 +223,7 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View view) {
+        //When Left Arrow Image Button is clicked, take user back to previous screen
         if (view.getId() == R.id.TheSecondDawnImageButton3) {
             finish();
         }
