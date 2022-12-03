@@ -60,5 +60,4 @@
         android:layout_marginTop="10dp"
         app:srcCompat="@drawable/about_us_1" />
 
-
 </LinearLayout>

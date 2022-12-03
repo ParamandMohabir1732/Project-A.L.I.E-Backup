@@ -186,12 +186,12 @@
     <string name="imageView36">This is an Image of the Smart Fan Icon</string>
     <string name="imageButton8">This is a Light Blue Gradient Button that will be used to Turn the Voice Device ON/OFF</string>
     <string name="imageView37">This is an Image of the Microphone Icon</string>
-    <string name="voicePrompt">Hi, Please Enter a Command!</string>
+    <string name="voicePrompt">Hi, Please Say a Command!</string>
     <string name="switch1">Off/On</string>
     <string name="switch2">Off/On</string>
     <string name="switch3">Off/On</string>
     <string name="switch4">Off/On</string>
-    <string name="imageButton4">This is an Image of the Microphone Icon that will be used to record your voice.</string>
+    <string name="floatingButton1">This is an Mic Icon for the Floating Button That will be used to Record your Voice</string>
 
     <!-- Settings Screen -->
     <string name="imageButton3">This is an Image Button of the Left Arrow in Settings Screen</string>

@@ -57,7 +57,7 @@
         android:layout_height="150dp"
         android:layout_gravity="start"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="5dp"
         android:background="@null"
         android:contentDescription="@string/imageButton5"
         android:scaleType="fitCenter"
@@ -182,5 +182,18 @@
         android:text="@string/switch4"
         android:textColor="@color/black"
         android:textStyle="bold" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/TheSecondDawnFloatingButton1"
+        android:contentDescription="@string/floatingButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-275dp"
+        android:layout_marginStart="200dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_mic"
+        android:visibility="visible" />
 
 </LinearLayout>
