@@ -47,4 +47,9 @@ public class LEDTest {
     public void switchLEDWhite() {
         onView(ViewMatchers.withId(R.id.TheSecondDawnSwitch6)).perform(click());
     }
+
+    @Test
+    public void titleColor() {
+        onView(withId(R.id.TheSecondDawnTextView9)).check(matches(hasTextColor(R.color.aqua)));
+    }
 }
