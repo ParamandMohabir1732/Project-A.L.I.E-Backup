@@ -127,46 +127,11 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         }
 
         LEDGroup.setOnCheckedChangeListener((radioGroup1, checkedId) -> {
-
-            Snackbar snackbar;
-
-            switch (checkedId) {
-                case R.id.TheSecondDawnRadioButton4:
-                    snackbar = Snackbar.make(settingsLayout, R.string.snackbar5, Snackbar.LENGTH_SHORT);
-                    snackbar.setBackgroundTint(getResources().getColor(R.color.brightred));
-                    snackbar.setTextColor(getResources().getColor(R.color.black));
-                    snackbar.show();
-
-                    editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                    editor.putInt(LED_CONTROL, R.id.TheSecondDawnRadioButton4);
-                    editor.apply();
-                    break;
-
-                case R.id.TheSecondDawnRadioButton5:
-                    snackbar = Snackbar.make(settingsLayout, R.string.snackbar6, Snackbar.LENGTH_SHORT);
-                    snackbar.setBackgroundTint(getResources().getColor(R.color.brightgreen));
-                    snackbar.setTextColor(getResources().getColor(R.color.black));
-                    snackbar.show();
-
-                    editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                    editor.putInt(LED_CONTROL, R.id.TheSecondDawnRadioButton5);
-                    editor.apply();
-
-                    break;
-
-                case R.id.TheSecondDawnRadioButton6:
-                    snackbar = Snackbar.make(settingsLayout, R.string.snackbar7, Snackbar.LENGTH_SHORT);
-                    snackbar.setBackgroundTint(getResources().getColor(R.color.brightblue));
-                    snackbar.setTextColor(getResources().getColor(R.color.black));
-                    snackbar.show();
-
-                    editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                    editor.putInt(LED_CONTROL, R.id.TheSecondDawnRadioButton6);
-                    editor.apply();
-            }
+            setLEDColor(checkedId);
         });
     }
 
+    //Refactored Orientation from OnCreate Method to its own Method setOrientation
     private void setOrientation(boolean isChecked) {
         //sets the orientation to landscape
         if (isChecked) {
@@ -210,6 +175,46 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
 
             fanControl.setText(R.string.fanControlText2);
             fanControl.setTextColor(getResources().getColor(R.color.brightred));
+        }
+    }
+
+    private void setLEDColor(int checkedId) {
+
+        Snackbar snackbar;
+
+        switch (checkedId) {
+            case R.id.TheSecondDawnRadioButton4:
+                snackbar = Snackbar.make(settingsLayout, R.string.snackbar5, Snackbar.LENGTH_SHORT);
+                snackbar.setBackgroundTint(getResources().getColor(R.color.brightred));
+                snackbar.setTextColor(getResources().getColor(R.color.black));
+                snackbar.show();
+
+                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+                editor.putInt(LED_CONTROL, R.id.TheSecondDawnRadioButton4);
+                editor.apply();
+                break;
+
+            case R.id.TheSecondDawnRadioButton5:
+                snackbar = Snackbar.make(settingsLayout, R.string.snackbar6, Snackbar.LENGTH_SHORT);
+                snackbar.setBackgroundTint(getResources().getColor(R.color.brightgreen));
+                snackbar.setTextColor(getResources().getColor(R.color.black));
+                snackbar.show();
+
+                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+                editor.putInt(LED_CONTROL, R.id.TheSecondDawnRadioButton5);
+                editor.apply();
+
+                break;
+
+            case R.id.TheSecondDawnRadioButton6:
+                snackbar = Snackbar.make(settingsLayout, R.string.snackbar7, Snackbar.LENGTH_SHORT);
+                snackbar.setBackgroundTint(getResources().getColor(R.color.brightblue));
+                snackbar.setTextColor(getResources().getColor(R.color.black));
+                snackbar.show();
+
+                editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
+                editor.putInt(LED_CONTROL, R.id.TheSecondDawnRadioButton6);
+                editor.apply();
         }
     }
 
