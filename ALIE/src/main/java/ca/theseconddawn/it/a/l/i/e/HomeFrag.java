@@ -21,12 +21,15 @@ Software Project
 
 package ca.theseconddawn.it.a.l.i.e;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -46,12 +49,17 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     private ImageButton voiceButton, speakerButton, ledButton, fanButton;
     private SwitchCompat speakerSwitch, ledSwitch, fanSwitch, voiceSwitch;
     private FloatingActionButton voiceInputButton;
-    private int currentSpeakerImage, currentLedImage, currentFanImage, currentVoiceImage;
+    private int currentLedImage, currentFanImage, currentVoiceImage;
 
-    private final int[] speakerImages = {R.drawable.speaker_button_off, R.drawable.speaker_button_on};
     private final int[] ledImages = {R.drawable.led_button_off, R.drawable.led_button_on};
     private final int[] fanImages = {R.drawable.fan_button_off, R.drawable.fan_button_on};
     private final int[] voiceImages = {R.drawable.voice_button_off, R.drawable.voice_button_on};
+
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
+
+    private static final String HOME = "Home Pref";
+    private static final String SPEAKER = "Speaker Switch";
 
     private static final int REQUEST_CODE_SPEECH_INPUT = 1;
     private static final int RESULT_OK = -1;
@@ -78,7 +86,30 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         voiceButton.setOnClickListener(this);
 
         speakerSwitch = view.findViewById(R.id.TheSecondDawnSwitch1);
-        speakerSwitch.setOnClickListener(this);
+        speakerSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+            if (isChecked) {
+                editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+                editor = editor.putBoolean(SPEAKER, true);
+                editor.apply();
+
+                speakerSwitch.setChecked(true);
+                speakerSwitch.setText("ON");
+                speakerSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
+                speakerButton.setImageResource(R.drawable.speaker_button_on);
+            } else {
+                editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+                editor = editor.putBoolean(SPEAKER, false);
+                editor.apply();
+
+                speakerSwitch.setChecked(false);
+                speakerSwitch.setText("OFF");
+                speakerSwitch.setTextColor(getResources().getColor(R.color.brightred));
+                speakerButton.setImageResource(R.drawable.speaker_button_off);
+            }
+        });
+
+        sharedPreferences = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE);
+        speakerSwitch.setChecked(sharedPreferences.getBoolean(SPEAKER, false));
 
         ledSwitch = view.findViewById(R.id.TheSecondDawnSwitch2);
         ledSwitch.setOnClickListener(this);
@@ -106,12 +137,6 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         if (view.getId() == R.id.TheSecondDawnImageButton7) {
         }
         if (view.getId() == R.id.TheSecondDawnImageButton8) {
-        }
-
-        if (view.getId() == R.id.TheSecondDawnSwitch1) {
-            currentSpeakerImage++;
-            currentSpeakerImage = currentSpeakerImage % speakerImages.length;
-            speakerButton.setImageResource(speakerImages[currentSpeakerImage]);
         }
 
         if (view.getId() == R.id.TheSecondDawnSwitch2) {
