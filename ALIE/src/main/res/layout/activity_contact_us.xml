@@ -34,7 +34,7 @@
         app:startIconTint="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/TheSecondDawnEditText7"
+            android:id="@+id/TheSecondDawnEditText13"
             android:layout_width="375dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -61,7 +61,7 @@
         app:startIconTint="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/TheSecondDawnEditText8"
+            android:id="@+id/TheSecondDawnEditText14"
             android:layout_width="375dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -88,7 +88,7 @@
         app:startIconTint="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/TheSecondDawnEditText9"
+            android:id="@+id/TheSecondDawnEditText15"
             android:layout_width="375dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -118,7 +118,7 @@
         app:startIconTint="@color/black">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/TheSecondDawnEditText10"
+            android:id="@+id/TheSecondDawnEditText16"
             android:layout_width="375dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
@@ -132,7 +132,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/TheSecondDawnButton15"
+        android:id="@+id/TheSecondDawnButton17"
         android:layout_width="360dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
@@ -144,7 +144,7 @@
         android:textStyle="bold" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/TheSecondDawnImageView61"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="-310dp"
@@ -160,7 +160,7 @@
         android:visibility="gone" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/TheSecondDawnImageView62"
         android:layout_width="182dp"
         android:layout_height="137dp"
         android:layout_gravity="center"
