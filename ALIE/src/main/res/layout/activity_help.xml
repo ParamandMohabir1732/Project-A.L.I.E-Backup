@@ -19,6 +19,7 @@
         android:src="@drawable/ic_left_arrow_state" />
 
     <TextView
+        android:id="@+id/TheSecondDawnTextView52"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -35,6 +36,7 @@
         android:orientation="vertical">
 
         <ImageView
+            android:id="@+id/TheSecondDawnImageView54"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:layout_gravity="center"
@@ -42,6 +44,7 @@
             android:src="@drawable/alie" />
 
         <TextView
+            android:id="@+id/TheSecondDawnTextView53"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -52,6 +55,7 @@
             android:textStyle="bold" />
 
         <TextView
+            android:id="@+id/TheSecondDawnTextView54"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -60,7 +64,7 @@
             android:textSize="12sp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/appCompatButton"
+            android:id="@+id/TheSecondDawnButton16"
             android:layout_width="125dp"
             android:layout_height="40dp"
             android:layout_gravity="center"
@@ -93,7 +97,7 @@
         <!-- Night Mode -->
 
         <ImageView
-            android:id="@+id/imageView30"
+            android:id="@+id/TheSecondDawnImageView55"
             android:layout_width="55dp"
             android:layout_height="52dp"
             android:layout_marginStart="10dp"
@@ -105,7 +109,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView28"
+            android:id="@+id/TheSecondDawnTextView55"
             android:layout_width="138dp"
             android:layout_height="32dp"
             android:layout_marginStart="112dp"
@@ -121,7 +125,7 @@
         <!-- Notifications -->
 
         <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/nightmode_switch"
+            android:id="@+id/TheSecondDawnSwitch11"
             android:layout_width="98dp"
             android:layout_height="20dp"
             android:layout_marginStart="268dp"
@@ -130,7 +134,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView31"
+            android:id="@+id/TheSecondDawnImageView56"
             android:layout_width="55dp"
             android:layout_height="54dp"
             android:layout_marginStart="8dp"
@@ -142,7 +146,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView29"
+            android:id="@+id/TheSecondDawnTextView30"
             android:layout_width="164dp"
             android:layout_height="34dp"
             android:layout_marginStart="112dp"
@@ -157,7 +161,7 @@
         <!-- Private Account -->
 
         <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/notifications_switch"
+            android:id="@+id/TheSecondDawnSwitch12"
             android:layout_width="98dp"
             android:layout_height="20dp"
             android:layout_marginStart="268dp"
@@ -166,7 +170,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView32"
+            android:id="@+id/TheSecondDawnImageView57"
             android:layout_width="54dp"
             android:layout_height="53dp"
             android:layout_marginStart="8dp"
@@ -178,7 +182,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView30"
+            android:id="@+id/TheSecondDawnTextView56"
             android:layout_width="164dp"
             android:layout_height="34dp"
             android:layout_marginStart="116dp"
@@ -191,7 +195,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/private_switch"
+            android:id="@+id/TheSecondDawnSwitch13"
             android:layout_width="98dp"
             android:layout_height="20dp"
             android:layout_marginStart="268dp"
@@ -202,7 +206,6 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout12"
         android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
@@ -212,7 +215,7 @@
         android:background="@drawable/background_white">
 
         <ImageView
-            android:id="@+id/imageView7"
+            android:id="@+id/TheSecondDawnImageView58"
             android:layout_width="54dp"
             android:layout_height="53dp"
             android:layout_marginStart="332dp"
@@ -223,7 +226,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/imageView33"
+            android:id="@+id/TheSecondDawnImageButton16"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="6dp"
@@ -233,14 +236,14 @@
             android:background="@drawable/background_message"
             android:padding="12dp"
             android:src="@drawable/ic_baseline_message_24"
-            app:layout_constraintBottom_toTopOf="@+id/imageView34"
-            app:layout_constraintEnd_toStartOf="@+id/textView31"
+            app:layout_constraintBottom_toTopOf="@+id/TheSecondDawnImageButton17"
+            app:layout_constraintEnd_toStartOf="@+id/TheSecondDawnTextView57"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
         <TextView
-            android:id="@+id/textView31"
+            android:id="@+id/TheSecondDawnTextView57"
             android:layout_width="197dp"
             android:layout_height="37dp"
             android:layout_marginStart="100dp"
@@ -253,7 +256,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/imageView34"
+            android:id="@+id/TheSecondDawnImageButton17"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="6dp"
@@ -262,13 +265,13 @@
             android:background="@drawable/background_about"
             android:padding="12dp"
             android:src="@drawable/ic_baseline_info_24"
-            app:layout_constraintBottom_toTopOf="@+id/imageView36"
-            app:layout_constraintEnd_toStartOf="@+id/textView32"
+            app:layout_constraintBottom_toTopOf="@+id/TheSecondDawnImageButton18"
+            app:layout_constraintEnd_toStartOf="@+id/TheSecondDawnTextView58"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView33" />
+            app:layout_constraintTop_toBottomOf="@+id/TheSecondDawnImageButton16" />
 
         <TextView
-            android:id="@+id/textView32"
+            android:id="@+id/TheSecondDawnTextView58"
             android:layout_width="197dp"
             android:layout_height="37dp"
             android:layout_marginStart="100dp"
@@ -281,7 +284,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView35"
+            android:id="@+id/TheSecondDawnImageView59"
             android:layout_width="54dp"
             android:layout_height="53dp"
             android:layout_marginStart="332dp"
@@ -292,7 +295,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
-            android:id="@+id/imageView36"
+            android:id="@+id/TheSecondDawnImageButton18"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="6dp"
@@ -302,12 +305,12 @@
             android:padding="12dp"
             android:src="@drawable/ic_baseline_question_mark_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/textView33"
+            app:layout_constraintEnd_toStartOf="@+id/TheSecondDawnTextView59"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView34" />
+            app:layout_constraintTop_toBottomOf="@+id/TheSecondDawnImageButton17" />
 
         <TextView
-            android:id="@+id/textView33"
+            android:id="@+id/TheSecondDawnTextView59"
             android:layout_width="197dp"
             android:layout_height="37dp"
             android:layout_marginStart="100dp"
@@ -320,7 +323,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView8"
+            android:id="@+id/TheSecondDawnImageView60"
             android:layout_width="54dp"
             android:layout_height="53dp"
             android:layout_marginStart="332dp"
