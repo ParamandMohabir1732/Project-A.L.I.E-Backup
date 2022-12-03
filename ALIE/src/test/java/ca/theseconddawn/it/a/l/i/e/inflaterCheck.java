@@ -22,7 +22,6 @@ import org.robolectric.annotation.Implements;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 
-
 @RunWith(RobolectricTestRunner.class)
 @Implements(value = org.robolectric.shadows.ShadowBackdropFrameRenderer.class, minSdk = S, isInAndroidSdk = false)
 public class inflaterCheck {
@@ -57,7 +56,3 @@ public class inflaterCheck {
     }
 
 }
-
-
-
-
