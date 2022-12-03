@@ -36,4 +36,9 @@ public class LEDTest {
     public void locationPermissionButton() {
         onView(ViewMatchers.withId(R.id.TheSecondDawnButton8)).perform(click());
     }
+
+    @Test
+    public void switchPower() {
+        onView(ViewMatchers.withId(R.id.TheSecondDawnSwitch5)).perform(click());
+    }
 }
