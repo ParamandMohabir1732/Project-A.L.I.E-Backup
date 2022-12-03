@@ -155,26 +155,28 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         sharedPreferences = getSharedPreferences(SETTINGS, MODE_PRIVATE);
         int radioGroup = sharedPreferences.getInt(LED_CONTROL, MODE_PRIVATE);
         //sets the LED according to the selected color
-        if (radioGroup == 1) {
+        if (radioGroup == 0) {
             redLED.setChecked(true);
-        } else if (radioGroup == 2) {
+        } else if (radioGroup == 1) {
             greenLED.setChecked(true);
-        } else if (radioGroup == 3) {
+        } else if (radioGroup == 2) {
             blueLED.setChecked(true);
         }
 
         LEDGroup.setOnCheckedChangeListener((radioGroup1, checkedId) -> {
             if (checkedId == R.id.TheSecondDawnRadioButton4) {
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                editor.putInt(LED_CONTROL, 1);
+                editor.putInt(LED_CONTROL, 0);
+                editor.apply();
             } else if (checkedId == R.id.TheSecondDawnRadioButton5) {
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                editor.putInt(LED_CONTROL, 2);
+                editor.putInt(LED_CONTROL, 1);
+                editor.apply();
             } else if (checkedId == R.id.TheSecondDawnButton6) {
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
-                editor.putInt(LED_CONTROL, 3);
+                editor.putInt(LED_CONTROL, 2);
+                editor.apply();
             }
-            editor.commit();
         });
     }
 

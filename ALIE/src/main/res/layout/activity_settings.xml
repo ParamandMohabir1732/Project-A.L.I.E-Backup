@@ -29,7 +29,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="-25dp"
             android:text="@string/textView20"
-            android:textColor="@color/white"
+            android:textColor="@color/aqua"
             android:textSize="30sp"
             android:textStyle="bold|italic" />
 
@@ -40,7 +40,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="15dp"
             android:text="@string/textView33"
-            android:textColor="@color/white"
+            android:textColor="@color/teal_200"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -51,7 +51,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
             android:text="@string/textView34"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -79,7 +79,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:text="@string/textView35"
-            android:textColor="@color/white"
+            android:textColor="@color/teal_200"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -90,7 +90,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
             android:text="@string/textView36"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -130,7 +130,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="50dp"
             android:text="@string/textView38"
-            android:textColor="@color/white"
+            android:textColor="@color/teal_200"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -141,7 +141,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
             android:text="@string/textView39"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -200,9 +200,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="50dp"
             android:text="@string/textView40"
-            android:textColor="@color/white"
+            android:textColor="@color/teal_200"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -213,7 +213,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
             android:text="@string/textView41"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="15sp"
             android:textStyle="bold" />
 

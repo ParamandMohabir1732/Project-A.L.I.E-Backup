@@ -68,8 +68,6 @@ public class settingsCheck {
 
     @Test
     public void changeOrientation() {
-
-
         try (ActivityController<SettingsActivity> controller = Robolectric.buildActivity(SettingsActivity.class)) {
             controller.setup();
             SettingsActivity activity = controller.get();
