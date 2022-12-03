@@ -61,7 +61,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-
         setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
         leftArrow = findViewById(R.id.TheSecondDawnImageButton3);

@@ -86,11 +86,11 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
     private void registerReviewUser() {
         // UserReview Class Objects
         float rating = ratingBar.getRating();
-        String name = editTextName.getText().toString();
-        String email = editTextEmail.getText().toString();
-        String phone = editTextPhoneNumber.getText().toString();
-        String device = deviceModel.getText().toString();
-        String review = editTextMessage.getText().toString();
+        String name = editTextName.getText().toString().trim();
+        String email = editTextEmail.getText().toString().trim();
+        String phone = editTextPhoneNumber.getText().toString().trim();
+        String device = deviceModel.getText().toString().trim();
+        String review = editTextMessage.getText().toString().trim();
 
         // If Name Field is Empty
         if (name.isEmpty()) {
@@ -152,7 +152,7 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
         UserReviewClass reviewClass = new UserReviewClass(rating, name, email, phone, device, review);
 
         // Set Values in Database Reference "Customer Reviews"
-        databaseReference.child(name).setValue(reviewClass);
+        databaseReference.child(email).setValue(reviewClass);
     }
 
     private void startingProgressDialog() {

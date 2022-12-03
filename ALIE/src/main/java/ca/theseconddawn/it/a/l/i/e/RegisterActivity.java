@@ -121,7 +121,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             return;
         }
 //if password does not contain one special minimum error occurs
-        if (!password.matches(".*[@#$%^&+=].*")) {
+        if (!password.matches(".*[!@#$%^&*+=].*")) {
             editTextPassword.setError(getString(R.string.matchPasswordError1Char));
             editTextPassword.requestFocus();
             return;

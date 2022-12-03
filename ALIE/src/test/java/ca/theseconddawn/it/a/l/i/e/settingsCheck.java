@@ -1,6 +1,28 @@
+/*
+Paramand Mohabir N01421732
+CENG322 Section 0NC
+Software Project
+*/
+/*
+Vladislav Vassilyev N01436627
+CENG322 Section 0NB
+Software Project
+*/
+/*
+Dave Patel N01465129
+CENG322 Section 0NA
+Software Project
+*/
+/*
+Paolo Brancato N01434080
+CENG322 Section ONC
+Software Project
+*/
+
 package ca.theseconddawn.it.a.l.i.e;
 
 import static android.os.Build.VERSION_CODES.S;
+import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotNull;
 import static junit.framework.TestCase.assertTrue;
 
@@ -27,7 +49,7 @@ public class settingsCheck {
 
             TextView checker = (TextView) activity.findViewById(R.id.TheSecondDawnTextView36);
             assertNotNull("Text view cannot be accessed", checker);
-            assertTrue("The text is incorrect", "Current Volume:".equals(checker.getText().toString()));
+            assertEquals("The text is incorrect", "Current Volume:", checker.getText().toString());
 
 
         }
@@ -41,8 +63,6 @@ public class settingsCheck {
             SettingsActivity activity = controller.get();
 
             activity.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-
-
         }
     }
 
@@ -59,6 +79,4 @@ public class settingsCheck {
         }
 
     }
-
-
 }

@@ -1,3 +1,24 @@
+/*
+Paramand Mohabir N01421732
+CENG322 Section 0NC
+Software Project
+*/
+/*
+Vladislav Vassilyev N01436627
+CENG322 Section 0NB
+Software Project
+*/
+/*
+Dave Patel N01465129
+CENG322 Section 0NA
+Software Project
+*/
+/*
+Paolo Brancato N01434080
+CENG322 Section ONC
+Software Project
+*/
+
 package ca.theseconddawn.it.a.l.i.e;
 
 import static android.os.Build.VERSION_CODES.S;
@@ -16,12 +37,6 @@ import org.robolectric.RuntimeEnvironment;
 import org.robolectric.android.controller.ActivityController;
 import org.robolectric.annotation.Implements;
 
-/**
- * Example local unit test, which will execute on the development machine (host).
- *
- * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
- */
-
 @RunWith(RobolectricTestRunner.class)
 @Implements(value = org.robolectric.shadows.ShadowBackdropFrameRenderer.class, minSdk = S, isInAndroidSdk = false)
 public class inflaterCheck {
@@ -36,7 +51,6 @@ public class inflaterCheck {
             activity.findViewById(R.id.TheSecondDawnNavigationView).performClick();
             assertNotNull(activity);
         }
-
     }
 
     //Check if the button actually inflates
@@ -52,7 +66,6 @@ public class inflaterCheck {
             Intent actual = shadowOf(RuntimeEnvironment.getApplication()).getNextStartedActivity();
             assertEquals(expectedIntent.getComponent(), actual.getComponent());
         }
-        //no it does not
+        //Test doesn't pass for Demonstration Purposes
     }
-
 }
