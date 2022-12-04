@@ -33,11 +33,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -52,9 +54,10 @@ public class LEDFrag extends Fragment {
 
     private LinearLayout LEDLayout;
     private int LEDDefaultColor;
+    private ImageView ledImage;
     private Button LEDButton, buttonRequest;
     private AmbilWarnaDialog colorPicker;
-    private Switch ledPower;
+    private SwitchCompat ledPower;
 
     private static final String LED = "LED";
     private static final String LED_COLOR = "LED Color";
@@ -69,12 +72,23 @@ public class LEDFrag extends Fragment {
 
         LEDLayout = view.findViewById(R.id.TheSecondDawnLEDLayout);
         LEDDefaultColor = ContextCompat.getColor(getActivity(), com.google.android.material.R.color.design_default_color_on_primary);
+        ledImage = view.findViewById(R.id.TheSecondDawnImageView38);
 
         ledPower = view.findViewById(R.id.TheSecondDawnSwitch5);
         ledPower.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-
+                if (isChecked) {
+                    ledPower.setChecked(true);
+                    ledPower.setText("ON");
+                    ledPower.setTextColor(requireActivity().getResources().getColor(R.color.brightgreen));
+                    ledImage.setVisibility(View.VISIBLE);
+                } else {
+                    ledPower.setChecked(false);
+                    ledPower.setText("OFF");
+                    ledPower.setTextColor(requireActivity().getResources().getColor(R.color.brightred));
+                    ledImage.setVisibility(View.INVISIBLE);
+                }
             }
         });
 
