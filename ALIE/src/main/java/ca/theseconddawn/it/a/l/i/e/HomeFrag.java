@@ -90,27 +90,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         speakerSwitch.setChecked(sharedPreferences.getBoolean(SPEAKER, false));
 
         ledSwitch = view.findViewById(R.id.TheSecondDawnSwitch2);
-        ledSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> {
-            if (isChecked) {
-                editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-                editor = editor.putBoolean(LED, true);
-                editor.apply();
-
-                ledSwitch.setChecked(true);
-                ledSwitch.setText("ON");
-                ledSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
-                ledButton.setImageResource(R.drawable.led_button_on);
-            } else {
-                editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-                editor = editor.putBoolean(LED, false);
-                editor.apply();
-
-                ledSwitch.setChecked(false);
-                ledSwitch.setText("OFF");
-                ledSwitch.setTextColor(getResources().getColor(R.color.brightred));
-                ledButton.setImageResource(R.drawable.led_button_off);
-            }
-        });
+        ledSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> ledControl(isChecked));
 
         sharedPreferences = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE);
         ledSwitch.setChecked(sharedPreferences.getBoolean(LED, false));
@@ -228,6 +208,28 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             speakerSwitch.setText("OFF");
             speakerSwitch.setTextColor(getResources().getColor(R.color.brightred));
             speakerButton.setImageResource(R.drawable.speaker_button_off);
+        }
+    }
+
+    private void ledControl(boolean isChecked) {
+        if (isChecked) {
+            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+            editor = editor.putBoolean(LED, true);
+            editor.apply();
+
+            ledSwitch.setChecked(true);
+            ledSwitch.setText("ON");
+            ledSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
+            ledButton.setImageResource(R.drawable.led_button_on);
+        } else {
+            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+            editor = editor.putBoolean(LED, false);
+            editor.apply();
+
+            ledSwitch.setChecked(false);
+            ledSwitch.setText("OFF");
+            ledSwitch.setTextColor(getResources().getColor(R.color.brightred));
+            ledButton.setImageResource(R.drawable.led_button_off);
         }
     }
 }
