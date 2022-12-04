@@ -84,27 +84,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         voiceButton.setOnClickListener(this);
 
         speakerSwitch = view.findViewById(R.id.TheSecondDawnSwitch1);
-        speakerSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> {
-            if (isChecked) {
-                editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-                editor = editor.putBoolean(SPEAKER, true);
-                editor.apply();
-
-                speakerSwitch.setChecked(true);
-                speakerSwitch.setText("ON");
-                speakerSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
-                speakerButton.setImageResource(R.drawable.speaker_button_on);
-            } else {
-                editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-                editor = editor.putBoolean(SPEAKER, false);
-                editor.apply();
-
-                speakerSwitch.setChecked(false);
-                speakerSwitch.setText("OFF");
-                speakerSwitch.setTextColor(getResources().getColor(R.color.brightred));
-                speakerButton.setImageResource(R.drawable.speaker_button_off);
-            }
-        });
+        speakerSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> speakerControl(isChecked));
 
         sharedPreferences = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE);
         speakerSwitch.setChecked(sharedPreferences.getBoolean(SPEAKER, false));
@@ -201,14 +181,6 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             fragmentManager.beginTransaction().replace(R.id.TheSecondDawnDrawerLayout, speakerFrag, speakerFrag.getTag()).commit();
         }
 
-        if (view.getId() == R.id.TheSecondDawnImageButton6) {
-        }
-
-        if (view.getId() == R.id.TheSecondDawnImageButton7) {
-        }
-        if (view.getId() == R.id.TheSecondDawnImageButton8) {
-        }
-
         if (view.getId() == R.id.TheSecondDawnFloatingButton1) {
             setVoiceInput();
         }
@@ -234,6 +206,28 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
                 ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
                 voiceInput.setText(result.get(0));
             }
+        }
+    }
+
+    private void speakerControl(boolean isChecked) {
+        if (isChecked) {
+            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+            editor = editor.putBoolean(SPEAKER, true);
+            editor.apply();
+
+            speakerSwitch.setChecked(true);
+            speakerSwitch.setText("ON");
+            speakerSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
+            speakerButton.setImageResource(R.drawable.speaker_button_on);
+        } else {
+            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+            editor = editor.putBoolean(SPEAKER, false);
+            editor.apply();
+
+            speakerSwitch.setChecked(false);
+            speakerSwitch.setText("OFF");
+            speakerSwitch.setTextColor(getResources().getColor(R.color.brightred));
+            speakerButton.setImageResource(R.drawable.speaker_button_off);
         }
     }
 }

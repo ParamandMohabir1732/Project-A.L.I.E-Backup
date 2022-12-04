@@ -129,6 +129,14 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
         LEDGroup.setOnCheckedChangeListener((radioGroup1, checkedId) -> setLEDColor(checkedId));
     }
 
+    @Override
+    public void onClick(View view) {
+        //When Left Arrow Image Button is clicked, take user back to previous screen
+        if (view.getId() == R.id.TheSecondDawnImageButton3) {
+            finish();
+        }
+    }
+
     //Refactored Orientation from OnCreate Method to its own Method setOrientation
     private void setOrientation(boolean isChecked) {
         //sets the orientation to landscape
@@ -218,14 +226,6 @@ public class SettingsActivity extends AppCompatActivity implements View.OnClickL
                 editor = getSharedPreferences(SETTINGS, MODE_PRIVATE).edit();
                 editor.putInt(LED_CONTROL, R.id.TheSecondDawnRadioButton6);
                 editor.apply();
-        }
-    }
-
-    @Override
-    public void onClick(View view) {
-        //When Left Arrow Image Button is clicked, take user back to previous screen
-        if (view.getId() == R.id.TheSecondDawnImageButton3) {
-            finish();
         }
     }
 }
