@@ -76,31 +76,7 @@ public class LEDFrag extends Fragment {
         LEDImage = view.findViewById(R.id.TheSecondDawnImageView38);
 
         LEDPower = view.findViewById(R.id.TheSecondDawnSwitch5);
-        LEDPower.setOnCheckedChangeListener((compoundButton, isChecked) -> {
-            if (isChecked) {
-                LEDPower.setChecked(true);
-                LEDPower.setText("Lights: ON");
-                LEDPower.setTextColor(requireActivity().getResources().getColor(R.color.brightgreen));
-                LEDImage.setVisibility(View.VISIBLE);
-                LEDButton.setBackgroundColor(getResources().getColor(R.color.purple_500));
-                LEDButton.setTextColor(getResources().getColor(R.color.brightgreen));
-                LEDButton.setClickable(true);
-                LEDMode.setTextColor(getResources().getColor(R.color.brightgreen));
-                LEDMode.setEnabled(true);
-
-            } else {
-                LEDPower.setChecked(false);
-                LEDPower.setText("Lights: OFF");
-                LEDPower.setTextColor(requireActivity().getResources().getColor(R.color.brightred));
-                LEDImage.setVisibility(View.INVISIBLE);
-                LEDButton.setBackgroundColor(getResources().getColor(R.color.grey));
-                LEDButton.setTextColor(getResources().getColor(R.color.brightred));
-                LEDButton.setClickable(false);
-                LEDMode.setTextColor(getResources().getColor(R.color.brightred));
-                LEDMode.setChecked(false);
-                LEDMode.setEnabled(false);
-            }
-        });
+        LEDPower.setOnCheckedChangeListener((compoundButton, isChecked) -> LEDPower(isChecked));
 
         LEDMode = view.findViewById(R.id.TheSecondDawnSwitch6);
         LEDMode.setOnCheckedChangeListener((compoundButton, isChecked) -> {
@@ -130,6 +106,32 @@ public class LEDFrag extends Fragment {
         });
         retrieveLEDSharedPref();
         return view;
+    }
+
+    private void LEDPower(boolean isChecked) {
+        if (isChecked) {
+            LEDPower.setChecked(true);
+            LEDPower.setText("Lights: ON");
+            LEDPower.setTextColor(requireActivity().getResources().getColor(R.color.brightgreen));
+            LEDImage.setVisibility(View.VISIBLE);
+            LEDButton.setBackgroundColor(getResources().getColor(R.color.purple_500));
+            LEDButton.setTextColor(getResources().getColor(R.color.brightgreen));
+            LEDButton.setClickable(true);
+            LEDMode.setTextColor(getResources().getColor(R.color.brightgreen));
+            LEDMode.setEnabled(true);
+
+        } else {
+            LEDPower.setChecked(false);
+            LEDPower.setText("Lights: OFF");
+            LEDPower.setTextColor(requireActivity().getResources().getColor(R.color.brightred));
+            LEDImage.setVisibility(View.INVISIBLE);
+            LEDButton.setBackgroundColor(getResources().getColor(R.color.grey));
+            LEDButton.setTextColor(getResources().getColor(R.color.brightred));
+            LEDButton.setClickable(false);
+            LEDMode.setTextColor(getResources().getColor(R.color.brightred));
+            LEDMode.setChecked(false);
+            LEDMode.setEnabled(false);
+        }
     }
 
     //used to gain internet permissions from user
