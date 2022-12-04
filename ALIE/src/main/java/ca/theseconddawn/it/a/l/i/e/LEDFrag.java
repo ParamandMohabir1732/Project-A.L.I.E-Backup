@@ -32,10 +32,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -45,6 +43,8 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.snackbar.Snackbar;
+
+import java.util.Objects;
 
 import yuku.ambilwarna.AmbilWarnaDialog;
 
@@ -71,24 +71,21 @@ public class LEDFrag extends Fragment {
         View view = inflater.inflate(R.layout.fragment_l_e_d, container, false);
 
         LEDLayout = view.findViewById(R.id.TheSecondDawnLEDLayout);
-        LEDDefaultColor = ContextCompat.getColor(getActivity(), com.google.android.material.R.color.design_default_color_on_primary);
+        LEDDefaultColor = ContextCompat.getColor(requireActivity(), com.google.android.material.R.color.design_default_color_on_primary);
         ledImage = view.findViewById(R.id.TheSecondDawnImageView38);
 
         ledPower = view.findViewById(R.id.TheSecondDawnSwitch5);
-        ledPower.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if (isChecked) {
-                    ledPower.setChecked(true);
-                    ledPower.setText("ON");
-                    ledPower.setTextColor(requireActivity().getResources().getColor(R.color.brightgreen));
-                    ledImage.setVisibility(View.VISIBLE);
-                } else {
-                    ledPower.setChecked(false);
-                    ledPower.setText("OFF");
-                    ledPower.setTextColor(requireActivity().getResources().getColor(R.color.brightred));
-                    ledImage.setVisibility(View.INVISIBLE);
-                }
+        ledPower.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+            if (isChecked) {
+                ledPower.setChecked(true);
+                ledPower.setText("Lights: ON");
+                ledPower.setTextColor(requireActivity().getResources().getColor(R.color.brightgreen));
+                ledImage.setVisibility(View.VISIBLE);
+            } else {
+                ledPower.setChecked(false);
+                ledPower.setText("Lights: OFF");
+                ledPower.setTextColor(requireActivity().getResources().getColor(R.color.brightred));
+                ledImage.setVisibility(View.INVISIBLE);
             }
         });
 
