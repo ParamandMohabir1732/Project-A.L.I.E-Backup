@@ -118,14 +118,17 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         }
 
         if (view.getId() == R.id.TheSecondDawnFloatingButton1) {
+            //Calling Voice Input Method upon onClick on Fab Button
             setVoiceInput();
         }
     }
 
     private void setVoiceInput() {
+        //Start the Intent of the Voice Recognize Speech
         Intent voice = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         voice.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         voice.putExtra(RecognizerIntent.EXTRA_LANGUAGE, Locale.getDefault());
+        //Prompt the User to say a Command
         voice.putExtra(RecognizerIntent.EXTRA_PROMPT, getString(R.string.voicePrompt));
 
         try {
@@ -140,12 +143,15 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         if (requestCode == REQUEST_CODE_SPEECH_INPUT) {
             if (resultCode == RESULT_OK && null != data) {
                 ArrayList<String> result = data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+                //Display Results in VoiceInput Text view
                 voiceInput.setText(result.get(0));
             }
         }
     }
 
+    //Refactored Speaker Control from OnCreate Method to its own Method speakerControl()
     private void speakerControl(boolean isChecked) {
+        //If Speaker Control Switch is Checked On, Change the Text to "ON" and the color to Green.
         if (isChecked) {
             editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
             editor = editor.putBoolean(SPEAKER, true);
@@ -155,6 +161,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             speakerSwitch.setText(R.string.speakerControlText1);
             speakerSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
             speakerButton.setImageResource(R.drawable.speaker_button_on);
+            //If Voice Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.
         } else {
             editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
             editor = editor.putBoolean(SPEAKER, false);
@@ -167,7 +174,9 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         }
     }
 
+    //Refactored LED Control from OnCreate Method to its own Method ledControl()
     private void ledControl(boolean isChecked) {
+        //If LED Control Switch is Checked On, Change the Text to "ON" and the color to Green.
         if (isChecked) {
             editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
             editor = editor.putBoolean(LED, true);
@@ -178,6 +187,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             ledSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
             ledButton.setImageResource(R.drawable.led_button_on);
         } else {
+            //If LED Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.
             editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
             editor = editor.putBoolean(LED, false);
             editor.apply();
@@ -189,7 +199,9 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         }
     }
 
+    //Refactored Fan Control from OnCreate Method to its own Method fanControl()
     private void fanControl(boolean isChecked) {
+        //If Fan Control Switch is Checked On, Change the Text to "ON" and the color to Green.
         if (isChecked) {
             editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
             editor = editor.putBoolean(FAN, true);
@@ -199,6 +211,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             fanSwitch.setText(R.string.fanControlText3);
             fanSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
             fanButton.setImageResource(R.drawable.fan_button_on);
+            //If Fan Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.
         } else {
             editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
             editor = editor.putBoolean(FAN, false);
@@ -211,7 +224,9 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         }
     }
 
+    //Refactored Voice Control from OnCreate Method to its own Method voiceControl()
     private void voiceControl(boolean isChecked) {
+        //If Voice Control Switch is Checked On, Change the Text to "ON" and the color to Green.
         if (isChecked) {
             editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
             editor = editor.putBoolean(VOICE, true);
@@ -222,6 +237,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             voiceSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
             voiceButton.setImageResource(R.drawable.voice_button_on);
         } else {
+            //If Voice Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.
             editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
             editor = editor.putBoolean(VOICE, false);
             editor.apply();
