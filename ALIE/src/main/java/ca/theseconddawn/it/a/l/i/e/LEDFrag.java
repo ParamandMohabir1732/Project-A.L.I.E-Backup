@@ -32,6 +32,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -54,10 +55,10 @@ public class LEDFrag extends Fragment {
 
     private LinearLayout LEDLayout;
     private int LEDDefaultColor;
-    private ImageView ledImage;
+    private ImageView LEDImage;
     private Button LEDButton, buttonRequest;
     private AmbilWarnaDialog colorPicker;
-    private SwitchCompat ledPower;
+    private SwitchCompat LEDPower, LEDMode;
 
     private static final String LED = "LED";
     private static final String LED_COLOR = "LED Color";
@@ -72,27 +73,44 @@ public class LEDFrag extends Fragment {
 
         LEDLayout = view.findViewById(R.id.TheSecondDawnLEDLayout);
         LEDDefaultColor = ContextCompat.getColor(requireActivity(), com.google.android.material.R.color.design_default_color_on_primary);
-        ledImage = view.findViewById(R.id.TheSecondDawnImageView38);
+        LEDImage = view.findViewById(R.id.TheSecondDawnImageView38);
 
-        ledPower = view.findViewById(R.id.TheSecondDawnSwitch5);
-        ledPower.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+        LEDPower = view.findViewById(R.id.TheSecondDawnSwitch5);
+        LEDPower.setOnCheckedChangeListener((compoundButton, isChecked) -> {
             if (isChecked) {
-                ledPower.setChecked(true);
-                ledPower.setText("Lights: ON");
-                ledPower.setTextColor(requireActivity().getResources().getColor(R.color.brightgreen));
-                ledImage.setVisibility(View.VISIBLE);
+                LEDPower.setChecked(true);
+                LEDPower.setText("Lights: ON");
+                LEDPower.setTextColor(requireActivity().getResources().getColor(R.color.brightgreen));
+                LEDImage.setVisibility(View.VISIBLE);
                 LEDButton.setBackgroundColor(getResources().getColor(R.color.purple_500));
                 LEDButton.setTextColor(getResources().getColor(R.color.brightgreen));
                 LEDButton.setClickable(true);
+                LEDMode.setTextColor(getResources().getColor(R.color.brightgreen));
+                LEDMode.setEnabled(true);
 
             } else {
-                ledPower.setChecked(false);
-                ledPower.setText("Lights: OFF");
-                ledPower.setTextColor(requireActivity().getResources().getColor(R.color.brightred));
-                ledImage.setVisibility(View.INVISIBLE);
+                LEDPower.setChecked(false);
+                LEDPower.setText("Lights: OFF");
+                LEDPower.setTextColor(requireActivity().getResources().getColor(R.color.brightred));
+                LEDImage.setVisibility(View.INVISIBLE);
                 LEDButton.setBackgroundColor(getResources().getColor(R.color.grey));
                 LEDButton.setTextColor(getResources().getColor(R.color.brightred));
                 LEDButton.setClickable(false);
+                LEDMode.setTextColor(getResources().getColor(R.color.brightred));
+                LEDMode.setChecked(false);
+                LEDMode.setEnabled(false);
+            }
+        });
+
+        LEDMode = view.findViewById(R.id.TheSecondDawnSwitch6);
+        LEDMode.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+            if (isChecked) {
+                LEDMode.setChecked(true);
+                LEDLayout.setBackground(getResources().getDrawable(R.drawable.gradient_led));
+
+            } else {
+                LEDMode.setChecked(false);
+                LEDLayout.setBackgroundColor(getResources().getColor(R.color.white));
             }
         });
 
