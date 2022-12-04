@@ -62,6 +62,7 @@ public class LEDFrag extends Fragment {
     private static final String LED = "LED";
     private static final String LED_COLOR = "LED Color";
     private static final String LED_MODE = "LED Mode";
+    private static final String LED_MODE2 = "LED Mode2";
 
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
@@ -135,10 +136,18 @@ public class LEDFrag extends Fragment {
 
     private void LEDMode(boolean isChecked) {
         if (isChecked) {
+            editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
+            editor.putBoolean(LED_MODE2, true);
+            editor.apply();
+
             LEDMode.setChecked(true);
             LEDLayout.setBackground(getResources().getDrawable(R.drawable.gradient_led));
 
         } else {
+            editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
+            editor.putBoolean(LED_MODE2, false);
+            editor.apply();
+
             LEDMode.setChecked(false);
             LEDLayout.setBackgroundColor(getResources().getColor(R.color.white));
         }
