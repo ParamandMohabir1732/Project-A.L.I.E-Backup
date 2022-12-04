@@ -96,27 +96,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         ledSwitch.setChecked(sharedPreferences.getBoolean(LED, false));
 
         fanSwitch = view.findViewById(R.id.TheSecondDawnSwitch3);
-        fanSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> {
-            if (isChecked) {
-                editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-                editor = editor.putBoolean(FAN, true);
-                editor.apply();
-
-                fanSwitch.setChecked(true);
-                fanSwitch.setText("ON");
-                fanSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
-                fanButton.setImageResource(R.drawable.fan_button_on);
-            } else {
-                editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-                editor = editor.putBoolean(FAN, false);
-                editor.apply();
-
-                fanSwitch.setChecked(false);
-                fanSwitch.setText("OFF");
-                fanSwitch.setTextColor(getResources().getColor(R.color.brightred));
-                fanButton.setImageResource(R.drawable.fan_button_off);
-            }
-        });
+        fanSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> fanControl(isChecked));
 
         sharedPreferences = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE);
         fanSwitch.setChecked(sharedPreferences.getBoolean(FAN, false));
@@ -230,6 +210,28 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             ledSwitch.setText("OFF");
             ledSwitch.setTextColor(getResources().getColor(R.color.brightred));
             ledButton.setImageResource(R.drawable.led_button_off);
+        }
+    }
+
+    private void fanControl(boolean isChecked) {
+        if (isChecked) {
+            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+            editor = editor.putBoolean(FAN, true);
+            editor.apply();
+
+            fanSwitch.setChecked(true);
+            fanSwitch.setText("ON");
+            fanSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
+            fanButton.setImageResource(R.drawable.fan_button_on);
+        } else {
+            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+            editor = editor.putBoolean(FAN, false);
+            editor.apply();
+
+            fanSwitch.setChecked(false);
+            fanSwitch.setText("OFF");
+            fanSwitch.setTextColor(getResources().getColor(R.color.brightred));
+            fanButton.setImageResource(R.drawable.fan_button_off);
         }
     }
 }
