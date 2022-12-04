@@ -38,7 +38,7 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
     private ImageButton leftArrow;
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
-    private EditText editTextName, editTextEmail, editTextNum, editTextMsg;
+    private EditText editTextName, editTextEmail, editTextNumber, editTextMessage;
     private Button contactUsBtn;
 
     @Override
@@ -50,8 +50,8 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
         leftArrow.setOnClickListener(this);
         editTextName = findViewById(R.id.TheSecondDawnEditText13);
         editTextEmail = findViewById(R.id.TheSecondDawnEditText14);
-        editTextNum = findViewById(R.id.TheSecondDawnEditText15);
-        editTextMsg= findViewById(R.id.TheSecondDawnEditText16);
+        editTextNumber = findViewById(R.id.TheSecondDawnEditText15);
+        editTextMessage= findViewById(R.id.TheSecondDawnEditText16);
         contactUsBtn = findViewById(R.id.TheSecondDawnButton17);
 
         contactUsBtn.setOnClickListener(this);
@@ -63,14 +63,14 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
             finish();
         }
         if (view.getId() == R.id.TheSecondDawnButton17) {
-            finish();
+            contactUsUser();
         }
     }
-    private void contactUsUser(){
+    private void contactUsUser() {
         String name = editTextName.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
-        String num = editTextNum.getText().toString().trim();
-        String msg = editTextMsg.getText().toString().trim();
+        String number = editTextNumber.getText().toString().trim();
+        String message = editTextMessage.getText().toString().trim();
 
         // If Name Field is Empty
         if (name.isEmpty()) {
@@ -94,32 +94,37 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
         }
 
         // If Phone is Empty
-        if (num.isEmpty()) {
-            editTextNum.setError(getString(R.string.emptyPhoneError1));
-            editTextNum.requestFocus();
+        if (number.isEmpty()) {
+            editTextNumber.setError(getString(R.string.emptyPhoneError1));
+            editTextNumber.requestFocus();
             return;
         }
 
         // If Phone Number is less than 10 Digits
-        if (num.length() < 10) {
-            editTextNum.setError(getString(R.string.lengthPhoneError1));
-            editTextNum.requestFocus();
+        if (number.length() < 10) {
+            editTextNumber.setError(getString(R.string.lengthPhoneError1));
+            editTextNumber.requestFocus();
             return;
         }
 
         // If Phone Pattern is Incorrect and Doesn't Match the Proper Format
-        if (!Patterns.PHONE.matcher(num).matches()) {
-            editTextNum.setError(getString(R.string.matchPhoneError1));
-            editTextNum.requestFocus();
+        if (!Patterns.PHONE.matcher(number).matches()) {
+            editTextNumber.setError(getString(R.string.matchPhoneError1));
+            editTextNumber.requestFocus();
             return;
         }
 
-        // If Review Field is Empty
-        if (msg.isEmpty()) {
-            editTextMsg.setError(getString(R.string.emptyReviewError1));
-            editTextMsg.requestFocus();
+        // If Message Field is Empty
+        if (message.isEmpty()) {
+            editTextMessage.setError(getString(R.string.emptyMessageError1));
+            editTextMessage.requestFocus();
             return;
         }
 
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference("Customer Messages");
+
+        UserContactUsClass userContactUsClass = new UserContactUsClass(name, email, number, message);
+        databaseReference.child(email).setValue(userContactUsClass);
     }
 }

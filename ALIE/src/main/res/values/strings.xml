@@ -301,6 +301,7 @@
     <string name="Name">Name</string>
     <string name="editText13">Send us a message</string>
     <string name="button16">SUBMIT</string>
+    <string name="emptyMessageError1">Your message is required!</string>
 
     <!-- About Us Screen -->
     <string name="imageButton14">This is an Image Button of the Left Arrow in About Us Screen</string>
