@@ -152,7 +152,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             editor.apply();
 
             speakerSwitch.setChecked(true);
-            speakerSwitch.setText("ON");
+            speakerSwitch.setText(R.string.speakerControlText1);
             speakerSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
             speakerButton.setImageResource(R.drawable.speaker_button_on);
         } else {
@@ -161,7 +161,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             editor.apply();
 
             speakerSwitch.setChecked(false);
-            speakerSwitch.setText("OFF");
+            speakerSwitch.setText(R.string.speakerControlText2);
             speakerSwitch.setTextColor(getResources().getColor(R.color.brightred));
             speakerButton.setImageResource(R.drawable.speaker_button_off);
         }
@@ -174,7 +174,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             editor.apply();
 
             ledSwitch.setChecked(true);
-            ledSwitch.setText("ON");
+            ledSwitch.setText(R.string.ledControlText1);
             ledSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
             ledButton.setImageResource(R.drawable.led_button_on);
         } else {
@@ -183,7 +183,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             editor.apply();
 
             ledSwitch.setChecked(false);
-            ledSwitch.setText("OFF");
+            ledSwitch.setText(R.string.ledControlText2);
             ledSwitch.setTextColor(getResources().getColor(R.color.brightred));
             ledButton.setImageResource(R.drawable.led_button_off);
         }
@@ -196,7 +196,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             editor.apply();
 
             fanSwitch.setChecked(true);
-            fanSwitch.setText("ON");
+            fanSwitch.setText(R.string.fanControlText3);
             fanSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
             fanButton.setImageResource(R.drawable.fan_button_on);
         } else {
@@ -205,7 +205,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             editor.apply();
 
             fanSwitch.setChecked(false);
-            fanSwitch.setText("OFF");
+            fanSwitch.setText(R.string.fanControlText4);
             fanSwitch.setTextColor(getResources().getColor(R.color.brightred));
             fanButton.setImageResource(R.drawable.fan_button_off);
         }
@@ -218,7 +218,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             editor.apply();
 
             voiceSwitch.setChecked(true);
-            voiceSwitch.setText("ON");
+            voiceSwitch.setText(R.string.voiceControlText1);
             voiceSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
             voiceButton.setImageResource(R.drawable.voice_button_on);
         } else {
@@ -227,7 +227,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             editor.apply();
 
             voiceSwitch.setChecked(false);
-            voiceSwitch.setText("OFF");
+            voiceSwitch.setText(R.string.voiceControlText2);
             voiceSwitch.setTextColor(getResources().getColor(R.color.brightred));
             voiceButton.setImageResource(R.drawable.voice_button_off);
         }

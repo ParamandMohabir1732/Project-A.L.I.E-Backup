@@ -192,6 +192,14 @@
     <string name="switch3">OFF</string>
     <string name="switch4">OFF</string>
     <string name="floatingButton1">This is an Mic Icon for the Floating Button That will be used to Record your Voice</string>
+    <string name="speakerControlText1">ON</string>
+    <string name="speakerControlText2">OFF</string>
+    <string name="ledControlText1">ON</string>
+    <string name="ledControlText2">OFF</string>
+    <string name="fanControlText3">ON</string>
+    <string name="fanControlText4">OFF</string>
+    <string name="voiceControlText1">ON</string>
+    <string name="voiceControlText2">OFF</string>
 
     <!-- Settings Screen -->
     <string name="imageButton3">This is an Image Button of the Left Arrow in Settings Screen</string>
