@@ -24,6 +24,7 @@ package ca.theseconddawn.it.a.l.i.e;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -70,6 +71,55 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
         String email = editTextEmail.getText().toString().trim();
         String num = editTextNum.getText().toString().trim();
         String msg = editTextMsg.getText().toString().trim();
+
+        // If Name Field is Empty
+        if (name.isEmpty()) {
+            editTextName.setError(getString(R.string.emptyNameError1));
+            editTextName.requestFocus();
+            return;
+        }
+
+        // If Email Field is Empty
+        if (email.isEmpty()) {
+            editTextEmail.setError(getString(R.string.emptyEmailError4));
+            editTextEmail.requestFocus();
+            return;
+        }
+
+        // If Email Pattern is Incorrect and Doesn't Match the Proper Format
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            editTextEmail.setError(getString(R.string.matchEmailError4));
+            editTextEmail.requestFocus();
+            return;
+        }
+
+        // If Phone is Empty
+        if (num.isEmpty()) {
+            editTextNum.setError(getString(R.string.emptyPhoneError1));
+            editTextNum.requestFocus();
+            return;
+        }
+
+        // If Phone Number is less than 10 Digits
+        if (num.length() < 10) {
+            editTextNum.setError(getString(R.string.lengthPhoneError1));
+            editTextNum.requestFocus();
+            return;
+        }
+
+        // If Phone Pattern is Incorrect and Doesn't Match the Proper Format
+        if (!Patterns.PHONE.matcher(num).matches()) {
+            editTextNum.setError(getString(R.string.matchPhoneError1));
+            editTextNum.requestFocus();
+            return;
+        }
+
+        // If Review Field is Empty
+        if (msg.isEmpty()) {
+            editTextMsg.setError(getString(R.string.emptyReviewError1));
+            editTextMsg.requestFocus();
+            return;
+        }
 
     }
 }
