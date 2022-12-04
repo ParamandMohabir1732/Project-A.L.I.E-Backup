@@ -44,6 +44,8 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.Objects;
+
 import yuku.ambilwarna.AmbilWarnaDialog;
 
 public class LEDFrag extends Fragment {
@@ -59,7 +61,8 @@ public class LEDFrag extends Fragment {
 
     private static final String LED = "LED";
     private static final String LED_COLOR = "LED Color";
-    public static String LEDStatus;
+    private static final String LED_MODE = "LED Mode";
+
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
 
@@ -98,6 +101,10 @@ public class LEDFrag extends Fragment {
 
     private void LEDPower(boolean isChecked) {
         if (isChecked) {
+            editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
+            editor.putBoolean(LED_MODE, true);
+            editor.apply();
+
             LEDPower.setChecked(true);
             LEDPower.setText("Lights: ON");
             LEDPower.setTextColor(requireActivity().getResources().getColor(R.color.brightgreen));
@@ -109,6 +116,10 @@ public class LEDFrag extends Fragment {
             LEDMode.setEnabled(true);
 
         } else {
+            editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
+            editor.putBoolean(LED_MODE, false);
+            editor.apply();
+
             LEDPower.setChecked(false);
             LEDPower.setText("Lights: OFF");
             LEDPower.setTextColor(requireActivity().getResources().getColor(R.color.brightred));
