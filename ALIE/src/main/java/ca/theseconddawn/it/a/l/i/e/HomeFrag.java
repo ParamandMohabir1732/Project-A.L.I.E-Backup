@@ -29,7 +29,6 @@ import android.speech.RecognizerIntent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -49,9 +48,8 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     private ImageButton voiceButton, speakerButton, ledButton, fanButton;
     private SwitchCompat speakerSwitch, ledSwitch, fanSwitch, voiceSwitch;
     private FloatingActionButton voiceInputButton;
-    private int currentFanImage, currentVoiceImage;
+    private int currentVoiceImage;
 
-    private final int[] fanImages = {R.drawable.fan_button_off, R.drawable.fan_button_on};
     private final int[] voiceImages = {R.drawable.voice_button_off, R.drawable.voice_button_on};
 
     private SharedPreferences sharedPreferences;
@@ -60,6 +58,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     private static final String HOME = "Home Pref";
     private static final String SPEAKER = "Speaker Switch";
     private static final String LED = "LED Switch";
+    private static final String FAN = "Fan Switch";
 
     private static final int REQUEST_CODE_SPEECH_INPUT = 1;
     private static final int RESULT_OK = -1;
@@ -138,7 +137,30 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         ledSwitch.setChecked(sharedPreferences.getBoolean(LED, false));
 
         fanSwitch = view.findViewById(R.id.TheSecondDawnSwitch3);
-        fanSwitch.setOnClickListener(this);
+        fanSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+            if (isChecked) {
+                editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+                editor = editor.putBoolean(FAN, true);
+                editor.apply();
+
+                fanSwitch.setChecked(true);
+                fanSwitch.setText("ON");
+                fanSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
+                fanButton.setImageResource(R.drawable.fan_button_on);
+            } else {
+                editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+                editor = editor.putBoolean(FAN, false);
+                editor.apply();
+
+                fanSwitch.setChecked(false);
+                fanSwitch.setText("OFF");
+                fanSwitch.setTextColor(getResources().getColor(R.color.brightred));
+                fanButton.setImageResource(R.drawable.fan_button_off);
+            }
+        });
+
+        sharedPreferences = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE);
+        fanSwitch.setChecked(sharedPreferences.getBoolean(FAN, false));
 
         voiceSwitch = view.findViewById(R.id.TheSecondDawnSwitch4);
         voiceSwitch.setOnClickListener(this);
@@ -160,12 +182,6 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         if (view.getId() == R.id.TheSecondDawnImageButton7) {
         }
         if (view.getId() == R.id.TheSecondDawnImageButton8) {
-        }
-
-        if (view.getId() == R.id.TheSecondDawnSwitch3) {
-            currentFanImage++;
-            currentFanImage = currentFanImage % fanImages.length;
-            fanButton.setImageResource(fanImages[currentFanImage]);
         }
 
         if (view.getId() == R.id.TheSecondDawnSwitch4) {
