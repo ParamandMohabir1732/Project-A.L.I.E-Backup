@@ -32,7 +32,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -52,6 +54,7 @@ public class LEDFrag extends Fragment {
     private int LEDDefaultColor;
     private Button LEDButton, buttonRequest;
     private AmbilWarnaDialog colorPicker;
+    private Switch ledPower;
 
     private static final String LED = "LED";
     private static final String LED_COLOR = "LED Color";
@@ -66,6 +69,14 @@ public class LEDFrag extends Fragment {
 
         LEDLayout = view.findViewById(R.id.TheSecondDawnLEDLayout);
         LEDDefaultColor = ContextCompat.getColor(getActivity(), com.google.android.material.R.color.design_default_color_on_primary);
+
+        ledPower = view.findViewById(R.id.TheSecondDawnSwitch5);
+        ledPower.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
+
+            }
+        });
 
         LEDButton = view.findViewById(R.id.TheSecondDawnButton7);
         LEDButton.setOnClickListener(view1 -> openColorPicker());
