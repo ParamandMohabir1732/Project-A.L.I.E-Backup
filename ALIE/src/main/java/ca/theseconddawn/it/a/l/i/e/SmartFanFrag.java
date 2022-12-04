@@ -92,7 +92,7 @@ public class SmartFanFrag extends Fragment {
         //Design pattern of this portion of code is composite pattern
         //It is a logical operation with a strong hierarchy of elements within it
         //If the fan is off you cannot control it
-        //If the fan if off no radio button should be selected
+        //If the fan is off no radio button should be selected
         //if the fans is on then It should not get to the max level of rotation and so on
         fanControl.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

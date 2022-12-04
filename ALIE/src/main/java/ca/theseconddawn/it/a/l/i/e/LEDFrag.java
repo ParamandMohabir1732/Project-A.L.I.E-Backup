@@ -81,11 +81,18 @@ public class LEDFrag extends Fragment {
                 ledPower.setText("Lights: ON");
                 ledPower.setTextColor(requireActivity().getResources().getColor(R.color.brightgreen));
                 ledImage.setVisibility(View.VISIBLE);
+                LEDButton.setBackgroundColor(getResources().getColor(R.color.purple_500));
+                LEDButton.setTextColor(getResources().getColor(R.color.brightgreen));
+                LEDButton.setClickable(true);
+
             } else {
                 ledPower.setChecked(false);
                 ledPower.setText("Lights: OFF");
                 ledPower.setTextColor(requireActivity().getResources().getColor(R.color.brightred));
                 ledImage.setVisibility(View.INVISIBLE);
+                LEDButton.setBackgroundColor(getResources().getColor(R.color.grey));
+                LEDButton.setTextColor(getResources().getColor(R.color.brightred));
+                LEDButton.setClickable(false);
             }
         });
 
