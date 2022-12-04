@@ -181,9 +181,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 return;
             }
 
-            if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-                editTextEmail.setError(getString(R.string.matchEmailError1));
-                editTextEmail.requestFocus();
+            if (!validateEmail()) {
                 return;
             }
 
@@ -248,6 +246,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 progressBar.setVisibility(View.GONE);
             }
         });
+    }
+
+    public boolean validateEmail() {
+        String email = editTextEmail.getText().toString().trim();
+
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            editTextEmail.setError(getString(R.string.matchEmailError1));
+            editTextEmail.requestFocus();
+            return false;
+        } else {
+            editTextEmail.setError(null);
+            return true;
+        }
     }
 
     private void StoreDataUsingSharedPref(String email, String password) {
