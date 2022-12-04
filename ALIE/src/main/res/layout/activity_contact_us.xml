@@ -145,9 +145,10 @@
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView61"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-310dp"
+        android:layout_width="308dp"
+        android:layout_height="134dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="-200dp"
         app:srcCompat="@drawable/contact_us" />
 
     <ProgressBar
@@ -164,7 +165,7 @@
         android:layout_width="182dp"
         android:layout_height="137dp"
         android:layout_gravity="center"
-        android:layout_marginTop="-710dp"
+        android:layout_marginTop="-630dp"
         app:srcCompat="@drawable/contact_us2" />
 
 </LinearLayout>

@@ -25,11 +25,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class ContactUsActivity extends AppCompatActivity implements View.OnClickListener {
 
     private ImageButton leftArrow;
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
+    private EditText editTextName, editTextEmail, editTextNum, editTextMsg;
+    private Button contactUsBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +47,11 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
 
         leftArrow = findViewById(R.id.TheSecondDawnImageButton13);
         leftArrow.setOnClickListener(this);
+        editTextName = findViewById(R.id.TheSecondDawnEditText13);
+        editTextEmail = findViewById(R.id.TheSecondDawnEditText14);
+        editTextNum = findViewById(R.id.TheSecondDawnEditText15);
+        editTextMsg= findViewById(R.id.TheSecondDawnEditText16);
+        contactUsBtn = findViewById(R.id.TheSecondDawnButton17);
     }
 
     @Override
