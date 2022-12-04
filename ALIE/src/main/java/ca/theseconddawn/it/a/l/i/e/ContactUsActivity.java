@@ -52,6 +52,8 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
         editTextNum = findViewById(R.id.TheSecondDawnEditText15);
         editTextMsg= findViewById(R.id.TheSecondDawnEditText16);
         contactUsBtn = findViewById(R.id.TheSecondDawnButton17);
+
+        contactUsBtn.setOnClickListener(this);
     }
 
     @Override
@@ -59,5 +61,15 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
         if (view.getId() == R.id.TheSecondDawnImageButton13) {
             finish();
         }
+        if (view.getId() == R.id.TheSecondDawnButton17) {
+            finish();
+        }
+    }
+    private void contactUsUser(){
+        String name = editTextName.getText().toString().trim();
+        String email = editTextEmail.getText().toString().trim();
+        String num = editTextNum.getText().toString().trim();
+        String msg = editTextMsg.getText().toString().trim();
+
     }
 }
