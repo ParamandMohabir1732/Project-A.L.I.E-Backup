@@ -152,7 +152,7 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
         UserReviewClass reviewClass = new UserReviewClass(rating, name, email, phone, device, review);
 
         // Set Values in Database Reference "Customer Reviews"
-        databaseReference.child(email).setValue(reviewClass);
+        databaseReference.child(name).setValue(reviewClass);
     }
 
     private void startingProgressDialog() {

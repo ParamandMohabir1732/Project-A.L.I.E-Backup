@@ -21,14 +21,18 @@ Software Project
 
 package ca.theseconddawn.it.a.l.i.e;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Patterns;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -40,6 +44,8 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
     private DatabaseReference databaseReference;
     private EditText editTextName, editTextEmail, editTextNumber, editTextMessage;
     private Button contactUsBtn;
+    private AlertDialog progressDialog;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -121,10 +127,43 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
             return;
         }
 
+        // Starting the Progress Dialog
+        startingProgressDialog();
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = firebaseDatabase.getReference("Customer Messages");
 
         UserContactUsClass userContactUsClass = new UserContactUsClass(name, email, number, message);
-        databaseReference.child(email).setValue(userContactUsClass);
+        databaseReference.child(name).setValue(userContactUsClass);
+    }
+    private void startingProgressDialog() {
+        LayoutInflater inflater = this.getLayoutInflater();
+
+        // Creating a new Alert Dialog and Inflating it with the Custom Dialog XML file
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setView(inflater.inflate(R.layout.activity_custom_dialog, null));
+        builder.setCancelable(true);
+
+        // Creating the Builder and Displaying it
+        progressDialog = builder.create();
+        progressDialog.show();
+
+        // Calling the Progress Handler to Begin the Delay
+        progressHandler();
+    }
+
+    private void progressHandler() {
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                dismissProgressDialog();
+                Toast.makeText(getApplicationContext(), "Your Message has Been Sent to The Second Dawn! Thank You!", Toast.LENGTH_SHORT).show();
+            }
+        }, 3000); // Setting the Delay Timer of the Progress Bar to 3 Seconds or 3000 Milliseconds
+    }
+
+    private void dismissProgressDialog() {
+        // Dismiss Progress Dialog
+        progressDialog.dismiss();
     }
 }
