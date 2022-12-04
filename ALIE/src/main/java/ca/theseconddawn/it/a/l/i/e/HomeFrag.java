@@ -29,7 +29,6 @@ import android.speech.RecognizerIntent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -102,30 +101,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         fanSwitch.setChecked(sharedPreferences.getBoolean(FAN, false));
 
         voiceSwitch = view.findViewById(R.id.TheSecondDawnSwitch4);
-        voiceSwitch.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-                if (isChecked) {
-                    editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-                    editor = editor.putBoolean(VOICE, true);
-                    editor.apply();
-
-                    voiceSwitch.setChecked(true);
-                    voiceSwitch.setText("ON");
-                    voiceSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
-                    voiceButton.setImageResource(R.drawable.voice_button_on);
-                } else {
-                    editor = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-                    editor = editor.putBoolean(VOICE, false);
-                    editor.apply();
-
-                    voiceSwitch.setChecked(false);
-                    voiceSwitch.setText("OFF");
-                    voiceSwitch.setTextColor(getResources().getColor(R.color.brightred));
-                    voiceButton.setImageResource(R.drawable.voice_button_off);
-                }
-            }
-        });
+        voiceSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> voiceControl(isChecked));
 
         sharedPreferences = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE);
         voiceSwitch.setChecked(sharedPreferences.getBoolean(VOICE, false));
@@ -232,6 +208,28 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             fanSwitch.setText("OFF");
             fanSwitch.setTextColor(getResources().getColor(R.color.brightred));
             fanButton.setImageResource(R.drawable.fan_button_off);
+        }
+    }
+
+    private void voiceControl(boolean isChecked) {
+        if (isChecked) {
+            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+            editor = editor.putBoolean(VOICE, true);
+            editor.apply();
+
+            voiceSwitch.setChecked(true);
+            voiceSwitch.setText("ON");
+            voiceSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
+            voiceButton.setImageResource(R.drawable.voice_button_on);
+        } else {
+            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
+            editor = editor.putBoolean(VOICE, false);
+            editor.apply();
+
+            voiceSwitch.setChecked(false);
+            voiceSwitch.setText("OFF");
+            voiceSwitch.setTextColor(getResources().getColor(R.color.brightred));
+            voiceButton.setImageResource(R.drawable.voice_button_off);
         }
     }
 }
