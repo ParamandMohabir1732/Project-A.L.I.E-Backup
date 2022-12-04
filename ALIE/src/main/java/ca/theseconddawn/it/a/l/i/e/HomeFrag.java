@@ -21,9 +21,7 @@ Software Project
 
 package ca.theseconddawn.it.a.l.i.e;
 
-import android.content.Context;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
 import android.view.LayoutInflater;
@@ -33,14 +31,22 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Objects;
 
 public class HomeFrag extends Fragment implements View.OnClickListener {
 
@@ -49,21 +55,24 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     private SwitchCompat speakerSwitch, ledSwitch, fanSwitch, voiceSwitch;
     private FloatingActionButton voiceInputButton;
 
-    private SharedPreferences sharedPreferences;
-    private SharedPreferences.Editor editor;
+    private final String userID = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
+    private final String userKey = "Users/";
+    private final String speakerKey = "/Speaker Status";
 
-    private static final String HOME = "Home Pref";
-    private static final String SPEAKER = "Speaker Switch";
-    private static final String LED = "LED Switch";
-    private static final String FAN = "Fan Switch";
-    private static final String VOICE = "Voice Switch";
+    private String speakerDB;
 
     private static final int REQUEST_CODE_SPEECH_INPUT = 1;
     private static final int RESULT_OK = -1;
 
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = firebaseDatabase.getReference().child(Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid());
 
         voiceInput = view.findViewById(R.id.TheSecondDawnTextView19);
 
@@ -85,26 +94,16 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         speakerSwitch = view.findViewById(R.id.TheSecondDawnSwitch1);
         speakerSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> speakerControl(isChecked));
 
-        sharedPreferences = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE);
-        speakerSwitch.setChecked(sharedPreferences.getBoolean(SPEAKER, false));
-
         ledSwitch = view.findViewById(R.id.TheSecondDawnSwitch2);
         ledSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> ledControl(isChecked));
-
-        sharedPreferences = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE);
-        ledSwitch.setChecked(sharedPreferences.getBoolean(LED, false));
 
         fanSwitch = view.findViewById(R.id.TheSecondDawnSwitch3);
         fanSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> fanControl(isChecked));
 
-        sharedPreferences = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE);
-        fanSwitch.setChecked(sharedPreferences.getBoolean(FAN, false));
-
         voiceSwitch = view.findViewById(R.id.TheSecondDawnSwitch4);
         voiceSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> voiceControl(isChecked));
 
-        sharedPreferences = view.getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE);
-        voiceSwitch.setChecked(sharedPreferences.getBoolean(VOICE, false));
+        readDatabase();
 
         return view;
     }
@@ -149,27 +148,51 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
         }
     }
 
+    private void readDatabase() {
+        databaseReference = firebaseDatabase.getReference().child(userKey + userID + speakerKey);
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    speakerDB = snapshot.getValue().toString();
+
+                    if (speakerDB.equals("ON")) {
+                        speakerSwitch.setChecked(true);
+                    }
+                    else if (speakerDB.equals("OFF")) {
+                        speakerSwitch.setChecked(false);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
     //Refactored Speaker Control from OnCreate Method to its own Method speakerControl()
     private void speakerControl(boolean isChecked) {
+
         //If Speaker Control Switch is Checked On, Change the Text to "ON" and the color to Green.
         if (isChecked) {
-            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-            editor = editor.putBoolean(SPEAKER, true);
-            editor.apply();
+            databaseReference = firebaseDatabase.getReference().child(userKey + userID + speakerKey);
+            databaseReference.setValue("ON");
 
             speakerSwitch.setChecked(true);
             speakerSwitch.setText(R.string.speakerControlText1);
-            speakerSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
+            //speakerSwitch.setTextColor(getActivity().getResources().getColor(R.color.brightgreen));
             speakerButton.setImageResource(R.drawable.speaker_button_on);
-            //If Voice Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.
+
+            //If Speaker Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.
         } else {
-            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-            editor = editor.putBoolean(SPEAKER, false);
-            editor.apply();
+            databaseReference = firebaseDatabase.getReference().child(userKey + userID + speakerKey);
+            databaseReference.setValue("OFF");
 
             speakerSwitch.setChecked(false);
             speakerSwitch.setText(R.string.speakerControlText2);
-            speakerSwitch.setTextColor(getResources().getColor(R.color.brightred));
+            //speakerSwitch.setTextColor(getActivity().getResources().getColor(R.color.brightred));
             speakerButton.setImageResource(R.drawable.speaker_button_off);
         }
     }
@@ -178,20 +201,12 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     private void ledControl(boolean isChecked) {
         //If LED Control Switch is Checked On, Change the Text to "ON" and the color to Green.
         if (isChecked) {
-            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-            editor = editor.putBoolean(LED, true);
-            editor.apply();
-
             ledSwitch.setChecked(true);
             ledSwitch.setText(R.string.ledControlText1);
             ledSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
             ledButton.setImageResource(R.drawable.led_button_on);
         } else {
             //If LED Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.
-            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-            editor = editor.putBoolean(LED, false);
-            editor.apply();
-
             ledSwitch.setChecked(false);
             ledSwitch.setText(R.string.ledControlText2);
             ledSwitch.setTextColor(getResources().getColor(R.color.brightred));
@@ -203,9 +218,6 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     private void fanControl(boolean isChecked) {
         //If Fan Control Switch is Checked On, Change the Text to "ON" and the color to Green.
         if (isChecked) {
-            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-            editor = editor.putBoolean(FAN, true);
-            editor.apply();
 
             fanSwitch.setChecked(true);
             fanSwitch.setText(R.string.fanControlText3);
@@ -213,10 +225,6 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             fanButton.setImageResource(R.drawable.fan_button_on);
             //If Fan Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.
         } else {
-            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-            editor = editor.putBoolean(FAN, false);
-            editor.apply();
-
             fanSwitch.setChecked(false);
             fanSwitch.setText(R.string.fanControlText4);
             fanSwitch.setTextColor(getResources().getColor(R.color.brightred));
@@ -228,19 +236,13 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     private void voiceControl(boolean isChecked) {
         //If Voice Control Switch is Checked On, Change the Text to "ON" and the color to Green.
         if (isChecked) {
-            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-            editor = editor.putBoolean(VOICE, true);
-            editor.apply();
 
             voiceSwitch.setChecked(true);
             voiceSwitch.setText(R.string.voiceControlText1);
             voiceSwitch.setTextColor(getResources().getColor(R.color.brightgreen));
             voiceButton.setImageResource(R.drawable.voice_button_on);
         } else {
-            //If Voice Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.
-            editor = getContext().getSharedPreferences(HOME, Context.MODE_PRIVATE).edit();
-            editor = editor.putBoolean(VOICE, false);
-            editor.apply();
+            //If Voice Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.;
 
             voiceSwitch.setChecked(false);
             voiceSwitch.setText(R.string.voiceControlText2);
