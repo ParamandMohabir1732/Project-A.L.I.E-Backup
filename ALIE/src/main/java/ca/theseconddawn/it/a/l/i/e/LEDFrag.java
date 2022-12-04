@@ -115,7 +115,6 @@ public class LEDFrag extends Fragment {
             LEDButton.setClickable(true);
             LEDMode.setTextColor(getResources().getColor(R.color.brightgreen));
             LEDMode.setEnabled(true);
-
         } else {
             editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
             editor.putBoolean(LED_MODE, false);
@@ -143,6 +142,10 @@ public class LEDFrag extends Fragment {
             LEDMode.setChecked(true);
             LEDLayout.setBackground(getResources().getDrawable(R.drawable.gradient_led));
 
+            Snackbar snackbar = Snackbar.make(requireView(), "RGB Mode is Activated!", Snackbar.LENGTH_LONG);
+            snackbar.setBackgroundTint(getResources().getColor(R.color.brightgreen));
+            snackbar.setTextColor(getResources().getColor(R.color.black));
+            snackbar.show();
         } else {
             editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
             editor.putBoolean(LED_MODE2, false);
@@ -150,6 +153,11 @@ public class LEDFrag extends Fragment {
 
             LEDMode.setChecked(false);
             LEDLayout.setBackgroundColor(getResources().getColor(R.color.white));
+
+            Snackbar snackbar = Snackbar.make(requireView(), "White Mode is Activated!", Snackbar.LENGTH_LONG);
+            snackbar.setBackgroundTint(getResources().getColor(R.color.white));
+            snackbar.setTextColor(getResources().getColor(R.color.black));
+            snackbar.show();
         }
     }
 
