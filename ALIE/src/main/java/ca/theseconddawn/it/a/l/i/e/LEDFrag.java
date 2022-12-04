@@ -32,7 +32,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -44,8 +43,6 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.snackbar.Snackbar;
-
-import java.util.Objects;
 
 import yuku.ambilwarna.AmbilWarnaDialog;
 
@@ -79,16 +76,7 @@ public class LEDFrag extends Fragment {
         LEDPower.setOnCheckedChangeListener((compoundButton, isChecked) -> LEDPower(isChecked));
 
         LEDMode = view.findViewById(R.id.TheSecondDawnSwitch6);
-        LEDMode.setOnCheckedChangeListener((compoundButton, isChecked) -> {
-            if (isChecked) {
-                LEDMode.setChecked(true);
-                LEDLayout.setBackground(getResources().getDrawable(R.drawable.gradient_led));
-
-            } else {
-                LEDMode.setChecked(false);
-                LEDLayout.setBackgroundColor(getResources().getColor(R.color.white));
-            }
-        });
+        LEDMode.setOnCheckedChangeListener((compoundButton, isChecked) -> LEDMode(isChecked));
 
         LEDButton = view.findViewById(R.id.TheSecondDawnButton7);
         LEDButton.setOnClickListener(view1 -> openColorPicker());
@@ -131,6 +119,17 @@ public class LEDFrag extends Fragment {
             LEDMode.setTextColor(getResources().getColor(R.color.brightred));
             LEDMode.setChecked(false);
             LEDMode.setEnabled(false);
+        }
+    }
+
+    private void LEDMode(boolean isChecked) {
+        if (isChecked) {
+            LEDMode.setChecked(true);
+            LEDLayout.setBackground(getResources().getDrawable(R.drawable.gradient_led));
+
+        } else {
+            LEDMode.setChecked(false);
+            LEDLayout.setBackgroundColor(getResources().getColor(R.color.white));
         }
     }
 
