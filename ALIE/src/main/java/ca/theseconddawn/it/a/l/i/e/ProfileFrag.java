@@ -60,6 +60,8 @@ public class ProfileFrag extends Fragment implements View.OnClickListener {
     private ProgressBar progressBar;
     private TextView emailTextView, fullNameTextView, phoneNoTextView, changeProfile;
 
+    private final String accountKey = "/Account Information";
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
@@ -87,7 +89,7 @@ public class ProfileFrag extends Fragment implements View.OnClickListener {
         reference = FirebaseDatabase.getInstance().getReference(getString(R.string.firebaseReference2));
         userID = user.getUid();
 
-        reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener() {
+        reference.child(userID + accountKey).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 UserClass userProfile = snapshot.getValue(UserClass.class);
