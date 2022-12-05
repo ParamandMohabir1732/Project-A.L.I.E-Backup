@@ -46,7 +46,6 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
     private Button contactUsBtn;
     private AlertDialog progressDialog;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +71,7 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
             contactUsUser();
         }
     }
+
     private void contactUsUser() {
         String name = editTextName.getText().toString().trim();
         String email = editTextEmail.getText().toString().trim();
@@ -130,7 +130,7 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
         // Starting the Progress Dialog
         startingProgressDialog();
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("Customer Messages");
+        databaseReference = firebaseDatabase.getReference(getString(R.string.firebaseReference4));
 
         UserContactUsClass userContactUsClass = new UserContactUsClass(name, email, number, message);
         databaseReference.child(name).setValue(userContactUsClass);
@@ -153,12 +153,9 @@ public class ContactUsActivity extends AppCompatActivity implements View.OnClick
 
     private void progressHandler() {
         Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                dismissProgressDialog();
-                Toast.makeText(getApplicationContext(), "Your Message has Been Sent to The Second Dawn! Thank You!", Toast.LENGTH_SHORT).show();
-            }
+        handler.postDelayed(() -> {
+            dismissProgressDialog();
+            Toast.makeText(getApplicationContext(), R.string.toastMessage35, Toast.LENGTH_SHORT).show();
         }, 3000); // Setting the Delay Timer of the Progress Bar to 3 Seconds or 3000 Milliseconds
     }
 

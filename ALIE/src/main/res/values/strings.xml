@@ -82,6 +82,7 @@
     <string name="toastMessage32">Please Check Your Email to Reset your Password!</string>
     <string name="toastMessage33">An Error has Occurred, Please Try Again!</string>
     <string name="toastMessage34">Your Review has Been Sent! Thank You :)</string>
+    <string name="toastMessage35">Your Message has Been Sent to The Second Dawn! Thank You :)</string>
 
     <!-- Snackbar Messages -->
     <string name="snackbar1">Permission is Granted!</string>
@@ -91,6 +92,8 @@
     <string name="snackbar5">Red Color is Selected!</string>
     <string name="snackbar6">Green Color is Selected!</string>
     <string name="snackbar7">Blue Color is Selected!</string>
+    <string name="snackbar8">RGB Mode is Activated!</string>
+    <string name="snackbar9">White Mode is Activated!</string>
 
     <!-- Login Screen -->
     <string name="textView3">A.L.I.E</string>
@@ -148,6 +151,8 @@
     <string name="button7">Color Picker</string>
     <string name="imageView38">This is an Image of the LED Icon</string>
     <string name="button8">Location Permission</string>
+    <string name="ledPowerOn">Lights: ON</string>
+    <string name="ledPowerOff">Lights: OFF</string>
 
     <!-- Speaker Screen -->
     <string name="textView10">Speaker Screen</string>
@@ -298,6 +303,7 @@
     <!-- Contact Us Screen -->
     <string name="imageButton13">This is an Image Button of the Left Arrow in Contact Us Screen</string>
     <string name="textview_contactus">Contact Us</string>
+    <string name="firebaseReference4">Customer Messages</string>
     <string name="Name">Name</string>
     <string name="editText13">Send us a message</string>
     <string name="button16">SUBMIT</string>
@@ -317,8 +323,4 @@
     <string name="textview21">3. What happens when I speak to A.L.I.E? </string>
     <string name="textview22">When you ask A.L.I.E a question, a recording of your conversation is uploaded to TheSecondDawn\'s Firebase cloud, where we process your request and respond to you. For instance, when you ask A.L.I.E to play Music, we use the recording of your request to play your selected media.</string>
     <string name="textview23">For more help…</string>
-    <string name="ledPowerOn">Lights: ON</string>
-    <string name="ledPowerOff">Lights: OFF</string>
-    <string name="snackbar8">RGB Mode is Activated!</string>
-    <string name="snackbar9">White Mode is Activated!</string>
 </resources>
