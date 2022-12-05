@@ -13,7 +13,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:contentDescription="@string/imageView31"
         android:src="@drawable/ic_profile"
         app:civ_border_color="@color/black"
@@ -29,23 +29,22 @@
         android:textSize="15sp"
         android:textStyle="bold" />
 
-
     <ImageView
         android:id="@+id/TheSecondDawnImageView43"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="-165dp"
-        android:layout_marginTop="35dp"
+        android:layout_marginStart="-300dp"
+        android:layout_marginTop="-50dp"
         android:contentDescription="@string/imageView43"
         android:src="@drawable/ic_profile" />
 
     <TextView
         android:id="@+id/TheSecondDawnTextView29"
-        android:layout_width="325dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="27dp"
+        android:layout_marginStart="-225dp"
         android:layout_marginTop="-27dp"
         android:text="@string/textView29"
         android:textColor="@color/black"
@@ -58,6 +57,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="-135dp"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
@@ -66,17 +66,17 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="-165dp"
+        android:layout_marginStart="-300dp"
         android:layout_marginTop="5dp"
         android:contentDescription="@string/imageView33"
         android:src="@drawable/ic_email" />
 
     <TextView
         android:id="@+id/TheSecondDawnTextView14"
-        android:layout_width="325dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="27dp"
+        android:layout_marginStart="-205dp"
         android:layout_marginTop="-27dp"
         android:text="@string/textView14"
         android:textColor="@color/black"
@@ -89,6 +89,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="5dp"
+        android:layout_marginStart="-135dp"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
@@ -97,17 +98,17 @@
         android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="-165dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginStart="125dp"
+        android:layout_marginTop="-123dp"
         android:contentDescription="@string/imageView44"
         android:src="@drawable/ic_phone" />
 
     <TextView
         android:id="@+id/TheSecondDawnTextView31"
-        android:layout_width="325dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="27dp"
+        android:layout_marginStart="219dp"
         android:layout_marginTop="-27dp"
         android:text="@string/textView31"
         android:textColor="@color/black"
@@ -120,6 +121,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="290dp"
         android:textColor="@color/black"
         android:textSize="20sp" />
 
@@ -128,7 +130,7 @@
         android:layout_width="360dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="65dp"
         android:background="@drawable/button_shape"
         android:text="@string/button4"
         android:textColor="@color/white"

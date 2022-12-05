@@ -321,7 +321,4 @@
     <string name="ledPowerOff">Lights: OFF</string>
     <string name="snackbar8">RGB Mode is Activated!</string>
     <string name="snackbar9">White Mode is Activated!</string>
-    <string name="mediaBtnOne">PLAY</string>
-    <string name="mediaBtnTwo">PAUSE</string>
-    <string name="mediaTitle">TITLE</string>
 </resources>
