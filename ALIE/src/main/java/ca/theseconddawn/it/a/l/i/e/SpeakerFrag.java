@@ -24,11 +24,9 @@ package ca.theseconddawn.it.a.l.i.e;
 import static android.app.Activity.RESULT_OK;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.media.AudioAttributes;
-import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
@@ -37,7 +35,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -61,7 +58,6 @@ public class SpeakerFrag extends Fragment {
     private ImageButton openFileBtn;
 
     private SwitchCompat aSwitch;
-    private AudioManager audioManager;
     String duration;
     private MediaPlayer mediaPlayer;
     ScheduledExecutorService timer;
@@ -86,42 +82,36 @@ public class SpeakerFrag extends Fragment {
             }
         });
 
-        openFileBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-                intent.addCategory(Intent.CATEGORY_OPENABLE);
-                intent.setType("audio/*");
-                startActivityForResult(intent, PICK_FILE);
-            }
+        openFileBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.setType("audio/*");
+            startActivityForResult(intent, PICK_FILE);
         });
 
-        mediaBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mediaPlayer != null) {
-                    if (mediaPlayer.isPlaying()){
-                        mediaPlayer.pause();
-                        mediaBtn.setText(R.string.mediaBtnOne);
-                        mediaBtn.setBackgroundColor(getResources().getColor(R.color.brightgreen));
-                        timer.shutdown();
-                    } else {
-                        mediaPlayer.start();
-                        mediaBtn.setText(R.string.mediaBtnTwo);
-                        mediaBtn.setBackgroundColor(getResources().getColor(R.color.brightred));
+        mediaBtn.setOnClickListener(v -> {
+            if (mediaPlayer != null) {
+                if (mediaPlayer.isPlaying()){
+                    mediaPlayer.pause();
+                    mediaBtn.setText(R.string.mediaBtn1);
+                    mediaBtn.setBackgroundColor(getResources().getColor(R.color.brightgreen));
+                    timer.shutdown();
+                } else {
+                    mediaPlayer.start();
+                    mediaBtn.setText(R.string.mediaBtn2);
+                    mediaBtn.setBackgroundColor(getResources().getColor(R.color.brightred));
 
-                        timer = Executors.newScheduledThreadPool(1);
-                        timer.scheduleAtFixedRate(new Runnable() {
-                            @Override
-                            public void run() {
-                                if (mediaPlayer != null) {
-                                    if (!seekBar.isPressed()) {
-                                        seekBar.setProgress(mediaPlayer.getCurrentPosition());
-                                    }
+                    timer = Executors.newScheduledThreadPool(1);
+                    timer.scheduleAtFixedRate(new Runnable() {
+                        @Override
+                        public void run() {
+                            if (mediaPlayer != null) {
+                                if (!seekBar.isPressed()) {
+                                    seekBar.setProgress(mediaPlayer.getCurrentPosition());
                                 }
                             }
-                        }, 10, 10, TimeUnit.MILLISECONDS);
-                    }
+                        }
+                    }, 10, 10, TimeUnit.MILLISECONDS);
                 }
             }
         });
@@ -188,12 +178,7 @@ public class SpeakerFrag extends Fragment {
             seekBar.setMax(millis);
             seekBar.setProgress(0);
 
-            mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-                @Override
-                public void onCompletion(MediaPlayer mp) {
-                    releaseMediaPlayer();
-                }
-            });
+            mediaPlayer.setOnCompletionListener(mp -> releaseMediaPlayer());
         } catch (IOException e){
             textView.setText(e.toString());
         }
@@ -230,8 +215,8 @@ public class SpeakerFrag extends Fragment {
             mediaPlayer = null;
         }
         mediaBtn.setEnabled(false);
-        textView.setText(R.string.mediaTitle);
-        textViewOne.setText("00:00 / 00:00");
+        textView.setText(R.string.mediaTitle1);
+        textViewOne.setText(R.string.medaTitle2);
         seekBar.setMax(100);
         seekBar.setProgress(0);
     }

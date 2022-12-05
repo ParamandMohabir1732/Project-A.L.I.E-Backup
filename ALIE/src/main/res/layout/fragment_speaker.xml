@@ -11,8 +11,8 @@
         android:id="@+id/TheSecondDawnTextView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:layout_gravity="center"
+        android:layout_marginTop="10dp"
         android:text="@string/textView10"
         android:textColor="@color/brightblue"
         android:textSize="40sp"
@@ -55,9 +55,9 @@
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView14"
-        android:layout_gravity="center"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:layout_gravity="center"
         android:layout_marginStart="100dp"
         android:layout_marginTop="-150dp"
         android:contentDescription="@string/imageView14"
@@ -67,9 +67,9 @@
         android:id="@+id/TheSecondDawnButton14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/brightgreen"
-        android:layout_gravity="center"
         android:text="@string/button14"
         android:textColor="@color/black"
         android:textStyle="bold"
@@ -79,9 +79,9 @@
         android:id="@+id/TheSecondDawnTextView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="@string/textView25"
-        android:layout_gravity="center"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -96,9 +96,9 @@
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView42"
-        android:layout_gravity="center"
         android:layout_width="36dp"
         android:layout_height="36dp"
+        android:layout_gravity="center"
         android:layout_marginStart="-170dp"
         android:layout_marginTop="-45dp"
         android:contentDescription="@string/imageView42"
@@ -110,16 +110,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="-70dp"
-        android:text="TextView" />
+        android:layout_marginTop="-70dp" />
 
     <TextView
         android:id="@+id/TheSecondDawnTextView61"
         android:layout_width="wrap_content"
         android:layout_height="17dp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:text="TextView" />
+        android:layout_marginTop="50dp" />
 
     <TextView
         android:id="@+id/TheSecondDawnTextView26"
@@ -134,9 +132,9 @@
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton11"
-        android:layout_gravity="center"
         android:layout_width="26dp"
         android:layout_height="49dp"
+        android:layout_gravity="center"
         android:layout_marginStart="75dp"
         android:layout_marginTop="-45dp"
         android:background="@null"

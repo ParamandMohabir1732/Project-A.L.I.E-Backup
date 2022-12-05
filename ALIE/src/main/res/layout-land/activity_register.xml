@@ -23,8 +23,8 @@
         android:id="@+id/TheSecondDawnImageView3"
         android:layout_width="126dp"
         android:layout_height="100dp"
-        android:layout_gravity="start"
-        android:layout_marginStart="150dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="-150dp"
         android:layout_marginTop="-40dp"
         android:contentDescription="@string/imageView3"
         android:src="@mipmap/ic_launcher_round" />
@@ -53,10 +53,39 @@
         android:textStyle="italic" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
+        android:hint="@string/editText11"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/ic_profile"
+        app:startIconTint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TheSecondDawnEditText11"
+            android:layout_width="325dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_shape"
+            android:fontFamily="sans-serif-black"
+            android:inputType="textPersonName"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="-56dp"
+        android:layout_marginEnd="10dp"
         android:hint="@string/editText3"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
@@ -68,7 +97,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TheSecondDawnEditText3"
-            android:layout_width="375dp"
+            android:layout_width="325dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:background="@drawable/edittext_shape"
@@ -80,9 +109,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="start"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
         android:hint="@string/editText4"
         app:boxStrokeColor="@color/black"
@@ -95,7 +125,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TheSecondDawnEditText4"
-            android:layout_width="375dp"
+            android:layout_width="325dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:background="@drawable/edittext_shape"
@@ -107,10 +137,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="-57dp"
+        android:layout_marginEnd="10dp"
         android:hint="@string/editText5"
         app:boxStrokeColor="@color/black"
         app:boxStrokeWidthFocused="2dp"
@@ -122,7 +153,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/TheSecondDawnEditText5"
-            android:layout_width="375dp"
+            android:layout_width="325dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:background="@drawable/edittext_shape"
@@ -133,12 +164,40 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:hint="@string/editText12"
+        app:boxStrokeColor="@color/black"
+        app:boxStrokeWidthFocused="2dp"
+        app:endIconMode="clear_text"
+        app:endIconTint="@color/black"
+        app:hintTextColor="@color/white"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconTint="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/TheSecondDawnEditText12"
+            android:layout_width="375dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/edittext_shape"
+            android:fontFamily="sans-serif-black"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textColor="@color/black"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
     <Button
         android:id="@+id/TheSecondDawnButton2"
         android:layout_width="360dp"
         android:layout_height="55dp"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/button_shape"
         android:text="@string/button2"
         android:textColor="@color/white"
