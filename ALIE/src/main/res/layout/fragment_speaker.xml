@@ -12,7 +12,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
         android:text="@string/textView10"
         android:textColor="@color/brightblue"
         android:textSize="40sp"
@@ -34,7 +33,7 @@
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/TheSecondDawnSwitch7"
         android:layout_width="139dp"
-        android:layout_height="69dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:text="@string/switch7"
@@ -49,7 +48,7 @@
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="75dp"
+        android:layout_marginEnd="100dp"
         android:contentDescription="@string/imageView10"
         android:src="@drawable/speaker_1" />
 
@@ -63,33 +62,22 @@
         android:contentDescription="@string/imageView14"
         android:src="@drawable/speaker_5" />
 
-    <Button
-        android:id="@+id/TheSecondDawnButton14"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/brightgreen"
-        android:text="@string/button14"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        tools:text="Play" />
-
     <TextView
         android:id="@+id/TheSecondDawnTextView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="25dp"
         android:text="@string/textView25"
         android:textColor="@color/black"
+        android:textAlignment="center"
         android:textSize="24sp"
         android:textStyle="bold" />
 
     <SeekBar
         android:id="@+id/TheSecondDawnSeekBar1"
         android:layout_width="300dp"
-        android:layout_height="51dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         android:layout_marginStart="0dp"
         android:layout_marginTop="50dp" />
@@ -121,24 +109,38 @@
 
     <TextView
         android:id="@+id/TheSecondDawnTextView26"
-        android:layout_width="110dp"
-        android:layout_height="35dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="-25dp"
         android:text="@string/textView26"
         android:textColor="@color/black"
+        android:textAlignment="center"
         android:textSize="18sp"
         android:textStyle="bold" />
 
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton11"
-        android:layout_width="26dp"
-        android:layout_height="49dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="-45dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-24dp"
         android:background="@null"
         android:contentDescription="@string/imageButton11"
         android:src="@drawable/ic_baseline_folder_open_24" />
+
+    <Button
+        android:id="@+id/TheSecondDawnButton14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/brightgreen"
+        android:text="@string/button14"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        tools:text="Play" />
 
 </LinearLayout>
