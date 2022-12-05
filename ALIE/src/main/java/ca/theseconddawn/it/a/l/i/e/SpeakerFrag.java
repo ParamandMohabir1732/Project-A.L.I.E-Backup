@@ -102,11 +102,13 @@ public class SpeakerFrag extends Fragment {
                 if (mediaPlayer != null) {
                     if (mediaPlayer.isPlaying()){
                         mediaPlayer.pause();
-                        mediaBtn.setText("PLAY");
+                        mediaBtn.setText(R.string.mediaBtnOne);
+                        mediaBtn.setBackgroundColor(getResources().getColor(R.color.brightgreen));
                         timer.shutdown();
                     } else {
                         mediaPlayer.start();
-                        mediaBtn.setText("PAUSE");
+                        mediaBtn.setText(R.string.mediaBtnTwo);
+                        mediaBtn.setBackgroundColor(getResources().getColor(R.color.brightred));
 
                         timer = Executors.newScheduledThreadPool(1);
                         timer.scheduleAtFixedRate(new Runnable() {
@@ -228,7 +230,7 @@ public class SpeakerFrag extends Fragment {
             mediaPlayer = null;
         }
         mediaBtn.setEnabled(false);
-        textView.setText("TITLE");
+        textView.setText(R.string.mediaTitle);
         textViewOne.setText("00:00 / 00:00");
         seekBar.setMax(100);
         seekBar.setProgress(0);

@@ -11,7 +11,7 @@
         android:id="@+id/TheSecondDawnTextView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:text="@string/textView10"
         android:textColor="@color/brightblue"
@@ -104,25 +104,13 @@
         android:contentDescription="@string/imageView42"
         android:src="@drawable/ic_speaker" />
 
-    <TextView
-        android:id="@+id/TheSecondDawnTextView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="70dp"
-        android:layout_gravity="center"
-        android:text="@string/textView26"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
-
-
 
     <TextView
         android:id="@+id/TheSecondDawnTextView60"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="-160dp"
         android:layout_gravity="center"
+        android:layout_marginTop="-70dp"
         android:text="TextView" />
 
     <TextView
@@ -133,13 +121,24 @@
         android:layout_marginTop="50dp"
         android:text="TextView" />
 
+    <TextView
+        android:id="@+id/TheSecondDawnTextView26"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:text="@string/textView26"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton11"
         android:layout_gravity="center"
         android:layout_width="26dp"
         android:layout_height="49dp"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="-45dp"
         android:background="@null"
         android:contentDescription="@string/imageButton11"
         android:src="@drawable/ic_baseline_folder_open_24" />
