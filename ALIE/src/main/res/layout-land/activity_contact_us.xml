@@ -142,7 +142,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="190dp"
-        android:layout_marginTop="-250dp"
+        android:layout_marginTop="-100dp"
         android:background="@drawable/button_shape"
         android:text="@string/button16"
         android:textColor="@color/white"
@@ -153,9 +153,9 @@
         android:id="@+id/TheSecondDawnImageView61"
         android:layout_width="300dp"
         android:layout_height="190dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="-250dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginStart="410dp"
+        android:layout_marginStart="420dp"
         app:srcCompat="@drawable/contact_us" />
 
     <ProgressBar
@@ -173,7 +173,7 @@
         android:layout_height="101dp"
         android:layout_gravity="center"
         android:layout_marginStart="-150dp"
-        android:layout_marginTop="-380dp"
+        android:layout_marginTop="-285dp"
         app:srcCompat="@drawable/contact_us2" />
 
 </LinearLayout>
