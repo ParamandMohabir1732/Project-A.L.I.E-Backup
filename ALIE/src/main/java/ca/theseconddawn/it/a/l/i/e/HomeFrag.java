@@ -55,9 +55,10 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     private SwitchCompat speakerSwitch, ledSwitch, fanSwitch, voiceSwitch;
     private FloatingActionButton voiceInputButton;
 
-    private final String userID = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
     private final String userKey = "Users/";
+    private final String userID = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
 
+    private final String componentKey = "/Components";
     private final String speakerKey = "/Speaker Status";
     private final String ledKey = "/LED Status";
     private final String fanKey = "/Fan Status";
@@ -130,7 +131,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     }
 
     private void readDatabase() {
-        databaseReference = firebaseDatabase.getReference().child(userKey + userID + speakerKey);
+        databaseReference = firebaseDatabase.getReference().child(userKey + userID + componentKey + speakerKey);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -151,7 +152,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             }
         });
 
-        databaseReference = firebaseDatabase.getReference().child(userKey + userID + ledKey);
+        databaseReference = firebaseDatabase.getReference().child(userKey + userID + componentKey + ledKey);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -172,7 +173,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             }
         });
 
-        databaseReference = firebaseDatabase.getReference().child(userKey + userID + fanKey);
+        databaseReference = firebaseDatabase.getReference().child(userKey + userID + componentKey + fanKey);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -193,7 +194,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             }
         });
 
-        databaseReference = firebaseDatabase.getReference().child(userKey + userID + voiceKey);
+        databaseReference = firebaseDatabase.getReference().child(userKey + userID + componentKey + voiceKey);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
@@ -246,7 +247,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
 
         //If Speaker Control Switch is Checked On, Change the Text to "ON" and the color to Green.
         if (isChecked) {
-            databaseReference = firebaseDatabase.getReference().child(userKey + userID + speakerKey);
+            databaseReference = firebaseDatabase.getReference().child(userKey + userID + componentKey + speakerKey);
             databaseReference.setValue("ON");
 
             speakerSwitch.setChecked(true);
@@ -256,7 +257,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
 
             //If Speaker Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.
         } else {
-            databaseReference = firebaseDatabase.getReference().child(userKey + userID + speakerKey);
+            databaseReference = firebaseDatabase.getReference().child(userKey + userID + componentKey + speakerKey);
             databaseReference.setValue("OFF");
 
             speakerSwitch.setChecked(false);
@@ -270,7 +271,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     private void ledControl(boolean isChecked) {
         //If LED Control Switch is Checked On, Change the Text to "ON" and the color to Green.
         if (isChecked) {
-            databaseReference = firebaseDatabase.getReference().child(userKey + userID + ledKey);
+            databaseReference = firebaseDatabase.getReference().child(userKey + userID + componentKey + ledKey);
             databaseReference.setValue("ON");
 
             ledSwitch.setChecked(true);
@@ -279,7 +280,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             ledButton.setImageResource(R.drawable.led_button_on);
         } else {
             //If LED Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.
-            databaseReference = firebaseDatabase.getReference().child(userKey + userID + ledKey);
+            databaseReference = firebaseDatabase.getReference().child(userKey + userID + componentKey + ledKey);
             databaseReference.setValue("OFF");
 
             ledSwitch.setChecked(false);
@@ -293,7 +294,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     private void fanControl(boolean isChecked) {
         //If Fan Control Switch is Checked On, Change the Text to "ON" and the color to Green.
         if (isChecked) {
-            databaseReference = firebaseDatabase.getReference().child(userKey + userID + fanKey);
+            databaseReference = firebaseDatabase.getReference().child(userKey + userID + componentKey + fanKey);
             databaseReference.setValue("ON");
 
             fanSwitch.setChecked(true);
@@ -302,7 +303,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             fanButton.setImageResource(R.drawable.fan_button_on);
             //If Fan Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.
         } else {
-            databaseReference = firebaseDatabase.getReference().child(userKey + userID + fanKey);
+            databaseReference = firebaseDatabase.getReference().child(userKey + userID + componentKey + fanKey);
             databaseReference.setValue("OFF");
 
             fanSwitch.setChecked(false);
@@ -316,7 +317,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
     private void voiceControl(boolean isChecked) {
         //If Voice Control Switch is Checked On, Change the Text to "ON" and the color to Green.
         if (isChecked) {
-            databaseReference = firebaseDatabase.getReference().child(userKey + userID + voiceKey);
+            databaseReference = firebaseDatabase.getReference().child(userKey + userID + componentKey + voiceKey);
             databaseReference.setValue("ON");
 
             voiceSwitch.setChecked(true);
@@ -325,7 +326,7 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
             voiceButton.setImageResource(R.drawable.voice_button_on);
         } else {
             //If Voice Control Switch is Checked Off, Change the Text to "OFF" and the color to Red.;
-            databaseReference = firebaseDatabase.getReference().child(userKey + userID + voiceKey);
+            databaseReference = firebaseDatabase.getReference().child(userKey + userID + componentKey + voiceKey);
             databaseReference.setValue("OFF");
 
             voiceSwitch.setChecked(false);
