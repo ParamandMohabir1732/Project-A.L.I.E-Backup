@@ -12,6 +12,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:baselineAligned="false"
         android:text="@string/textView10"
         android:textColor="@color/brightblue"
         android:textSize="40sp"
@@ -22,7 +24,7 @@
         android:layout_width="71dp"
         android:layout_height="54dp"
         android:layout_gravity="center"
-        android:layout_marginStart="190dp"
+        android:layout_marginStart="180dp"
         android:layout_marginTop="-55dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="0dp"
@@ -32,20 +34,23 @@
 
     <androidx.appcompat.widget.SwitchCompat
         android:id="@+id/TheSecondDawnSwitch7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="139dp"
+        android:layout_height="69dp"
         android:layout_gravity="center"
+        android:layout_marginTop="-55dp"
+        android:layout_marginStart="-270dp"
         android:text="@string/switch7"
         android:textColor="@color/brightred"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         android:trackTint="#FFFFFF" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView10"
         android:layout_width="150dp"
-        android:layout_height="100dp"
+        android:layout_height="150dp"
         android:layout_gravity="center"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="75dp"
         android:contentDescription="@string/imageView10"
         android:src="@drawable/speaker_1" />
@@ -53,9 +58,10 @@
     <ImageView
         android:id="@+id/TheSecondDawnImageView14"
         android:layout_width="150dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="400dp"
-        android:layout_marginTop="-100dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="-150dp"
         android:contentDescription="@string/imageView14"
         android:src="@drawable/speaker_5" />
 
@@ -64,71 +70,82 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="-75dp"
+        android:layout_marginTop="-150dp"
+        android:layout_marginStart="-280dp"
         android:backgroundTint="@color/brightgreen"
         android:text="@string/button14"
         android:textColor="@color/black"
         android:textStyle="bold"
         tools:text="Play" />
 
-    <Button
-        android:id="@+id/TheSecondDawnButton15"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="-48dp"
-        android:backgroundTint="@color/brightred"
-        android:text="@string/button15"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        tools:text="Pause" />
-
     <TextView
         android:id="@+id/TheSecondDawnTextView25"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginStart="10dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="-280dp"
         android:text="@string/textView25"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <SeekBar
         android:id="@+id/TheSecondDawnSeekBar1"
         android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center" />
+        android:layout_height="51dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="-150dp"
+        android:layout_marginTop="50dp" />
 
     <ImageView
         android:id="@+id/TheSecondDawnImageView42"
         android:layout_width="36dp"
         android:layout_height="36dp"
         android:layout_gravity="center"
-        android:layout_marginStart="-175dp"
-        android:layout_marginTop="-50dp"
+        android:layout_marginStart="-320dp"
+        android:layout_marginTop="-45dp"
         android:contentDescription="@string/imageView42"
         android:src="@drawable/ic_speaker" />
 
     <TextView
         android:id="@+id/TheSecondDawnTextView26"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="28dp"
         android:layout_gravity="center"
-        android:layout_marginStart="250dp"
-        android:layout_marginTop="-100dp"
+        android:layout_marginTop="-30dp"
+        android:layout_marginStart="130dp"
         android:text="@string/textView26"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
 
+
+    <TextView
+        android:id="@+id/TheSecondDawnTextView60"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="-280dp"
+        android:layout_marginTop="-60dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/TheSecondDawnTextView61"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="-280dp"
+        android:text="TextView" />
+
     <ImageButton
         android:id="@+id/TheSecondDawnImageButton11"
-        android:layout_width="25dp"
-        android:layout_height="50dp"
+        android:layout_width="26dp"
+        android:layout_height="49dp"
         android:layout_gravity="center"
-        android:layout_marginStart="250dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="-68dp"
         android:background="@null"
         android:contentDescription="@string/imageButton11"
         android:src="@drawable/ic_baseline_folder_open_24" />
