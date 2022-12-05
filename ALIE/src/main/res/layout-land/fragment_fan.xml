@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/textView11"
-        android:textColor="@color/lightblue"
+        android:textColor="@color/white"
         android:textSize="40sp"
         android:textStyle="bold|italic" />
 
@@ -32,7 +32,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:layout_marginTop="-75dp"
+        android:layout_marginTop="-90dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/switch8"
         android:textColor="#FFFFFF"
@@ -43,7 +43,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:fontFamily="sans-serif-black"
         android:text="@string/textView27"
         android:textColor="#F8F8F8"
@@ -54,17 +54,20 @@
         android:layout_width="300dp"
         android:layout_height="25dp"
         android:layout_gravity="center"
+        android:layout_marginTop="5dp"
         android:contentDescription="@string/slider1"
-        android:value="20"
+        android:value="10"
         android:valueFrom="0"
         android:valueTo="100"
-        app:haloColor="#F80000" />
+        app:haloColor="#F80000"
+        app:labelBehavior="gone" />
 
     <RadioGroup
+        android:id="@+id/TheSecondDawnRadioGroup1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <RadioButton
             android:id="@+id/TheSecondDawnRadioButton1"
@@ -97,11 +100,11 @@
 
     <Button
         android:id="@+id/TheSecondDawnButton3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="175dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
+        android:layout_marginTop="15dp"
         android:text="@string/button3"
-        android:textColor="@color/snowwhite"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        android:textColor="@color/snowwhite" />
 
 </LinearLayout>

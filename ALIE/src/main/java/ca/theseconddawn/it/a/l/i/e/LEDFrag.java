@@ -32,10 +32,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
@@ -50,12 +52,16 @@ public class LEDFrag extends Fragment {
 
     private LinearLayout LEDLayout;
     private int LEDDefaultColor;
+    private ImageView LEDImage;
     private Button LEDButton, buttonRequest;
     private AmbilWarnaDialog colorPicker;
+    private SwitchCompat LEDPower, LEDMode;
 
     private static final String LED = "LED";
     private static final String LED_COLOR = "LED Color";
-    public static String LEDStatus;
+    private static final String LED_MODE = "LED Mode";
+    private static final String LED_MODE2 = "LED Mode2";
+
     private SharedPreferences sharedPreferences;
     private SharedPreferences.Editor editor;
 
@@ -65,7 +71,14 @@ public class LEDFrag extends Fragment {
         View view = inflater.inflate(R.layout.fragment_l_e_d, container, false);
 
         LEDLayout = view.findViewById(R.id.TheSecondDawnLEDLayout);
-        LEDDefaultColor = ContextCompat.getColor(getActivity(), com.google.android.material.R.color.design_default_color_on_primary);
+        LEDDefaultColor = ContextCompat.getColor(requireActivity(), com.google.android.material.R.color.design_default_color_on_primary);
+        LEDImage = view.findViewById(R.id.TheSecondDawnImageView38);
+
+        LEDPower = view.findViewById(R.id.TheSecondDawnSwitch5);
+        LEDPower.setOnCheckedChangeListener((compoundButton, isChecked) -> LEDPower(isChecked));
+
+        LEDMode = view.findViewById(R.id.TheSecondDawnSwitch6);
+        LEDMode.setOnCheckedChangeListener((compoundButton, isChecked) -> LEDMode(isChecked));
 
         LEDButton = view.findViewById(R.id.TheSecondDawnButton7);
         LEDButton.setOnClickListener(view1 -> openColorPicker());
@@ -83,6 +96,71 @@ public class LEDFrag extends Fragment {
         });
         retrieveLEDSharedPref();
         return view;
+    }
+
+    private void LEDPower(boolean isChecked) {
+        if (isChecked) {
+            //If LED Power Button is Checked On, set the Text to On and Switch the Image on
+            editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
+            editor.putBoolean(LED_MODE, true);
+            editor.apply();
+
+            LEDPower.setChecked(true);
+            LEDPower.setText(R.string.ledPowerOn);
+            LEDPower.setTextColor(requireActivity().getResources().getColor(R.color.brightgreen));
+            LEDImage.setVisibility(View.VISIBLE);
+            LEDButton.setBackgroundColor(getResources().getColor(R.color.purple_500));
+            LEDButton.setTextColor(getResources().getColor(R.color.brightgreen));
+            LEDButton.setClickable(true);
+            LEDMode.setTextColor(getResources().getColor(R.color.brightgreen));
+            LEDMode.setEnabled(true);
+        } else {
+            //If LED Power Button is Checked Off, set the text to Off and Switch the Image Off
+            editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
+            editor.putBoolean(LED_MODE, false);
+            editor.apply();
+
+            LEDPower.setChecked(false);
+            LEDPower.setText(R.string.ledPowerOff);
+            LEDPower.setTextColor(requireActivity().getResources().getColor(R.color.brightred));
+            LEDImage.setVisibility(View.INVISIBLE);
+            LEDButton.setBackgroundColor(getResources().getColor(R.color.grey));
+            LEDButton.setTextColor(getResources().getColor(R.color.brightred));
+            LEDButton.setClickable(false);
+            LEDMode.setTextColor(getResources().getColor(R.color.brightred));
+            LEDMode.setChecked(false);
+            LEDMode.setEnabled(false);
+        }
+    }
+
+    private void LEDMode(boolean isChecked) {
+        if (isChecked) {
+            //If LED Button is Checked, change background color to RGB Rainbow and display Snackbar
+            editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
+            editor.putBoolean(LED_MODE2, true);
+            editor.apply();
+
+            LEDMode.setChecked(true);
+            LEDLayout.setBackground(getResources().getDrawable(R.drawable.gradient_led));
+
+            Snackbar snackbar = Snackbar.make(requireView(), R.string.snackbar8, Snackbar.LENGTH_LONG);
+            snackbar.setBackgroundTint(getResources().getColor(R.color.brightgreen));
+            snackbar.setTextColor(getResources().getColor(R.color.black));
+            snackbar.show();
+        } else {
+            //If LED Button is unChecked, change background color to White and display Snackbar
+            editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
+            editor.putBoolean(LED_MODE2, false);
+            editor.apply();
+
+            LEDMode.setChecked(false);
+            LEDLayout.setBackgroundColor(getResources().getColor(R.color.white));
+
+            Snackbar snackbar = Snackbar.make(requireView(), R.string.snackbar9, Snackbar.LENGTH_LONG);
+            snackbar.setBackgroundTint(getResources().getColor(R.color.white));
+            snackbar.setTextColor(getResources().getColor(R.color.black));
+            snackbar.show();
+        }
     }
 
     //used to gain internet permissions from user
@@ -124,7 +202,7 @@ public class LEDFrag extends Fragment {
 
             @Override
             public void onOk(AmbilWarnaDialog dialog, int color) {
-                editor = getActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
+                editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
                 editor.putInt(LED_COLOR, color);
                 editor.apply();
 
@@ -136,7 +214,7 @@ public class LEDFrag extends Fragment {
     }
 
     private void retrieveLEDSharedPref() {
-        sharedPreferences = getActivity().getSharedPreferences(LED, MODE_PRIVATE);
+        sharedPreferences = requireActivity().getSharedPreferences(LED, MODE_PRIVATE);
         LEDLayout.setBackgroundColor(sharedPreferences.getInt(LED_COLOR, 0));
     }
 }

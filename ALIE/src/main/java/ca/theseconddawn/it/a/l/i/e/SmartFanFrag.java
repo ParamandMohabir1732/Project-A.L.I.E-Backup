@@ -29,7 +29,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -62,7 +61,7 @@ public class SmartFanFrag extends Fragment {
         //define local variables and link them to their ID's
         fanControl = view.findViewById(R.id.TheSecondDawnSwitch8);
         fanSpeed = view.findViewById(R.id.TheSecondDawnSlider1);
-        radGroup = view.findViewById(R.id.TheSecondDawnRadioGroup);
+        radGroup = view.findViewById(R.id.TheSecondDawnRadioGroup1);
         low = view.findViewById(R.id.TheSecondDawnRadioButton1);
         med = view.findViewById(R.id.TheSecondDawnRadioButton2);
         high = view.findViewById(R.id.TheSecondDawnRadioButton3);
@@ -92,32 +91,26 @@ public class SmartFanFrag extends Fragment {
         //Design pattern of this portion of code is composite pattern
         //It is a logical operation with a strong hierarchy of elements within it
         //If the fan is off you cannot control it
-        //If the fan if off no radio button should be selected
+        //If the fan is off no radio button should be selected
         //if the fans is on then It should not get to the max level of rotation and so on
-        fanControl.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                fanSpeed.setEnabled(fanControl.isChecked());
-                low.setClickable(fanControl.isChecked());
-                med.setClickable(fanControl.isChecked());
-                high.setClickable(fanControl.isChecked());
-                radGroup.clearCheck();
-                fanSpeed.setValue(10);
-            }
+        fanControl.setOnCheckedChangeListener((compoundButton, b) -> {
+            fanSpeed.setEnabled(fanControl.isChecked());
+            low.setClickable(fanControl.isChecked());
+            med.setClickable(fanControl.isChecked());
+            high.setClickable(fanControl.isChecked());
+            radGroup.clearCheck();
+            fanSpeed.setValue(10);
         });
         //Predefined values for radio buttons
-        radGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if(low.isChecked()){
-                    fanSpeed.setValue(25);
-                }
-                else if(med.isChecked()){
-                    fanSpeed.setValue(50);
-                }
-                else if(high.isChecked()){
-                    fanSpeed.setValue(75);
-                }
+        radGroup.setOnCheckedChangeListener((radioGroup, i) -> {
+            if(low.isChecked()){
+                fanSpeed.setValue(25);
+            }
+            else if(med.isChecked()){
+                fanSpeed.setValue(50);
+            }
+            else if(high.isChecked()){
+                fanSpeed.setValue(75);
             }
         });
 
