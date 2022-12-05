@@ -317,4 +317,8 @@
     <string name="textview21">3. What happens when I speak to A.L.I.E? </string>
     <string name="textview22">When you ask A.L.I.E a question, a recording of your conversation is uploaded to TheSecondDawn\'s Firebase cloud, where we process your request and respond to you. For instance, when you ask A.L.I.E to play Music, we use the recording of your request to play your selected media.</string>
     <string name="textview23">For more help…</string>
+    <string name="ledPowerOn">Lights: ON</string>
+    <string name="ledPowerOff">Lights: OFF</string>
+    <string name="snackbar8">RGB Mode is Activated!</string>
+    <string name="snackbar9">White Mode is Activated!</string>
 </resources>

@@ -44,8 +44,6 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.snackbar.Snackbar;
 
-import java.util.Objects;
-
 import yuku.ambilwarna.AmbilWarnaDialog;
 
 public class LEDFrag extends Fragment {
@@ -102,12 +100,13 @@ public class LEDFrag extends Fragment {
 
     private void LEDPower(boolean isChecked) {
         if (isChecked) {
+            //If LED Power Button is Checked On, set the Text to On and Switch the Image on
             editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
             editor.putBoolean(LED_MODE, true);
             editor.apply();
 
             LEDPower.setChecked(true);
-            LEDPower.setText("Lights: ON");
+            LEDPower.setText(R.string.ledPowerOn);
             LEDPower.setTextColor(requireActivity().getResources().getColor(R.color.brightgreen));
             LEDImage.setVisibility(View.VISIBLE);
             LEDButton.setBackgroundColor(getResources().getColor(R.color.purple_500));
@@ -116,12 +115,13 @@ public class LEDFrag extends Fragment {
             LEDMode.setTextColor(getResources().getColor(R.color.brightgreen));
             LEDMode.setEnabled(true);
         } else {
+            //If LED Power Button is Checked Off, set the text to Off and Switch the Image Off
             editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
             editor.putBoolean(LED_MODE, false);
             editor.apply();
 
             LEDPower.setChecked(false);
-            LEDPower.setText("Lights: OFF");
+            LEDPower.setText(R.string.ledPowerOff);
             LEDPower.setTextColor(requireActivity().getResources().getColor(R.color.brightred));
             LEDImage.setVisibility(View.INVISIBLE);
             LEDButton.setBackgroundColor(getResources().getColor(R.color.grey));
@@ -135,6 +135,7 @@ public class LEDFrag extends Fragment {
 
     private void LEDMode(boolean isChecked) {
         if (isChecked) {
+            //If LED Button is Checked, change background color to RGB Rainbow and display Snackbar
             editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
             editor.putBoolean(LED_MODE2, true);
             editor.apply();
@@ -142,11 +143,12 @@ public class LEDFrag extends Fragment {
             LEDMode.setChecked(true);
             LEDLayout.setBackground(getResources().getDrawable(R.drawable.gradient_led));
 
-            Snackbar snackbar = Snackbar.make(requireView(), "RGB Mode is Activated!", Snackbar.LENGTH_LONG);
+            Snackbar snackbar = Snackbar.make(requireView(), R.string.snackbar8, Snackbar.LENGTH_LONG);
             snackbar.setBackgroundTint(getResources().getColor(R.color.brightgreen));
             snackbar.setTextColor(getResources().getColor(R.color.black));
             snackbar.show();
         } else {
+            //If LED Button is unChecked, change background color to White and display Snackbar
             editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
             editor.putBoolean(LED_MODE2, false);
             editor.apply();
@@ -154,7 +156,7 @@ public class LEDFrag extends Fragment {
             LEDMode.setChecked(false);
             LEDLayout.setBackgroundColor(getResources().getColor(R.color.white));
 
-            Snackbar snackbar = Snackbar.make(requireView(), "White Mode is Activated!", Snackbar.LENGTH_LONG);
+            Snackbar snackbar = Snackbar.make(requireView(), R.string.snackbar9, Snackbar.LENGTH_LONG);
             snackbar.setBackgroundTint(getResources().getColor(R.color.white));
             snackbar.setTextColor(getResources().getColor(R.color.black));
             snackbar.show();
@@ -200,7 +202,7 @@ public class LEDFrag extends Fragment {
 
             @Override
             public void onOk(AmbilWarnaDialog dialog, int color) {
-                editor = getActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
+                editor = requireActivity().getSharedPreferences(LED, MODE_PRIVATE).edit();
                 editor.putInt(LED_COLOR, color);
                 editor.apply();
 
@@ -212,7 +214,7 @@ public class LEDFrag extends Fragment {
     }
 
     private void retrieveLEDSharedPref() {
-        sharedPreferences = getActivity().getSharedPreferences(LED, MODE_PRIVATE);
+        sharedPreferences = requireActivity().getSharedPreferences(LED, MODE_PRIVATE);
         LEDLayout.setBackgroundColor(sharedPreferences.getInt(LED_COLOR, 0));
     }
 }
