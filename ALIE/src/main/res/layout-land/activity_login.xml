@@ -138,16 +138,6 @@
         android:contentDescription="@string/imageView29"
         app:srcCompat="@drawable/google_button" />
 
-    <ImageView
-        android:id="@+id/TheSecondDawnImageView30"
-        android:layout_width="200dp"
-        android:layout_height="45dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="175dp"
-        android:layout_marginTop="-45dp"
-        android:contentDescription="@string/imageView30"
-        app:srcCompat="@drawable/facebook_button" />
-
     <TextView
         android:id="@+id/TheSecondDawnTextView5"
         android:layout_width="wrap_content"
