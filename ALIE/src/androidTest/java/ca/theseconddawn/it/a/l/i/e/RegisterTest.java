@@ -51,4 +51,13 @@ public class RegisterTest {
         onView(ViewMatchers.withId(R.id.TheSecondDawnEditText4)).perform(typeText("TheSecondDawn"), closeSoftKeyboard());
         onView(ViewMatchers.withId(R.id.TheSecondDawnButton2)).perform(click());
     }
+
+    @Test
+    public void invalidPasswordNumber() {
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText11)).perform(typeText("Titus"), closeSoftKeyboard());
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText3)).perform(typeText("Titus@gmail.com"), closeSoftKeyboard());
+        //Password Needs at least 1 digit
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText4)).perform(typeText("TheSecondDawn$"), closeSoftKeyboard());
+        onView(ViewMatchers.withId(R.id.TheSecondDawnButton2)).perform(click());
+    }
 }
