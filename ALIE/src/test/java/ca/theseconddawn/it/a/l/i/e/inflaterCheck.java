@@ -26,7 +26,6 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.robolectric.Shadows.shadowOf;
 
-import android.app.Activity;
 import android.content.Intent;
 
 import org.junit.Test;

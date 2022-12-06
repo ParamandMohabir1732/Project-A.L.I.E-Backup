@@ -24,7 +24,6 @@ package ca.theseconddawn.it.a.l.i.e;
 import static android.os.Build.VERSION_CODES.S;
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertNotNull;
-import static junit.framework.TestCase.assertTrue;
 
 import android.content.pm.ActivityInfo;
 import android.widget.TextView;
@@ -50,7 +49,6 @@ public class settingsCheck {
             TextView checker = (TextView) activity.findViewById(R.id.TheSecondDawnTextView36);
             assertNotNull("Text view cannot be accessed", checker);
             assertEquals("The text is incorrect", "Current Volume:", checker.getText().toString());
-
 
         }
     }
