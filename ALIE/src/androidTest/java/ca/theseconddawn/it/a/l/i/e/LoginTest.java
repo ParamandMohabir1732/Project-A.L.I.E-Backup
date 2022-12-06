@@ -32,21 +32,33 @@ public class LoginTest {
         onView(ViewMatchers.withId(R.id.TheSecondDawnButton1)).perform(click());
     }
 
+    //This user doesn't exist so login won't work
     @Test
     public void invalidLogin() {
         onView(ViewMatchers.withId(R.id.TheSecondDawnEditText1))
-                .perform(typeText("TheSecondDawnALIEAPP@gmail.com"), closeSoftKeyboard());
+                .perform(typeText("TheSecondDawnALIEAPP100@gmail.com"), closeSoftKeyboard());
         onView(ViewMatchers.withId(R.id.TheSecondDawnEditText2))
                 .perform(typeText("Wrong Password"), closeSoftKeyboard());
         onView(ViewMatchers.withId(R.id.TheSecondDawnButton1)).perform(click());
     }
 
+    //This email is invalid so the system will use regex to deny the request.
     @Test
-    public void invalidLEmail() {
+    public void invalidEmail() {
         onView(ViewMatchers.withId(R.id.TheSecondDawnEditText1))
                 .perform(typeText("TheSecondDawnALIEAPP@gmailcom"), closeSoftKeyboard());
         onView(ViewMatchers.withId(R.id.TheSecondDawnEditText2))
                 .perform(typeText("TheSecondDawn$123"), closeSoftKeyboard());
+        onView(ViewMatchers.withId(R.id.TheSecondDawnButton1)).perform(click());
+    }
+
+    //This password is incorrect for this account so user cannot login
+    @Test
+    public void invalidPassword() {
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText1))
+                .perform(typeText("TheSecondDawnALIEAPP@gmail.com"), closeSoftKeyboard());
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText2))
+                .perform(typeText("TheSecondDawn$123222"), closeSoftKeyboard());
         onView(ViewMatchers.withId(R.id.TheSecondDawnButton1)).perform(click());
     }
 }
