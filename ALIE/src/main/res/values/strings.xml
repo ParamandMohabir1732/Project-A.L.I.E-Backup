@@ -170,6 +170,7 @@
     <string name="mediaBtn2">PAUSE</string>
     <string name="mediaTitle1">TITLE</string>
     <string name="medaTitle2">00:00 / 00:00</string>
+    <string name="speakerIntent">audio/*</string>
 
     <!-- Smart Fan Screen -->
     <string name="textView11">Smart Fan Screen</string>
@@ -303,6 +304,15 @@
     <string name="about_us">About Us</string>
     <string name="faq">FAQ</string>
     <string name="intentPhoneUri">tel:18009981498</string>
+    <string name="imageButton15">This is an Image of Left Arrow in Help Screen</string>
+    <string name="imageView54">This is an Image of ALIE Background</string>
+    <string name="imageView55">This is an Image of Night Mode Icon</string>
+    <string name="imageView56">This is an Image of Notifactions Image Icon</string>
+    <string name="imageView57">This is an Image of Private Account Icon</string>
+    <string name="rightArrowHelp">This is an Image of Right Arrow Image</string>
+    <string name="imageButton16">This is an Image of Message Icon</string>
+    <string name="imageButton17">This is an Image of About us Icon</string>
+    <string name="imageButton18">This is an Image of FAQ Icon</string>
 
     <!-- Contact Us Screen -->
     <string name="imageButton13">This is an Image Button of the Left Arrow in Contact Us Screen</string>
@@ -327,5 +337,4 @@
     <string name="textview21">3. What happens when I speak to A.L.I.E? </string>
     <string name="textview22">When you ask A.L.I.E a question, a recording of your conversation is uploaded to TheSecondDawn\'s Firebase cloud, where we process your request and respond to you. For instance, when you ask A.L.I.E to play Music, we use the recording of your request to play your selected media.</string>
     <string name="textview23">For more help…</string>
-    <string name="speakerIntent">audio/*</string>
 </resources>
