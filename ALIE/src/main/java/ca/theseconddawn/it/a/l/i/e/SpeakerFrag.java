@@ -58,10 +58,10 @@ public class SpeakerFrag extends Fragment {
     private ImageButton openFileBtn;
 
     private SwitchCompat aSwitch;
-    String duration;
+    private String duration;
     private MediaPlayer mediaPlayer;
-    ScheduledExecutorService timer;
-    public static final int PICK_FILE =99;
+    private ScheduledExecutorService timer;
+    private static final int PICK_FILE = 99;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -74,10 +74,16 @@ public class SpeakerFrag extends Fragment {
         aSwitch = view.findViewById(R.id.TheSecondDawnSwitch7);
         openFileBtn = view.findViewById(R.id.TheSecondDawnImageButton11);
 
-        aSwitch.setOnCheckedChangeListener((compoundButton, b) -> {
-            if (b) {
+        aSwitch.setOnCheckedChangeListener((compoundButton, isChecked) -> {
+            if (isChecked) {
+                aSwitch.setChecked(true);
+                aSwitch.setTextColor(requireActivity().getResources().getColor(R.color.brightgreen));
+
                 Toast.makeText(getActivity(), R.string.toastMessage29, Toast.LENGTH_SHORT).show();
             } else {
+                aSwitch.setChecked(false);
+                aSwitch.setTextColor(requireActivity().getResources().getColor(R.color.brightred));
+
                 Toast.makeText(getActivity(), R.string.toastMessage30, Toast.LENGTH_SHORT).show();
             }
         });
@@ -85,13 +91,13 @@ public class SpeakerFrag extends Fragment {
         openFileBtn.setOnClickListener(v -> {
             Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
             intent.addCategory(Intent.CATEGORY_OPENABLE);
-            intent.setType("audio/*");
+            intent.setType(getString(R.string.speakerIntent));
             startActivityForResult(intent, PICK_FILE);
         });
 
         mediaBtn.setOnClickListener(v -> {
             if (mediaPlayer != null) {
-                if (mediaPlayer.isPlaying()){
+                if (mediaPlayer.isPlaying()) {
                     mediaPlayer.pause();
                     mediaBtn.setText(R.string.mediaBtn1);
                     mediaBtn.setBackgroundColor(getResources().getColor(R.color.brightgreen));
@@ -102,13 +108,10 @@ public class SpeakerFrag extends Fragment {
                     mediaBtn.setBackgroundColor(getResources().getColor(R.color.brightred));
 
                     timer = Executors.newScheduledThreadPool(1);
-                    timer.scheduleAtFixedRate(new Runnable() {
-                        @Override
-                        public void run() {
-                            if (mediaPlayer != null) {
-                                if (!seekBar.isPressed()) {
-                                    seekBar.setProgress(mediaPlayer.getCurrentPosition());
-                                }
+                    timer.scheduleAtFixedRate(() -> {
+                        if (mediaPlayer != null) {
+                            if (!seekBar.isPressed()) {
+                                seekBar.setProgress(mediaPlayer.getCurrentPosition());
                             }
                         }
                     }, 10, 10, TimeUnit.MILLISECONDS);
@@ -119,18 +122,20 @@ public class SpeakerFrag extends Fragment {
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                if (mediaPlayer != null){
+                if (mediaPlayer != null) {
                     int millis = mediaPlayer.getCurrentPosition();
                     long total_secs = TimeUnit.SECONDS.convert(millis, TimeUnit.MILLISECONDS);
                     long mins = TimeUnit.MINUTES.convert(total_secs, TimeUnit.SECONDS);
-                    long secs = total_secs - (mins*60);
+                    long secs = total_secs - (mins * 60);
                     textViewOne.setText(mins + ":" + secs + " / " + duration);
                 }
             }
+
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {
 
             }
+
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {
                 if (mediaPlayer != null) {
@@ -146,22 +151,17 @@ public class SpeakerFrag extends Fragment {
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == PICK_FILE && resultCode == RESULT_OK){
-            if (data != null){
+        if (requestCode == PICK_FILE && resultCode == RESULT_OK) {
+            if (data != null) {
                 Uri uri = data.getData();
                 createMediaPlayer(uri);
             }
         }
     }
 
-    public void createMediaPlayer(Uri uri){
+    public void createMediaPlayer(Uri uri) {
         mediaPlayer = new MediaPlayer();
-        mediaPlayer.setAudioAttributes(
-                new AudioAttributes.Builder()
-                        .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
-                        .setUsage(AudioAttributes.USAGE_MEDIA)
-                        .build()
-        );
+        mediaPlayer.setAudioAttributes(new AudioAttributes.Builder().setContentType(AudioAttributes.CONTENT_TYPE_MUSIC).setUsage(AudioAttributes.USAGE_MEDIA).build());
         try {
             mediaPlayer.setDataSource(getActivity(), uri);
             mediaPlayer.prepare();
@@ -172,25 +172,23 @@ public class SpeakerFrag extends Fragment {
             int millis = mediaPlayer.getDuration();
             long total_secs = TimeUnit.SECONDS.convert(millis, TimeUnit.MILLISECONDS);
             long mins = TimeUnit.MINUTES.convert(total_secs, TimeUnit.SECONDS);
-            long secs = total_secs - (mins*60);
+            long secs = total_secs - (mins * 60);
             duration = mins + ":" + secs;
             textViewOne.setText("00:00 / " + duration);
             seekBar.setMax(millis);
             seekBar.setProgress(0);
 
             mediaPlayer.setOnCompletionListener(mp -> releaseMediaPlayer());
-        } catch (IOException e){
+        } catch (IOException e) {
             textView.setText(e.toString());
         }
     }
 
     @SuppressLint("Range")
-    public String getNameFromUri(Uri uri){
+    public String getNameFromUri(Uri uri) {
         String fileName = "";
         Cursor cursor = null;
-        cursor = getActivity().getContentResolver().query(uri, new String[]{
-                MediaStore.Images.ImageColumns.DISPLAY_NAME
-        }, null, null, null);
+        cursor = getActivity().getContentResolver().query(uri, new String[]{MediaStore.Images.ImageColumns.DISPLAY_NAME}, null, null, null);
         if (cursor != null && cursor.moveToFirst()) {
             fileName = cursor.getString(cursor.getColumnIndex(MediaStore.Images.ImageColumns.DISPLAY_NAME));
         }
@@ -206,7 +204,7 @@ public class SpeakerFrag extends Fragment {
         releaseMediaPlayer();
     }
 
-    public void releaseMediaPlayer(){
+    public void releaseMediaPlayer() {
         if (timer != null) {
             timer.shutdown();
         }
@@ -220,8 +218,4 @@ public class SpeakerFrag extends Fragment {
         seekBar.setMax(100);
         seekBar.setProgress(0);
     }
-
 }
-
-
-

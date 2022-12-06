@@ -69,8 +69,8 @@
         android:layout_gravity="center"
         android:layout_marginTop="25dp"
         android:text="@string/textView25"
-        android:textColor="@color/black"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -112,11 +112,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="25dp"
         android:layout_marginStart="-25dp"
+        android:layout_marginTop="25dp"
         android:text="@string/textView26"
-        android:textColor="@color/black"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold" />
 

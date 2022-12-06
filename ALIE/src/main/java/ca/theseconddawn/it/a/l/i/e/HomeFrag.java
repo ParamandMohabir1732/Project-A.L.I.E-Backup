@@ -57,8 +57,8 @@ public class HomeFrag extends Fragment implements View.OnClickListener {
 
     private final String userKey = "Users/";
     private final String userID = Objects.requireNonNull(FirebaseAuth.getInstance().getCurrentUser()).getUid();
-
     private final String componentKey = "/Components";
+
     private final String speakerKey = "/Speaker Status";
     private final String ledKey = "/LED Status";
     private final String fanKey = "/Fan Status";
