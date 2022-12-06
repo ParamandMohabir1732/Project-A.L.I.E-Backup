@@ -82,12 +82,19 @@
     <string name="toastMessage32">Veuillez vérifier votre e-mail pour réinitialiser votre mot de passe !</string>
     <string name="toastMessage33">Une erreur s\est produite, veuillez réessayer !</string>
     <string name="toastMessage34">Votre avis a été envoyé ! Merci :)</string>
+    <string name="toastMessage35">Votre message a été envoyé à The Second Dawn ! Merci :)</string>
+
 
     <!-- Snackbar Messages -->
     <string name="snackbar1">Lautorisation est accordée!</string>
     <string name="snackbar2">Lautorisation est refusée!</string>
     <string name="snackbar3">Lautorisation est accordée!</string>
     <string name="snackbar4">Lautorisation est refusée!</string>
+    <string name="snackbar5">La couleur rouge est sélectionnée !</string>
+    <string name="snackbar6">La couleur verte est sélectionnée !</string>
+    <string name="snackbar7">La couleur bleue est sélectionnée !</string>
+    <string name="snackbar8">Le mode RVB est activé !</string>
+    <string name="snackbar9">Le mode blanc est activé !</string>
 
     <!-- Login Screen -->
     <string name="textView3">A.L.I.E</string>
@@ -145,6 +152,8 @@
     <string name="button7">Pipette à couleurs</string>
     <string name="imageView38">Ceci est une image de l\icône LED</string>
     <string name="button8">Autorisation de localisation</string>
+    <string name="ledPowerOn">Lumières allumées</string>
+    <string name="ledPowerOff">Lumières éteintes</string>
 
     <!-- Speaker Screen -->
     <string name="textView10">Écran du haut parleur</string>
@@ -158,6 +167,11 @@
     <string name="switch7">Du pouvoir</string>
     <string name="textView25">Le volume</string>
     <string name="textView26">Choisir le fichier:</string>
+    <string name="mediaBtn1">JOUER</string>
+    <string name="mediaBtn2">PAUSE</string>
+    <string name="mediaTitle1">TITRE</string>
+    <string name="medaTitle2">00:00 / 00:00</string>
+    <string name="speakerIntent">audio/*</string>
 
     <!-- Smart Fan Screen -->
     <string name="textView11">Écran de ventilateur intelligent</string>
@@ -188,8 +202,19 @@
     <string name="switch2">Éteint/allumé</string>
     <string name="switch3">Éteint/allumé</string>
     <string name="switch4">Éteint/allumé</string>
+    <string name="floatingButton1">Il s\agit un icône de micro pour le bouton flottant qui sera utilisée pour enregistrer votre voix</string>
+    <string name="speakerControlText1">SUR</string>
+    <string name="speakerControlText2">À L\ARRÊT</string>
+    <string name="ledControlText1">SUR</string>
+    <string name="ledControlText2">À L/ARRÊT</string>
+    <string name="fanControlText3">SUR</string>
+    <string name="fanControlText4">À L/ARRÊT</string>
+    <string name="voiceControlText1">SUR</string>
+    <string name="voiceControlText2">À L\ARRÊT</string>
 
     <!-- Settings Screen -->
+    <string name="imageButton3">Ceci est un bouton d/image de la flèche gauche dans l/écran des paramètres</string>
+    <string name="textView20">Écran des paramètres</string>
     <string name="textView33">Orientation</string>
     <string name="switch9">Portrait</string>
     <string name="textView34">Orientation actuelle de l\écran:</string>
@@ -239,6 +264,15 @@
     <string name="about_us">À propos de nous</string>
     <string name="faq">FAQ</string>
     <string name="intentPhoneUri">tel:18009981498</string>
+    <string name="imageButton15">Ceci est une image de la flèche gauche dans l/écran d/aide</string>
+    <string name="imageView54">Ceci est une image d\arrière-plan ALIE</string>
+    <string name="imageView55">Ceci est une image de l\icône du mode nuit</string>
+    <string name="imageView56">Ceci est une image de l\icône Image de notifications</string>
+    <string name="imageView57">Ceci est une image de l\icône Compte privé</string>
+    <string name="rightArrowHelp">Ceci est une image de l\image de la flèche droite</string>
+    <string name="imageButton16">Ceci est une image de l\icône Message</string>
+    <string name="imageButton17">Ceci est une image de l\icône À propos de nous</string>
+    <string name="imageButton18">Ceci est une image de l\icône FAQ</string>
 
 
     <!-- Bluetooth Screen -->
@@ -289,6 +323,8 @@
     <string name="Name">Nom</string>
     <string name="editText13">Envoie-nous un message</string>
     <string name="button16">NOUS FAIRE PARVENIR</string>
+    <string name="emptyMessageError1">Votre message est obligatoire !</string>
+    <string name="firebaseReference4">Messages clients</string>
 
     <!-- About Us Screen -->
     <string name="imageButton14">Ceci est un bouton d\image de la flèche gauche dans l\écran À propos de nous</string>
