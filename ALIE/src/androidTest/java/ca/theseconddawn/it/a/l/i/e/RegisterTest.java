@@ -69,4 +69,14 @@ public class RegisterTest {
         onView(ViewMatchers.withId(R.id.TheSecondDawnEditText4)).perform(typeText("1111111$"), closeSoftKeyboard());
         onView(ViewMatchers.withId(R.id.TheSecondDawnButton2)).perform(click());
     }
+
+    @Test
+    public void passwordNotMatching() {
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText11)).perform(typeText("Titus"), closeSoftKeyboard());
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText3)).perform(typeText("Titus@gmail.com"), closeSoftKeyboard());
+        //Passwords Don't Match
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText4)).perform(typeText("TheSecondDawn$123"), closeSoftKeyboard());
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText5)).perform(typeText("TheSecondDawn$1234"), closeSoftKeyboard());
+        onView(ViewMatchers.withId(R.id.TheSecondDawnButton2)).perform(click());
+    }
 }
