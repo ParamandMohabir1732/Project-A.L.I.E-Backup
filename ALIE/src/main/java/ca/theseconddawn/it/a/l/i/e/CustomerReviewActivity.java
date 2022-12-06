@@ -173,12 +173,9 @@ public class CustomerReviewActivity extends AppCompatActivity implements View.On
 
     private void progressHandler() {
         Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                dismissProgressDialog();
-                Toast.makeText(getApplicationContext(), "Your Message has Been Sent to The Second Dawn! Thank You!", Toast.LENGTH_SHORT).show();
-            }
+        handler.postDelayed(() -> {
+            dismissProgressDialog();
+            Toast.makeText(getApplicationContext(), getString(R.string.toastMessage34), Toast.LENGTH_SHORT).show();
         }, 3000); // Setting the Delay Timer of the Progress Bar to 3 Seconds or 3000 Milliseconds
     }
 
