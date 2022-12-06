@@ -40,5 +40,14 @@ public class LoginTest {
                 .perform(typeText("Wrong Password"), closeSoftKeyboard());
         onView(ViewMatchers.withId(R.id.TheSecondDawnButton1)).perform(click());
     }
+
+    @Test
+    public void invalidLEmail() {
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText1))
+                .perform(typeText("TheSecondDawnALIEAPP@gmailcom"), closeSoftKeyboard());
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText2))
+                .perform(typeText("TheSecondDawn$123"), closeSoftKeyboard());
+        onView(ViewMatchers.withId(R.id.TheSecondDawnButton1)).perform(click());
+    }
 }
 
