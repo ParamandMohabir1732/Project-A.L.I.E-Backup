@@ -44,6 +44,14 @@ public class RegisterTest {
     public ActivityTestRule<RegisterActivity> activityActivityTestRule = new ActivityTestRule<>(RegisterActivity.class);
 
     @Test
+    public void invalidEmail() {
+        //Email is Invalid
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText11)).perform(typeText("Titus"), closeSoftKeyboard());
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText3)).perform(typeText("Titus@gmailcom"), closeSoftKeyboard());
+        onView(ViewMatchers.withId(R.id.TheSecondDawnButton2)).perform(click());
+    }
+
+    @Test
     public void invalidPasswordSpecialChar() {
         onView(ViewMatchers.withId(R.id.TheSecondDawnEditText11)).perform(typeText("Titus"), closeSoftKeyboard());
         onView(ViewMatchers.withId(R.id.TheSecondDawnEditText3)).perform(typeText("Titus@gmail.com"), closeSoftKeyboard());
