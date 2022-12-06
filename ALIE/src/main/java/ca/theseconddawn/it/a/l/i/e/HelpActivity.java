@@ -28,6 +28,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
@@ -35,9 +36,9 @@ import androidx.appcompat.widget.SwitchCompat;
 
 public class HelpActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private ImageButton leftArrow;
     private Button callUs;
-    private ImageButton contactUs, aboutUs, faq;
+    private ImageView contactUs2, aboutUs2, faq2;
+    private ImageButton leftArrow, contactUs, aboutUs, faq;
 
     private SwitchCompat switchCompat;
     private SharedPreferences sharedPreferences;
@@ -60,11 +61,20 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
         contactUs = findViewById(R.id.TheSecondDawnImageButton16);
         contactUs.setOnClickListener(this);
 
+        contactUs2 = findViewById(R.id.TheSecondDawnImageView59);
+        contactUs2.setOnClickListener(this);
+
         aboutUs = findViewById(R.id.TheSecondDawnImageButton17);
         aboutUs.setOnClickListener(this);
 
+        aboutUs2 = findViewById(R.id.TheSecondDawnImageView58);
+        aboutUs2.setOnClickListener(this);
+
         faq = findViewById(R.id.TheSecondDawnImageButton18);
         faq.setOnClickListener(this);
+
+        faq2 = findViewById(R.id.TheSecondDawnImageView60);
+        faq2.setOnClickListener(this);
 
         switchCompat = findViewById(R.id.TheSecondDawnSwitch11);
         switchCompat.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -102,10 +112,19 @@ public class HelpActivity extends AppCompatActivity implements View.OnClickListe
         if (view.getId() == R.id.TheSecondDawnImageButton16) {
             startActivity(new Intent(this, ContactUsActivity.class));
         }
+        if (view.getId() == R.id.TheSecondDawnImageView59) {
+            startActivity(new Intent(this, ContactUsActivity.class));
+        }
         if (view.getId() == R.id.TheSecondDawnImageButton17) {
             startActivity(new Intent(this, AboutUsActivity.class));
         }
+        if (view.getId() == R.id.TheSecondDawnImageView58) {
+            startActivity(new Intent(this, AboutUsActivity.class));
+        }
         if (view.getId() == R.id.TheSecondDawnImageButton18) {
+            startActivity(new Intent(this, FAQActivity.class));
+        }
+        if (view.getId() == R.id.TheSecondDawnImageView60) {
             startActivity(new Intent(this, FAQActivity.class));
         }
     }
