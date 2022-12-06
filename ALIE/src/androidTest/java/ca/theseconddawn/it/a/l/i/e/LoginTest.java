@@ -10,8 +10,6 @@ import androidx.test.ext.junit.runners.AndroidJUnit4;
 import androidx.test.filters.LargeTest;
 import androidx.test.rule.ActivityTestRule;
 
-import com.android21buttons.fragmenttestrule.FragmentTestRule;
-
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -26,11 +24,20 @@ public class LoginTest {
 
     //Test should run successfully if no Email and Password is store in remember me
     @Test
-    public void loginVerification() {
+    public void validLogin() {
         onView(ViewMatchers.withId(R.id.TheSecondDawnEditText1))
                 .perform(typeText("TheSecondDawnALIEAPP@gmail.com"), closeSoftKeyboard());
         onView(ViewMatchers.withId(R.id.TheSecondDawnEditText2))
                 .perform(typeText("TheSecondDawn$123"), closeSoftKeyboard());
+        onView(ViewMatchers.withId(R.id.TheSecondDawnButton1)).perform(click());
+    }
+
+    @Test
+    public void invalidLogin() {
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText1))
+                .perform(typeText("TheSecondDawnALIEAPP@gmail.com"), closeSoftKeyboard());
+        onView(ViewMatchers.withId(R.id.TheSecondDawnEditText2))
+                .perform(typeText("Wrong Password"), closeSoftKeyboard());
         onView(ViewMatchers.withId(R.id.TheSecondDawnButton1)).perform(click());
     }
 }
